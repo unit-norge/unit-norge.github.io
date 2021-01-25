@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Utvikling av brukernære API og datasett :: UNIT refansearkitekturer</title>
+    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-forvaltning/Utvikling%20av%20brukernære%20API%20og%20datasett.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://unit-norge.github.io">UNIT refansearkitekturer</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="unit-ra" data-version="main">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">UNIT referansearkitekturer</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Om UNIT referansearkitekturer</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../Bøker/Referansearkitektur%20for%20deling%20av%20data%20i%20høyere%20utdanning%20og%20forsking.html">Referansearkitektur for deling av data i høyere utdanning og forsking</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">UNIT referansearkitekturer</span>
+    <span class="version">main</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">UNIT referansearkitekturer</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">main</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">UNIT referansearkitekturer</a></li>
+    <li><a href="Utvikling%20av%20brukernære%20API%20og%20datasett.html">Utvikling av brukernære API og datasett</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/unit-ra-datadeling-forvaltning/pages/Utvikling%20av%20brukernære%20API%20og%20datasett.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Utvikling av brukernære API og datasett</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_forutsetninger_for_arbeid_med_definisjon_av_datasett_og_api">1. Forutsetninger for arbeid med definisjon av datasett og API</a></li>
+<li><a href="#_rutinen_for_nye_brukernære_behov">2. Rutinen for nye brukernære behov</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_forutsetninger_for_arbeid_med_definisjon_av_datasett_og_api"><a class="anchor" href="#_forutsetninger_for_arbeid_med_definisjon_av_datasett_og_api"></a>1. Forutsetninger for arbeid med definisjon av datasett og API</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Vi forutsetter og bygger på en viss fremgang i arbeid med
+<a href="https://data.norge.no/guide/veileder-orden-i-eget-hus/">orden i eget hus</a>
+hos deltagende virksomheter der noen datasett er dokumentert i en
+datakatalog. Dette kan enten være Digitaliseringsdirektoratets
+<a href="https://data.norge.no/">felles datakatalog</a>, eller en fremtidig katalog
+for høyere utdanning og forskningssektoren som høstes inn i felles
+datakatalogen.</p>
+</div>
+<div class="paragraph">
+<p>Vi forutsetter også en domenebasert tilnærming der det finnes noen
+masterdata kilder som reflekterer den overordnede forretningsmodellen
+til utdanning og forskning. Disse realiserer «domains aligned with the
+source» i figuren under (fra How to Move Beyond a Monolithic Data Lake
+to a Distributed Data Mesh</p>
+</div>
+<div class="paragraph">
+<p><a href="https://martinfowler.com/articles/data-monolith-to-mesh.html#CentralizedAndMonolithic" class="bare">https://martinfowler.com/articles/data-monolith-to-mesh.html#CentralizedAndMonolithic</a>).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/image10.png" alt="image" width="601" height="331"></span></p>
+</div>
+<div class="paragraph">
+<p>Disse kildene vil være basiskildene, som for eksempel studentregister,
+ansattregister, organisasjonsregister, emneregister,
+forskningsdatakilder og Learning Object Repository. Disse kildene
+defineres i andre prosesser. Innhold i disse masterdatakildene suppleres
+av annen informasjon i en mer bruksnær kontekst, og en tilnærming til
+definisjon av denne er beskrevet under.</p>
+</div>
+<div class="paragraph">
+<p>Rutinen under benyttes dermed til å definere API og datasett i «domains
+aligned with the consumption», eller brukernære behov.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rutinen_for_nye_brukernære_behov"><a class="anchor" href="#_rutinen_for_nye_brukernære_behov"></a>2. Rutinen for nye brukernære behov</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Melde behov, gjerne av datakonsumentene</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Interessenter melder ønsker inn gjennom kjent verktøy / grensenitt</p>
+</li>
+<li>
+<p>Periodisk prosess for å samle innspill og prioritere</p>
+</li>
+<li>
+<p>For de case som går videre: Intervjue interessenter/ kjøre
+tjenestedesign workshop for å beskrive scenariet</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Analysere behov og finne ut hvilke domener og kilder som er involvert</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Hvem gjør dette? Tjenesteansvarlige? Informasjonsdomeneeiere?
+Prosesseiere? Sekretariatet? Hvem hos institusjonene?</p>
+</li>
+<li>
+<p>F. eks. studieadministrasjon kunne være en domene, og tjenesansvarlig
+for FSAPI</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Finn eksisterende datasett involvert (helst fra datakatalogen) som er
+ferdig harmonisert</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Spesifisere hva som blir berørt f. eks. begreper, API, datamodell,
+(tjeneste- og API-eiere)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Identifiser hva må skapes, harmoniseres eller videreutvikles i tillegg
+til eksisterende datasett for å tilfredsstille behovet</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Trenger vi nye: begreper, kilder, API, datasett m.m?</p>
+</li>
+<li>
+<p>Kontakte interessentene til de berørte områdene med sikte på å være
+med i prosessen</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Kjør begreps harmoniseringsprosessen etter behov med relevante
+interessenter (hele verdikjeden for data involvert må være representert)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Følg
+<a href="https://data.norge.no/specification/forvaltningsstandard-begrepskoordinering/">standarden
+om Begrepsharmonisering og begrepsdifferensiering</a>
+(<a href="https://laeringsplattformen.difi.no/kurs/971527404/begrip-begrepene-et-innforingskurs-i-terminologi-og-begrepsarbeid">kurs
+om begrepsarbeid</a> er en utfyllende ressurs)</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Definere API/datasett team med representasjon fra både bruksmiljø og
+produsent (er dette den samme gruppen fra punkt 5?)</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Det kan ta noen iterasjoner med utprøving av API før man er fornøyd</p>
+</li>
+<li>
+<p>Senere oppdateringer kan kjøres som iterasjoner da man allerede har
+resultatene fra tidligere steg.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
