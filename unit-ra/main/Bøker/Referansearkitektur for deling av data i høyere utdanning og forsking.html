@@ -125,11 +125,7 @@
 <ul class="sectlevel1">
 <li><a href="#_om_arkitekturprinsippenes_føringer_for_datadeling">1. Om arkitekturprinsippenes føringer for datadeling</a></li>
 <li><a href="#_hva_er_datadeling">2. Hva er datadeling</a></li>
-<li><a href="#_modeller_for_datadeling">3. Modeller for datadeling</a>
-<ul class="sectlevel2">
-<li><a href="#_del_og_innhent_data_verdistrøm">3.1. Del og innhent data, verdistrøm</a></li>
-</ul>
-</li>
+<li><a href="#_modeller_for_datadeling">3. Modeller for datadeling</a></li>
 <li><a href="#_kapabiliteter">4. Kapabiliteter</a>
 <ul class="sectlevel2">
 <li><a href="#_innhent_data_detaljert_verdistrøm_konsument_med_kapabiliteter">4.1. Innhent data, detaljert verdistrøm konsument med kapabiliteter</a></li>
@@ -185,7 +181,7 @@
 <p><span class="image"><img src="_images/image1.jpeg" alt="image1"></span></p>
 </div>
 <div class="paragraph">
-<p>Tue Feb 09 2021 18:20:37 GMT+0100 (CET):leveloffset: +1
+<p>Tue Feb 09 2021 18:53:23 GMT+0100 (CET):leveloffset: +1
 = Bakgrunn
 :wysiwig_editing: 1
 :imagepath: main@unit-ra:unit-ra-datadeling-bakgrunn:
@@ -496,97 +492,6 @@ samhandling.</p>
 <div class="paragraph">
 <p><a href="https://www.digdir.no/apne-data/nasjonal-verktoykasse-deling-av-data/2243">Verktøykassen for deling av data</a> inneholder den overordnende modell for datadeling og kapabilitetene som datatilbydere og datakonsumenter trenger for å dele data. Vi legger disse modellene til grunn.</p>
 </div>
-<div class="sect2">
-<h3 id="_del_og_innhent_data_verdistrøm"><a class="anchor" href="#_del_og_innhent_data_verdistrøm"></a>3.1. Del og innhent data, verdistrøm</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../unit-ra-datadeling-målarkitekturen/_images/Del%20og%20innhent%20data,%20verdistrøm.png" alt="Del og innhent data" width="verdistrøm image">
-</div>
-<div class="title">Figure 1. Del og innhent data, verdistrøm</div>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Elementer i view for Del og innhent data, verdistrøm</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Element</th>
-<th class="tableblock halign-left valign-top">Beskrivelse</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder &lt;business-role&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p>
-<p class="tableblock">API Eiere  (kan eie Data som API gir tilgang til, eller system som tilbyr APIet)??</p>
-<p class="tableblock">Når virksomheten tilbyr åpne data, vil det være virksomheten som eier dataene. (men det bør vel definere et domen-eier innenfor virksomheten)</p>
-<p class="tableblock">Data eier på to nivå: f. eks. studieavdelingen (er ikke dette behandlingsansvarlig?) spør studenten om de gir samtykke til å gi tilgang til data om studenten som hen eier.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Del  data &lt;value-stream&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tilrettelegg for dataoppdagelse og datadeling &lt;value-stream&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Share data &lt;value-stream&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">"Del data (operativt)" handler om utveksling av data gjennom etablerte kanaler og iht. avtaler. Dette forutsetter også håndtering av avvik og ikke-tilsiktede hendelser.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sett opp avtaler, løsninger og tilganger etter henvendelse &lt;value-stream&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Motta henvendelser om datadeling &lt;value-stream&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ta rede på egne data og krav til datadeling &lt;value-stream&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forbedre løsninger, sikkerhet og datakvalitet (tilbyder) &lt;value-stream&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Data-konsument &lt;business-role&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Den som innhenter eller mottar data fra andre aktører.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Collect data &lt;value-stream&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oppdag data og datakilder &lt;value-stream&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Be  om tilganger og abonnementer &lt;value-stream&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forespør og motta data &lt;value-stream&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Etabler avtaler og løsninger for datainnhenting &lt;value-stream&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ta rede på behov for innhenting av data &lt;value-stream&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forbedre løsninger, sikkerhet og datakvalitet (konsument) &lt;value-stream&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -621,10 +526,10 @@ samhandlingsevne.</p>
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Innhent%20data,%20detaljert%20verdistrøm%20konsument%20med%20kapabiliteter.png" alt="Innhent data" width="detaljert verdistrøm konsument med kapabiliteter image">
 </div>
-<div class="title">Figure 2. Innhent data, detaljert verdistrøm konsument med kapabiliteter</div>
+<div class="title">Figure 1. Innhent data, detaljert verdistrøm konsument med kapabiliteter</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Elementer i view for Innhent data, detaljert verdistrøm konsument med kapabiliteter</caption>
+<caption class="title">Table 1. Elementer i view for Innhent data, detaljert verdistrøm konsument med kapabiliteter</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -774,10 +679,10 @@ Prosesser for å dele data som åpne data</p>
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Del%20og%20innhent%20data%20og%20hendelser,%20detaljert%20verdistrøm%20datatilbyder%20med%20kapabiliteter.png" alt="Del og innhent data og hendelser" width="detaljert verdistrøm datatilbyder med kapabiliteter image">
 </div>
-<div class="title">Figure 3. Del og innhent data og hendelser, detaljert verdistrøm datatilbyder med kapabiliteter</div>
+<div class="title">Figure 2. Del og innhent data og hendelser, detaljert verdistrøm datatilbyder med kapabiliteter</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. Elementer i view for Del og innhent data og hendelser, detaljert verdistrøm datatilbyder med kapabiliteter</caption>
+<caption class="title">Table 2. Elementer i view for Del og innhent data og hendelser, detaljert verdistrøm datatilbyder med kapabiliteter</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -970,10 +875,10 @@ Personer som er ansvarlige for virksomhetens prosesser for deling av data må be
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Muliggjørende%20kapabiliteter.png" alt="Muliggjørende kapabiliteter image">
 </div>
-<div class="title">Figure 4. Muliggjørende kapabiliteter</div>
+<div class="title">Figure 3. Muliggjørende kapabiliteter</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 4. Elementer i view for Muliggjørende kapabiliteter</caption>
+<caption class="title">Table 3. Elementer i view for Muliggjørende kapabiliteter</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1028,10 +933,10 @@ Personer som er ansvarlige for virksomhetens prosesser for deling av data må be
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Informasjonsforvaltningsdomener.png" alt="Informasjonsforvaltningsdomener image">
 </div>
-<div class="title">Figure 5. Informasjonsforvaltningsdomener</div>
+<div class="title">Figure 4. Informasjonsforvaltningsdomener</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 5. Elementer i view for Informasjonsforvaltningsdomener</caption>
+<caption class="title">Table 4. Elementer i view for Informasjonsforvaltningsdomener</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1231,10 +1136,10 @@ for datautveksling</a> beskriv de mønstrene som vi bruker</p>
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Føderert%20API%20management.png" alt="Føderert API management image">
 </div>
-<div class="title">Figure 6. Føderert API management</div>
+<div class="title">Figure 5. Føderert API management</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 6. Elementer i view for Føderert API management</caption>
+<caption class="title">Table 5. Elementer i view for Føderert API management</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1358,10 +1263,10 @@ Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Applikasjonsoversikt%20forespørsel%20integrert%20med%20IAM.png" alt="Applikasjonsoversikt forespørsel integrert med IAM image">
 </div>
-<div class="title">Figure 7. Applikasjonsoversikt forespørsel integrert med IAM</div>
+<div class="title">Figure 6. Applikasjonsoversikt forespørsel integrert med IAM</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 7. Elementer i view for Applikasjonsoversikt forespørsel integrert med IAM</caption>
+<caption class="title">Table 6. Elementer i view for Applikasjonsoversikt forespørsel integrert med IAM</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1458,10 +1363,10 @@ Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Applikasjonsoversikt%20forespørsel%20integrert%20nasjonalt.png" alt="Applikasjonsoversikt forespørsel integrert nasjonalt image">
 </div>
-<div class="title">Figure 8. Applikasjonsoversikt forespørsel integrert nasjonalt</div>
+<div class="title">Figure 7. Applikasjonsoversikt forespørsel integrert nasjonalt</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 8. Elementer i view for Applikasjonsoversikt forespørsel integrert nasjonalt</caption>
+<caption class="title">Table 7. Elementer i view for Applikasjonsoversikt forespørsel integrert nasjonalt</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1565,10 +1470,10 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Registrere%20API%20UHF.png" alt="Registrere API UHF image">
 </div>
-<div class="title">Figure 9. Registrere API UHF</div>
+<div class="title">Figure 8. Registrere API UHF</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 9. Elementer i view for Registrere API UHF</caption>
+<caption class="title">Table 8. Elementer i view for Registrere API UHF</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1660,10 +1565,10 @@ En klient må forholde seg til</p></td>
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Tilgjengeliggjøre%20data%20etter%20forspørsel%20løsningsmønster%20UHF.png" alt="Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF image">
 </div>
-<div class="title">Figure 10. Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF</div>
+<div class="title">Figure 9. Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 10. Elementer i view for Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF</caption>
+<caption class="title">Table 9. Elementer i view for Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1772,10 +1677,10 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Få%20tilgang%20til%20data%20-%20løsningsmønster%20UHF.png" alt="Få tilgang til data - løsningsmønster UHF image">
 </div>
-<div class="title">Figure 11. Få tilgang til data - løsningsmønster UHF</div>
+<div class="title">Figure 10. Få tilgang til data - løsningsmønster UHF</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 11. Elementer i view for Få tilgang til data - løsningsmønster UHF</caption>
+<caption class="title">Table 10. Elementer i view for Få tilgang til data - løsningsmønster UHF</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1866,10 +1771,10 @@ underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Innhente%20data%20-%20løsningsmønster%20UHF.png" alt="Innhente data - løsningsmønster UHF image">
 </div>
-<div class="title">Figure 12. Innhente data - løsningsmønster UHF</div>
+<div class="title">Figure 11. Innhente data - løsningsmønster UHF</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 12. Elementer i view for Innhente data - løsningsmønster UHF</caption>
+<caption class="title">Table 11. Elementer i view for Innhente data - løsningsmønster UHF</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2011,10 +1916,10 @@ underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Avgi%20data%20-%20løsningsmønster%20UHF.png" alt="Avgi data - løsningsmønster UHF image">
 </div>
-<div class="title">Figure 13. Avgi data - løsningsmønster UHF</div>
+<div class="title">Figure 12. Avgi data - løsningsmønster UHF</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 13. Elementer i view for Avgi data - løsningsmønster UHF</caption>
+<caption class="title">Table 12. Elementer i view for Avgi data - løsningsmønster UHF</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
