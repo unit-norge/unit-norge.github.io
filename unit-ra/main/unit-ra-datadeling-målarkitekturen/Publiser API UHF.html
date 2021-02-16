@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>API management integrert med nasjonale felleskomponenter :: UNIT refansearkitekturer</title>
-    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-målarkitekturen/API%20management%20integrert%20med%20nasjonale%20felleskomponenter.html">
+    <title>Publiser API UHF :: UNIT refansearkitekturer</title>
+    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-målarkitekturen/Publiser%20API%20UHF.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -103,25 +103,28 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">UNIT referansearkitekturer</a></li>
-    <li><a href="API%20management%20integrert%20med%20nasjonale%20felleskomponenter.html">API management integrert med nasjonale felleskomponenter</a></li>
+    <li><a href="Publiser%20API%20UHF.html">Publiser API UHF</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/unit-ra-datadeling-målarkitekturen/pages/API%20management%20integrert%20med%20nasjonale%20felleskomponenter.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/unit-ra-datadeling-målarkitekturen/pages/Publiser%20API%20UHF.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">API management integrert med nasjonale felleskomponenter</h1>
+<h1 class="page">Publiser API UHF</h1>
+<div class="paragraph">
+<p>En prosessflyt som datatilbyder må gjennomføre for å gjøre et API synlig og tilgjengelig gjennom kataloger og søkeløsninger. Metadata om APIet blir registrert i API-katalogen. Metadata inkluderer begreper og datamodeller omfattet av datasettet som APIet tilgjengeliggjør, samt tilganger (scopes) knyttet til APIet som kan tildeles konsumenter.</p>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/API%20management%20integrert%20med%20nasjonale%20felleskomponenter.png" alt="API management integrert med nasjonale felleskomponenter image">
+<img src="_images/Publiser%20API%20UHF.png" alt="Publiser API UHF image">
 </div>
-<div class="title">Figure 1. API management integrert med nasjonale felleskomponenter</div>
+<div class="title">Figure 1. Publiser API UHF</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Elementer i view for API management integrert med nasjonale felleskomponenter</caption>
+<caption class="title">Table 1. Elementer i view for Publiser API UHF</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -134,39 +137,59 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Infrastruktur &lt;grouping&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Felleskomponenter i UHF-infrastrukturen for datadeling</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OAUTH scopes &lt;data-object&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hvordan får Dataobjekt som som kan beskrives som en ressurs-definisjon, og et token er som regel knyttet til ett eller flere scopes. Scopes benyttes til å styre tilganger til API-er og operasjoner, samt eventuelt hva slags responser man får fra API-er.</p>
+<p class="tableblock">Fra eHelse: Regler for et API som beskriver hvilke tilganger en datakonsument (representert ved organisasjonsnummer) og deres klienter skal ha tilgang til (utstedt token for).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tokentjeneste &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som utsteder sikkerhetsbilletter. Sikkerhetsbillett utstedes basert på tildelte rettigheter og eventuelle representasjonsforhold.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Token-egenskaper &lt;data-object&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Egenskaper som f.eks. gyldighetstid ved tilgangstoken som er Maskinportens variant av sikkerhetsbillett.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder &lt;business-role&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p>
+<p class="tableblock">Datatibyder har definisjonsrett og har rettigheter til å behandle data
+Datatilbyder kan sette sammen data som tilbyderen har til et dataprodukt som tilbys datakonsumenter gjennom et API</p>
+<p class="tableblock">API Eiere  (kan eie Data som API gir tilgang til, eller system som tilbyr APIet)??</p>
+<p class="tableblock">Når virksomheten tilbyr åpne data, vil det være virksomheten som eier dataene. (men det bør vel definere et domen-eier innenfor virksomheten)</p>
+<p class="tableblock">Data eier på to nivå: f. eks. studieavdelingen (er ikke dette behandlingsansvarlig?) spør studenten om de gir samtykke til å gi tilgang til data om studenten som hen eier.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[Torget]
+Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering.</p>
+<p class="tableblock">[Verktøykasse for deling av data]
+Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
+virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
+<p class="tableblock">Mer om Maskinporten:
+<a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Registrere API i UHF sektoren &lt;application-service&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Programtjeneste for å registrere og vedlikeholde API som er tilgjengelige i Universitets og Høyskole-sektoren</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API Beskrivelse  &lt;data-object&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Open API spesifikasjon (har vi føringer på format her)?</p>
+<p class="tableblock">VI ønsker oss beskrivelse av datamodell og begreper som finnes i begrepskatalog og datamodell katalog (per default bruker vi det nasjonale, men kan hende vi må bruke noe for sektoren om ikke funksjonalitet er dekket</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UHF definer rettighetter knyttet til APIer &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UHF sentralisert selvbetjeningstjeneste for administrasjon av integrasjoner og APIer.
+Tjeneste "administrasjonssentre" vil ha rettigheter til å registrere på vegne av andre f.eks. API-katalogen
+Definere hvilke scopes finnes koblet til et API</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publiser API &lt;capability&gt;</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens.
-En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
-<p class="tableblock">Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
-<p class="tableblock">////
-Per i dag er Scopes er grovkornet
-Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
-underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.
-////</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere API &lt;business-process&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prosess med å registere API i relevante tjenester, api-katalog, Maskinporten, Kapabilitetsoversikt</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Klientregister &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Felles API-katalog &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Del av Felles datakatalog som gir mulighet for å søke etter API-er og lese API-spesifikasjoner <a href="https://fellesdatakatalog.brreg.no/apis" class="bare">https://fellesdatakatalog.brreg.no/apis</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF API manager  &lt;application-component&gt;</p></td>
@@ -192,36 +215,6 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
   * Informasjon om tilgang, juridiske og tekniske begrensinger for bruk
   * Eksempelkode, interaktiv API-konsoll og sandkasse for test
   * Informasjon om hvordan få support og hjelp fra utsteder</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Nasjonal infrastruktur &lt;grouping&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[Torget]
-Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering.</p>
-<p class="tableblock">[Verktøykasse for deling av data]
-Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
-virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
-<p class="tableblock">Mer om Maskinporten:
-<a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Altinn autorisasjon &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[Torget]
-Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
-Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p>
-<p class="tableblock">[Verktøykasse for deling av data]
-Altinn autorisasjon gir teknisk samhandlingsevne ved at bruker logger inn med elektronisk ID,
-autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å ta i bruk aktuell tjeneste.</p>
-<p class="tableblock">Dersom en privatperson skal ta i bruk en tjeneste på vegne av en virksomhet, gjøres det et oppslag mot Enhetsregisteret for å bekrefte at personen har en rolle på vegne av virksomheten. Dette gir organisatorisk samhandlingsevne.</p>
-<p class="tableblock">Mer om Altinn autorisasjon:
-<a href="https://www.altinndigital.no/produkter/styring-av-tilgang/" class="bare">https://www.altinndigital.no/produkter/styring-av-tilgang/</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Felles API-katalog &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Del av Felles datakatalog som gir mulighet for å søke etter API-er og lese API-spesifikasjoner <a href="https://fellesdatakatalog.brreg.no/apis" class="bare">https://fellesdatakatalog.brreg.no/apis</a></p></td>
 </tr>
 </tbody>
 </table>

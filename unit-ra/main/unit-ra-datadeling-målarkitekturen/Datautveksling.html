@@ -123,7 +123,7 @@
 <li><a href="#_føderert_api_management">1.2. Føderert API management</a></li>
 <li><a href="#_api_management_integrert_med_iam">1.3. API management integrert med IAM</a></li>
 <li><a href="#_api_management_integrert_med_nasjonale_felleskomponenter">1.4. API management integrert med nasjonale felleskomponenter</a></li>
-<li><a href="#_registrere_api_uhf">1.5. Registrere API UHF</a></li>
+<li><a href="#_publiser_api_uhf">1.5. Publiser API UHF</a></li>
 <li><a href="#_tilgjengeliggjøre_data_etter_forspørsel_løsningsmønster_uhf">1.6. Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF</a></li>
 <li><a href="#_få_tilgang_til_data_løsningsmønster_uhf">1.7. Få tilgang til data - løsningsmønster UHF</a></li>
 <li><a href="#_innhente_data_løsningsmønster_uhf">1.8. Innhente data - løsningsmønster UHF</a></li>
@@ -221,11 +221,14 @@ Viktig innholde er bl.a. URL</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjeneter realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens. En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens.
+En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
 <p class="tableblock">Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
-<p class="tableblock">Per i dag er Scopes er grovkornet
+<p class="tableblock">////
+Per i dag er Scopes er grovkornet
 Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
-underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p></td>
+underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.
+////</p></td>
 </tr>
 </tbody>
 </table>
@@ -278,7 +281,7 @@ underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Infrastruktur &lt;grouping&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Felleskomponenter i UHF-infrastrukturen for datadeling</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tokentjeneste &lt;application-service&gt;</p></td>
@@ -290,11 +293,14 @@ underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjeneter realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens. En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens.
+En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
 <p class="tableblock">Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
-<p class="tableblock">Per i dag er Scopes er grovkornet
+<p class="tableblock">////
+Per i dag er Scopes er grovkornet
 Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
-underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p></td>
+underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.
+////</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Klientregister &lt;application-component&gt;</p></td>
@@ -302,26 +308,36 @@ underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF API manager  &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Administrativ komponent som kontrollerer policy og livssyklus for definisjon og forvaltning av API. Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstjener. Ansvaret til API manager inkluderer:</p>
-<p class="tableblock">* Sentralisert API administrasjon og forvaltning av API-katalogen
-* Håndtering av registrerings- og introduksjonsprosesser for API utviklere
-* Håndtere livssyklusen til et API</p>
-<p class="tableblock">Ivareta registrering, forvaltning og og utvikling av klientrettigheter</p>
-<p class="tableblock">Hva tilbyr API av datamodell
-Hvordan ønsker API å sikre seg selv
-En klient må forholde seg til</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrativ komponent som kontrollerer policy og livssyklus for definisjon og forvaltning av API.
+Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstjener.</p>
+<p class="tableblock">Ansvaret til API manager inkluderer:
+  * Sentralisert API Gateway som håndterer sikkerhetsretningslinjer, og sender kall til bakenforliggende API
+  * Sentralisert publisering av API spesifikasjon (OpenAPI/RAML), dokumentasjon
+  * Sentralisert API administrasjon og forvaltning av API-katalogen
+  * Håndtering av registrerings- og introduksjonsprosesser for API utviklere
+  * Håndtere livssyklusen til et API, uvikling, test, utrulling, nye versjoner, nedlegging
+  * Ivareta registrering, forvaltning og og utvikling av klientrettigheter
+  * Rapportering og analyse for å monitorere bruk og last</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF API katalog &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p>
+<p class="tableblock">UHF API katalog kan inneholde
+  * Navn på API
+  * Tekstlig beskrivelse av API
+  * Informasjonsmodell / Datamodell for API som tilbys
+  * Kildeinformasjon for data, begrepsinformasjon
+  * Informasjon om tilgang, juridiske og tekniske begrensinger for bruk
+  * Eksempelkode, interaktiv API-konsoll og sandkasse for test
+  * Informasjon om hvordan få support og hjelp fra utsteder</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Registrere API i UHF sektoren &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Programtjeneste for å registrere og vedlikeholde API som er tilgjengelige i Universitets og Høyskole-sektoren</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UiX &lt;grouping&gt;</p></td>
@@ -329,27 +345,33 @@ En klient må forholde seg til</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kildedata &lt;data-object&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataprodukt som tilbys av datatilbyder
+Produktet kan være fra en kilde sammensatt av flere innen et domene</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway hos dataeier / OAuth resource server &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API gateway beskytter ressurser og monitorerer tilgang. Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll. Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway hos datatilbyder / OAuth resource server &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API gateway beskytter ressurser og monitorerer tilgang.
+Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll.
+Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
 <p class="tableblock">Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
-<p class="tableblock">*  Validere tilgangstoken
-*  Beskytte mot inntrenging og andre trusler
-• Håndtere volumbegrensninger og andre abonnementsordninger
-• Håndheve tilgangsstyring
-• Samle inn data om bruken av API-er
-• [orkestrering mellom interntjeneser??]</p>
-<p class="tableblock">Prinsipp fra Steiner:
+<p class="tableblock">  *  Validere tilgangstoken
+  *  Beskytte mot inntrenging og andre trusler
+  * Håndtere volumbegrensninger og andre abonnementsordninger
+  * Håndheve tilgangsstyring
+  * Samle inn data om bruken av API-er
+  * Orkestrering mellom interntjenester</p>
+<p class="tableblock">////
+Prinsipp fra Steiner:
 Oppgaver både sikkerhetsperspektiv og forvaltningsperspektivet
 Dersom gatway skal stå for sikkerheten, MÅ VÆRE SIKKER PÅ at API ikke kan nås utenom gateway
 Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
-<p class="tableblock">Det må være et tydeligvalg om hvem (gateway eller API) har ansvar for sikkerhetsmessig.</p></td>
+<p class="tableblock">Det må være et tydeligvalg om hvem (gateway eller API) har ansvar for sikkerhetsmessig.
+////</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kildedata &lt;data-object&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataprodukt som tilbys av datatilbyder
+Produktet kan være fra en kilde sammensatt av flere innen et domene</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UiO &lt;grouping&gt;</p></td>
@@ -357,33 +379,45 @@ Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kildedata &lt;data-object&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataprodukt som tilbys av datatilbyder
+Produktet kan være fra en kilde sammensatt av flere innen et domene</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway hos dataeier / OAuth resource server &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API gateway beskytter ressurser og monitorerer tilgang. Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll. Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway hos datatilbyder / OAuth resource server &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API gateway beskytter ressurser og monitorerer tilgang.
+Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll.
+Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
 <p class="tableblock">Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
-<p class="tableblock">*  Validere tilgangstoken
-*  Beskytte mot inntrenging og andre trusler
-• Håndtere volumbegrensninger og andre abonnementsordninger
-• Håndheve tilgangsstyring
-• Samle inn data om bruken av API-er
-• [orkestrering mellom interntjeneser??]</p>
-<p class="tableblock">Prinsipp fra Steiner:
+<p class="tableblock">  *  Validere tilgangstoken
+  *  Beskytte mot inntrenging og andre trusler
+  * Håndtere volumbegrensninger og andre abonnementsordninger
+  * Håndheve tilgangsstyring
+  * Samle inn data om bruken av API-er
+  * Orkestrering mellom interntjenester</p>
+<p class="tableblock">////
+Prinsipp fra Steiner:
 Oppgaver både sikkerhetsperspektiv og forvaltningsperspektivet
 Dersom gatway skal stå for sikkerheten, MÅ VÆRE SIKKER PÅ at API ikke kan nås utenom gateway
 Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
-<p class="tableblock">Det må være et tydeligvalg om hvem (gateway eller API) har ansvar for sikkerhetsmessig.</p></td>
+<p class="tableblock">Det må være et tydeligvalg om hvem (gateway eller API) har ansvar for sikkerhetsmessig.
+////</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kildedata &lt;data-object&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataprodukt som tilbys av datatilbyder
+Produktet kan være fra en kilde sammensatt av flere innen et domene</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect2">
 <h3 id="_api_management_integrert_med_iam"><a class="anchor" href="#_api_management_integrert_med_iam"></a>1.3. API management integrert med IAM</h3>
+<div class="paragraph">
+<p>Infrastruktur for Identitetshåndtering og tilgangsstyring (IAM) utfyller API management og må fungere sammen. IAM utføres av komponenter i den øvre delen av viewet. API managaement utføres av kompontenter i den nedre delen av viewet. Ressursportalen og tjenesten for tildeling av rettigheter til klienter deltar i begge funksjoner.</p>
+</div>
+<div class="paragraph">
+<p>IAM styrer sluttbrukeres tilgang til tjenester, basert på både autentisering av deres identitet og deres roller hos institusjoner. API management styrer tilgang til data gjennom API basert på policy eller godkjenning fra dataforvalter. Avgjørelsen om å godkjenne tilgang til data kan godt være basert på en sluttbrukers rolle hos en institusjon.​</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/API%20management%20integrert%20med%20IAM.png" alt="API management integrert med IAM image">
@@ -404,12 +438,20 @@ Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument  &lt;grouping&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Komponenter som utgjør datakonsument, det vil si Universitetet, Høyskolens eller andre, sitt grensesnitt for datadeling</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sluttbruker &lt;business-actor&gt;</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Klient &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beskyttet tjeneste / klient hos datakonsument  &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som IAM beskytter tilgang til. Tjenesten kan også være en konsument av data gjennom API, det vil si Universitet, Høyskole eller andre som gir tilgang til data fra datatilbyder.</p>
+<p class="tableblock">Komponenten tilbyr:
+  * autentisering  gjennom en Autentiseringstjeneste
+  * oppslag i felleskomponeneter for tilgang til datatilbyders dataprodukter
+  * tilgang til ressurser hos datatilbyder</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identitetstilbyder &lt;business-role&gt;</p></td>
@@ -417,7 +459,7 @@ Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Infrastruktur &lt;grouping&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Felleskomponenter i UHF-infrastrukturen for datadeling</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal &lt;application-component&gt;</p></td>
@@ -425,19 +467,23 @@ Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Roller og tilgangsregler &lt;data-object&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon av roller som blir brukt til å styre autorisasjon for å gi tilgang for en klient til et eller flere API.
+Definisjon av regler for tilgang til et eller flere API</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Attributter /grunndata &lt;data-object&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attributter / grunndata &lt;data-object&gt;</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjeneter realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens. En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens.
+En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
 <p class="tableblock">Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
-<p class="tableblock">Per i dag er Scopes er grovkornet
+<p class="tableblock">////
+Per i dag er Scopes er grovkornet
 Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
-underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p></td>
+underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.
+////</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Klientregister &lt;application-component&gt;</p></td>
@@ -445,35 +491,41 @@ underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UiX &lt;grouping&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kildedata &lt;data-object&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UiX / Datatilbyder &lt;grouping&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Komponenter som utgjør datatilbyder, det vil si Universitetet eller Høyskolens, grensesnitt for datadeling</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kildedata &lt;data-object&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataprodukt som tilbys av datatilbyder
+Produktet kan være fra en kilde sammensatt av flere innen et domene</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway hos dataeier / OAuth resource server &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API gateway beskytter ressurser og monitorerer tilgang. Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll. Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kildedata &lt;data-object&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataprodukt som tilbys av datatilbyder
+Produktet kan være fra en kilde sammensatt av flere innen et domene</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway hos datatilbyder / OAuth resource server &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API gateway beskytter ressurser og monitorerer tilgang.
+Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll.
+Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
 <p class="tableblock">Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
-<p class="tableblock">*  Validere tilgangstoken
-*  Beskytte mot inntrenging og andre trusler
-• Håndtere volumbegrensninger og andre abonnementsordninger
-• Håndheve tilgangsstyring
-• Samle inn data om bruken av API-er
-• [orkestrering mellom interntjeneser??]</p>
-<p class="tableblock">Prinsipp fra Steiner:
+<p class="tableblock">  *  Validere tilgangstoken
+  *  Beskytte mot inntrenging og andre trusler
+  * Håndtere volumbegrensninger og andre abonnementsordninger
+  * Håndheve tilgangsstyring
+  * Samle inn data om bruken av API-er
+  * Orkestrering mellom interntjenester</p>
+<p class="tableblock">////
+Prinsipp fra Steiner:
 Oppgaver både sikkerhetsperspektiv og forvaltningsperspektivet
 Dersom gatway skal stå for sikkerheten, MÅ VÆRE SIKKER PÅ at API ikke kan nås utenom gateway
 Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
-<p class="tableblock">Det må være et tydeligvalg om hvem (gateway eller API) har ansvar for sikkerhetsmessig.</p></td>
+<p class="tableblock">Det må være et tydeligvalg om hvem (gateway eller API) har ansvar for sikkerhetsmessig.
+////</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Autentiseringstjeneste &lt;application-service&gt;</p></td>
@@ -505,7 +557,7 @@ Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Infrastruktur &lt;grouping&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Felleskomponenter i UHF-infrastrukturen for datadeling</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tokentjeneste &lt;application-service&gt;</p></td>
@@ -513,11 +565,11 @@ Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Registrere API i UHF sektoren &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Programtjeneste for å registrere og vedlikeholde API som er tilgjengelige i Universitets og Høyskole-sektoren</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal &lt;application-component&gt;</p></td>
@@ -525,11 +577,14 @@ Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjeneter realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens. En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens.
+En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
 <p class="tableblock">Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
-<p class="tableblock">Per i dag er Scopes er grovkornet
+<p class="tableblock">////
+Per i dag er Scopes er grovkornet
 Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
-underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p></td>
+underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.
+////</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Klientregister &lt;application-component&gt;</p></td>
@@ -537,18 +592,28 @@ underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF API manager  &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Administrativ komponent som kontrollerer policy og livssyklus for definisjon og forvaltning av API. Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstjener. Ansvaret til API manager inkluderer:</p>
-<p class="tableblock">* Sentralisert API administrasjon og forvaltning av API-katalogen
-* Håndtering av registrerings- og introduksjonsprosesser for API utviklere
-* Håndtere livssyklusen til et API</p>
-<p class="tableblock">Ivareta registrering, forvaltning og og utvikling av klientrettigheter</p>
-<p class="tableblock">Hva tilbyr API av datamodell
-Hvordan ønsker API å sikre seg selv
-En klient må forholde seg til</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrativ komponent som kontrollerer policy og livssyklus for definisjon og forvaltning av API.
+Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstjener.</p>
+<p class="tableblock">Ansvaret til API manager inkluderer:
+  * Sentralisert API Gateway som håndterer sikkerhetsretningslinjer, og sender kall til bakenforliggende API
+  * Sentralisert publisering av API spesifikasjon (OpenAPI/RAML), dokumentasjon
+  * Sentralisert API administrasjon og forvaltning av API-katalogen
+  * Håndtering av registrerings- og introduksjonsprosesser for API utviklere
+  * Håndtere livssyklusen til et API, uvikling, test, utrulling, nye versjoner, nedlegging
+  * Ivareta registrering, forvaltning og og utvikling av klientrettigheter
+  * Rapportering og analyse for å monitorere bruk og last</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF API katalog &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p>
+<p class="tableblock">UHF API katalog kan inneholde
+  * Navn på API
+  * Tekstlig beskrivelse av API
+  * Informasjonsmodell / Datamodell for API som tilbys
+  * Kildeinformasjon for data, begrepsinformasjon
+  * Informasjon om tilgang, juridiske og tekniske begrensinger for bruk
+  * Eksempelkode, interaktiv API-konsoll og sandkasse for test
+  * Informasjon om hvordan få support og hjelp fra utsteder</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Nasjonal infrastruktur &lt;grouping&gt;</p></td>
@@ -584,21 +649,18 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 </table>
 </div>
 <div class="sect2">
-<h3 id="_registrere_api_uhf"><a class="anchor" href="#_registrere_api_uhf"></a>1.5. Registrere API UHF</h3>
+<h3 id="_publiser_api_uhf"><a class="anchor" href="#_publiser_api_uhf"></a>1.5. Publiser API UHF</h3>
 <div class="paragraph">
-<p>En arbeidsflyt som datatilbyder må gjennomføre for å gjøre et API synlig og tilgjengelig gjennom kataloger og søkeløsninger. Metadata om APIet blir registrert i API-katalogen. Metadata inkluderer begreper og datamodeller omfattet av datasettet som APIet tilgjengeliggjør, samt tilganger (scopes) knyttet til APIet som kan tildeles konsumenter.</p>
-</div>
-<div class="paragraph">
-<p>Kanskje omdøpe kapabiliteten til "Publiser API"</p>
+<p>En prosessflyt som datatilbyder må gjennomføre for å gjøre et API synlig og tilgjengelig gjennom kataloger og søkeløsninger. Metadata om APIet blir registrert i API-katalogen. Metadata inkluderer begreper og datamodeller omfattet av datasettet som APIet tilgjengeliggjør, samt tilganger (scopes) knyttet til APIet som kan tildeles konsumenter.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/Registrere%20API%20UHF.png" alt="Registrere API UHF image">
+<img src="_images/Publiser%20API%20UHF.png" alt="Publiser API UHF image">
 </div>
-<div class="title">Figure 5. Registrere API UHF</div>
+<div class="title">Figure 5. Publiser API UHF</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 5. Elementer i view for Registrere API UHF</caption>
+<caption class="title">Table 5. Elementer i view for Publiser API UHF</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -622,6 +684,8 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder &lt;business-role&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p>
+<p class="tableblock">Datatibyder har definisjonsrett og har rettigheter til å behandle data
+Datatilbyder kan sette sammen data som tilbyderen har til et dataprodukt som tilbys datakonsumenter gjennom et API</p>
 <p class="tableblock">API Eiere  (kan eie Data som API gir tilgang til, eller system som tilbyr APIet)??</p>
 <p class="tableblock">Når virksomheten tilbyr åpne data, vil det være virksomheten som eier dataene. (men det bør vel definere et domen-eier innenfor virksomheten)</p>
 <p class="tableblock">Data eier på to nivå: f. eks. studieavdelingen (er ikke dette behandlingsansvarlig?) spør studenten om de gir samtykke til å gi tilgang til data om studenten som hen eier.</p></td>
@@ -638,7 +702,7 @@ virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandling
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Registrere API i UHF sektoren &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Programtjeneste for å registrere og vedlikeholde API som er tilgjengelige i Universitets og Høyskole-sektoren</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">API Beskrivelse  &lt;data-object&gt;</p></td>
@@ -652,7 +716,7 @@ Tjeneste "administrasjonssentre" vil ha rettigheter til å registrere på vegne 
 Definere hvilke scopes finnes koblet til et API</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere API &lt;capability&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publiser API &lt;capability&gt;</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -665,18 +729,28 @@ Definere hvilke scopes finnes koblet til et API</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF API manager  &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Administrativ komponent som kontrollerer policy og livssyklus for definisjon og forvaltning av API. Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstjener. Ansvaret til API manager inkluderer:</p>
-<p class="tableblock">* Sentralisert API administrasjon og forvaltning av API-katalogen
-* Håndtering av registrerings- og introduksjonsprosesser for API utviklere
-* Håndtere livssyklusen til et API</p>
-<p class="tableblock">Ivareta registrering, forvaltning og og utvikling av klientrettigheter</p>
-<p class="tableblock">Hva tilbyr API av datamodell
-Hvordan ønsker API å sikre seg selv
-En klient må forholde seg til</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrativ komponent som kontrollerer policy og livssyklus for definisjon og forvaltning av API.
+Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstjener.</p>
+<p class="tableblock">Ansvaret til API manager inkluderer:
+  * Sentralisert API Gateway som håndterer sikkerhetsretningslinjer, og sender kall til bakenforliggende API
+  * Sentralisert publisering av API spesifikasjon (OpenAPI/RAML), dokumentasjon
+  * Sentralisert API administrasjon og forvaltning av API-katalogen
+  * Håndtering av registrerings- og introduksjonsprosesser for API utviklere
+  * Håndtere livssyklusen til et API, uvikling, test, utrulling, nye versjoner, nedlegging
+  * Ivareta registrering, forvaltning og og utvikling av klientrettigheter
+  * Rapportering og analyse for å monitorere bruk og last</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF API katalog &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p>
+<p class="tableblock">UHF API katalog kan inneholde
+  * Navn på API
+  * Tekstlig beskrivelse av API
+  * Informasjonsmodell / Datamodell for API som tilbys
+  * Kildeinformasjon for data, begrepsinformasjon
+  * Informasjon om tilgang, juridiske og tekniske begrensinger for bruk
+  * Eksempelkode, interaktiv API-konsoll og sandkasse for test
+  * Informasjon om hvordan få support og hjelp fra utsteder</p></td>
 </tr>
 </tbody>
 </table>
@@ -684,7 +758,7 @@ En klient må forholde seg til</p></td>
 <div class="sect2">
 <h3 id="_tilgjengeliggjøre_data_etter_forspørsel_løsningsmønster_uhf"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forspørsel_løsningsmønster_uhf"></a>1.6. Tilgjengeliggjøre data etter forspørsel løsningsmønster UHF</h3>
 <div class="paragraph">
-<p>En arbeidsflyt som datatilbyder må gjennomføre for å tildele rettigheter til en konsument som ber om tilgang til data. En datatilbyder mottar forespørsel om tilgang til et API på vegne av en organisasjon eller bruker. Dataeieren tar stilling til om konsumenten skal få tilgang til data gjennom APIet. Tilgang registreres knyttet til konsumentens klient (applikasjonen som benytter APIet) i klientregisteret.</p>
+<p>En prosessflyt som datatilbyder må gjennomføre for å tildele rettigheter til en konsument som ber om tilgang til data. En datatilbyder mottar forespørsel om tilgang til et API på vegne av en organisasjon eller bruker. Dataeieren tar stilling til om konsumenten skal få tilgang til data gjennom APIet. Tilgang registreres knyttet til konsumentens klient (applikasjonen som benytter APIet) i klientregisteret.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -712,6 +786,8 @@ En klient må forholde seg til</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder &lt;business-role&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p>
+<p class="tableblock">Datatibyder har definisjonsrett og har rettigheter til å behandle data
+Datatilbyder kan sette sammen data som tilbyderen har til et dataprodukt som tilbys datakonsumenter gjennom et API</p>
 <p class="tableblock">API Eiere  (kan eie Data som API gir tilgang til, eller system som tilbyr APIet)??</p>
 <p class="tableblock">Når virksomheten tilbyr åpne data, vil det være virksomheten som eier dataene. (men det bør vel definere et domen-eier innenfor virksomheten)</p>
 <p class="tableblock">Data eier på to nivå: f. eks. studieavdelingen (er ikke dette behandlingsansvarlig?) spør studenten om de gir samtykke til å gi tilgang til data om studenten som hen eier.</p></td>
@@ -779,7 +855,7 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal &lt;application-component&gt;</p></td>
@@ -796,7 +872,7 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 <div class="sect2">
 <h3 id="_få_tilgang_til_data_løsningsmønster_uhf"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf"></a>1.7. Få tilgang til data - løsningsmønster UHF</h3>
 <div class="paragraph">
-<p>En arbeidsflyt en konsument av data må gjennomføre for å få tildelt rettigheter til data gjennom et API. Det omfatter å få kjennskap til aktuelt API gjennom API-katalogen, autentisere konsumenten, inngå avtale om bruk av data, samt å registrere tilganger hos den tekniske komponenten som skal utføre tjenestekallet. Dersom det dreier seg om tilgang til et åpent tilgjengelig API, kan enkelte delaktiviteter i prosessene hoppes over, men for å kunne logge informasjon om bruk av APIer bør alle konsumenter av et API registreres i klientregisteret.</p>
+<p>En prosessflyt en konsument av data må gjennomføre for å få tildelt rettigheter til data gjennom et API. Det omfatter å få kjennskap til aktuelt API gjennom API-katalogen, autentisere konsumenten, inngå avtale om bruk av data, samt å registrere tilganger hos den tekniske komponenten som skal utføre tjenestekallet. Dersom det dreier seg om tilgang til et åpent tilgjengelig API, kan enkelte delaktiviteter i prosessene hoppes over, men for å kunne logge informasjon om bruk av APIer bør alle konsumenter av et API registreres i klientregisteret.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -857,11 +933,19 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF API katalog &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p>
+<p class="tableblock">UHF API katalog kan inneholde
+  * Navn på API
+  * Tekstlig beskrivelse av API
+  * Informasjonsmodell / Datamodell for API som tilbys
+  * Kildeinformasjon for data, begrepsinformasjon
+  * Informasjon om tilgang, juridiske og tekniske begrensinger for bruk
+  * Eksempelkode, interaktiv API-konsoll og sandkasse for test
+  * Informasjon om hvordan få support og hjelp fra utsteder</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">API tilgangs-forespørsel &lt;application-service&gt;</p></td>
@@ -869,11 +953,14 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjeneter realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens. En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens.
+En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
 <p class="tableblock">Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
-<p class="tableblock">Per i dag er Scopes er grovkornet
+<p class="tableblock">////
+Per i dag er Scopes er grovkornet
 Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
-underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p></td>
+underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.
+////</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Klientregister &lt;application-component&gt;</p></td>
@@ -890,7 +977,7 @@ underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
 <div class="sect2">
 <h3 id="_innhente_data_løsningsmønster_uhf"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf"></a>1.8. Innhente data - løsningsmønster UHF</h3>
 <div class="paragraph">
-<p>En arbeidsflyt en konsument utfører når det utføres et tjenestekall for å innhente data gjennom et API. API-adressen hentes i API-katalogen. Tilgang til APIet byttes inn mot et kjøretids-token i autoriseringstjenesten. Tjenestekall til APIet utføres gjennom API gateway der tokenet benyttes for å få tilgang. Dersom det er et åpent API er det kun relevante prossessteg som utføres.</p>
+<p>En prosessflyt en konsument utfører når det utføres et tjenestekall for å innhente data gjennom et API. API-adressen hentes i API-katalogen. Tilgang til APIet byttes inn mot et kjøretids-token i autoriseringstjenesten. Tjenestekall til APIet utføres gjennom API gateway der tokenet benyttes for å få tilgang. Dersom det er et åpent API er det kun relevante prossessteg som utføres.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -912,6 +999,69 @@ underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Infrastruktur &lt;grouping&gt;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslings-tjeneste &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data over aktuell transportprotokoll, f.eks, gjennom asynkrone medlinger eller synkrone API-oppslag.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samtykkeregistererings-tjeneste &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å innhente samtykke fra den registrert som dataene gjelder. Dette kan være en person eller en virksomhet.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adressetjeneste &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som gir mulighet til å slå opp teknisk endepunkt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Virksomhetssertifikat &lt;data-object&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En virksomhets elektroniske ID. Benyttes for å autentisere virksomheten overfor tokentjenesten.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tokentjeneste &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som utsteder sikkerhetsbilletter. Sikkerhetsbillett utstedes basert på tildelte rettigheter og eventuelle representasjonsforhold.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oppslag representasjons-forhold &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som benyttes av tokentjenesten for å kontrollere om det foreligger et delegert representasjonsforhold fra konsument til leverendør i autorisasjonstjenesten til Altinn.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilganger konsument &lt;data-object&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens.
+En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
+<p class="tableblock">Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
+<p class="tableblock">////
+Per i dag er Scopes er grovkornet
+Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
+underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.
+////</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UHF API katalog &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p>
+<p class="tableblock">UHF API katalog kan inneholde
+  * Navn på API
+  * Tekstlig beskrivelse av API
+  * Informasjonsmodell / Datamodell for API som tilbys
+  * Kildeinformasjon for data, begrepsinformasjon
+  * Informasjon om tilgang, juridiske og tekniske begrensinger for bruk
+  * Eksempelkode, interaktiv API-konsoll og sandkasse for test
+  * Informasjon om hvordan få support og hjelp fra utsteder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Endepunkt (adresse) &lt;data-object&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som representerer teknisk adresse til et API eller ressurs.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nasjonal Infrastruktur &lt;grouping&gt;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten &lt;application-component&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[Torget]
 Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering.</p>
@@ -926,24 +1076,8 @@ virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandling
 <td class="tableblock halign-left valign-top"><p class="tableblock">Den som innhenter eller mottar data fra andre aktører.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tokentjeneste &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som utsteder sikkerhetsbilletter. Sikkerhetsbillett utstedes basert på tildelte rettigheter og eventuelle representasjonsforhold.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Virksomhetssertifikat &lt;data-object&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">En virksomhets elektroniske ID. Benyttes for å autentisere virksomheten overfor tokentjenesten.</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Innhente data &lt;capability&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å innhente data fra en annen aktør.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Endepunkt (adresse) &lt;data-object&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som representerer teknisk adresse til et API eller ressurs.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oppslag representasjons-forhold &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som benyttes av tokentjenesten for å kontrollere om det foreligger et delegert representasjonsforhold fra konsument til leverendør i autorisasjonstjenesten til Altinn.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Slå opp data gjennom et API  &lt;business-process&gt;</p></td>
@@ -974,10 +1108,6 @@ virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandling
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tilganger konsument &lt;data-object&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Altinn autorisasjon &lt;application-component&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[Torget]
 Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
@@ -994,18 +1124,6 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 <td class="tableblock halign-left valign-top"><p class="tableblock">Del av Felles datakatalog som gir mulighet for å søke etter API-er og lese API-spesifikasjoner <a href="https://fellesdatakatalog.brreg.no/apis" class="bare">https://fellesdatakatalog.brreg.no/apis</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Adressetjeneste &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som gir mulighet til å slå opp teknisk endepunkt</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslings-tjeneste &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data over aktuell transportprotokoll, f.eks, gjennom asynkrone medlinger eller synkrone API-oppslag.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Samtykkeregistererings-tjeneste &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å innhente samtykke fra den registrert som dataene gjelder. Dette kan være en person eller en virksomhet.</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Altinn autorisasjon &lt;application-component&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">[Torget]
 Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
@@ -1017,25 +1135,13 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 <p class="tableblock">Mer om Altinn autorisasjon:
 <a href="https://www.altinndigital.no/produkter/styring-av-tilgang/" class="bare">https://www.altinndigital.no/produkter/styring-av-tilgang/</a></p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjeneter realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens. En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
-<p class="tableblock">Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
-<p class="tableblock">Per i dag er Scopes er grovkornet
-Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
-underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF API katalog &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p></td>
-</tr>
 </tbody>
 </table>
 </div>
 <div class="sect2">
 <h3 id="_avgi_data_løsningsmønster_uhf"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf"></a>1.9. Avgi data - løsningsmønster UHF</h3>
 <div class="paragraph">
-<p>En arbeidsflyt en tilbyder av data utfører for å svare på en dataforespørsel. Tilbyder mottar forespørsel om oppslag med et aksesstoken. Klienten som forespør autentiseres og token valideres. Eventuelt mer fin-granulert tilgangskontroll utføres og data returneres. Tilgang kontrolleres kun dersom det er snakk om et sikret API.</p>
+<p>En prosessflyt en tilbyder av data utfører for å svare på en dataforespørsel. Tilbyder mottar forespørsel om oppslag med et aksesstoken. Klienten som forespør autentiseres og token valideres. Eventuelt mer fin-granulert tilgangskontroll utføres og data returneres. Tilgang kontrolleres kun dersom det er snakk om et sikret API.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1076,6 +1182,8 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder &lt;business-role&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p>
+<p class="tableblock">Datatibyder har definisjonsrett og har rettigheter til å behandle data
+Datatilbyder kan sette sammen data som tilbyderen har til et dataprodukt som tilbys datakonsumenter gjennom et API</p>
 <p class="tableblock">API Eiere  (kan eie Data som API gir tilgang til, eller system som tilbyr APIet)??</p>
 <p class="tableblock">Når virksomheten tilbyr åpne data, vil det være virksomheten som eier dataene. (men det bør vel definere et domen-eier innenfor virksomheten)</p>
 <p class="tableblock">Data eier på to nivå: f. eks. studieavdelingen (er ikke dette behandlingsansvarlig?) spør studenten om de gir samtykke til å gi tilgang til data om studenten som hen eier.</p></td>
@@ -1099,7 +1207,7 @@ Eksempler på rettigheter kan komme av samtykker fra person eller virksomhet, el
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kontroller tilgang &lt;business-process&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroll og håndheving av konsumentens rettigheter til å få forespurte data.  I tillegg til "validering av sikkerhetsbillet", kan det være behov for kontroll mot virksomhetsinterne policies.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroll og håndheving av konsumentens rettigheter til å få forespurte data.  I tillegg til "validering av sikkerhetsbillett", kan det være behov for kontroll mot virksomhetsinterne policies.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Autentisere konsument &lt;business-process&gt;</p></td>
@@ -1122,20 +1230,24 @@ Eksempler på rettigheter kan komme av samtykker fra person eller virksomhet, el
 <td class="tableblock halign-left valign-top"><p class="tableblock">Evne til å avgi data på forespørsel. Kan omfatte tilgangsstyring.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway hos dataeier / OAuth resource server &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API gateway beskytter ressurser og monitorerer tilgang. Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll. Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway hos datatilbyder / OAuth resource server &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API gateway beskytter ressurser og monitorerer tilgang.
+Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll.
+Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
 <p class="tableblock">Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
-<p class="tableblock">*  Validere tilgangstoken
-*  Beskytte mot inntrenging og andre trusler
-• Håndtere volumbegrensninger og andre abonnementsordninger
-• Håndheve tilgangsstyring
-• Samle inn data om bruken av API-er
-• [orkestrering mellom interntjeneser??]</p>
-<p class="tableblock">Prinsipp fra Steiner:
+<p class="tableblock">  *  Validere tilgangstoken
+  *  Beskytte mot inntrenging og andre trusler
+  * Håndtere volumbegrensninger og andre abonnementsordninger
+  * Håndheve tilgangsstyring
+  * Samle inn data om bruken av API-er
+  * Orkestrering mellom interntjenester</p>
+<p class="tableblock">////
+Prinsipp fra Steiner:
 Oppgaver både sikkerhetsperspektiv og forvaltningsperspektivet
 Dersom gatway skal stå for sikkerheten, MÅ VÆRE SIKKER PÅ at API ikke kan nås utenom gateway
 Noen må passe VELDIG godt på gatewayen og holder den oppdatert.</p>
-<p class="tableblock">Det må være et tydeligvalg om hvem (gateway eller API) har ansvar for sikkerhetsmessig.</p></td>
+<p class="tableblock">Det må være et tydeligvalg om hvem (gateway eller API) har ansvar for sikkerhetsmessig.
+////</p></td>
 </tr>
 </tbody>
 </table>
