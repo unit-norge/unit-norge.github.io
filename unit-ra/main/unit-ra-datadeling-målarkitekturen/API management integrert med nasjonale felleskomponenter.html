@@ -115,10 +115,13 @@
 <article class="doc">
 <h1 class="page">API management integrert med nasjonale felleskomponenter</h1>
 <div class="paragraph">
-<p>​​Det er behov for datadeling og API Management på tvers av sektorer. Høyere utdanning og forskning ønsker utstrakt bruk av nasjonale felleskomponenter, som omtalt i Digitaliseringsrundskrivet. For å oppnå dette må infrastrukturen videreutvikles.​</p>
+<p>​​Det er behov for datadeling og API Management på tvers av sektorer. Høyere utdanning og forskning ønsker utstrakt bruk av nasjonale felleskomponenter, som omtalt i Digitaliseringsrundskrivet. For å oppnå dette må både sektorens og den nasjonale infrastrukturen videreutvikles.​</p>
 </div>
 <div class="paragraph">
-<p>Føderert tilgangsstyring for datadeling på tvers av sektorer krever blant annet standardisering av tilgangstokens for å oppnå gjennomgående tillitskjeder. ​Figuren viser kobling til maskinporten fra sektoren vår da det er fullt mulig å benytte maskinporten direkte uten føderering av tilgangsstyring. Det er også ønskelig at brukere kan gi samtykke til sine data et sted nasjonalt, inklusivt til kilder i høyere utdanning og forskning. Samtykke til kilder i vår sektor fra Altinn autorisasjon er foreløpig ikke imlementert, så ingen kobling til Altinn autorisasjon er visst i figuren. ​</p>
+<p>Føderert tilgangsstyring for datadeling på tvers av sektorer er ønskelig, og det krever blant annet standardisering av tilgangstokens for å oppnå gjennomgående tillitskjeder. ​Det er også ønskelig at brukere kan gi samtykke til sine data et sted nasjonalt, inklusivt til kilder i høyere utdanning og forskning. Det hadde vært ønskelig om en felles Norsk samtykketjeneste kunne være integrert med funksjonalitet som vi forvente skal realiseres i IAM løsningent til høyere utdanning og forskning.</p>
+</div>
+<div class="paragraph">
+<p>Figuren viser kun kobling til maskinporten direkte som er mulig i dag.  Det er planlagt automatisert høsting av API katalogen fra høyere utdanning og forskning til Felles API-katalog som visst i figuren. Samtykke til kilder i vår sektor fra Altinn autorisasjon er foreløpig ikke imlementert, så ingen kobling til Altinn autorisasjon er visst i figuren. ​</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -153,19 +156,19 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter".</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Test</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportalen holder oversik over og tildeler tilganger til beskyttede ressurser i høyere utdanning og forskningssektoren i henhold til føringer fra eierne av disse ressursene. Tilganger er gitt i form av OAuth2 grants og tokens. Ressursportalen er en del av den felles infrastrukturen for føderert API management for høyere utdanning og forskning. Den registrerer og holder oversikt over API, holder oversikt over klienter som har blitt tildelt tilgang til API og hvilke tilganger det gjelder. Ressursportalen benytter Jason Web Token formattert OAuth2 sikkerhetstoken for å gi tilgang til ressurser gjennom API gateway nær de beskyttede ressursene.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OpenID Connect eller OAuth 2 grants og tokens.
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OAuth 2 grants og tokens.
 En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
 <p class="tableblock">Scope (rettighet) og Audience (identifikator eller ressurs-server f. eks. FS)</p>
 <p class="tableblock">////
-Per i dag er Scopes er grovkornet
+Per i dag er Scopes grovkornet
 Rich authorization requsts (ny spesifikasjon) for å utvide scope begrep i IETF
 underenhet og behandlingssted, behandlingsgrunnlag og roller jobbes det med.
 ////</p></td>
