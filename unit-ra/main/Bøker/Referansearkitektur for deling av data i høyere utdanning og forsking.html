@@ -143,7 +143,7 @@
 <li><a href="#_føderert_api_management">6.1.2. Føderert API management</a></li>
 <li><a href="#_api_management_integrert_med_iam">6.1.3. API management integrert med IAM</a></li>
 <li><a href="#_api_management_integrert_med_nasjonale_felleskomponenter">6.1.4. API management integrert med nasjonale felleskomponenter</a></li>
-<li><a href="#_publiser_api_uhf">6.1.5. Publiser API UHF</a></li>
+<li><a href="#_publiser_api">6.1.5. Publiser API</a></li>
 <li><a href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf">6.1.6. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</a></li>
 <li><a href="#_få_tilgang_til_data_løsningsmønster_uhf">6.1.7. Få tilgang til data - løsningsmønster UHF</a></li>
 <li><a href="#_innhente_data_løsningsmønster_uhf">6.1.8. Innhente data - løsningsmønster UHF</a></li>
@@ -182,7 +182,7 @@
 <p><span class="image"><img src="_images/image1.jpeg" alt="image1"></span></p>
 </div>
 <div class="paragraph">
-<p>Wed Feb 17 2021 10:10:59 GMT+0100 (CET):leveloffset: +1
+<p>Wed Feb 17 2021 12:51:06 GMT+0100 (CET):leveloffset: +1
 = Bakgrunn
 :wysiwig_editing: 1
 :imagepath: main@unit-ra:unit-ra-datadeling-bakgrunn:
@@ -1179,7 +1179,7 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 Viktig innholde er bl.a. URL</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OAuth 2 grants og tokens.
 En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tr>
@@ -1242,15 +1242,15 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportalen holder oversik over og tildeler tilganger til beskyttede ressurser i høyere utdanning og forskningssektoren i henhold til føringer fra eierne av disse ressursene. Tilganger er gitt i form av OAuth2 grants og tokens. Ressursportalen er en del av den felles infrastrukturen for føderert API management for høyere utdanning og forskning. Den registrerer og holder oversikt over API, holder oversikt over klienter som har blitt tildelt tilgang til API og hvilke tilganger det gjelder. Ressursportalen benytter Jason Web Token formattert OAuth2 sikkerhetstoken for å gi tilgang til ressurser gjennom API gateway nær de beskyttede ressursene.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportalen holder oversikt over og tildeler tilganger til beskyttede ressurser i høyere utdanning og forskningssektoren i henhold til føringer fra eierne av disse ressursene. Tilganger er gitt i form av OAuth2 grants og tokens. Ressursportalen er en del av den felles infrastrukturen for føderert API management for høyere utdanning og forskning. Den registrerer og holder oversikt over API, holder oversikt over klienter som har blitt tildelt tilgang til API og hvilke tilganger det gjelder. Ressursportalen benytter Jason Web Token formattert OAuth2 sikkerhetstoken for å gi tilgang til ressurser gjennom API gateway nær de beskyttede ressursene.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OAuth 2 grants og tokens.
 En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Klientregister &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Klientregister &lt;application-component&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p></td>
 </tr>
 <tr>
@@ -1267,9 +1267,9 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
   * Rapportering og analyse for å monitorere bruk og last</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF API katalog &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p>
-<p class="tableblock">UHF API katalog kan inneholde
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F API katalog &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert i UH/F sektoren</p>
+<p class="tableblock">UH/F API katalog kan inneholde
   * Navn på API
   * Tekstlig beskrivelse av API
   * Informasjonsmodell / Datamodell for API som tilbys
@@ -1279,12 +1279,12 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
   * Informasjon om hvordan få support og hjelp fra utsteder</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere API i UHF sektoren &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere API i UH/F sektoren &lt;application-service&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Programtjeneste for å registrere og vedlikeholde API som er tilgjengelige i Universitets og Høyskole-sektoren</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UHF sektoren blir tildelt rettighetene lagret i UHF klientregisteret i Ressusportalen. Om klienten er fra utenfor UHF sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F tildel rettigheter til klienter &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuell behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UH/F sektoren blir tildelt rettighetene lagret i UH/F klientregisteret i Ressusportalen. Om klienten er fra utenfor UH/F sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UiX &lt;grouping&gt;</p></td>
@@ -1396,7 +1396,7 @@ Produktet kan være fra en kilde eller sammensatt av flere innen et domene</p></
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportalen holder oversik over og tildeler tilganger til beskyttede ressurser i høyere utdanning og forskningssektoren i henhold til føringer fra eierne av disse ressursene. Tilganger er gitt i form av OAuth2 grants og tokens. Ressursportalen er en del av den felles infrastrukturen for føderert API management for høyere utdanning og forskning. Den registrerer og holder oversikt over API, holder oversikt over klienter som har blitt tildelt tilgang til API og hvilke tilganger det gjelder. Ressursportalen benytter Jason Web Token formattert OAuth2 sikkerhetstoken for å gi tilgang til ressurser gjennom API gateway nær de beskyttede ressursene.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportalen holder oversikt over og tildeler tilganger til beskyttede ressurser i høyere utdanning og forskningssektoren i henhold til føringer fra eierne av disse ressursene. Tilganger er gitt i form av OAuth2 grants og tokens. Ressursportalen er en del av den felles infrastrukturen for føderert API management for høyere utdanning og forskning. Den registrerer og holder oversikt over API, holder oversikt over klienter som har blitt tildelt tilgang til API og hvilke tilganger det gjelder. Ressursportalen benytter Jason Web Token formattert OAuth2 sikkerhetstoken for å gi tilgang til ressurser gjennom API gateway nær de beskyttede ressursene.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Roller og tilgangsregler &lt;data-object&gt;</p></td>
@@ -1408,17 +1408,17 @@ Definisjon av regler for tilgang til et eller flere API</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Opplysninger om personer som skal benyttes i tilgangsstyring.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OAuth 2 grants og tokens.
 En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Klientregister &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Klientregister &lt;application-component&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UHF sektoren blir tildelt rettighetene lagret i UHF klientregisteret i Ressusportalen. Om klienten er fra utenfor UHF sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F tildel rettigheter til klienter &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuell behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UH/F sektoren blir tildelt rettighetene lagret i UH/F klientregisteret i Ressusportalen. Om klienten er fra utenfor UH/F sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UiX / Datatilbyder &lt;grouping&gt;</p></td>
@@ -1493,24 +1493,24 @@ Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logg
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som utsteder sikkerhetsbilletter. Sikkerhetsbillett utstedes basert på tildelte rettigheter og eventuelle representasjonsforhold.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere API i UHF sektoren &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere API i UH/F sektoren &lt;application-service&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Programtjeneste for å registrere og vedlikeholde API som er tilgjengelige i Universitets og Høyskole-sektoren</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UHF sektoren blir tildelt rettighetene lagret i UHF klientregisteret i Ressusportalen. Om klienten er fra utenfor UHF sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F tildel rettigheter til klienter &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuell behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UH/F sektoren blir tildelt rettighetene lagret i UH/F klientregisteret i Ressusportalen. Om klienten er fra utenfor UH/F sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportalen holder oversik over og tildeler tilganger til beskyttede ressurser i høyere utdanning og forskningssektoren i henhold til føringer fra eierne av disse ressursene. Tilganger er gitt i form av OAuth2 grants og tokens. Ressursportalen er en del av den felles infrastrukturen for føderert API management for høyere utdanning og forskning. Den registrerer og holder oversikt over API, holder oversikt over klienter som har blitt tildelt tilgang til API og hvilke tilganger det gjelder. Ressursportalen benytter Jason Web Token formattert OAuth2 sikkerhetstoken for å gi tilgang til ressurser gjennom API gateway nær de beskyttede ressursene.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportalen holder oversikt over og tildeler tilganger til beskyttede ressurser i høyere utdanning og forskningssektoren i henhold til føringer fra eierne av disse ressursene. Tilganger er gitt i form av OAuth2 grants og tokens. Ressursportalen er en del av den felles infrastrukturen for føderert API management for høyere utdanning og forskning. Den registrerer og holder oversikt over API, holder oversikt over klienter som har blitt tildelt tilgang til API og hvilke tilganger det gjelder. Ressursportalen benytter Jason Web Token formattert OAuth2 sikkerhetstoken for å gi tilgang til ressurser gjennom API gateway nær de beskyttede ressursene.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OAuth 2 grants og tokens.
 En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Klientregister &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Klientregister &lt;application-component&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p></td>
 </tr>
 <tr>
@@ -1527,9 +1527,9 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
   * Rapportering og analyse for å monitorere bruk og last</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF API katalog &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p>
-<p class="tableblock">UHF API katalog kan inneholde
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F API katalog &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert i UH/F sektoren</p>
+<p class="tableblock">UH/F API katalog kan inneholde
   * Navn på API
   * Tekstlig beskrivelse av API
   * Informasjonsmodell / Datamodell for API som tilbys
@@ -1572,7 +1572,7 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 </table>
 </div>
 <div class="sect3">
-<h4 id="_publiser_api_uhf"><a class="anchor" href="#_publiser_api_uhf"></a>6.1.5. Publiser API UHF</h4>
+<h4 id="_publiser_api"><a class="anchor" href="#_publiser_api"></a>6.1.5. Publiser API</h4>
 <div class="paragraph">
 <p>En prosessflyt som datatilbyder må gjennomføre for å gjøre et API synlig og tilgjengelig gjennom kataloger og søkeløsninger. Metadata om APIet blir registrert i API-katalogen. Metadata inkluderer begreper og datamodeller omfattet av datasettet som APIet tilgjengeliggjør, samt tilganger (scopes) knyttet til APIet som kan tildeles konsumenter.</p>
 </div>
@@ -1581,12 +1581,12 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../unit-ra-datadeling-målarkitekturen/_images/Publiser%20API%20UHF.png" alt="Publiser API UHF image">
+<img src="../unit-ra-datadeling-målarkitekturen/_images/Publiser%20API.png" alt="Publiser API image">
 </div>
-<div class="title">Figure 9. Publiser API UHF</div>
+<div class="title">Figure 9. Publiser API</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 9. Elementer i view for Publiser API UHF</caption>
+<caption class="title">Table 9. Elementer i view for Publiser API</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1623,7 +1623,7 @@ virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandling
 <a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere API i UHF sektoren &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere API i UH/F sektoren &lt;application-service&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Programtjeneste for å registrere og vedlikeholde API som er tilgjengelige i Universitets og Høyskole-sektoren</p></td>
 </tr>
 <tr>
@@ -1663,9 +1663,9 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
   * Rapportering og analyse for å monitorere bruk og last</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF API katalog &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p>
-<p class="tableblock">UHF API katalog kan inneholde
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F API katalog &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert i UH/F sektoren</p>
+<p class="tableblock">UH/F API katalog kan inneholde
   * Navn på API
   * Tekstlig beskrivelse av API
   * Informasjonsmodell / Datamodell for API som tilbys
@@ -1774,12 +1774,12 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å vurdere og eventuelt gi tilgang til en konsument som ber om tilgang. En tjeneste i UHF Ressursportalen benyttes som lar dataforvalteren beslutte tilgang, enten gjennom en automatisert policy eller gjennom en manuell behandling.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UHF sektoren blir tildelt rettighetene lagret i UHF klientregisteret i Ressusportalen. Om klienten er fra utenfor UHF sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F tildel rettigheter til klienter &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuell behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UH/F sektoren blir tildelt rettighetene lagret i UH/F klientregisteret i Ressusportalen. Om klienten er fra utenfor UH/F sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportalen holder oversik over og tildeler tilganger til beskyttede ressurser i høyere utdanning og forskningssektoren i henhold til føringer fra eierne av disse ressursene. Tilganger er gitt i form av OAuth2 grants og tokens. Ressursportalen er en del av den felles infrastrukturen for føderert API management for høyere utdanning og forskning. Den registrerer og holder oversikt over API, holder oversikt over klienter som har blitt tildelt tilgang til API og hvilke tilganger det gjelder. Ressursportalen benytter Jason Web Token formattert OAuth2 sikkerhetstoken for å gi tilgang til ressurser gjennom API gateway nær de beskyttede ressursene.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportalen holder oversikt over og tildeler tilganger til beskyttede ressurser i høyere utdanning og forskningssektoren i henhold til føringer fra eierne av disse ressursene. Tilganger er gitt i form av OAuth2 grants og tokens. Ressursportalen er en del av den felles infrastrukturen for føderert API management for høyere utdanning og forskning. Den registrerer og holder oversikt over API, holder oversikt over klienter som har blitt tildelt tilgang til API og hvilke tilganger det gjelder. Ressursportalen benytter Jason Web Token formattert OAuth2 sikkerhetstoken for å gi tilgang til ressurser gjennom API gateway nær de beskyttede ressursene.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Forespør dataforvalter &lt;application-service&gt;</p></td>
@@ -1792,6 +1792,9 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 <h4 id="_få_tilgang_til_data_løsningsmønster_uhf"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf"></a>6.1.7. Få tilgang til data - løsningsmønster UHF</h4>
 <div class="paragraph">
 <p>En prosessflyt en konsument av data må gjennomføre for å få tildelt rettigheter til data gjennom et API. Det omfatter å få kjennskap til aktuelt API gjennom API-katalogen, autentisere konsumenten, inngå avtale om bruk av data, samt å registrere tilganger hos den tekniske komponenten som skal utføre tjenestekallet. Dersom det dreier seg om tilgang til et åpent tilgjengelig API, kan enkelte delaktiviteter i prosessene hoppes over, men for å kunne logge informasjon om bruk av APIer bør alle konsumenter av et API registreres i klientregisteret.</p>
+</div>
+<div class="paragraph">
+<p>Viewet bør strengt tatt vise at konsumenten kan finne APIet enten i UH/F sektorens API katalog eller i Felles datakatalog. Vi velger å vise prosessflyten kun med UH/F sektorens komponenter både for å kunne presentere en oversiktlig prosessflyt og fordi forholdet til de nasjonale felleskomponenter er ennå ikke helt avklart.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1851,9 +1854,9 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 <td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å skaffe seg tilgang til tilbudte data fra annen aktør.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF API katalog &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p>
-<p class="tableblock">UHF API katalog kan inneholde
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F API katalog &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert i UH/F sektoren</p>
+<p class="tableblock">UH/F API katalog kan inneholde
   * Navn på API
   * Tekstlig beskrivelse av API
   * Informasjonsmodell / Datamodell for API som tilbys
@@ -1863,20 +1866,20 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
   * Informasjon om hvordan få support og hjelp fra utsteder</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UHF sektoren blir tildelt rettighetene lagret i UHF klientregisteret i Ressusportalen. Om klienten er fra utenfor UHF sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F tildel rettigheter til klienter &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuell behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UH/F sektoren blir tildelt rettighetene lagret i UH/F klientregisteret i Ressusportalen. Om klienten er fra utenfor UH/F sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">API tilgangs-forespørsel &lt;application-service&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">API eieren får forespørsel om den vil gi konsumenten tilgang til APIet.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OAuth 2 grants og tokens.
 En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Klientregister &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Klientregister &lt;application-component&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p></td>
 </tr>
 <tr>
@@ -1943,14 +1946,14 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over tilganger gitt til konsumenter utenfor UHF sektoren tildelt gjennom Maskinporten. Oversikten spesifiserer hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OAuth 2 grants og tokens.
 En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF API katalog &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p>
-<p class="tableblock">UHF API katalog kan inneholde
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F API katalog &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert i UH/F sektoren</p>
+<p class="tableblock">UH/F API katalog kan inneholde
   * Navn på API
   * Tekstlig beskrivelse av API
   * Informasjonsmodell / Datamodell for API som tilbys

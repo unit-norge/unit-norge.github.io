@@ -117,6 +117,9 @@
 <div class="paragraph">
 <p>En prosessflyt en konsument av data må gjennomføre for å få tildelt rettigheter til data gjennom et API. Det omfatter å få kjennskap til aktuelt API gjennom API-katalogen, autentisere konsumenten, inngå avtale om bruk av data, samt å registrere tilganger hos den tekniske komponenten som skal utføre tjenestekallet. Dersom det dreier seg om tilgang til et åpent tilgjengelig API, kan enkelte delaktiviteter i prosessene hoppes over, men for å kunne logge informasjon om bruk av APIer bør alle konsumenter av et API registreres i klientregisteret.</p>
 </div>
+<div class="paragraph">
+<p>Viewet bør strengt tatt vise at konsumenten kan finne APIet enten i UH/F sektorens API katalog eller i Felles datakatalog. Vi velger å vise prosessflyten kun med UH/F sektorens komponenter både for å kunne presentere en oversiktlig prosessflyt og fordi forholdet til de nasjonale felleskomponenter er ennå ikke helt avklart.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/Få%20tilgang%20til%20data%20-%20løsningsmønster%20UHF.png" alt="Få tilgang til data - løsningsmønster UHF image">
@@ -175,9 +178,9 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å skaffe seg tilgang til tilbudte data fra annen aktør.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF API katalog &lt;application-component&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert</p>
-<p class="tableblock">UHF API katalog kan inneholde
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F API katalog &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle API som er registrert i UH/F sektoren</p>
+<p class="tableblock">UH/F API katalog kan inneholde
   * Navn på API
   * Tekstlig beskrivelse av API
   * Informasjonsmodell / Datamodell for API som tilbys
@@ -187,20 +190,20 @@
   * Informasjon om hvordan få support og hjelp fra utsteder</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UHF sektoren blir tildelt rettighetene lagret i UHF klientregisteret i Ressusportalen. Om klienten er fra utenfor UHF sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F tildel rettigheter til klienter &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuell behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UH/F sektoren blir tildelt rettighetene lagret i UH/F klientregisteret i Ressusportalen. Om klienten er fra utenfor UH/F sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">API tilgangs-forespørsel &lt;application-service&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">API eieren får forespørsel om den vil gi konsumenten tilgang til APIet.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OAuth 2 grants og tokens.
 En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Klientregister &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Klientregister &lt;application-component&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p></td>
 </tr>
 <tr>
