@@ -182,7 +182,7 @@
 <p><span class="image"><img src="_images/image1.jpeg" alt="image1"></span></p>
 </div>
 <div class="paragraph">
-<p>Wed Feb 17 2021 09:12:45 GMT+0100 (CET):leveloffset: +1
+<p>Wed Feb 17 2021 09:52:02 GMT+0100 (CET):leveloffset: +1
 = Bakgrunn
 :wysiwig_editing: 1
 :imagepath: main@unit-ra:unit-ra-datadeling-bakgrunn:
@@ -1284,7 +1284,7 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter".</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UHF sektoren blir tildelt rettighetene lagret i UHF klientregisteret i Ressusportalen. Om klienten er fra utenfor UHF sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UiX &lt;grouping&gt;</p></td>
@@ -1418,7 +1418,7 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter".</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UHF sektoren blir tildelt rettighetene lagret i UHF klientregisteret i Ressusportalen. Om klienten er fra utenfor UHF sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UiX / Datatilbyder &lt;grouping&gt;</p></td>
@@ -1498,7 +1498,7 @@ Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logg
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter".</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UHF sektoren blir tildelt rettighetene lagret i UHF klientregisteret i Ressusportalen. Om klienten er fra utenfor UHF sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal &lt;application-component&gt;</p></td>
@@ -1703,7 +1703,7 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tilganger konsument &lt;data-object&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over tilganger gitt til konsumenter utenfor UHF sektoren tildelt gjennom Maskinporten. Oversikten spesifiserer hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder &lt;business-role&gt;</p></td>
@@ -1718,7 +1718,7 @@ Datatilbyder kan sette sammen data som tilbyderen har til et dataprodukt som til
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tildele tilganger til API &lt;business-process&gt;</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å registrere hvilke databrukere som skal få tilgang
-Sette policy, og grov tilgangsstyring gjennom maskinporten.</p></td>
+Sette policy, og grov tilgangsstyring.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtale om tilgang til data &lt;business-process&gt;</p></td>
@@ -1753,7 +1753,8 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Registrere samtykkebasert tilgang &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registerer konsumenter som kan innhente samtykke som gir grunnlag for utlevering fra datatilbyder.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registerer konsumenter som kan innhente samtykke som gir grunnlag for utlevering fra datatilbyder.</p>
+<p class="tableblock">Tjenesten tilbyr i dag ikke samtykke til UHF sektorens datakilder integrert i tjenesten. Dette er ønsket funksjonaltet.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Aktører som kan innhente samtykke for bruk av API &lt;data-object&gt;</p></td>
@@ -1762,7 +1763,7 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tilgjengeliggjøre data etter forespørsel &lt;capability&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evnen til å gjøre data tilgjengelig for aktører utenfor egen virksomhet på forespørsel.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">API tilgangs-forespørsel &lt;application-service&gt;</p></td>
@@ -1770,11 +1771,11 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Godkjenn tilgang &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å vurdere og eventuelt gi tilgang til en konsument som ber om tilgang. En tjeneste i UHF Ressursportalen benyttes som lar dataforvalteren beslutte tilgang, enten gjennom en automatisert policy eller gjennom en manuell behandling.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter".</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UHF sektoren blir tildelt rettighetene lagret i UHF klientregisteret i Ressusportalen. Om klienten er fra utenfor UHF sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal &lt;application-component&gt;</p></td>
@@ -1782,8 +1783,7 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Forespør dataforvalter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Harmoniserers med rolledefinisjoner.</p>
-<p class="tableblock">En dataforvalter kan besvare forespørselen automatisk på grunnlag av forhåndsdefinerte instruks. Det kan også besvares manuelt om ønskelig.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En tjeneste som lar dataforvalteren beslutte datatilgang, enten gjennom en automatisert policy eller gjennom en manuell behandling.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1864,7 +1864,7 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF tildel rettigheter til klienter &lt;application-service&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter".</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuel behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UHF sektoren blir tildelt rettighetene lagret i UHF klientregisteret i Ressusportalen. Om klienten er fra utenfor UHF sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">API tilgangs-forespørsel &lt;application-service&gt;</p></td>
@@ -1940,7 +1940,7 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tilganger konsument &lt;data-object&gt;</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over tilganger gitt til konsumenter utenfor UHF sektoren tildelt gjennom Maskinporten. Oversikten spesifiserer hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
