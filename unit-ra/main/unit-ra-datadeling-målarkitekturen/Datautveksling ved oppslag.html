@@ -215,29 +215,25 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 <h2 id="_føderert_api_management"><a class="anchor" href="#_føderert_api_management"></a>2. Føderert API management</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Føderert API Management innebærer at et domene (føderasjon) kan gi brukere i andre domener man har et tillitsforhold til (ofte kalt fødereringspartnere) tilgang til sine egne data gjennom APIer. Dette er et prinsipp for API Management som har etablert seg de siste årene. Det er flere grunner for dette, blant annet at store virksomheter i dag gjerne har virksomhetsdata lagret distribuert og gjerne fordelt mellom systemer som kjører på lokale servere (on-premise) og i skybaserte-løsninger som kjører på egen infrastruktur.</p>
+<p>Føderert API Management innebærer at et domene kan gi brukere i andre domener som man har et tillitsforhold til, ofte kalt fødereringspartnere, tilgang til sine egne data gjennom APIer. Dette er en tilnærming til API Management som har etablert seg de siste årene.  Det er flere grunner for dette, blant annet at store virksomheter i dag gjerne har virksomhetsdata lagret distribuert og gjerne fordelt mellom systemer som kjører på lokale servere (on-premise) og i skybaserte-løsninger.</p>
 </div>
 <div class="paragraph">
-<p>Det sterke politiske fokuset på deling av data gjennom orden i eget hus og nasjonale og sektorvise digitaliseringsstrategier understøtter også behovet for et API Management regime som understøtter deling av data til 3. part for innovasjon, og fokus på sammenhengende brukerreiser (eksemplifisert ved de syv livshendelser og tjenestekjeder) som forutsetter at data kan deles mellom virksomheter som betjener slike brukerreiser.</p>
+<p>Det er et sterkt politisk fokus på deling av data mellom domener. Flere initiativer, som "orden i eget hus" og nasjonale og sektorvise digitaliseringsstrategier skal understøtte dette fokuset på deling av data. I en slik sammenheng ser vi behovet for et felles API Management-regime i kunnskapssektoren.</p>
 </div>
 <div class="paragraph">
-<p>Virksomhetene i UH/F har mange fellestrekk og noen fellestjenester på tvers, men deres autonomi gjør at de også er ulike på enkelte områder, f.eks. når det gjelder teknisk infrastruktur. Dette understreker behovet for en føderert API Management løsning som er mer fleksibel mtp. tekniske løsninger og produktvalg lokalt.</p>
+<p>Et slikt regime muliggjør deling av data for å oppnå sammenhengende brukerreiser, eksemplifisert ved de syv livshendelser og tjenestekjeder.  Det er en forutsetning at data kan deles mellom virksomheter som betjener slike brukerreiser.</p>
 </div>
 <div class="paragraph">
-<p>Designen avbildet er laget for å støtte følgende karakteristikk:</p>
+<p>3.parts aktører kan bruke data fra sektoren for innovasjon. API management kan medvirke til deling av data til 3. part ved å gjøre data gjenfinnbart, tilgjengelig og dokumentert.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Intstitusjonene er sikret råderett over egne data gjennom tilgangstjeneste i resssursportalen og API gateway hos institusjonen som kan styre og holde oversikt over datatilgang</p>
-</li>
-<li>
-<p>Institusjonene har valgfrihet over API Gateway såfremt funksjoner og grensesnitt er ivaretatt</p>
-</li>
-<li>
-<p>Deling av data på tvers av institusjoner er støttet gjennom felles ressursportal</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Virksomhetene i Universiteter, Høyskoler og Forskning har mange fellestrekk og noen fellestjenester på tvers. Deres autonomi gjør likevel at de er ulike på enkelte områder, for eksempel når det gjelder teknisk infrastruktur.  Disse likhetene og forskjellene understreker behovet for en føderert API Management-løsning.  En slik løsning er mer fleksibel med tanke på tekniske løsninger og produktvalg lokalt.</p>
+</div>
+<div class="paragraph">
+<p>Designen avbildet er laget for å støtte følgende karakteristikk:
+  * Intstitusjonene er sikret råderett over egne data gjennom tilgangstjeneste i ressursportalen og API gateway hos institusjonen som kan styre og holde oversikt over datatilgang
+  * Institusjonene har valgfrihet over API Gateway såfremt funksjoner og grensesnitt er ivaretatt
+  *	 Deling av data på tvers av institusjoner er støttet gjennom felles ressursportal</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -374,10 +370,38 @@ Produktet kan være fra en kilde eller sammensatt av flere innen et domene</p></
 <h2 id="_api_management_integrert_med_iam"><a class="anchor" href="#_api_management_integrert_med_iam"></a>3. API management integrert med IAM</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Infrastruktur for Identitetshåndtering og tilgangsstyring (IAM) utfyller API management og må fungere sammen. IAM utføres av komponenter i den øvre delen av viewet. API managaement utføres av kompontenter i den nedre delen av viewet. Ressursportalen og tjenesten for tildeling av rettigheter til klienter deltar i begge funksjoner.</p>
+<p>Infrastruktur for identitetshåndtering og tilgangsstyring (IAM) utfyller API management og må
+fungere sammen.</p>
 </div>
 <div class="paragraph">
-<p>IAM styrer sluttbrukeres tilgang til tjenester, basert på både autentisering av deres identitet og deres roller hos institusjoner. API management styrer tilgang til data gjennom API basert på policy eller godkjenning fra dataforvalter. Avgjørelsen om å godkjenne tilgang til data kan godt være basert på en sluttbrukers rolle hos en institusjon.​</p>
+<p>Autentisering er det som sjekker at brukeren er kjent for virksomhenten og forsikrer
+at brukeren er den vedkommende gir seg ut for å være når brukeren ber om tilgang til ressurser.</p>
+</div>
+<div class="paragraph">
+<p>Autorisering identifiserer hvilke tilganger en bruker skal ha til virksomhetens ressurser.
+Autorisasjon kan tildeles roller. Brukere kan tildeles roller og gjennom dette få
+autorisasjon til virksomhetens ressurser som er knyttet til rollen.</p>
+</div>
+<div class="paragraph">
+<p>IAM utfører autentisering ved bruk av komponenter i den øvre delen av viewet.</p>
+</div>
+<div class="paragraph">
+<p>API management utføres av komponenter i den nedre delen av viewet.</p>
+</div>
+<div class="paragraph">
+<p>Ressursportalen og tjenesten for tildeling av rettigheter til klienter deltar i begge funksjoner.</p>
+</div>
+<div class="paragraph">
+<p>IAM autoriserer sluttbrukeres tilgang til tjenester. Dette er basert på både autentisering
+av deres identitet, det vil si hvem brukeren er, og de roller brukeren er tildelt hos en
+eller flere institusjoner.</p>
+</div>
+<div class="paragraph">
+<p>API management styrer tilgang til data gjennom API basert på policy eller godkjenning
+fra dataforvalter. Brukers tilgang til beskyttet tjeneste hos datakonsument kan være
+tilstrekkelig til at bruker ikke trenger å autoriseres eksplisitt hos datatilbyder. Avgjørelsen om å godkjenne tilgang til data kan godt være basert på
+en sluttbrukers rolle hos en institusjon.
+​</p>
 </div>
 <div class="imageblock">
 <div class="content">
