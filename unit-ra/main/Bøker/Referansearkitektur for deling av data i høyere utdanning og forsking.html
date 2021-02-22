@@ -140,15 +140,14 @@
 <ul class="sectlevel3">
 <li><a href="#_datautveksling_ved_oppslag">3.2.1. Datautveksling ved oppslag</a>
 <ul class="sectlevel4">
-<li><a href="#_dataobjekter_eoppslag_uhf">3.2.1.1. Dataobjekter eOppslag UHF</a></li>
-<li><a href="#_føderert_api_management">3.2.1.2. Føderert API management</a></li>
-<li><a href="#_api_management_integrert_med_iam">3.2.1.3. API management integrert med IAM</a></li>
-<li><a href="#_api_management_integrert_med_nasjonale_felleskomponenter">3.2.1.4. API management integrert med nasjonale felleskomponenter</a></li>
-<li><a href="#_publiser_api">3.2.1.5. Publiser API</a></li>
-<li><a href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf">3.2.1.6. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</a></li>
-<li><a href="#_få_tilgang_til_data_løsningsmønster_uhf">3.2.1.7. Få tilgang til data - løsningsmønster UHF</a></li>
-<li><a href="#_innhente_data_løsningsmønster_uhf">3.2.1.8. Innhente data - løsningsmønster UHF</a></li>
-<li><a href="#_avgi_data_løsningsmønster_uhf">3.2.1.9. Avgi data - løsningsmønster UHF</a></li>
+<li><a href="#_føderert_api_management">3.2.1.1. Føderert API management</a></li>
+<li><a href="#_api_management_integrert_med_iam">3.2.1.2. API management integrert med IAM</a></li>
+<li><a href="#_api_management_integrert_med_nasjonale_felleskomponenter">3.2.1.3. API management integrert med nasjonale felleskomponenter</a></li>
+<li><a href="#_publiser_api">3.2.1.4. Publiser API</a></li>
+<li><a href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf">3.2.1.5. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</a></li>
+<li><a href="#_få_tilgang_til_data_løsningsmønster_uhf">3.2.1.6. Få tilgang til data - løsningsmønster UHF</a></li>
+<li><a href="#_innhente_data_løsningsmønster_uhf">3.2.1.7. Innhente data - løsningsmønster UHF</a></li>
+<li><a href="#_avgi_data_løsningsmønster_uhf">3.2.1.8. Avgi data - løsningsmønster UHF</a></li>
 </ul>
 </li>
 <li><a href="#_datautveksling_ved_publisering_konsumering_hendelsesbasert">3.2.2. Datautveksling ved publisering – konsumering (hendelsesbasert)</a></li>
@@ -189,7 +188,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Mon Feb 22 2021 20:32:34 GMT+0100 (CET)</pre>
+<pre>Mon Feb 22 2021 20:37:34 GMT+0100 (CET)</pre>
 </div>
 </div>
 </div>
@@ -677,88 +676,7 @@ for datautveksling</a> beskriv de mønstrene som vi bruker</p>
 <p>Tekst Datautveksling ved oppslag representasjon.</p>
 </div>
 <div class="sect4">
-<h5 id="_dataobjekter_eoppslag_uhf"><a class="anchor" href="#_dataobjekter_eoppslag_uhf"></a>3.2.1.1. Dataobjekter eOppslag UHF</h5>
-<div class="imageblock">
-<div class="content">
-<img src="../unit-ra-datadeling-målarkitekturen/_images/Dataobjekter%20eOppslag%20UHF.png" alt="Dataobjekter eOppslag UHF image">
-</div>
-<div class="title">Figure 5. Dataobjekter eOppslag UHF</div>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 5. Elementer i view for Dataobjekter eOppslag UHF</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Element</th>
-<th class="tableblock halign-left valign-top">Beskrivelse</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API-katalogen</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API-katalogen er en del av Felles datakatalog som inneholder API-beskrivelser med endepunktsadresser og kobling til datasett.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tilganger konsument/representasjonsforhold</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som beskriver hvilke tilganger til ressurser en representant (leverandør) skal ha på vegne av konsument.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Delegerbar ressurs</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som beskriver en ressurs, f.eks. et API, som det kan gis rettigheter til gjennom et representasjonsforhold.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Endepunkt (adresse)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som representerer teknisk adresse til et API eller ressurs.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[Torget]
-Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering.</p>
-<p class="tableblock">[Verktøykasse for deling av data]
-Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
-virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
-<p class="tableblock">Mer om Maskinporten:
-<a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Altinn autorisasjon</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[Torget]
-Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
-Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p>
-<p class="tableblock">[Verktøykasse for deling av data]
-Altinn autorisasjon gir teknisk samhandlingsevne ved at bruker logger inn med elektronisk ID,
-autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å ta i bruk aktuell tjeneste.</p>
-<p class="tableblock">Dersom en privatperson skal ta i bruk en tjeneste på vegne av en virksomhet, gjøres det et oppslag mot Enhetsregisteret for å bekrefte at personen har en rolle på vegne av virksomheten. Dette gir organisatorisk samhandlingsevne.</p>
-<p class="tableblock">Mer om Altinn autorisasjon:
-<a href="https://www.altinndigital.no/produkter/styring-av-tilgang/" class="bare">https://www.altinndigital.no/produkter/styring-av-tilgang/</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Beskrivelse API</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som er en maskinlesbar beskrivelse av REST API-er iht. Open API Specification. Dette er formatet som benyttes for å registrere et API i felles API-katalog</p>
-<p class="tableblock">Ønsker å bruke Open API spesifikasjon</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OAUTH scopes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">En OAuth Scope er en mekanisme for å begrense konsumentens tilgang til datasettet eksponert gjennom et API. Foreløpig er dette grovkornet tilgangskontroll som for eksempel lese eller skrivetilgang til datasettet. Standardsorganet IETF jobber med å spesifisere mer fingranulert tilgangsmekanismer.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Beskrivelse av aktør som kan innhente samtykke</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som beskriver en datakonsument som har rett til å innhente samtykke om å slå opp data.
-Viktig innholde er bl.a. URL</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Oauth2 autorisasjonstjener</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OAuth 2 grants og tokens.
-En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="_føderert_api_management"><a class="anchor" href="#_føderert_api_management"></a>3.2.1.2. Føderert API management</h5>
+<h5 id="_føderert_api_management"><a class="anchor" href="#_føderert_api_management"></a>3.2.1.1. Føderert API management</h5>
 <div class="paragraph">
 <p>Føderert API Management innebærer at et domene kan gi brukere i andre domener som man har et tillitsforhold til, ofte kalt fødereringspartnere, tilgang til sine egne data gjennom APIer. Dette er en tilnærming til API Management som har etablert seg de siste årene.  Det er flere grunner for dette, blant annet at store virksomheter i dag gjerne har virksomhetsdata lagret distribuert og gjerne fordelt mellom systemer som kjører på lokale servere (on-premise) og i skybaserte-løsninger.</p>
 </div>
@@ -794,10 +712,10 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Føderert%20API%20management.png" alt="Føderert API management image">
 </div>
-<div class="title">Figure 6. Føderert API management</div>
+<div class="title">Figure 5. Føderert API management</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 6. Elementer i view for Føderert API management</caption>
+<caption class="title">Table 5. Elementer i view for Føderert API management</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -921,7 +839,7 @@ Produktet kan være fra en kilde eller sammensatt av flere innen et domene</p></
 </table>
 </div>
 <div class="sect4">
-<h5 id="_api_management_integrert_med_iam"><a class="anchor" href="#_api_management_integrert_med_iam"></a>3.2.1.3. API management integrert med IAM</h5>
+<h5 id="_api_management_integrert_med_iam"><a class="anchor" href="#_api_management_integrert_med_iam"></a>3.2.1.2. API management integrert med IAM</h5>
 <div class="paragraph">
 <p>Infrastruktur for identitetshåndtering og tilgangsstyring (IAM) utfyller API management og må
 fungere sammen.</p>
@@ -960,10 +878,10 @@ en sluttbrukers rolle hos en institusjon.
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/API%20management%20integrert%20med%20IAM.png" alt="API management integrert med IAM image">
 </div>
-<div class="title">Figure 7. API management integrert med IAM</div>
+<div class="title">Figure 6. API management integrert med IAM</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 7. Elementer i view for API management integrert med IAM</caption>
+<caption class="title">Table 6. Elementer i view for API management integrert med IAM</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1060,7 +978,7 @@ Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logg
 </table>
 </div>
 <div class="sect4">
-<h5 id="_api_management_integrert_med_nasjonale_felleskomponenter"><a class="anchor" href="#_api_management_integrert_med_nasjonale_felleskomponenter"></a>3.2.1.4. API management integrert med nasjonale felleskomponenter</h5>
+<h5 id="_api_management_integrert_med_nasjonale_felleskomponenter"><a class="anchor" href="#_api_management_integrert_med_nasjonale_felleskomponenter"></a>3.2.1.3. API management integrert med nasjonale felleskomponenter</h5>
 <div class="paragraph">
 <p>​​Det er behov for datadeling og API Management på tvers av sektorer. Høyere utdanning og forskning ønsker utstrakt bruk av nasjonale felleskomponenter, som omtalt i Digitaliseringsrundskrivet. For å oppnå dette må både sektorens og den nasjonale infrastrukturen videreutvikles.​</p>
 </div>
@@ -1074,10 +992,10 @@ Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logg
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/API%20management%20integrert%20med%20nasjonale%20felleskomponenter.png" alt="API management integrert med nasjonale felleskomponenter image">
 </div>
-<div class="title">Figure 8. API management integrert med nasjonale felleskomponenter</div>
+<div class="title">Figure 7. API management integrert med nasjonale felleskomponenter</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 8. Elementer i view for API management integrert med nasjonale felleskomponenter</caption>
+<caption class="title">Table 7. Elementer i view for API management integrert med nasjonale felleskomponenter</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1177,7 +1095,7 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 </table>
 </div>
 <div class="sect4">
-<h5 id="_publiser_api"><a class="anchor" href="#_publiser_api"></a>3.2.1.5. Publiser API</h5>
+<h5 id="_publiser_api"><a class="anchor" href="#_publiser_api"></a>3.2.1.4. Publiser API</h5>
 <div class="paragraph">
 <p>En prosessflyt som datatilbyder må gjennomføre for å gjøre et API synlig og tilgjengelig gjennom kataloger og søkeløsninger. Metadata om APIet blir registrert i API-katalogen. Metadata inkluderer begreper og datamodeller omfattet av datasettet som APIet tilgjengeliggjør, samt tilganger (scopes) knyttet til APIet som kan tildeles konsumenter.</p>
 </div>
@@ -1188,10 +1106,10 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Publiser%20API.png" alt="Publiser API image">
 </div>
-<div class="title">Figure 9. Publiser API</div>
+<div class="title">Figure 8. Publiser API</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 9. Elementer i view for Publiser API</caption>
+<caption class="title">Table 8. Elementer i view for Publiser API</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1283,7 +1201,7 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
 </table>
 </div>
 <div class="sect4">
-<h5 id="_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"></a>3.2.1.6. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</h5>
+<h5 id="_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"></a>3.2.1.5. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</h5>
 <div class="paragraph">
 <p>En prosessflyt som datatilbyder må gjennomføre for å tildele rettigheter til en konsument som ber om tilgang til data. En datatilbyder mottar forespørsel om tilgang til et API på vegne av en organisasjon eller bruker. Dataeieren tar stilling til om konsumenten skal få tilgang til data gjennom APIet. Tilgang registreres knyttet til konsumentens klient (applikasjonen som benytter APIet) i klientregisteret.</p>
 </div>
@@ -1291,10 +1209,10 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Tilgjengeliggjøre%20data%20etter%20forsepørsel%20løsningsmønster%20UHF.png" alt="Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF image">
 </div>
-<div class="title">Figure 10. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</div>
+<div class="title">Figure 9. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 10. Elementer i view for Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</caption>
+<caption class="title">Table 9. Elementer i view for Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1394,7 +1312,7 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 </table>
 </div>
 <div class="sect4">
-<h5 id="_få_tilgang_til_data_løsningsmønster_uhf"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf"></a>3.2.1.7. Få tilgang til data - løsningsmønster UHF</h5>
+<h5 id="_få_tilgang_til_data_løsningsmønster_uhf"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf"></a>3.2.1.6. Få tilgang til data - løsningsmønster UHF</h5>
 <div class="paragraph">
 <p>En prosessflyt en konsument av data må gjennomføre for å få tildelt rettigheter til data gjennom et API. Det omfatter å få kjennskap til aktuelt API gjennom API-katalogen, autentisere konsumenten, inngå avtale om bruk av data, samt å registrere tilganger hos den tekniske komponenten som skal utføre tjenestekallet. Dersom det dreier seg om tilgang til et åpent tilgjengelig API, kan enkelte delaktiviteter i prosessene hoppes over, men for å kunne logge informasjon om bruk av APIer bør alle konsumenter av et API registreres i klientregisteret.</p>
 </div>
@@ -1405,10 +1323,10 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Få%20tilgang%20til%20data%20-%20løsningsmønster%20UHF.png" alt="Få tilgang til data - løsningsmønster UHF image">
 </div>
-<div class="title">Figure 11. Få tilgang til data - løsningsmønster UHF</div>
+<div class="title">Figure 10. Få tilgang til data - løsningsmønster UHF</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 11. Elementer i view for Få tilgang til data - løsningsmønster UHF</caption>
+<caption class="title">Table 10. Elementer i view for Få tilgang til data - løsningsmønster UHF</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1495,7 +1413,7 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_innhente_data_løsningsmønster_uhf"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf"></a>3.2.1.8. Innhente data - løsningsmønster UHF</h5>
+<h5 id="_innhente_data_løsningsmønster_uhf"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf"></a>3.2.1.7. Innhente data - løsningsmønster UHF</h5>
 <div class="paragraph">
 <p>En prosessflyt en konsument utfører når det utføres et tjenestekall for å innhente data gjennom et API. API-adressen hentes i API-katalogen. Tilgang til APIet byttes inn mot et kjøretids-token i autoriseringstjenesten. Tjenestekall til APIet utføres gjennom API gateway der tokenet benyttes for å få tilgang. Dersom det er et åpent API er det kun relevante prossessteg som utføres.</p>
 </div>
@@ -1503,10 +1421,10 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Innhente%20data%20-%20løsningsmønster%20UHF.png" alt="Innhente data - løsningsmønster UHF image">
 </div>
-<div class="title">Figure 12. Innhente data - løsningsmønster UHF</div>
+<div class="title">Figure 11. Innhente data - løsningsmønster UHF</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 12. Elementer i view for Innhente data - løsningsmønster UHF</caption>
+<caption class="title">Table 11. Elementer i view for Innhente data - løsningsmønster UHF</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -1653,7 +1571,7 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 </table>
 </div>
 <div class="sect4">
-<h5 id="_avgi_data_løsningsmønster_uhf"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf"></a>3.2.1.9. Avgi data - løsningsmønster UHF</h5>
+<h5 id="_avgi_data_løsningsmønster_uhf"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf"></a>3.2.1.8. Avgi data - løsningsmønster UHF</h5>
 <div class="paragraph">
 <p>En prosessflyt en tilbyder av data utfører for å svare på en dataforespørsel. Tilbyder mottar forespørsel om oppslag med et aksesstoken. Klienten som forespør autentiseres og token valideres. Eventuelt mer fin-granulert tilgangskontroll utføres og data returneres. Tilgang kontrolleres kun dersom det er snakk om et sikret API.</p>
 </div>
@@ -1661,10 +1579,10 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/Avgi%20data%20-%20løsningsmønster%20UHF.png" alt="Avgi data - løsningsmønster UHF image">
 </div>
-<div class="title">Figure 13. Avgi data - løsningsmønster UHF</div>
+<div class="title">Figure 12. Avgi data - løsningsmønster UHF</div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 13. Elementer i view for Avgi data - løsningsmønster UHF</caption>
+<caption class="title">Table 12. Elementer i view for Avgi data - løsningsmønster UHF</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
