@@ -117,89 +117,30 @@
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_modeller_for_datadeling">1. Modeller for datadeling</a></li>
-<li><a href="#_kapabiliteter">2. Kapabiliteter</a></li>
-<li><a href="#_felleskomponenter">3. Felleskomponenter</a></li>
-<li><a href="#_datautveksling">4. Datautveksling</a>
+<li><a href="#_felleskomponenter">1. Felleskomponenter</a></li>
+<li><a href="#_datautveksling">2. Datautveksling</a>
 <ul class="sectlevel2">
-<li><a href="#_datautveksling_ved_oppslag">4.1. Datautveksling ved oppslag</a>
+<li><a href="#_datautveksling_ved_oppslag">2.1. Datautveksling ved oppslag</a>
 <ul class="sectlevel3">
-<li><a href="#_dataobjekter_eoppslag_uhf">4.1.1. Dataobjekter eOppslag UHF</a></li>
-<li><a href="#_føderert_api_management">4.1.2. Føderert API management</a></li>
-<li><a href="#_api_management_integrert_med_iam">4.1.3. API management integrert med IAM</a></li>
-<li><a href="#_api_management_integrert_med_nasjonale_felleskomponenter">4.1.4. API management integrert med nasjonale felleskomponenter</a></li>
-<li><a href="#_publiser_api">4.1.5. Publiser API</a></li>
-<li><a href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf">4.1.6. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</a></li>
-<li><a href="#_få_tilgang_til_data_løsningsmønster_uhf">4.1.7. Få tilgang til data - løsningsmønster UHF</a></li>
-<li><a href="#_innhente_data_løsningsmønster_uhf">4.1.8. Innhente data - løsningsmønster UHF</a></li>
-<li><a href="#_avgi_data_løsningsmønster_uhf">4.1.9. Avgi data - løsningsmønster UHF</a></li>
+<li><a href="#_dataobjekter_eoppslag_uhf">2.1.1. Dataobjekter eOppslag UHF</a></li>
+<li><a href="#_føderert_api_management">2.1.2. Føderert API management</a></li>
+<li><a href="#_api_management_integrert_med_iam">2.1.3. API management integrert med IAM</a></li>
+<li><a href="#_api_management_integrert_med_nasjonale_felleskomponenter">2.1.4. API management integrert med nasjonale felleskomponenter</a></li>
+<li><a href="#_publiser_api">2.1.5. Publiser API</a></li>
+<li><a href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf">2.1.6. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</a></li>
+<li><a href="#_få_tilgang_til_data_løsningsmønster_uhf">2.1.7. Få tilgang til data - løsningsmønster UHF</a></li>
+<li><a href="#_innhente_data_løsningsmønster_uhf">2.1.8. Innhente data - løsningsmønster UHF</a></li>
+<li><a href="#_avgi_data_løsningsmønster_uhf">2.1.9. Avgi data - løsningsmønster UHF</a></li>
 </ul>
 </li>
-<li><a href="#_datautveksling_ved_publisering_konsumering_hendelsesbasert">4.2. Datautveksling ved publisering – konsumering (hendelsesbasert)</a></li>
+<li><a href="#_datautveksling_ved_publisering_konsumering_hendelsesbasert">2.2. Datautveksling ved publisering – konsumering (hendelsesbasert)</a></li>
 </ul>
 </li>
-<li><a href="#_integrasjonsmønster_for_datadeling">5. Integrasjonsmønster for datadeling</a></li>
+<li><a href="#_integrasjonsmønster_for_datadeling">3. Integrasjonsmønster for datadeling</a></li>
 </ul>
 </div>
 <div class="sect1">
-<h2 id="_modeller_for_datadeling"><a class="anchor" href="#_modeller_for_datadeling"></a>1. Modeller for datadeling</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Når datatilbydere og datakonsumenter deler data, skjer det som en del av
-en digital samhandling. For at samhandlingen skal være vellykket, må
-tilbydere og konsumenter sikre at de handler i henhold til loven
-(juridisk samhandlingsevne), at aktørene har avklart forventninger til
-hverandre (organisatorisk samhandlingsevne), at datatilbyder og
-konsumenter har samme forståelse av dataenes betydning (semantisk
-samhandlingsevne) og at de tekniske løsningene som utfører datadeling
-fungerer sammen slik de skal (teknisk samhandlingsevne).
-<a href="https://www.digdir.no/nasjonal-arkitektur/rammeverk-digital-samhandling/2148#juridisk_samhandlingsevne">Rammeverk
-for digital samhandling</a> vist under utdyper disse samhandlingsevner.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/image4.png" alt="image" width="464" height="274"></span></p>
-</div>
-<div class="paragraph">
-<p>Modellene i referansearkitekturen beskrevet under er laget for å ivareta
-juridisk-, organisatorisk-, semantisk- og teknisk samhandlingsevner og
-hjelper dermed de som benytter modellene til å lykkes med digital
-samhandling.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://www.digdir.no/apne-data/nasjonal-verktoykasse-deling-av-data/2243">Verktøykassen for deling av data</a> inneholder den overordnende modell for datadeling og kapabilitetene som datatilbydere og datakonsumenter trenger for å dele data. Vi legger disse modellene til grunn.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_kapabiliteter"><a class="anchor" href="#_kapabiliteter"></a>2. Kapabiliteter</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Som vist i <mark>figuren over</mark>, må datatilbyderen ha oversikt over egne data
-som skal deles og evne til å publisere datasettene slik at andre kan
-benytte disse.</p>
-</div>
-<div class="paragraph">
-<p>For at datadeling skal fungere etter hensikt, må dataene
-ha god kvalitet. Dette krever kapabiliteter innen
-informasjonsforvaltning.  Vi har modellert disse evner som
-«muliggjørende kapabiliteter» i referansearkitekturen for høyere
-utdanning og forskning med utgangspunkt i
-<a href="https://app.powerbi.com/view?r=eyJrIjoiMThhNjkzNmItOGQ4NC00MDkzLWI3MDQtNzY0ZjA1MjQ5MzViIiwidCI6ImFlMWE3NzI0LTQwNDEtNDQ2Mi1hNmRjLTUzOGNiMTk5NzA3ZSIsImMiOjh9">EUNIS
-sin kapabilitetsmodell for europeiske universiteter</a> <mark>som vist under</mark>.</p>
-</div>
-<div class="paragraph">
-<p>God
-informasjonsforvaltning støtter både opp om organisatorisk
-samhandlingsevne gjennom å gi organisasjoner riktig data av god kvalitet
-og støtter opp om semantisk samhandlingsevne ved å klargjøre dataenes
-betydning. Vi velger også å synliggjøre juridiske tjenester som
-muliggjørende kapabilitet for å støtte opp under juridisk
-samhandlingsevne.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_felleskomponenter"><a class="anchor" href="#_felleskomponenter"></a>3. Felleskomponenter</h2>
+<h2 id="_felleskomponenter"><a class="anchor" href="#_felleskomponenter"></a>1. Felleskomponenter</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><mark>(i sektoren hittil har «felles» betyd både at alle bruker samme instans,
@@ -246,7 +187,7 @@ kompontenene</mark></p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_datautveksling"><a class="anchor" href="#_datautveksling"></a>4. Datautveksling</h2>
+<h2 id="_datautveksling"><a class="anchor" href="#_datautveksling"></a>2. Datautveksling</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Med utgangspunkt i
@@ -254,12 +195,12 @@ kompontenene</mark></p>
 for datautveksling</a> beskriv de mønstrene som vi bruker</p>
 </div>
 <div class="sect2">
-<h3 id="_datautveksling_ved_oppslag"><a class="anchor" href="#_datautveksling_ved_oppslag"></a>4.1. Datautveksling ved oppslag</h3>
+<h3 id="_datautveksling_ved_oppslag"><a class="anchor" href="#_datautveksling_ved_oppslag"></a>2.1. Datautveksling ved oppslag</h3>
 <div class="paragraph">
 <p>Tekst Datautveksling ved oppslag representasjon.</p>
 </div>
 <div class="sect3">
-<h4 id="_dataobjekter_eoppslag_uhf"><a class="anchor" href="#_dataobjekter_eoppslag_uhf"></a>4.1.1. Dataobjekter eOppslag UHF</h4>
+<h4 id="_dataobjekter_eoppslag_uhf"><a class="anchor" href="#_dataobjekter_eoppslag_uhf"></a>2.1.1. Dataobjekter eOppslag UHF</h4>
 <div class="imageblock">
 <div class="content">
 <img src="_images/Dataobjekter%20eOppslag%20UHF.png" alt="Dataobjekter eOppslag UHF image">
@@ -340,7 +281,7 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_føderert_api_management"><a class="anchor" href="#_føderert_api_management"></a>4.1.2. Føderert API management</h4>
+<h4 id="_føderert_api_management"><a class="anchor" href="#_føderert_api_management"></a>2.1.2. Føderert API management</h4>
 <div class="paragraph">
 <p>Føderert API Management innebærer at et domene kan gi brukere i andre domener som man har et tillitsforhold til, ofte kalt fødereringspartnere, tilgang til sine egne data gjennom APIer. Dette er en tilnærming til API Management som har etablert seg de siste årene.  Det er flere grunner for dette, blant annet at store virksomheter i dag gjerne har virksomhetsdata lagret distribuert og gjerne fordelt mellom systemer som kjører på lokale servere (on-premise) og i skybaserte-løsninger.</p>
 </div>
@@ -503,7 +444,7 @@ Produktet kan være fra en kilde eller sammensatt av flere innen et domene</p></
 </table>
 </div>
 <div class="sect3">
-<h4 id="_api_management_integrert_med_iam"><a class="anchor" href="#_api_management_integrert_med_iam"></a>4.1.3. API management integrert med IAM</h4>
+<h4 id="_api_management_integrert_med_iam"><a class="anchor" href="#_api_management_integrert_med_iam"></a>2.1.3. API management integrert med IAM</h4>
 <div class="paragraph">
 <p>Infrastruktur for identitetshåndtering og tilgangsstyring (IAM) utfyller API management og må
 fungere sammen.</p>
@@ -642,7 +583,7 @@ Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logg
 </table>
 </div>
 <div class="sect3">
-<h4 id="_api_management_integrert_med_nasjonale_felleskomponenter"><a class="anchor" href="#_api_management_integrert_med_nasjonale_felleskomponenter"></a>4.1.4. API management integrert med nasjonale felleskomponenter</h4>
+<h4 id="_api_management_integrert_med_nasjonale_felleskomponenter"><a class="anchor" href="#_api_management_integrert_med_nasjonale_felleskomponenter"></a>2.1.4. API management integrert med nasjonale felleskomponenter</h4>
 <div class="paragraph">
 <p>​​Det er behov for datadeling og API Management på tvers av sektorer. Høyere utdanning og forskning ønsker utstrakt bruk av nasjonale felleskomponenter, som omtalt i Digitaliseringsrundskrivet. For å oppnå dette må både sektorens og den nasjonale infrastrukturen videreutvikles.​</p>
 </div>
@@ -759,7 +700,7 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 </table>
 </div>
 <div class="sect3">
-<h4 id="_publiser_api"><a class="anchor" href="#_publiser_api"></a>4.1.5. Publiser API</h4>
+<h4 id="_publiser_api"><a class="anchor" href="#_publiser_api"></a>2.1.5. Publiser API</h4>
 <div class="paragraph">
 <p>En prosessflyt som datatilbyder må gjennomføre for å gjøre et API synlig og tilgjengelig gjennom kataloger og søkeløsninger. Metadata om APIet blir registrert i API-katalogen. Metadata inkluderer begreper og datamodeller omfattet av datasettet som APIet tilgjengeliggjør, samt tilganger (scopes) knyttet til APIet som kan tildeles konsumenter.</p>
 </div>
@@ -865,7 +806,7 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
 </table>
 </div>
 <div class="sect3">
-<h4 id="_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"></a>4.1.6. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</h4>
+<h4 id="_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"></a>2.1.6. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</h4>
 <div class="paragraph">
 <p>En prosessflyt som datatilbyder må gjennomføre for å tildele rettigheter til en konsument som ber om tilgang til data. En datatilbyder mottar forespørsel om tilgang til et API på vegne av en organisasjon eller bruker. Dataeieren tar stilling til om konsumenten skal få tilgang til data gjennom APIet. Tilgang registreres knyttet til konsumentens klient (applikasjonen som benytter APIet) i klientregisteret.</p>
 </div>
@@ -976,7 +917,7 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 </table>
 </div>
 <div class="sect3">
-<h4 id="_få_tilgang_til_data_løsningsmønster_uhf"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf"></a>4.1.7. Få tilgang til data - løsningsmønster UHF</h4>
+<h4 id="_få_tilgang_til_data_løsningsmønster_uhf"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf"></a>2.1.7. Få tilgang til data - løsningsmønster UHF</h4>
 <div class="paragraph">
 <p>En prosessflyt en konsument av data må gjennomføre for å få tildelt rettigheter til data gjennom et API. Det omfatter å få kjennskap til aktuelt API gjennom API-katalogen, autentisere konsumenten, inngå avtale om bruk av data, samt å registrere tilganger hos den tekniske komponenten som skal utføre tjenestekallet. Dersom det dreier seg om tilgang til et åpent tilgjengelig API, kan enkelte delaktiviteter i prosessene hoppes over, men for å kunne logge informasjon om bruk av APIer bør alle konsumenter av et API registreres i klientregisteret.</p>
 </div>
@@ -1077,7 +1018,7 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_innhente_data_løsningsmønster_uhf"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf"></a>4.1.8. Innhente data - løsningsmønster UHF</h4>
+<h4 id="_innhente_data_løsningsmønster_uhf"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf"></a>2.1.8. Innhente data - løsningsmønster UHF</h4>
 <div class="paragraph">
 <p>En prosessflyt en konsument utfører når det utføres et tjenestekall for å innhente data gjennom et API. API-adressen hentes i API-katalogen. Tilgang til APIet byttes inn mot et kjøretids-token i autoriseringstjenesten. Tjenestekall til APIet utføres gjennom API gateway der tokenet benyttes for å få tilgang. Dersom det er et åpent API er det kun relevante prossessteg som utføres.</p>
 </div>
@@ -1235,7 +1176,7 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 </table>
 </div>
 <div class="sect3">
-<h4 id="_avgi_data_løsningsmønster_uhf"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf"></a>4.1.9. Avgi data - løsningsmønster UHF</h4>
+<h4 id="_avgi_data_løsningsmønster_uhf"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf"></a>2.1.9. Avgi data - løsningsmønster UHF</h4>
 <div class="paragraph">
 <p>En prosessflyt en tilbyder av data utfører for å svare på en dataforespørsel. Tilbyder mottar forespørsel om oppslag med et aksesstoken. Klienten som forespør autentiseres og token valideres. Eventuelt mer fin-granulert tilgangskontroll utføres og data returneres. Tilgang kontrolleres kun dersom det er snakk om et sikret API.</p>
 </div>
@@ -1340,13 +1281,13 @@ Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logg
 </div>
 </div>
 <div class="sect2">
-<h3 id="_datautveksling_ved_publisering_konsumering_hendelsesbasert"><a class="anchor" href="#_datautveksling_ved_publisering_konsumering_hendelsesbasert"></a>4.2. Datautveksling ved publisering – konsumering (hendelsesbasert)</h3>
+<h3 id="_datautveksling_ved_publisering_konsumering_hendelsesbasert"><a class="anchor" href="#_datautveksling_ved_publisering_konsumering_hendelsesbasert"></a>2.2. Datautveksling ved publisering – konsumering (hendelsesbasert)</h3>
 
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_integrasjonsmønster_for_datadeling"><a class="anchor" href="#_integrasjonsmønster_for_datadeling"></a>5. Integrasjonsmønster for datadeling</h2>
+<h2 id="_integrasjonsmønster_for_datadeling"><a class="anchor" href="#_integrasjonsmønster_for_datadeling"></a>3. Integrasjonsmønster for datadeling</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>*Provisjonering *(hoved IntArk mønster): Holde «server-side» kopi løpende oppdatert
