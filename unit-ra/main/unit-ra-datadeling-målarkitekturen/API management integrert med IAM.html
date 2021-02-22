@@ -168,15 +168,15 @@ en sluttbrukers rolle hos en institusjon.
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument  &lt;grouping&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Komponenter som utgjør datakonsument, det vil si Universitetet, Høyskolens eller andre, sitt grensesnitt for datadeling</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Sluttbruker &lt;business-actor&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sluttbruker</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Personen som skal tildeles tilgang til beskyttede ressurser basert på identitet, roller og annen kontekst.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Beskyttet tjeneste / klient hos datakonsument  &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beskyttet tjeneste / klient hos datakonsument</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som IAM beskytter tilgang til. Tjenesten kan også være en konsument av data gjennom API, det vil si Universitet, Høyskole eller andre som gir tilgang til data fra datatilbyder.</p>
 <p class="tableblock">Komponenten tilbyr:
   * autentisering  gjennom en Autentiseringstjeneste
@@ -184,55 +184,55 @@ en sluttbrukers rolle hos en institusjon.
   * tilgang til ressurser hos datatilbyder</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identitetstilbyder &lt;business-role&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identitetstilbyder</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">En identitetstilbyder er en virksomhet som er godkjent til å utstede elektroniske identiteter for entydig identifikasjon av en fysisk person på et gitt sikkerhetsnivå.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Infrastruktur &lt;grouping&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Infrastruktur</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Felleskomponenter i UHF-infrastrukturen for datadeling</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportalen holder oversikt over og tildeler tilganger til beskyttede ressurser i høyere utdanning og forskningssektoren i henhold til føringer fra eierne av disse ressursene. Tilganger er gitt i form av OAuth2 grants og tokens. Ressursportalen er en del av den felles infrastrukturen for føderert API management for høyere utdanning og forskning. Den registrerer og holder oversikt over API, holder oversikt over klienter som har blitt tildelt tilgang til API og hvilke tilganger det gjelder. Ressursportalen benytter Jason Web Token formattert OAuth2 sikkerhetstoken for å gi tilgang til ressurser gjennom API gateway nær de beskyttede ressursene.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Roller og tilgangsregler &lt;data-object&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Roller og tilgangsregler</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon av roller som blir brukt til å styre autorisasjon for å gi tilgang for en klient til et eller flere API.
 Definisjon av regler for tilgang til et eller flere API</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Attributter / grunndata &lt;data-object&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attributter / grunndata</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Opplysninger om personer som skal benyttes i tilgangsstyring.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Oauth2 autorisasjonstjener &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Oauth2 autorisasjonstjener</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OAuth 2 grants og tokens.
 En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Klientregister &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Klientregister</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F tildel rettigheter til klienter &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F tildel rettigheter til klienter</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tildel autoriserte rettigheter basert på roller, annen policy eller manuell behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UH/F sektoren blir tildelt rettighetene lagret i UH/F klientregisteret i Ressusportalen. Om klienten er fra utenfor UH/F sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UiX / Datatilbyder &lt;grouping&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UiX / Datatilbyder</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Komponenter som utgjør datatilbyder, det vil si Universitetet eller Høyskolens, grensesnitt for datadeling</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kildedata &lt;data-object&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kildedata</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Dataprodukt som tilbys av datatilbyder
 Produktet kan være fra en kilde eller sammensatt av flere innen et domene</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kildedata &lt;data-object&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kildedata</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Dataprodukt som tilbys av datatilbyder
 Produktet kan være fra en kilde eller sammensatt av flere innen et domene</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway hos datatilbyder / OAuth resource server &lt;application-component&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway hos datatilbyder / OAuth resource server</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">API gateway beskytter ressurser og monitorerer tilgang.
 Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll.
 Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
@@ -245,7 +245,7 @@ Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logg
   * Orkestrering mellom interntjenester</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autentiseringstjeneste &lt;application-service&gt;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autentiseringstjeneste</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som benyttes av tilbyder for å autentisere aktuell konsument.</p></td>
 </tr>
 </tbody>

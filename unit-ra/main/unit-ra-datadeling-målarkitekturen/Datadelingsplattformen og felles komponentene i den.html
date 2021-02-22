@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Referansearkitektur for deling av data i høyere utdanning og forsking :: UNIT refansearkitekturer</title>
-    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/Bøker/Referansearkitektur%20for%20deling%20av%20data%20i%20høyere%20utdanning%20og%20forsking.html">
+    <title>Datadelingsplattformen og felles komponentene i den :: UNIT refansearkitekturer</title>
+    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-målarkitekturen/Datadelingsplattformen%20og%20felles%20komponentene%20i%20den.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -69,8 +69,8 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../index.html">Om UNIT referansearkitekturer</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="Referansearkitektur%20for%20deling%20av%20data%20i%20høyere%20utdanning%20og%20forsking.html">Referansearkitektur for deling av data i høyere utdanning og forsking</a>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../Bøker/Referansearkitektur%20for%20deling%20av%20data%20i%20høyere%20utdanning%20og%20forsking.html">Referansearkitektur for deling av data i høyere utdanning og forsking</a>
   </li>
 </ul>
   </li>
@@ -103,386 +103,55 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">UNIT referansearkitekturer</a></li>
-    <li><a href="Referansearkitektur%20for%20deling%20av%20data%20i%20høyere%20utdanning%20og%20forsking.html">Referansearkitektur for deling av data i høyere utdanning og forsking</a></li>
+    <li><a href="Datadelingsplattformen%20og%20felles%20komponentene%20i%20den.html">Datadelingsplattformen og felles komponentene i den</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/Bøker/pages/Referansearkitektur%20for%20deling%20av%20data%20i%20høyere%20utdanning%20og%20forsking.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/unit-ra-datadeling-målarkitekturen/pages/Datadelingsplattformen%20og%20felles%20komponentene%20i%20den.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Referansearkitektur for deling av data i høyere utdanning og forsking</h1>
+<h1 class="page">Datadelingsplattformen og felles komponentene i den</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_introduksjon">1. Introduksjon</a>
+<li><a href="#_modeller_for_datadeling">1. Modeller for datadeling</a></li>
+<li><a href="#_kapabiliteter">2. Kapabiliteter</a>
 <ul class="sectlevel2">
-<li><a href="#_forankring">1.1. Forankring</a></li>
-<li><a href="#_målgruppe">1.2. Målgruppe</a></li>
-<li><a href="#_bruksområder_for_datadeling">1.3. Bruksområder for datadeling</a></li>
-<li><a href="#_økosystemer_tjenestekjeder_og_tverrgående_prosesser">1.4. Økosystemer, tjenestekjeder og tverrgående prosesser</a></li>
-</ul>
-</li>
-<li><a href="#_metode">2. Metode</a>
-<ul class="sectlevel2">
-<li><a href="#_hva_er_datadeling">2.1. Hva er datadeling</a></li>
-<li><a href="#_del_og_innhent_data_verdistrøm_for_både_tilbyder_og_konsument_uhf">2.2. Del og innhent data, verdistrøm for både tilbyder og konsument - UHF</a></li>
+<li><a href="#_innhent_data_detaljert_verdistrøm_konsument_med_kapabiliteter">2.1. Innhent data, detaljert verdistrøm konsument med kapabiliteter</a></li>
+<li><a href="#_del_og_innhent_data_og_hendelser_detaljert_verdistrøm_datatilbyder_med_kapabiliteter">2.2. Del og innhent data og hendelser, detaljert verdistrøm datatilbyder med kapabiliteter</a></li>
 <li><a href="#_muliggjørende_kapabiliteter">2.3. Muliggjørende kapabiliteter</a></li>
 <li><a href="#_informasjonsforvaltningsdomener">2.4. Informasjonsforvaltningsdomener</a></li>
 <li><a href="#_domener">2.5. Domener</a></li>
 </ul>
 </li>
-<li><a href="#_datadelingsplattformen_og_felles_komponentene_i_den">3. Datadelingsplattformen og felles komponentene i den</a>
+<li><a href="#_felleskomponenter">3. Felleskomponenter</a></li>
+<li><a href="#_datautveksling">4. Datautveksling</a>
 <ul class="sectlevel2">
-<li><a href="#_modeller_for_datadeling">3.1. Modeller for datadeling</a></li>
-<li><a href="#_kapabiliteter">3.2. Kapabiliteter</a>
+<li><a href="#_datautveksling_ved_oppslag">4.1. Datautveksling ved oppslag</a>
 <ul class="sectlevel3">
-<li><a href="#_innhent_data_detaljert_verdistrøm_konsument_med_kapabiliteter">3.2.1. Innhent data, detaljert verdistrøm konsument med kapabiliteter</a></li>
-<li><a href="#_del_og_innhent_data_og_hendelser_detaljert_verdistrøm_datatilbyder_med_kapabiliteter">3.2.2. Del og innhent data og hendelser, detaljert verdistrøm datatilbyder med kapabiliteter</a></li>
-<li><a href="#_muliggjørende_kapabiliteter_2">3.2.3. Muliggjørende kapabiliteter</a></li>
-<li><a href="#_informasjonsforvaltningsdomener_2">3.2.4. Informasjonsforvaltningsdomener</a></li>
-<li><a href="#_domener_2">3.2.5. Domener</a></li>
+<li><a href="#_dataobjekter_eoppslag_uhf">4.1.1. Dataobjekter eOppslag UHF</a></li>
+<li><a href="#_føderert_api_management">4.1.2. Føderert API management</a></li>
+<li><a href="#_api_management_integrert_med_iam">4.1.3. API management integrert med IAM</a></li>
+<li><a href="#_api_management_integrert_med_nasjonale_felleskomponenter">4.1.4. API management integrert med nasjonale felleskomponenter</a></li>
+<li><a href="#_publiser_api">4.1.5. Publiser API</a></li>
+<li><a href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf">4.1.6. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</a></li>
+<li><a href="#_få_tilgang_til_data_løsningsmønster_uhf">4.1.7. Få tilgang til data - løsningsmønster UHF</a></li>
+<li><a href="#_innhente_data_løsningsmønster_uhf">4.1.8. Innhente data - løsningsmønster UHF</a></li>
+<li><a href="#_avgi_data_løsningsmønster_uhf">4.1.9. Avgi data - løsningsmønster UHF</a></li>
 </ul>
 </li>
-<li><a href="#_felleskomponenter">3.3. Felleskomponenter</a></li>
-<li><a href="#_datautveksling">3.4. Datautveksling</a>
-<ul class="sectlevel3">
-<li><a href="#_datautveksling_ved_oppslag">3.4.1. Datautveksling ved oppslag</a>
-<ul class="sectlevel4">
-<li><a href="#_dataobjekter_eoppslag_uhf">3.4.1.1. Dataobjekter eOppslag UHF</a></li>
-<li><a href="#_føderert_api_management">3.4.1.2. Føderert API management</a></li>
-<li><a href="#_api_management_integrert_med_iam">3.4.1.3. API management integrert med IAM</a></li>
-<li><a href="#_api_management_integrert_med_nasjonale_felleskomponenter">3.4.1.4. API management integrert med nasjonale felleskomponenter</a></li>
-<li><a href="#_publiser_api">3.4.1.5. Publiser API</a></li>
-<li><a href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf">3.4.1.6. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</a></li>
-<li><a href="#_få_tilgang_til_data_løsningsmønster_uhf">3.4.1.7. Få tilgang til data - løsningsmønster UHF</a></li>
-<li><a href="#_innhente_data_løsningsmønster_uhf">3.4.1.8. Innhente data - løsningsmønster UHF</a></li>
-<li><a href="#_avgi_data_løsningsmønster_uhf">3.4.1.9. Avgi data - løsningsmønster UHF</a></li>
+<li><a href="#_datautveksling_ved_publisering_konsumering_hendelsesbasert">4.2. Datautveksling ved publisering – konsumering (hendelsesbasert)</a></li>
 </ul>
 </li>
-<li><a href="#_datautveksling_ved_publisering_konsumering_hendelsesbasert">3.4.2. Datautveksling ved publisering – konsumering (hendelsesbasert)</a></li>
+<li><a href="#_integrasjonsmønster_for_datadeling">5. Integrasjonsmønster for datadeling</a></li>
 </ul>
-</li>
-<li><a href="#_integrasjonsmønster_for_datadeling">3.5. Integrasjonsmønster for datadeling</a></li>
-</ul>
-</li>
-<li><a href="#_forvaltning_av_målarkitekturen">4. Forvaltning av målarkitekturen</a>
-<ul class="sectlevel2">
-<li><a href="#_utvikling_av_brukernære_api_og_datasett">4.1. Utvikling av brukernære API og datasett</a>
-<ul class="sectlevel3">
-<li><a href="#_forutsetninger_for_arbeid_med_definisjon_av_datasett_og_api">4.1.1. Forutsetninger for arbeid med definisjon av datasett og API</a></li>
-<li><a href="#_rutinen_for_nye_brukernære_behov">4.1.2. Rutinen for nye brukernære behov</a></li>
-</ul>
-</li>
-<li><a href="#_roller_og_ansvar_for_informasjonsforvaltning">4.2. Roller og ansvar for informasjonsforvaltning</a></li>
-</ul>
-</li>
-<li><a href="#_vedlegg_1_definisjoner">5. Vedlegg 1 - Definisjoner</a></li>
-<li><a href="#_vedlegg_2_behov_for_avklaringer_og_utfordringer_i_sektorens_kontekst">6. Vedlegg 2 - Behov for avklaringer og utfordringer i sektorens kontekst</a>
-<ul class="sectlevel2">
-<li><a href="#_issues_mot_nasjonale_felleskompontenter_maskinporten_id_porten_og_altinn_autorisasjon">6.1. Issues mot nasjonale felleskompontenter (Maskinporten, ID Porten og Altinn autorisasjon)</a></li>
-<li><a href="#_issues_internt_i_uhf_sektor">6.2. Issues internt i UHF sektor</a></li>
-</ul>
-</li>
-<li><a href="#_vedlegg_3">7. Vedlegg 3 -</a></li>
-<li><a href="#_vedlegg_4">8. Vedlegg 4</a></li>
-<li><a href="#_vedlegg_5">9. Vedlegg 5</a>
-<ul class="sectlevel2">
-<li><a href="#_om_arkitekturprinsippenes_føringer_for_datadeling">9.1. Om arkitekturprinsippenes føringer for datadeling</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p><span class="image"><img src="_images/image1.jpeg" alt="image1"></span></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Mon Feb 22 2021 16:16:08 GMT+0100 (CET)</pre>
-</div>
-</div>
-</div>
 </div>
 <div class="sect1">
-<h2 id="_introduksjon"><a class="anchor" href="#_introduksjon"></a>1. Introduksjon</h2>
+<h2 id="_modeller_for_datadeling"><a class="anchor" href="#_modeller_for_datadeling"></a>1. Modeller for datadeling</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Økt deling av data er en forutsetning for å realisere flere av
-handlingsplanens initiativer innenfor utdanning, forskning,
-administrasjon og IMD. Dette dokumentet beskriver de føringene til
-organisasjoner og IT-løsninger som vi ønsker å bruke videre i sektoren
-til å skape en effektiv plattform for datadeling. Referansearkitekturen
-tar utgangspunkt i følgende pågående arbeid i sektoren i dag:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Integrasjonsarkitektur UH:IntArk</p>
-</li>
-<li>
-<p>Arbeid med Sak og Arkiv i sektoren</p>
-</li>
-<li>
-<p>Arbeid med nytt API for Felles Studentsystem, FS</p>
-</li>
-<li>
-<p>Arbeid med masterdatakilder for forskning</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Referansearkitekturen innarbeider også føringer fra:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Digitaliseringsstrategiene til offentlig sektor og høyere utdanning og
-forskning</p>
-</li>
-<li>
-<p><a href="https://www.digdir.no/digitalisering-og-samordning/overordnede-arkitekturprinsipper/1065">Overordnede
-arkitekturprinsipper</a> for digitaliering av offentlig sektor</p>
-</li>
-<li>
-<p><a href="https://www.digdir.no/nasjonal-arkitektur/rammeverk-digital-samhandling/2148">Rammeverk
-for digital samhandling</a></p>
-</li>
-<li>
-<p><a href="https://nasjonal-arkitektur.github.io/architecture-repository/about-topic-areas/about-topic-areas.html">Nasjonal
-referansearkitekturene for datadeling og datautveksling</a></p>
-</li>
-<li>
-<p><a href="https://app.powerbi.com/view?r=eyJrIjoiMThhNjkzNmItOGQ4NC00MDkzLWI3MDQtNzY0ZjA1MjQ5MzViIiwidCI6ImFlMWE3NzI0LTQwNDEtNDQ2Mi1hNmRjLTUzOGNiMTk5NzA3ZSIsImMiOjh9">Kapabilitetsmodell
-i høyere utdanning i EUNIS</a> (European University Information System
-Organization)</p>
-</li>
-<li>
-<p>Behovene avdekket i tjenestedesign analyse av behovene til Studenter,
-Lærere, Forskere og tjenesteleverandører av Muliggjørende økosystem</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Referansearkitekturer gir mønstre og veiledning til utforming av
-løsninger. Denne referansearkitekturen beskriver både eksisterende
-samhandling formulert som beste praksis og nødvendig neste steg i
-generelle datadelingsmønster som kan gjenbrukes i sektoren. Disse
-mønstrene er dokumentert gjennom videreutvikling av
-referansearkitekturene fra digitaliseringsdirektoratet. Hensikten med
-arbeidet er å fremme en koordinert utvikling av datadeling som
-resulterer i økt gjenbruk av data «kun en gang» og nye, innovative
-anvendelser av data i sektoren.</p>
-</div>
-<div class="paragraph">
-<p>Noe om prosesser, rutiner og veiledninger.</p>
-</div>
-<div class="paragraph">
-<p>Noe om forvaltning av rammeverket</p>
-</div>
-<div class="sect2">
-<h3 id="_forankring"><a class="anchor" href="#_forankring"></a>1.1. Forankring</h3>
-<div class="paragraph">
-<p>Referansearkitekturen er utarbeidet i et samarbeidsprosjekt Datadeling
-med prosjektdeltagelse fra Unit, NTNU, UiO og Uninett. Styringsgruppen
-består av medlemmer fra Unit, UiB, OsloMet, USIT, NMBU og Uninett.</p>
-</div>
-<div class="paragraph">
-<p>Noe om forankring av referansearkitekturen (test)</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_målgruppe"><a class="anchor" href="#_målgruppe"></a>1.2. Målgruppe</h3>
-<div class="paragraph">
-<p>Målgruppen for referansearkitekturen er primært arkitekter og tekniske prosjektledere.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_bruksområder_for_datadeling"><a class="anchor" href="#_bruksområder_for_datadeling"></a>1.3. Bruksområder for datadeling</h3>
-<div class="paragraph">
-<p>Datadeling skal støtte virksomhetene innen høyere utdanning og forskning
-i sine oppgaver. Arbeid med referansearkitekturen tar derfor
-utgangspunkt i følgende bruksområder som første steg i en brukerfokusert
-tilnærming:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Innovativ, individuelt tilpasset læring</p>
-</li>
-<li>
-<p>Livslang læring</p>
-</li>
-<li>
-<p>Åpen forskning</p>
-</li>
-<li>
-<p><mark>Heidi: Skulle vi si noe om forskning som ikke er åpen</mark></p>
-</li>
-<li>
-<p>Effektivisert administrasjon</p>
-</li>
-<li>
-<p>Automatisert administrativ støtte</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Forskningssøknader</p>
-</li>
-<li>
-<p>Data Management Planning innen forskning og andre prosjekter</p>
-</li>
-<li>
-<p>Arkivering</p>
-</li>
-<li>
-<p>HR prosesser for onboarding og «terminering?»</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Innen bruksområdene over ser vi sektoren produserer og ønsker å tilby
-følgende hovedkategori av data for deling:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Utdannings- og forskningsressurser til gjenbruk og viderebruk</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Forskningsresultater</p>
-</li>
-<li>
-<p>Forskningsdata</p>
-</li>
-<li>
-<p>Digitale læringsressurser</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Administrative data</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Grunndata for driftsformål</p>
-</li>
-<li>
-<p>Data brukt og produsert i saksbehandling</p>
-</li>
-<li>
-<p>Rapporteringsdata om egen saksbehandling og produksjon</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Analysedata om utdanning og forskning</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Sektoren har også bruk for data fra andre. Vi ser behov for følgende
-kategori av data:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Grunndata i nasjonale felleskomponenter (f. eks. folkeregisteret og
-enhetsregisteret)</p>
-</li>
-<li>
-<p>Autentiseringsdata fra utlandet</p>
-</li>
-<li>
-<p>Informasjon om grunnutdanning eller utdanning i utlandet</p>
-</li>
-<li>
-<p>Informasjon om forskning i utlandet og forskningsresultater fra
-utlandet</p>
-</li>
-<li>
-<p>Informasjon om forskning i privatnæringsliv og resultater
-fra forskning i privat næringsliv</p>
-</li>
-<li>
-<p>Informasjon om forskningsfinansiering i Norge (fra Forskningsrådet, m.
-fl.)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Bruksområdene over er utgangspunktet for forståelse av behovene som
-referansearkitekturen skal dekke.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_økosystemer_tjenestekjeder_og_tverrgående_prosesser"><a class="anchor" href="#_økosystemer_tjenestekjeder_og_tverrgående_prosesser"></a>1.4. Økosystemer, tjenestekjeder og tverrgående prosesser</h3>
-<div class="paragraph">
-<p><mark>input fra tjenestedesignprosess rundt muliggjørende økosystem (NB script test)</mark></p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_metode"><a class="anchor" href="#_metode"></a>2. Metode</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_hva_er_datadeling"><a class="anchor" href="#_hva_er_datadeling"></a>2.1. Hva er datadeling</h3>
-<div class="paragraph">
-<p>Følgende definisjon for datadeling er hentet fra
-Digitaliseringsdirektoratets
-<a href="https://doc.difi.no/nasjonal-arkitektur/nab_arkitekturlandskap_segmentarkitektur_datadeling/">segmentarkitektur for datadeling</a>.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title"><em>Datadeling</em></div>
-<div class="paragraph">
-<p>Datadeling handler om å forsyne forretningsprosesser og dataanalyse med nødvendig datagrunnlag.</p>
-</div>
-<div class="paragraph">
-<p>De fleste aktører sitter på begge sider i dette bildet, og må kunne
-både <em>dele</em> og <em>innhente</em> data og hendelser. I beskrivelsene skilles det
-likevel gjerne på rollene som <em>tilbyder</em> og <em>konsument</em>.</p>
-</div>
-<div class="paragraph">
-<p>Begrepet <em>datadeling</em> er ut fra dette å oppfatte som kortform
-for <strong><em>deling og innhenting av data og hendelser</em></strong>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_del_og_innhent_data_verdistrøm_for_både_tilbyder_og_konsument_uhf"><a class="anchor" href="#_del_og_innhent_data_verdistrøm_for_både_tilbyder_og_konsument_uhf"></a>2.2. Del og innhent data, verdistrøm for både tilbyder og konsument - UHF</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_muliggjørende_kapabiliteter"><a class="anchor" href="#_muliggjørende_kapabiliteter"></a>2.3. Muliggjørende kapabiliteter</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_informasjonsforvaltningsdomener"><a class="anchor" href="#_informasjonsforvaltningsdomener"></a>2.4. Informasjonsforvaltningsdomener</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_domener"><a class="anchor" href="#_domener"></a>2.5. Domener</h3>
-
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_datadelingsplattformen_og_felles_komponentene_i_den"><a class="anchor" href="#_datadelingsplattformen_og_felles_komponentene_i_den"></a>3. Datadelingsplattformen og felles komponentene i den</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_modeller_for_datadeling"><a class="anchor" href="#_modeller_for_datadeling"></a>3.1. Modeller for datadeling</h3>
 <div class="paragraph">
 <p>Når datatilbydere og datakonsumenter deler data, skjer det som en del av
 en digital samhandling. For at samhandlingen skal være vellykket, må
@@ -496,7 +165,7 @@ fungerer sammen slik de skal (teknisk samhandlingsevne).
 for digital samhandling</a> vist under utdyper disse samhandlingsevner.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../unit-ra-datadeling-målarkitekturen/_images/image4.png" alt="image" width="464" height="274"></span></p>
+<p><span class="image"><img src="_images/image4.png" alt="image" width="464" height="274"></span></p>
 </div>
 <div class="paragraph">
 <p>Modellene i referansearkitekturen beskrevet under er laget for å ivareta
@@ -508,8 +177,10 @@ samhandling.</p>
 <p><a href="https://www.digdir.no/apne-data/nasjonal-verktoykasse-deling-av-data/2243">Verktøykassen for deling av data</a> inneholder den overordnende modell for datadeling og kapabilitetene som datatilbydere og datakonsumenter trenger for å dele data. Vi legger disse modellene til grunn.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_kapabiliteter"><a class="anchor" href="#_kapabiliteter"></a>3.2. Kapabiliteter</h3>
+</div>
+<div class="sect1">
+<h2 id="_kapabiliteter"><a class="anchor" href="#_kapabiliteter"></a>2. Kapabiliteter</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Som vist i <mark>figuren over</mark>, må datatilbyderen ha oversikt over egne data
 som skal deles og evne til å publisere datasettene slik at andre kan
@@ -533,11 +204,11 @@ betydning. Vi velger også å synliggjøre juridiske tjenester som
 muliggjørende kapabilitet for å støtte opp under juridisk
 samhandlingsevne.</p>
 </div>
-<div class="sect3">
-<h4 id="_innhent_data_detaljert_verdistrøm_konsument_med_kapabiliteter"><a class="anchor" href="#_innhent_data_detaljert_verdistrøm_konsument_med_kapabiliteter"></a>3.2.1. Innhent data, detaljert verdistrøm konsument med kapabiliteter</h4>
+<div class="sect2">
+<h3 id="_innhent_data_detaljert_verdistrøm_konsument_med_kapabiliteter"><a class="anchor" href="#_innhent_data_detaljert_verdistrøm_konsument_med_kapabiliteter"></a>2.1. Innhent data, detaljert verdistrøm konsument med kapabiliteter</h3>
 <div class="imageblock">
 <div class="content">
-<img src="../unit-ra-datadeling-målarkitekturen/_images/Innhent%20data,%20detaljert%20verdistrøm%20konsument%20med%20kapabiliteter.png" alt="Innhent data" width="detaljert verdistrøm konsument med kapabiliteter image">
+<img src="_images/Innhent%20data,%20detaljert%20verdistrøm%20konsument%20med%20kapabiliteter.png" alt="Innhent data" width="detaljert verdistrøm konsument med kapabiliteter image">
 </div>
 <div class="title">Figure 1. Innhent data, detaljert verdistrøm konsument med kapabiliteter</div>
 </div>
@@ -669,8 +340,8 @@ Rutiner for riktig behandling av data i henhold til utleveringsavtale. Dette gje
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="_del_og_innhent_data_og_hendelser_detaljert_verdistrøm_datatilbyder_med_kapabiliteter"><a class="anchor" href="#_del_og_innhent_data_og_hendelser_detaljert_verdistrøm_datatilbyder_med_kapabiliteter"></a>3.2.2. Del og innhent data og hendelser, detaljert verdistrøm datatilbyder med kapabiliteter</h4>
+<div class="sect2">
+<h3 id="_del_og_innhent_data_og_hendelser_detaljert_verdistrøm_datatilbyder_med_kapabiliteter"><a class="anchor" href="#_del_og_innhent_data_og_hendelser_detaljert_verdistrøm_datatilbyder_med_kapabiliteter"></a>2.2. Del og innhent data og hendelser, detaljert verdistrøm datatilbyder med kapabiliteter</h3>
 <div class="paragraph">
 <p>Forklaring:
 Datatilbyder må evne å bestemme hvilken teknisk løsning som skal benyttes når dataene gjøres tilgjengelig som åpne data</p>
@@ -690,7 +361,7 @@ Prosesser for å dele data som åpne data</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../unit-ra-datadeling-målarkitekturen/_images/Del%20og%20innhent%20data%20og%20hendelser,%20detaljert%20verdistrøm%20datatilbyder%20med%20kapabiliteter.png" alt="Del og innhent data og hendelser" width="detaljert verdistrøm datatilbyder med kapabiliteter image">
+<img src="_images/Del%20og%20innhent%20data%20og%20hendelser,%20detaljert%20verdistrøm%20datatilbyder%20med%20kapabiliteter.png" alt="Del og innhent data og hendelser" width="detaljert verdistrøm datatilbyder med kapabiliteter image">
 </div>
 <div class="title">Figure 2. Del og innhent data og hendelser, detaljert verdistrøm datatilbyder med kapabiliteter</div>
 </div>
@@ -881,21 +552,23 @@ Personer som er ansvarlige for virksomhetens prosesser for deling av data må be
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="_muliggjørende_kapabiliteter_2"><a class="anchor" href="#_muliggjørende_kapabiliteter_2"></a>3.2.3. Muliggjørende kapabiliteter</h4>
+<div class="sect2">
+<h3 id="_muliggjørende_kapabiliteter"><a class="anchor" href="#_muliggjørende_kapabiliteter"></a>2.3. Muliggjørende kapabiliteter</h3>
 
-</div>
-<div class="sect3">
-<h4 id="_informasjonsforvaltningsdomener_2"><a class="anchor" href="#_informasjonsforvaltningsdomener_2"></a>3.2.4. Informasjonsforvaltningsdomener</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_domener_2"><a class="anchor" href="#_domener_2"></a>3.2.5. Domener</h4>
-
-</div>
 </div>
 <div class="sect2">
-<h3 id="_felleskomponenter"><a class="anchor" href="#_felleskomponenter"></a>3.3. Felleskomponenter</h3>
+<h3 id="_informasjonsforvaltningsdomener"><a class="anchor" href="#_informasjonsforvaltningsdomener"></a>2.4. Informasjonsforvaltningsdomener</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_domener"><a class="anchor" href="#_domener"></a>2.5. Domener</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_felleskomponenter"><a class="anchor" href="#_felleskomponenter"></a>3. Felleskomponenter</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><mark>(i sektoren hittil har «felles» betyd både at alle bruker samme instans,
 eller at alle har identiske instanser – vi må presisere hva som er
@@ -939,20 +612,22 @@ kompontenene</mark></p>
 <p><mark>Heidi NB: mangler komponenter for hendelsesstrømming/-publisering</mark></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_datautveksling"><a class="anchor" href="#_datautveksling"></a>3.4. Datautveksling</h3>
+</div>
+<div class="sect1">
+<h2 id="_datautveksling"><a class="anchor" href="#_datautveksling"></a>4. Datautveksling</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Med utgangspunkt i
 <a href="https://nasjonal-arkitektur.github.io/architecture-repository/data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur
 for datautveksling</a> beskriv de mønstrene som vi bruker</p>
 </div>
+<div class="sect2">
+<h3 id="_datautveksling_ved_oppslag"><a class="anchor" href="#_datautveksling_ved_oppslag"></a>4.1. Datautveksling ved oppslag</h3>
 <div class="sect3">
-<h4 id="_datautveksling_ved_oppslag"><a class="anchor" href="#_datautveksling_ved_oppslag"></a>3.4.1. Datautveksling ved oppslag</h4>
-<div class="sect4">
-<h5 id="_dataobjekter_eoppslag_uhf"><a class="anchor" href="#_dataobjekter_eoppslag_uhf"></a>3.4.1.1. Dataobjekter eOppslag UHF</h5>
+<h4 id="_dataobjekter_eoppslag_uhf"><a class="anchor" href="#_dataobjekter_eoppslag_uhf"></a>4.1.1. Dataobjekter eOppslag UHF</h4>
 <div class="imageblock">
 <div class="content">
-<img src="../unit-ra-datadeling-målarkitekturen/_images/Dataobjekter%20eOppslag%20UHF.png" alt="Dataobjekter eOppslag UHF image">
+<img src="_images/Dataobjekter%20eOppslag%20UHF.png" alt="Dataobjekter eOppslag UHF image">
 </div>
 <div class="title">Figure 3. Dataobjekter eOppslag UHF</div>
 </div>
@@ -1029,8 +704,8 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_føderert_api_management"><a class="anchor" href="#_føderert_api_management"></a>3.4.1.2. Føderert API management</h5>
+<div class="sect3">
+<h4 id="_føderert_api_management"><a class="anchor" href="#_føderert_api_management"></a>4.1.2. Føderert API management</h4>
 <div class="paragraph">
 <p>Føderert API Management innebærer at et domene kan gi brukere i andre domener som man har et tillitsforhold til, ofte kalt fødereringspartnere, tilgang til sine egne data gjennom APIer. Dette er en tilnærming til API Management som har etablert seg de siste årene.  Det er flere grunner for dette, blant annet at store virksomheter i dag gjerne har virksomhetsdata lagret distribuert og gjerne fordelt mellom systemer som kjører på lokale servere (on-premise) og i skybaserte-løsninger.</p>
 </div>
@@ -1064,7 +739,7 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../unit-ra-datadeling-målarkitekturen/_images/Føderert%20API%20management.png" alt="Føderert API management image">
+<img src="_images/Føderert%20API%20management.png" alt="Føderert API management image">
 </div>
 <div class="title">Figure 4. Føderert API management</div>
 </div>
@@ -1192,8 +867,8 @@ Produktet kan være fra en kilde eller sammensatt av flere innen et domene</p></
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_api_management_integrert_med_iam"><a class="anchor" href="#_api_management_integrert_med_iam"></a>3.4.1.3. API management integrert med IAM</h5>
+<div class="sect3">
+<h4 id="_api_management_integrert_med_iam"><a class="anchor" href="#_api_management_integrert_med_iam"></a>4.1.3. API management integrert med IAM</h4>
 <div class="paragraph">
 <p>Infrastruktur for identitetshåndtering og tilgangsstyring (IAM) utfyller API management og må
 fungere sammen.</p>
@@ -1230,7 +905,7 @@ en sluttbrukers rolle hos en institusjon.
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../unit-ra-datadeling-målarkitekturen/_images/API%20management%20integrert%20med%20IAM.png" alt="API management integrert med IAM image">
+<img src="_images/API%20management%20integrert%20med%20IAM.png" alt="API management integrert med IAM image">
 </div>
 <div class="title">Figure 5. API management integrert med IAM</div>
 </div>
@@ -1331,8 +1006,8 @@ Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logg
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_api_management_integrert_med_nasjonale_felleskomponenter"><a class="anchor" href="#_api_management_integrert_med_nasjonale_felleskomponenter"></a>3.4.1.4. API management integrert med nasjonale felleskomponenter</h5>
+<div class="sect3">
+<h4 id="_api_management_integrert_med_nasjonale_felleskomponenter"><a class="anchor" href="#_api_management_integrert_med_nasjonale_felleskomponenter"></a>4.1.4. API management integrert med nasjonale felleskomponenter</h4>
 <div class="paragraph">
 <p>​​Det er behov for datadeling og API Management på tvers av sektorer. Høyere utdanning og forskning ønsker utstrakt bruk av nasjonale felleskomponenter, som omtalt i Digitaliseringsrundskrivet. For å oppnå dette må både sektorens og den nasjonale infrastrukturen videreutvikles.​</p>
 </div>
@@ -1344,7 +1019,7 @@ Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logg
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../unit-ra-datadeling-målarkitekturen/_images/API%20management%20integrert%20med%20nasjonale%20felleskomponenter.png" alt="API management integrert med nasjonale felleskomponenter image">
+<img src="_images/API%20management%20integrert%20med%20nasjonale%20felleskomponenter.png" alt="API management integrert med nasjonale felleskomponenter image">
 </div>
 <div class="title">Figure 6. API management integrert med nasjonale felleskomponenter</div>
 </div>
@@ -1448,8 +1123,8 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_publiser_api"><a class="anchor" href="#_publiser_api"></a>3.4.1.5. Publiser API</h5>
+<div class="sect3">
+<h4 id="_publiser_api"><a class="anchor" href="#_publiser_api"></a>4.1.5. Publiser API</h4>
 <div class="paragraph">
 <p>En prosessflyt som datatilbyder må gjennomføre for å gjøre et API synlig og tilgjengelig gjennom kataloger og søkeløsninger. Metadata om APIet blir registrert i API-katalogen. Metadata inkluderer begreper og datamodeller omfattet av datasettet som APIet tilgjengeliggjør, samt tilganger (scopes) knyttet til APIet som kan tildeles konsumenter.</p>
 </div>
@@ -1458,7 +1133,7 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../unit-ra-datadeling-målarkitekturen/_images/Publiser%20API.png" alt="Publiser API image">
+<img src="_images/Publiser%20API.png" alt="Publiser API image">
 </div>
 <div class="title">Figure 7. Publiser API</div>
 </div>
@@ -1554,14 +1229,14 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"></a>3.4.1.6. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</h5>
+<div class="sect3">
+<h4 id="_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"></a>4.1.6. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</h4>
 <div class="paragraph">
 <p>En prosessflyt som datatilbyder må gjennomføre for å tildele rettigheter til en konsument som ber om tilgang til data. En datatilbyder mottar forespørsel om tilgang til et API på vegne av en organisasjon eller bruker. Dataeieren tar stilling til om konsumenten skal få tilgang til data gjennom APIet. Tilgang registreres knyttet til konsumentens klient (applikasjonen som benytter APIet) i klientregisteret.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../unit-ra-datadeling-målarkitekturen/_images/Tilgjengeliggjøre%20data%20etter%20forsepørsel%20løsningsmønster%20UHF.png" alt="Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF image">
+<img src="_images/Tilgjengeliggjøre%20data%20etter%20forsepørsel%20løsningsmønster%20UHF.png" alt="Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF image">
 </div>
 <div class="title">Figure 8. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</div>
 </div>
@@ -1665,8 +1340,8 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_få_tilgang_til_data_løsningsmønster_uhf"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf"></a>3.4.1.7. Få tilgang til data - løsningsmønster UHF</h5>
+<div class="sect3">
+<h4 id="_få_tilgang_til_data_løsningsmønster_uhf"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf"></a>4.1.7. Få tilgang til data - løsningsmønster UHF</h4>
 <div class="paragraph">
 <p>En prosessflyt en konsument av data må gjennomføre for å få tildelt rettigheter til data gjennom et API. Det omfatter å få kjennskap til aktuelt API gjennom API-katalogen, autentisere konsumenten, inngå avtale om bruk av data, samt å registrere tilganger hos den tekniske komponenten som skal utføre tjenestekallet. Dersom det dreier seg om tilgang til et åpent tilgjengelig API, kan enkelte delaktiviteter i prosessene hoppes over, men for å kunne logge informasjon om bruk av APIer bør alle konsumenter av et API registreres i klientregisteret.</p>
 </div>
@@ -1675,7 +1350,7 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../unit-ra-datadeling-målarkitekturen/_images/Få%20tilgang%20til%20data%20-%20løsningsmønster%20UHF.png" alt="Få tilgang til data - løsningsmønster UHF image">
+<img src="_images/Få%20tilgang%20til%20data%20-%20løsningsmønster%20UHF.png" alt="Få tilgang til data - løsningsmønster UHF image">
 </div>
 <div class="title">Figure 9. Få tilgang til data - løsningsmønster UHF</div>
 </div>
@@ -1766,14 +1441,14 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_innhente_data_løsningsmønster_uhf"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf"></a>3.4.1.8. Innhente data - løsningsmønster UHF</h5>
+<div class="sect3">
+<h4 id="_innhente_data_løsningsmønster_uhf"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf"></a>4.1.8. Innhente data - løsningsmønster UHF</h4>
 <div class="paragraph">
 <p>En prosessflyt en konsument utfører når det utføres et tjenestekall for å innhente data gjennom et API. API-adressen hentes i API-katalogen. Tilgang til APIet byttes inn mot et kjøretids-token i autoriseringstjenesten. Tjenestekall til APIet utføres gjennom API gateway der tokenet benyttes for å få tilgang. Dersom det er et åpent API er det kun relevante prossessteg som utføres.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../unit-ra-datadeling-målarkitekturen/_images/Innhente%20data%20-%20løsningsmønster%20UHF.png" alt="Innhente data - løsningsmønster UHF image">
+<img src="_images/Innhente%20data%20-%20løsningsmønster%20UHF.png" alt="Innhente data - løsningsmønster UHF image">
 </div>
 <div class="title">Figure 10. Innhente data - løsningsmønster UHF</div>
 </div>
@@ -1924,14 +1599,14 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="_avgi_data_løsningsmønster_uhf"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf"></a>3.4.1.9. Avgi data - løsningsmønster UHF</h5>
+<div class="sect3">
+<h4 id="_avgi_data_løsningsmønster_uhf"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf"></a>4.1.9. Avgi data - løsningsmønster UHF</h4>
 <div class="paragraph">
 <p>En prosessflyt en tilbyder av data utfører for å svare på en dataforespørsel. Tilbyder mottar forespørsel om oppslag med et aksesstoken. Klienten som forespør autentiseres og token valideres. Eventuelt mer fin-granulert tilgangskontroll utføres og data returneres. Tilgang kontrolleres kun dersom det er snakk om et sikret API.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../unit-ra-datadeling-målarkitekturen/_images/Avgi%20data%20-%20løsningsmønster%20UHF.png" alt="Avgi data - løsningsmønster UHF image">
+<img src="_images/Avgi%20data%20-%20løsningsmønster%20UHF.png" alt="Avgi data - løsningsmønster UHF image">
 </div>
 <div class="title">Figure 11. Avgi data - løsningsmønster UHF</div>
 </div>
@@ -2029,13 +1704,15 @@ Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logg
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_datautveksling_ved_publisering_konsumering_hendelsesbasert"><a class="anchor" href="#_datautveksling_ved_publisering_konsumering_hendelsesbasert"></a>3.4.2. Datautveksling ved publisering – konsumering (hendelsesbasert)</h4>
+<div class="sect2">
+<h3 id="_datautveksling_ved_publisering_konsumering_hendelsesbasert"><a class="anchor" href="#_datautveksling_ved_publisering_konsumering_hendelsesbasert"></a>4.2. Datautveksling ved publisering – konsumering (hendelsesbasert)</h3>
 
 </div>
 </div>
-<div class="sect2">
-<h3 id="_integrasjonsmønster_for_datadeling"><a class="anchor" href="#_integrasjonsmønster_for_datadeling"></a>3.5. Integrasjonsmønster for datadeling</h3>
+</div>
+<div class="sect1">
+<h2 id="_integrasjonsmønster_for_datadeling"><a class="anchor" href="#_integrasjonsmønster_for_datadeling"></a>5. Integrasjonsmønster for datadeling</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>*Provisjonering *(hoved IntArk mønster): Holde «server-side» kopi løpende oppdatert
 fra master ved å benytte eOppslag til å hente data fra master
@@ -2073,692 +1750,6 @@ hver sin backend slik at spesialtilpasninger på API-er som kreves for de
 ulike brukergrensesnitttypene kan realiseres uten at det går
 utover vedlikeholdbarheten til API-ene.» Gartner bruker også den.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_forvaltning_av_målarkitekturen"><a class="anchor" href="#_forvaltning_av_målarkitekturen"></a>4. Forvaltning av målarkitekturen</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><mark>Tekst om overgangen fra kapabilitetene og løsningene beskrevet
-over til informasjonsforvaltning og definisjon av datasett.</mark></p>
-</div>
-<div class="paragraph">
-<p>Sektoren er i ferd med å bygge en distribuert arkitektur som benytter
-løsere koblet, delte datakilder som inneholder data om sentrale
-entiteter i sektoren som for eksempel studenter, ansatte,
-forskningsprosjekt, forskningsresultater, læringsobjekter, med flere.
-Disse kildene blir rendyrket som <strong><em>masterdatakilder</em></strong>. Disse kildene er
-definert ut fra en dyp forståelse av sektorenes funksjon og vil typisk
-være forholdsvis stabile over tid. Definisjon av …[mer tekst her]</p>
-</div>
-<div class="sect2">
-<h3 id="_utvikling_av_brukernære_api_og_datasett"><a class="anchor" href="#_utvikling_av_brukernære_api_og_datasett"></a>4.1. Utvikling av brukernære API og datasett</h3>
-<div class="sect3">
-<h4 id="_forutsetninger_for_arbeid_med_definisjon_av_datasett_og_api"><a class="anchor" href="#_forutsetninger_for_arbeid_med_definisjon_av_datasett_og_api"></a>4.1.1. Forutsetninger for arbeid med definisjon av datasett og API</h4>
-<div class="paragraph">
-<p>Vi forutsetter og bygger på en viss fremgang i arbeid med
-<a href="https://data.norge.no/guide/veileder-orden-i-eget-hus/">orden i eget hus</a>
-hos deltagende virksomheter der noen datasett er dokumentert i en
-datakatalog. Dette kan enten være Digitaliseringsdirektoratets
-<a href="https://data.norge.no/">felles datakatalog</a>, eller en fremtidig katalog
-for høyere utdanning og forskningssektoren som høstes inn i felles
-datakatalogen.</p>
-</div>
-<div class="paragraph">
-<p>Vi forutsetter også en domenebasert tilnærming der det finnes noen
-masterdata kilder som reflekterer den overordnede forretningsmodellen
-til utdanning og forskning. Disse realiserer «domains aligned with the
-source» i figuren under (fra How to Move Beyond a Monolithic Data Lake
-to a Distributed Data Mesh</p>
-</div>
-<div class="paragraph">
-<p><a href="https://martinfowler.com/articles/data-monolith-to-mesh.html#CentralizedAndMonolithic" class="bare">https://martinfowler.com/articles/data-monolith-to-mesh.html#CentralizedAndMonolithic</a>).</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../unit-ra-datadeling-forvaltning/_images/image10.png" alt="image" width="601" height="331"></span></p>
-</div>
-<div class="paragraph">
-<p>Disse kildene vil være basiskildene, som for eksempel studentregister,
-ansattregister, organisasjonsregister, emneregister,
-forskningsdatakilder og Learning Object Repository. Disse kildene
-defineres i andre prosesser. Innhold i disse masterdatakildene suppleres
-av annen informasjon i en mer bruksnær kontekst, og en tilnærming til
-definisjon av denne er beskrevet under.</p>
-</div>
-<div class="paragraph">
-<p>Rutinen under benyttes dermed til å definere API og datasett i «domains
-aligned with the consumption», eller brukernære behov.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_rutinen_for_nye_brukernære_behov"><a class="anchor" href="#_rutinen_for_nye_brukernære_behov"></a>4.1.2. Rutinen for nye brukernære behov</h4>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Melde behov, gjerne av datakonsumentene</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Interessenter melder ønsker inn gjennom kjent verktøy / grensenitt</p>
-</li>
-<li>
-<p>Periodisk prosess for å samle innspill og prioritere</p>
-</li>
-<li>
-<p>For de case som går videre: Intervjue interessenter/ kjøre
-tjenestedesign workshop for å beskrive scenariet</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Analysere behov og finne ut hvilke domener og kilder som er involvert</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Hvem gjør dette? Tjenesteansvarlige? Informasjonsdomeneeiere?
-Prosesseiere? Sekretariatet? Hvem hos institusjonene?</p>
-</li>
-<li>
-<p>F. eks. studieadministrasjon kunne være en domene, og tjenesansvarlig
-for FSAPI</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Finn eksisterende datasett involvert (helst fra datakatalogen) som er
-ferdig harmonisert</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Spesifisere hva som blir berørt f. eks. begreper, API, datamodell,
-(tjeneste- og API-eiere)</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Identifiser hva må skapes, harmoniseres eller videreutvikles i tillegg
-til eksisterende datasett for å tilfredsstille behovet</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Trenger vi nye: begreper, kilder, API, datasett m.m?</p>
-</li>
-<li>
-<p>Kontakte interessentene til de berørte områdene med sikte på å være
-med i prosessen</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Kjør begreps harmoniseringsprosessen etter behov med relevante
-interessenter (hele verdikjeden for data involvert må være representert)</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Følg
-<a href="https://data.norge.no/specification/forvaltningsstandard-begrepskoordinering/">standarden
-om Begrepsharmonisering og begrepsdifferensiering</a>
-(<a href="https://laeringsplattformen.difi.no/kurs/971527404/begrip-begrepene-et-innforingskurs-i-terminologi-og-begrepsarbeid">kurs
-om begrepsarbeid</a> er en utfyllende ressurs)</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Definere API/datasett team med representasjon fra både bruksmiljø og
-produsent (er dette den samme gruppen fra punkt 5?)</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Det kan ta noen iterasjoner med utprøving av API før man er fornøyd</p>
-</li>
-<li>
-<p>Senere oppdateringer kan kjøres som iterasjoner da man allerede har
-resultatene fra tidligere steg.</p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_roller_og_ansvar_for_informasjonsforvaltning"><a class="anchor" href="#_roller_og_ansvar_for_informasjonsforvaltning"></a>4.2. Roller og ansvar for informasjonsforvaltning</h3>
-<div class="paragraph">
-<p>Vi mener at følgende roller, dekker behovene samt holder kompleksiteten
-på et håndterbart nivå når det gjelder informasjonsforvaltning ved
-deling av data:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Tjenesteeier</p>
-</li>
-<li>
-<p>Tjenesteansvarlig</p>
-</li>
-<li>
-<p>Dataeier</p>
-</li>
-<li>
-<p>Behandlingsansvarlig</p>
-</li>
-<li>
-<p>Databehandler</p>
-</li>
-<li>
-<p>Segmentansvarlig</p>
-</li>
-<li>
-<p>Begrepseier</p>
-</li>
-<li>
-<p>Datakonsumenter</p>
-</li>
-</ul>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Rolle:</strong></th>
-<th class="tableblock halign-left valign-top">Tjenesteier</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjenesteeier er den
-organisasjon/virksomhet/enhet som eier en tjeneste.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Er ansvarlig for at sine data/masterdata deles iht. Referansearkitektur
-(dvs. generiske grensesnitt og notifikasjoner, eksempel IntArk).</p>
-</div>
-<div class="paragraph">
-<p>Er ansvarlig for å definere tjenestenivå i henhold til brukeres behov, å
-kvalitetssikre faglig innhold i tjenesten og å gi faglig brukerstøtte.</p>
-</div>
-<div class="paragraph">
-<p>Er ansvarlig for at tjenesten følger gjeldende lover og regler, har
-myndighet til å foreta finansielle beslutninger og signere avtaler.</p>
-</div>
-<div class="paragraph">
-<p>Er ansvarlig for at det er utpekt en tjenesteansvarlig for tjenesten.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjenesteeier vil i de fleste tilfellene være en eller flere ledere av
-de fagavdelingene som benytter seg av løsningens funksjonalitet og som
-oppnår gevinster ved å benytte tjenesten.</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Rolle:</strong></th>
-<th class="tableblock halign-left valign-top">Tjenesteansvarlig</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Rollen har et helhetlig ansvar for at tjenesten dekke ønsker og behov
-for funksjonalitet som en kunde eller konsortium har til tjenesten.</p>
-</div>
-<div class="paragraph">
-<p>Tjenesteansvarlig er operativt ansvarlig og har større kunnskap om behov
-og praktisk bruk av tjenesten. Han/hun jobber i tett samarbeid med
-brukere/brukerrepresentanter. Tjenesteansvarlig og tjenesteeier kan være
-samme person for mindre/enklere tjenester.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><em>Drive nettverk og kommunikasjon</em></p>
-</div>
-<div class="paragraph">
-<p> -ha kontakt med
-brukerne/kundene/oppdragsgiver/myndigheter/leverandører</p>
-</div>
-<div class="paragraph">
-<p>-fremskaffe og formidle informasjon om tjenesten</p>
-</div>
-<div class="paragraph">
-<p><em>Sikre brukermedvirkning og koordinere utviklingen av tjenesten</em></p>
-</div>
-<div class="paragraph">
-<p>-sørge for oppdatert dokumentasjon av tjenesten</p>
-</div>
-<div class="paragraph">
-<p>-sørge for forankring av løpende beslutninger om utvikling av tjenesten</p>
-</div>
-<div class="paragraph">
-<p>-koordinerer beslutningsprosessen</p>
-</div>
-<div class="paragraph">
-<p><em>Sørge for tilstrekkelig kvalitet og sikkerhet i tjenesten</em></p>
-</div>
-<div class="paragraph">
-<p>-oppfølging av regelverk tilknyttet tjenesten</p>
-</div>
-<div class="paragraph">
-<p>-ansvarlig for brukerstøtte [brukerstøtte er også en del av innkjøpte
-tjenester]</p>
-</div>
-<div class="paragraph">
-<p>-ansvar for opplæring i tjenesten</p>
-</div>
-<div class="paragraph">
-<p>-ansvar for å identifisere og håndtere risiko</p>
-</div>
-<div class="paragraph">
-<p><em>Tilrettelegge for gevinstrealisering</em></p>
-</div>
-<div class="paragraph">
-<p><em>Samarbeide med brukerne om forbedring av arbeidsprosesser</em></p>
-</div>
-<div class="paragraph">
-<p>_Forvalte avtaler knyttet til tjenesten _</p>
-</div>
-<div class="paragraph">
-<p>_For innkjøpte tjenester gjelder også: _</p>
-</div>
-<div class="paragraph">
-<p>Forvalte tjenestens budsjett</p>
-</div>
-<div class="paragraph">
-<p>Følge opp ekstern(e) leverandør(er)</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjenesteeier, Datakonsument</p></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Rolle:</strong></th>
-<th class="tableblock halign-left valign-top">Dataeier</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Den virksomheten som forvalter opplysningene
-som skal deles fra sine fagsystemer, registre eller felleskomponenter.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Leveranse og forvalting av data. Datakvalitet, sikkerhet,
-tilgjengelighet</p>
-</div>
-<div class="paragraph">
-<p>Motta, registrere, endre og fjerne forekomster.</p>
-</div>
-<div class="paragraph">
-<p>Sikre at bruk av data som eies av tredjepart samsvarer med vilkårene som
-gis.</p>
-</div>
-<div class="paragraph">
-<p>Overholde krav i arkivloven når det gjelder kassasjon.</p>
-</div>
-<div class="paragraph">
-<p>Rådgivning og bistand i spørsmål som angår bruk av data</p>
-</div>
-<div class="paragraph">
-<p>Kommunikasjon med alle interessenter</p>
-</div>
-<div class="paragraph">
-<p>Oppgaver:</p>
-</div>
-<div class="paragraph">
-<p>Innhente data</p>
-</div>
-<div class="paragraph">
-<p>Kvalitetsikre data</p>
-</div>
-<div class="paragraph">
-<p>Bearbeide, berike data</p>
-</div>
-<div class="paragraph">
-<p>Lagre data</p>
-</div>
-<div class="paragraph">
-<p>Lisensiere data</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Rolle:</strong></th>
-<th class="tableblock halign-left valign-top">Behandlingsansvarlig</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Behandlingsansvarlig er en fysisk eller
-juridisk person, en offentlig myndighet, en institusjon eller ethvert
-annet organ som alene eller sammen med andre bestemmer formålet med
-behandlingen av personopplysninger og hvilke midler som skal benyttes;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Uttømmende informasjon om rollen finnes
-hos Datatilsynet
-<a href="https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/databehandleravtale/behandlingsansvarlig-og-databehandler/hva-er-en-behandlingsansvarlig/">(behandlingsansvarlig)</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Rolle:</strong></th>
-<th class="tableblock halign-left valign-top">Databehandler</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">En databehandler er en fysisk eller juridisk
-person, offentlig myndighet, institusjon eller ethvert annet organ som
-behandler personopplysninger på vegne av den behandlingsansvarlige.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Uttømmende informasjon om rollen finnes
-hos Datatilsynet
-<a href="https://www.datatilsynet.no/rettigheter-og-plikter/virksomhetenes-plikter/databehandleravtale/behandlingsansvarlig-og-databehandler/hva-er-en-databehandler/">(databehandler)</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Rolle:</strong></th>
-<th class="tableblock halign-left valign-top">Segmentansvarlig</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rolle:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Begrepseier</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Rollen som har det faglige ansvaret for et
-begreps innhold.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Rolle:</strong></th>
-<th class="tableblock halign-left valign-top">Datakonsument</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Beskrivelse av rollen:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Den virksomheten som mottar opplysninger fra
-datatilbyder til sitt formål/til et annet formål.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Ansvars-områder og oppgaver:</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Konsumenten har ansvar for å spesifisere hvilke opplysninger de trenger,
-og for å vurdere om disse kan deles uten hinder av taushetsplikt.</p>
-</div>
-<div class="paragraph">
-<p>Konsumenter med sammenfallende behov har ansvar for å samordne seg.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Typiske roller/stillinger som rollen skal samarbeide med:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjenesteansvarlig, Dataeier, Behandlingsansvarlig, Segmentansvarlig
-(skal Segmentansvarlig være felles kontaktpunkt?)</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_vedlegg_1_definisjoner"><a class="anchor" href="#_vedlegg_1_definisjoner"></a>5. Vedlegg 1 - Definisjoner</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Datakvalitet</strong>:</p>
-<div class="paragraph">
-<p>Datakvalitet innebærer at data skal være korrekte, komplette,
-oppdaterte og konsistente og har evnen til å støtte de
-informasjonsformål de brukes til [kilde: data.norge.no, SKATTEETATEN]</p>
-</div>
-</li>
-<li>
-<p><strong>Masterdata</strong>:</p>
-<div class="paragraph">
-<p>Master data is the consistent and uniform set of
-identifiers and extended attributes that describes the core entities of
-the enterprise including customers, prospects, citizens, suppliers,
-sites, hierarchies, and chart of accounts.  <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_vedlegg_2_behov_for_avklaringer_og_utfordringer_i_sektorens_kontekst"><a class="anchor" href="#_vedlegg_2_behov_for_avklaringer_og_utfordringer_i_sektorens_kontekst"></a>6. Vedlegg 2 - Behov for avklaringer og utfordringer i sektorens kontekst</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_issues_mot_nasjonale_felleskompontenter_maskinporten_id_porten_og_altinn_autorisasjon"><a class="anchor" href="#_issues_mot_nasjonale_felleskompontenter_maskinporten_id_porten_og_altinn_autorisasjon"></a>6.1. Issues mot nasjonale felleskompontenter (Maskinporten, ID Porten og Altinn autorisasjon)</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Harmonisering av autorisasjon</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Det er ønskelig at UHF autorisasjonstjener og Maskinporten godkjenner
-hverandres tokens. Dette forutsetter at informasjonsmodellen benyttet i
-tokens er felles. Løsningsvarianter:</p>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
-<p>Klienter forholder seg til flere autentiseringstjenere og
-standardisere token struktur</p>
-</li>
-<li>
-<p>Innbytte av tokens (token exchange) fra andre “trusted”
-autorisasjonstjenere. En konsekvens av dette er at man mister (?)
-koblingen til bruker og dermed kjennskap til autentiseringsstyrken som
-ligger bak.</p>
-</li>
-<li>
-<p>Software Statement Assertion
-(<a href="https://tools.ietf.org/html/draft-ietf-oauth-assertions-18" class="bare">https://tools.ietf.org/html/draft-ietf-oauth-assertions-18</a>) – løsning
-benyttet av Open Banking UK</p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Harmonisering av samtykke</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Altinn autorisasjon benytter «Self-contained OAuth2 token» for
-samtykke. Men da vi ikke kan godkjenne tokens på tvers, har vi
-utfordringer med å benytte Altinn autorisasjon direkte. I hvert fall
-dekker det ikke skopes vi har anvar for i UHF autorisasjonstjeneren</p>
-</li>
-<li>
-<p>Hjelper User Managed Access (UMA) her?</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Delegering av rettigheter (fullmakt??): Altinn har per i dag ingen god
-mekanisme for å delegere rettigheter under organisasjonsgranulariteten i
-Enhetsregisteret. Vi tror ikke dette er et problem siden vi <strong>forventer
-at IGA innenfor UHF sektoren vil dekke våre behov.</strong></p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_issues_internt_i_uhf_sektor"><a class="anchor" href="#_issues_internt_i_uhf_sektor"></a>6.2. Issues internt i UHF sektor</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Klientregister inneholder den samme klientoversikten i IAM og i
-datadeling. Hvordan den totale oversikten skal vedlikeholdes må
-defineres. Skal det være repliserte, konsistente registre? Skal det være
-disjunkte subsett?</p>
-</li>
-<li>
-<p>Tilgang til API-er kan ha basis i roller (da er man vel virkelig i
-overlapp med IGA)</p>
-</li>
-<li>
-<p>Dersom forskjellige autorisasjonstjenere ikke kan dele tokens, har vi
-vel også det samme problemet vi har mot de nasjonale fellestjenestene at
-den ene domenen ikke kan forholde seg til tokens fra den andre domenen.</p>
-</li>
-<li>
-<p>Sektoren har tre uavhengige SSO løsninger: IDporten, Feide og Azure
-AD. Dette gir både redusert brukervennlighet, og en sikkerhetsutfordring
-dersom man ikke kan garantere for at det er samme person i de ulike SSO
-dokenene.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_vedlegg_3"><a class="anchor" href="#_vedlegg_3"></a>7. Vedlegg 3 -</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_vedlegg_4"><a class="anchor" href="#_vedlegg_4"></a>8. Vedlegg 4</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_vedlegg_5"><a class="anchor" href="#_vedlegg_5"></a>9. Vedlegg 5</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_om_arkitekturprinsippenes_føringer_for_datadeling"><a class="anchor" href="#_om_arkitekturprinsippenes_føringer_for_datadeling"></a>9.1. Om arkitekturprinsippenes føringer for datadeling</h3>
-<div class="paragraph">
-<p>Pek til
-<a href="https://www.digdir.no/digitalisering-og-samordning/overordnede-arkitekturprinsipper/1065">overordnede arkitekturprinsippene</a> fra digitaliseringsdirektoratet og hva de betyr
-her.</p>
-</div>
-<div class="paragraph">
-<p><mark>Trenger vi noen justeringer av prinsippene?</mark></p>
-</div>
-<div class="paragraph">
-<p>Si noe om UH-IntArk prinsippene og forhold til de overordnede
-arkitekturprinsippene</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/image11.png" alt="image11"></span></p>
-</div>
-</div>
-</div>
-</div>
-<div id="footnotes">
-<hr>
-<div class="footnote" id="_footnotedef_1">
-<a href="#_footnoteref_1">1</a>. Gartner definisjon hentet fra <a href="https://www.gartner.com/en/information-technology/glossary/master-data-management-mdm" class="bare">https://www.gartner.com/en/information-technology/glossary/master-data-management-mdm</a> 2021.01.07
 </div>
 </div>
 </article>
