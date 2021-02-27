@@ -325,7 +325,7 @@ at brukeren er den vedkommende gir seg ut for å være når brukeren ber om tilg
 </div>
 <div class="paragraph">
 <p>Autorisering identifiserer hvilke tilganger en bruker skal ha til virksomhetens ressurser.
-Autorisasjon kan tildeles roller. Brukere kan tildeles roller og gjennom dette få
+Autorisasjon kan tildeles med basis i roller. Brukere kan tildeles roller og gjennom dette få
 autorisasjon til virksomhetens ressurser som er knyttet til rollen.</p>
 </div>
 <div class="paragraph">
@@ -447,8 +447,7 @@ Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logg
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Autentiseringstjeneste</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som benyttes av tilbyder for å autentisere aktuell konsument.</p>
-<p class="tableblock">Avventer input fra IAM projsektet.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som benyttes av tilbyder for å autentisere aktuell konsument.</p></td>
 </tr>
 </tbody>
 </table>
@@ -543,10 +542,7 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[Torget]
-Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering.</p>
-<p class="tableblock">[Verktøykasse for deling av data]
-Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
 virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
 <p class="tableblock">Mer om Maskinporten:
 <a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p></td>
@@ -599,7 +595,7 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OAUTH scopes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">En OAuth Scope er en mekanisme for å begrense konsumentens tilgang til datasettet eksponert gjennom et API. Foreløpig er dette grovkornet tilgangskontroll som for eksempel lese eller skrivetilgang til datasettet. Standardsorganet IETF jobber med å spesifisere mer fingranulert tilgangsmekanismer.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som som kan beskrives som en ressurs-definisjon, og et token er som regel knyttet til ett eller flere scopes. Scopes benyttes til å styre tilganger til API-er og operasjoner, samt eventuelt hva slags responser man får fra API-er.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Token-egenskaper</p></td>
@@ -607,16 +603,11 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p>
-<p class="tableblock">Datatibyder har definisjonsrett og har rettigheter til å behandle data
-Datatilbyder kan sette sammen data som tilbyderen har til et dataprodukt som tilbys datakonsumenter gjennom et API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[Torget]
-Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering.</p>
-<p class="tableblock">[Verktøykasse for deling av data]
-Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
 virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
 <p class="tableblock">Mer om Maskinporten:
 <a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p></td>
@@ -702,22 +693,20 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tilganger konsument</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over tilganger gitt til konsumenter utenfor UHF sektoren tildelt gjennom Maskinporten. Oversikten spesifiserer hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p>
-<p class="tableblock">Datatibyder har definisjonsrett og har rettigheter til å behandle data
-Datatilbyder kan sette sammen data som tilbyderen har til et dataprodukt som tilbys datakonsumenter gjennom et API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgjengeliggjør data etter forselpørsel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgjengeliggjør API</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å tilby data gjennom et API til aktører utenfor egen virksomhet.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tildele tilganger til API</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Prosess for å registrere hvilke databrukere som skal få tilgang
-Sette policy, og grov tilgangsstyring.</p></td>
+Sette policy, og grov tilgangsstyring gjennom maskinporten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtale om tilgang til data</p></td>
@@ -730,10 +719,7 @@ Sette policy, og grov tilgangsstyring.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[Torget]
-Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering.</p>
-<p class="tableblock">[Verktøykasse for deling av data]
-Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
 virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
 <p class="tableblock">Mer om Maskinporten:
 <a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p></td>
@@ -752,8 +738,7 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Registrere samtykkebasert tilgang</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registerer konsumenter som kan innhente samtykke som gir grunnlag for utlevering fra datatilbyder.</p>
-<p class="tableblock">Tjenesten tilbyr i dag ikke samtykke til UHF sektorens datakilder integrert i tjenesten. Dette er ønsket funksjonaltet.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å registerer konsumenter som kan innhente samtykke som gir grunnlag for utlevering fra datatilbyder.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Aktører som kan innhente samtykke for bruk av API</p></td>
@@ -815,7 +800,7 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Data-konsument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Den som innhenter eller mottar data fra andre aktører.</p></td>
 </tr>
 <tr>
@@ -841,8 +826,7 @@ URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Beskrivelse API</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som er en maskinlesbar beskrivelse av REST API-er iht. Open API Specification. Dette er formatet som benyttes for å registrere et API i felles API-katalog</p>
-<p class="tableblock">Ønsker å bruke Open API spesifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som er en maskinlesbar beskrivelse av REST API-er iht. Open API Specification. Dette er formatet som benyttes for å registrere et API i felles API-katalog</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">API-søk</p></td>
@@ -883,7 +867,7 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OAUTH scopes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">En OAuth Scope er en mekanisme for å begrense konsumentens tilgang til datasettet eksponert gjennom et API. Foreløpig er dette grovkornet tilgangskontroll som for eksempel lese eller skrivetilgang til datasettet. Standardsorganet IETF jobber med å spesifisere mer fingranulert tilgangsmekanismer.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dataobjekt som som kan beskrives som en ressurs-definisjon, og et token er som regel knyttet til ett eller flere scopes. Scopes benyttes til å styre tilganger til API-er og operasjoner, samt eventuelt hva slags responser man får fra API-er.</p></td>
 </tr>
 </tbody>
 </table>
@@ -929,10 +913,6 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som gir mulighet til å slå opp teknisk endepunkt</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Virksomhetssertifikat</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">En virksomhets elektroniske ID. Benyttes for å autentisere virksomheten overfor tokentjenesten.</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tokentjeneste</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som utsteder sikkerhetsbilletter. Sikkerhetsbillett utstedes basert på tildelte rettigheter og eventuelle representasjonsforhold.</p></td>
 </tr>
@@ -942,7 +922,7 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tilganger konsument</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over tilganger gitt til konsumenter utenfor UHF sektoren tildelt gjennom Maskinporten. Oversikten spesifiserer hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Oauth2 autorisasjonstjener</p></td>
@@ -971,16 +951,13 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[Torget]
-Maskinporten er en løsning for tilgangsstyring for virksomheter som utveksler data. Løsningen garanterer identiteten mellom virksomheter, og sørger for maskin-til-maskin autentisering.</p>
-<p class="tableblock">[Verktøykasse for deling av data]
-Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
 virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
 <p class="tableblock">Mer om Maskinporten:
 <a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Data-konsument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Den som innhenter eller mottar data fra andre aktører.</p></td>
 </tr>
 <tr>
@@ -1089,13 +1066,11 @@ autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å t
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p>
-<p class="tableblock">Datatibyder har definisjonsrett og har rettigheter til å behandle data
-Datatilbyder kan sette sammen data som tilbyderen har til et dataprodukt som tilbys datakonsumenter gjennom et API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tilgangskontroll-tjeneste</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å sjekke rettigheter til data. Kan være eksterne eller interne tjenester. Disse rettigheter kan være mer finkornet enn tilgangene administrert av autorisasjonstjeneren.
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å sjekke rettigheter til data. Kan være eksterne eller interne tjenester.
 Eksempler på rettigheter kan komme av samtykker fra person eller virksomhet, eller rollebasert fra vergemål, familierelasjon el.</p></td>
 </tr>
 <tr>
@@ -1112,7 +1087,7 @@ Eksempler på rettigheter kan komme av samtykker fra person eller virksomhet, el
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Kontroller tilgang</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroll og håndheving av konsumentens rettigheter til å få forespurte data.  I tillegg til "validering av sikkerhetsbillett", kan det være behov for kontroll mot virksomhetsinterne policies.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroll og håndheving av konsumentens rettigheter til å få forespurte data.  I tillegg til "validering av sikkerhetsbillet", kan det være behov for kontroll mot virksomhetsinterne policies.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Autentisere konsument</p></td>
