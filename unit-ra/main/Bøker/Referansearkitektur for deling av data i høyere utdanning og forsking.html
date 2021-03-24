@@ -188,7 +188,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Sat Feb 27 2021 09:39:34 GMT+0100 (CET)</pre>
+<pre>Wed Mar 24 2021 08:37:43 GMT+0100 (CET)</pre>
 </div>
 </div>
 </div>
@@ -295,7 +295,7 @@ for <strong><em>deling og innhenting av data og hendelser</em></strong>.</p>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ta rede på egne data og krav til datadeling</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Holde orden i data og ansvar</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -562,35 +562,8 @@ for <strong><em>deling og innhenting av data og hendelser</em></strong>.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway hos datatilbyder / OAuth resource server</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API gateway beskytter ressurser og monitorerer tilgang.
-Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll.
-Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
-<p class="tableblock">Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
-<p class="tableblock">  *  Validere tilgangstoken
-  *  Beskytte mot inntrenging og andre trusler
-  * Håndtere volumbegrensninger og andre abonnementsordninger
-  * Håndheve tilgangsstyring
-  * Samle inn data om bruken av API-er
-  * Orkestrering mellom interntjenester</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identity Goveranance Administration (IGA)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identitets- og tilgangsstyring (IAM) handler om å gi studenter, forskere og ansatte riktig tilgang til digitale systemer, tjenester og ressurser, samt avslutte tilgang for brukere som ikke lenger skal ha det.</p>
-<p class="tableblock">Avventer input fra IAM prosjektet</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportalen holder oversikt over og tildeler tilganger til beskyttede ressurser i høyere utdanning og forskningssektoren i henhold til føringer fra eierne av disse ressursene. Tilganger er gitt i form av OAuth2 grants og tokens. Ressursportalen er en del av den felles infrastrukturen for føderert API management for høyere utdanning og forskning. Den registrerer og holder oversikt over API, holder oversikt over klienter som har blitt tildelt tilgang til API og hvilke tilganger det gjelder. Ressursportalen benytter Jason Web Token formattert OAuth2 sikkerhetstoken for å gi tilgang til ressurser gjennom API gateway nær de beskyttede ressursene.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Oauth2 autorisasjonstjener</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OAuth 2 grants og tokens.
-En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Klientregister</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autentiseringstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som benyttes av tilbyder for å autentisere aktuell konsument.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF API manager</p></td>
@@ -618,17 +591,31 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
   * Informasjon om hvordan få support og hjelp fra utsteder</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Roller og tilgangsregler</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Definisjon av roller som blir brukt til å styre autorisasjon for å gi tilgang for en klient til et eller flere API.
-Definisjon av regler for tilgang til et eller flere API</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway hos datatilbyder / OAuth resource server</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API gateway beskytter ressurser og monitorerer tilgang.
+Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll.
+Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
+<p class="tableblock">Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
+<p class="tableblock">  *  Validere tilgangstoken
+  *  Beskytte mot inntrenging og andre trusler
+  * Håndtere volumbegrensninger og andre abonnementsordninger
+  * Håndheve tilgangsstyring
+  * Samle inn data om bruken av API-er
+  * Orkestrering mellom interntjenester</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Attributter / grunndata</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Opplysninger om personer som skal benyttes i tilgangsstyring.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Oauth2 autorisasjonstjener</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OAuth 2 grants og tokens.
+En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autentiseringstjeneste</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som benyttes av tilbyder for å autentisere aktuell konsument.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Klientregister</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Oversikt over alle klienter som er blitt tildelt tilgang til ressurser.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identity Goveranance Administration (IGA)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identitets- og tilgangsstyring (IAM) handler om å gi studenter, forskere og ansatte riktig tilgang til digitale systemer, tjenester og ressurser, samt avslutte tilgang for brukere som ikke lenger skal ha det.</p>
+<p class="tableblock">Avventer input fra IAM prosjektet</p></td>
 </tr>
 </tbody>
 </table>
@@ -823,7 +810,7 @@ at brukeren er den vedkommende gir seg ut for å være når brukeren ber om tilg
 </div>
 <div class="paragraph">
 <p>Autorisering identifiserer hvilke tilganger en bruker skal ha til virksomhetens ressurser.
-Autorisasjon kan tildeles med basis i roller. Brukere kan tildeles roller og gjennom dette få
+Autorisasjon kan tildeles roller. Brukere kan tildeles roller og gjennom dette få
 autorisasjon til virksomhetens ressurser som er knyttet til rollen.</p>
 </div>
 <div class="paragraph">
@@ -942,6 +929,10 @@ Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logg
   * Håndheve tilgangsstyring
   * Samle inn data om bruken av API-er
   * Orkestrering mellom interntjenester</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjonsdistribusjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tjensten mottar notifikasjoner fra konsumenter og distribuerer notifikasjoner til konsumenter som har interesse av gitte notifikasjoner</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Autentiseringstjeneste</p></td>
@@ -1409,6 +1400,10 @@ En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Adressetjeneste</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som gir mulighet til å slå opp teknisk endepunkt</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Virksomhetssertifikat</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">En virksomhets elektroniske ID. Benyttes for å autentisere virksomheten overfor tokentjenesten.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tokentjeneste</p></td>
