@@ -123,96 +123,13 @@
 </div>
 <div class="title">Figure 1. Avgi data - løsningsmønster UHF</div>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Elementer i view for Avgi data - løsningsmønster UHF</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Element</th>
-<th class="tableblock halign-left valign-top">Beskrivelse</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Egen autorisasjons-komponent</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Komponent for å håndheve virksomhetens regler for tilgang.
-Også kalt policy enforcement point (PEP).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Altinn autorisasjon</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[Torget]
-Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
-Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p>
-<p class="tableblock">[Verktøykasse for deling av data]
-Altinn autorisasjon gir teknisk samhandlingsevne ved at bruker logger inn med elektronisk ID,
-autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å ta i bruk aktuell tjeneste.</p>
-<p class="tableblock">Dersom en privatperson skal ta i bruk en tjeneste på vegne av en virksomhet, gjøres det et oppslag mot Enhetsregisteret for å bekrefte at personen har en rolle på vegne av virksomheten. Dette gir organisatorisk samhandlingsevne.</p>
-<p class="tableblock">Mer om Altinn autorisasjon:
-<a href="https://www.altinndigital.no/produkter/styring-av-tilgang/" class="bare">https://www.altinndigital.no/produkter/styring-av-tilgang/</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tilbyder av data til andre aktører.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgangskontroll-tjeneste</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for å sjekke rettigheter til data. Kan være eksterne eller interne tjenester.
-Eksempler på rettigheter kan komme av samtykker fra person eller virksomhet, eller rollebasert fra vergemål, familierelasjon el.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi forespurte data gjennom API</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å avgi data på forespørsel gjennom et egnet API.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Motta  forespørsel om oppslag</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Motta forespørsler fra API-konsument om å avgi data.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi data</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å gi svar på forespørselen.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroller tilgang</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kontroll og håndheving av konsumentens rettigheter til å få forespurte data.  I tillegg til "validering av sikkerhetsbillet", kan det være behov for kontroll mot virksomhetsinterne policies.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autentisere konsument</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Prosessen med å autentisere en konsument.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslings-tjeneste</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data over aktuell transportprotokoll, f.eks, gjennom asynkrone medlinger eller synkrone API-oppslag.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datautvekslings-tjeneste</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste for utveksling av data over aktuell transportprotokoll, f.eks, gjennom asynkrone medlinger eller synkrone API-oppslag.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tokenvaliderings-tjeneste</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tjeneste som benyttes av tilbyder for å validere og kontrollere autentisiteten til et OAUTH2 token fra Maskinporten</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Avgi data</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Evne til å avgi data på forespørsel. Kan omfatte tilgangsstyring.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway hos datatilbyder / OAuth resource server</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API gateway beskytter ressurser og monitorerer tilgang.
-Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll.
-Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
-<p class="tableblock">Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
-<p class="tableblock">  *  Validere tilgangstoken
-  *  Beskytte mot inntrenging og andre trusler
-  * Håndtere volumbegrensninger og andre abonnementsordninger
-  * Håndheve tilgangsstyring
-  * Samle inn data om bruken av API-er
-  * Orkestrering mellom interntjenester</p></td>
-</tr>
-</tbody>
-</table>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="Avgi%20data%20-%20løsningsmønster%20UHF.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
+</div>
+</div>
+</div>
 </article>
   </div>
 </main>
