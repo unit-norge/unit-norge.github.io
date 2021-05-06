@@ -117,12 +117,9 @@
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_utvikling_av_brukernære_api_og_datasett">1. Utvikling av brukernære API og datasett</a>
-<ul class="sectlevel2">
-<li><a href="#_forutsetninger_for_arbeid_med_definisjon_av_datasett_og_api">1.1. Forutsetninger for arbeid med definisjon av datasett og API</a></li>
-<li><a href="#_rutinen_for_nye_brukernære_behov">1.2. Rutinen for nye brukernære behov</a></li>
-</ul>
-</li>
+<li><a href="#_indre_api">1. Indre API</a></li>
+<li><a href="#_ytre_api">2. Ytre API</a></li>
+<li><a href="#_notifikasjoner">3. Notifikasjoner</a></li>
 </ul>
 </div>
 <div id="preamble">
@@ -146,143 +143,26 @@ være forholdsvis stabile over tid. Definisjon av …[mer tekst her]</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_utvikling_av_brukernære_api_og_datasett"><a class="anchor" href="#_utvikling_av_brukernære_api_og_datasett"></a>1. Utvikling av brukernære API og datasett</h2>
+<h2 id="_indre_api"><a class="anchor" href="#_indre_api"></a>1. Indre API</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Tekst utvikling av brukernære API og datasett</p>
+<p>Tekst Indre API</p>
 </div>
-<div class="sect2">
-<h3 id="_forutsetninger_for_arbeid_med_definisjon_av_datasett_og_api"><a class="anchor" href="#_forutsetninger_for_arbeid_med_definisjon_av_datasett_og_api"></a>1.1. Forutsetninger for arbeid med definisjon av datasett og API</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ytre_api"><a class="anchor" href="#_ytre_api"></a>2. Ytre API</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Vi forutsetter og bygger på en viss fremgang i arbeid med
-<a href="https://data.norge.no/guide/veileder-orden-i-eget-hus/">orden i eget hus</a>
-hos deltagende virksomheter der noen datasett er dokumentert i en
-datakatalog. Dette kan enten være Digitaliseringsdirektoratets
-<a href="https://data.norge.no/">felles datakatalog</a>, eller en fremtidig katalog
-for høyere utdanning og forskningssektoren som høstes inn i felles
-datakatalogen.</p>
+<p>Tekst Ytre API</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_notifikasjoner"><a class="anchor" href="#_notifikasjoner"></a>3. Notifikasjoner</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Vi forutsetter også en domenebasert tilnærming der det finnes noen
-masterdata kilder som reflekterer den overordnede forretningsmodellen
-til utdanning og forskning. Disse realiserer «domains aligned with the
-source» i figuren under (fra How to Move Beyond a Monolithic Data Lake
-to a Distributed Data Mesh</p>
-</div>
-<div class="paragraph">
-<p><a href="https://martinfowler.com/articles/data-monolith-to-mesh.html#CentralizedAndMonolithic" class="bare">https://martinfowler.com/articles/data-monolith-to-mesh.html#CentralizedAndMonolithic</a>).</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../unit-ra-datadeling-forvaltning/_images/image10.png" alt="image" width="601" height="331"></span></p>
-</div>
-<div class="paragraph">
-<p>Disse kildene vil være basiskildene, som for eksempel studentregister,
-ansattregister, organisasjonsregister, emneregister,
-forskningsdatakilder og Learning Object Repository. Disse kildene
-defineres i andre prosesser. Innhold i disse masterdatakildene suppleres
-av annen informasjon i en mer bruksnær kontekst, og en tilnærming til
-definisjon av denne er beskrevet under.</p>
-</div>
-<div class="paragraph">
-<p>Rutinen under benyttes dermed til å definere API og datasett i «domains
-aligned with the consumption», eller brukernære behov.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_rutinen_for_nye_brukernære_behov"><a class="anchor" href="#_rutinen_for_nye_brukernære_behov"></a>1.2. Rutinen for nye brukernære behov</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Melde behov, gjerne av datakonsumentene</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Interessenter melder ønsker inn gjennom kjent verktøy / grensenitt</p>
-</li>
-<li>
-<p>Periodisk prosess for å samle innspill og prioritere</p>
-</li>
-<li>
-<p>For de case som går videre: Intervjue interessenter/ kjøre
-tjenestedesign workshop for å beskrive scenariet</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Analysere behov og finne ut hvilke domener og kilder som er involvert</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Hvem gjør dette? Tjenesteansvarlige? Informasjonsdomeneeiere?
-Prosesseiere? Sekretariatet? Hvem hos institusjonene?</p>
-</li>
-<li>
-<p>F. eks. studieadministrasjon kunne være en domene, og tjenesansvarlig
-for FSAPI</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Finn eksisterende datasett involvert (helst fra datakatalogen) som er
-ferdig harmonisert</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Spesifisere hva som blir berørt f. eks. begreper, API, datamodell,
-(tjeneste- og API-eiere)</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Identifiser hva må skapes, harmoniseres eller videreutvikles i tillegg
-til eksisterende datasett for å tilfredsstille behovet</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Trenger vi nye: begreper, kilder, API, datasett m.m?</p>
-</li>
-<li>
-<p>Kontakte interessentene til de berørte områdene med sikte på å være
-med i prosessen</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Kjør begreps harmoniseringsprosessen etter behov med relevante
-interessenter (hele verdikjeden for data involvert må være representert)</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Følg
-<a href="https://data.norge.no/specification/forvaltningsstandard-begrepskoordinering/">standarden
-om Begrepsharmonisering og begrepsdifferensiering</a>
-(<a href="https://laeringsplattformen.difi.no/kurs/971527404/begrip-begrepene-et-innforingskurs-i-terminologi-og-begrepsarbeid">kurs
-om begrepsarbeid</a> er en utfyllende ressurs)</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Definere API/datasett team med representasjon fra både bruksmiljø og
-produsent (er dette den samme gruppen fra punkt 5?)</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Det kan ta noen iterasjoner med utprøving av API før man er fornøyd</p>
-</li>
-<li>
-<p>Senere oppdateringer kan kjøres som iterasjoner da man allerede har
-resultatene fra tidligere steg.</p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
+<p>Tekst Notifikasjoner</p>
 </div>
 </div>
 </div>

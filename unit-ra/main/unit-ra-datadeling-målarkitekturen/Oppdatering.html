@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Føderert API management :: UNIT refansearkitekturer</title>
-    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-målarkitekturen/Føderert%20API%20management.html">
+    <title>Oppdatering :: UNIT refansearkitekturer</title>
+    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-målarkitekturen/Oppdatering.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -103,18 +103,66 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">UNIT referansearkitekturer</a></li>
-    <li><a href="Føderert%20API%20management.html">Føderert API management</a></li>
+    <li><a href="Oppdatering.html">Oppdatering</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/unit-ra-datadeling-målarkitekturen/pages/Føderert%20API%20management.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/unit-ra-datadeling-målarkitekturen/pages/Oppdatering.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Føderert API management</h1>
-
+<h1 class="page">Oppdatering</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_be_om_oppdatering_løsningsmønster_i_uhf_sektoren">1. Be om oppdatering  - løsningsmønster i UHF sektoren</a></li>
+<li><a href="#_håndtere_forespørsel_om_oppdatering_løsningsmønster_uhf">2. Håndtere forespørsel om oppdatering  - løsningsmønster UHF</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_be_om_oppdatering_løsningsmønster_i_uhf_sektoren"><a class="anchor" href="#_be_om_oppdatering_løsningsmønster_i_uhf_sektoren"></a>1. Be om oppdatering  - løsningsmønster i UHF sektoren</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>En prosessflyt en konsument utfører når det utføres et tjenestekall for å innhente data gjennom et API. API-adressen hentes i API-katalogen. Tilgang til APIet byttes inn mot et kjøretids-token i autoriseringstjenesten. Tjenestekall til APIet utføres gjennom API gateway der tokenet benyttes for å få tilgang. Dersom det er et åpent API er det kun relevante prossessteg som utføres.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Be%20om%20oppdatering%20%20-%20løsningsmønster%20i%20UHF%20sektoren%20.png" alt="Be om oppdatering  - løsningsmønster i UHF sektoren  image">
+</div>
+<div class="title">Figure 1. Be om oppdatering  - løsningsmønster i UHF sektoren</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="Be%20om%20oppdatering%20%20-%20løsningsmønster%20i%20UHF%20sektoren%20.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_håndtere_forespørsel_om_oppdatering_løsningsmønster_uhf"><a class="anchor" href="#_håndtere_forespørsel_om_oppdatering_løsningsmønster_uhf"></a>2. Håndtere forespørsel om oppdatering  - løsningsmønster UHF</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>En prosessflyt en tilbyder av data utfører for å svare på en dataforespørsel. Tilbyder mottar forespørsel om oppslag med et aksesstoken. Klienten som forespør autentiseres og token valideres. Eventuelt mer fin-granulert tilgangskontroll utføres og data returneres. Tilgang kontrolleres kun dersom det er snakk om et sikret API.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Håndtere%20forespørsel%20om%20oppdatering%20%20-%20løsningsmønster%20UHF%20.png" alt="Håndtere forespørsel om oppdatering  - løsningsmønster UHF  image">
+</div>
+<div class="title">Figure 2. Håndtere forespørsel om oppdatering  - løsningsmønster UHF</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="Håndtere%20forespørsel%20om%20oppdatering%20%20-%20løsningsmønster%20UHF%20.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </article>
   </div>
 </main>

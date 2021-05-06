@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Del og innhent data, verdistrøm for både tilbyder og konsument - UHF :: UNIT refansearkitekturer</title>
-    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-metode/Del%20og%20innhent%20data,%20verdistrøm%20for%20både%20tilbyder%20og%20konsument%20-%20UHF.var.1.html">
+    <title>Konsumer notifikasjoner - Publiser og Abonner UHF :: UNIT refansearkitekturer</title>
+    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-målarkitekturen/Konsumer%20notifikasjoner%20-%20Publiser%20og%20Abonner%20UHF.var.1.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -103,25 +103,29 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">UNIT referansearkitekturer</a></li>
-    <li><a href="Del%20og%20innhent%20data,%20verdistrøm%20for%20både%20tilbyder%20og%20konsument%20-%20UHF.var.1.html">Del og innhent data, verdistrøm for både tilbyder og konsument - UHF</a></li>
+    <li><a href="Konsumer%20notifikasjoner%20-%20Publiser%20og%20Abonner%20UHF.var.1.html">Konsumer notifikasjoner - Publiser og Abonner UHF</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/unit-ra-datadeling-metode/pages/Del%20og%20innhent%20data,%20verdistrøm%20for%20både%20tilbyder%20og%20konsument%20-%20UHF.var.1.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/unit-ra-datadeling-målarkitekturen/pages/Konsumer%20notifikasjoner%20-%20Publiser%20og%20Abonner%20UHF.var.1.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Del og innhent data, verdistrøm for både tilbyder og konsument - UHF</h1>
+<h1 class="page">Konsumer notifikasjoner - Publiser og Abonner UHF</h1>
 <div class="paragraph">
-<p>Tekst overordnede verdistrømm for datadeling for datatilbyder og datakonsument.</p>
+<p>Datakonsumentlytter på emner som konsumenten abonnerer på hos  Datatilbyder. Når en ny melding kommer i meldingskøen trigges konsumsjonen av notifikasjonen.
+Datakonsumenten vurderer relevans og foretar videre behandling av notifikasjon</p>
+</div>
+<div class="paragraph">
+<p>Videre behandling består av å gjøre et eOppslag (via API) som beskrevet i "Løsningsmønster forespørsel UHF"</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/Del%20og%20innhent%20data,%20verdistrøm%20for%20både%20tilbyder%20og%20konsument%20-%20UHF.png" alt="Del og innhent data" width="verdistrøm for både tilbyder og konsument - UHF image">
+<img src="_images/Konsumer%20notifikasjoner%20-%20Publiser%20og%20Abonner%20UHF.png" alt="Konsumer notifikasjoner - Publiser og Abonner UHF image">
 </div>
-<div class="title">Figure 1. Del og innhent data, verdistrøm for både tilbyder og konsument - UHF</div>
+<div class="title">Figure 1. Konsumer notifikasjoner - Publiser og Abonner UHF</div>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -136,7 +140,7 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Elementer i view for Del og innhent data, verdistrøm for både tilbyder og konsument - UHF</caption>
+<caption class="title">Table 1. Elementer i view for Konsumer notifikasjoner - Publiser og Abonner UHF</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -149,44 +153,9 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Innhente og håndtere notifikasjoner</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Tilbyder av data til andre aktører.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Del  data</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Gjøre data tilgjengelige og klargjøre for deling</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Del data</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>"Del data (operativt)" handler om utveksling av data gjennom etablerte kanaler og iht. avtaler. Dette forutsetter også håndtering av avvik og ikke-tilsiktede hendelser.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Gi tilgang til data</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Vurdere tilgang til data</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Holde orden i data og ansvar</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forbedre (tilbyder)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>"Kontinuerlig forbedring av opplegg for deling av data" handler om aktiv forvaltning av operative løsninger for deling av data gjennom kontakt med datakonsumenter og tilpasning til nye behov, krav og teknologi.</p>
-</div>
-<div class="paragraph">
-<p>Kan også omfatte tilbakemeldinger på kvalitet på data og forbedring av datagrunnlaget.</p>
+<p>Evnen til å konsumere hendelseslister ved å innhente notifikasjoner.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -196,32 +165,70 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Innhent data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Konsumer notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prosessen med å lese og håndtere notifikasjoner.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vurder relevans av notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prosess med å vurdere om en hendelsen knyttet til lest notifikasjon er relevant for konsumenten.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forkast notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prosess med å forkaste notifikasjon som ikke er relevant for virksomheten. Avhengig av krav til personvern og informasjonssikkerhet kan det være særskilte krav til hva som er lov å beholde.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Videre behandling av notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prosess med videre behandling av en notifikasjon som normalt vil være å innhente mer informasjon om hendelsen eller subjektet notifikasjonen er knyttet til og eventuelt agere ut i fra denne.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Junction</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Finne og vurdere data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lytt på abonnert meldingskø/emne</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Be om tilgang til data</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kriterier og regler for å vurdere relevans av notifikasjoner</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Informasjon om hva som legges til grunn for å vurdere relevansen av en hendelse, basert på informasjon i lest notifikasjon.</p>
+</div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Motta data</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjonsdistribusjon</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Tjensten mottar notifikasjoner fra tilbyder og distribuerer notifikasjoner til konsumenter som har interesse av gitte notifikasjoner.</p>
+</div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Få tilgang til data</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisert Melding (Transient)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Den transiente meldingen som abonnenten leser.
+Når meldingen er lest forsvinner den fra innboksen til abonnenten</p>
+</div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Avklar behov for data</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publisert Meldingskø</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Meldingskø som inneholder  de meldingene publisert for en gitt abonnent av notifikasjoner om en gitt topic.</p>
+</div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forbedre (konsument)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Meldingsformidler</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Message broker</p>
+</div>
+<div class="paragraph">
+<p>Når en meldingsfordler skiver en notifikasjon i meldingskø plasseres det i meldingskø hos alle abonnenter (i hver sin kø).</p>
+</div></div></td>
 </tr>
 </tbody>
 </table>

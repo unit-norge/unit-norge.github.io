@@ -117,25 +117,11 @@
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_felleskomponenter">1. Felleskomponenter</a></li>
-<li><a href="#_datautveksling">2. Datautveksling</a>
-<ul class="sectlevel2">
-<li><a href="#_datautveksling_ved_oppslag">2.1. Datautveksling ved oppslag</a>
-<ul class="sectlevel3">
-<li><a href="#_føderert_api_management">2.1.1. Føderert API management</a></li>
-<li><a href="#_api_management_integrert_med_iam">2.1.2. API management integrert med IAM</a></li>
-<li><a href="#_api_management_integrert_med_nasjonale_felleskomponenter">2.1.3. API management integrert med nasjonale felleskomponenter</a></li>
-<li><a href="#_publiser_api">2.1.4. Publiser API</a></li>
-<li><a href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf">2.1.5. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</a></li>
-<li><a href="#_få_tilgang_til_data_løsningsmønster_uhf">2.1.6. Få tilgang til data - løsningsmønster UHF</a></li>
-<li><a href="#_innhente_data_løsningsmønster_uhf">2.1.7. Innhente data - løsningsmønster UHF</a></li>
-<li><a href="#_avgi_data_løsningsmønster_uhf">2.1.8. Avgi data - løsningsmønster UHF</a></li>
-</ul>
-</li>
-<li><a href="#_datautveksling_ved_publisering_konsumering_hendelsesbasert">2.2. Datautveksling ved publisering – konsumering (hendelsesbasert)</a></li>
-</ul>
-</li>
-<li><a href="#_integrasjonsmønster_for_datadeling">3. Integrasjonsmønster for datadeling</a></li>
+<li><a href="#_føderert_api_management">1. Føderert API management</a></li>
+<li><a href="#_publisering_av_hendelser">2. Publisering av hendelser</a></li>
+<li><a href="#_felleskomponenter">3. Felleskomponenter</a></li>
+<li><a href="#_datadeling_integrert_med_iam">4. Datadeling integrert med IAM</a></li>
+<li><a href="#_datadeling_på_tvers_av_sektorer">5. Datadeling på tvers av sektorer</a></li>
 </ul>
 </div>
 <div id="preamble">
@@ -146,7 +132,19 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_felleskomponenter"><a class="anchor" href="#_felleskomponenter"></a>1. Felleskomponenter</h2>
+<h2 id="_føderert_api_management"><a class="anchor" href="#_føderert_api_management"></a>1. Føderert API management</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_publisering_av_hendelser"><a class="anchor" href="#_publisering_av_hendelser"></a>2. Publisering av hendelser</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_felleskomponenter"><a class="anchor" href="#_felleskomponenter"></a>3. Felleskomponenter</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Datadelingsplattformen består av felleskomponentene beskrevet under. De fleste felleskomponenter skal realiseres som fellestjenester med en delt instans. API gateway er en funksjonell beskrivelse av en komponent som skal realiseres med instanser nær datakildene som skal tilbys.</p>
@@ -170,294 +168,15 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_datautveksling"><a class="anchor" href="#_datautveksling"></a>2. Datautveksling</h2>
+<h2 id="_datadeling_integrert_med_iam"><a class="anchor" href="#_datadeling_integrert_med_iam"></a>4. Datadeling integrert med IAM</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Tekst datautveksling</p>
-</div>
-<div class="paragraph">
-<p>Med utgangspunkt i
-<a href="https://nasjonal-arkitektur.github.io/architecture-repository/data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur
-for datautveksling</a> beskriv de mønstrene som vi bruker</p>
-</div>
-<div class="sect2">
-<h3 id="_datautveksling_ved_oppslag"><a class="anchor" href="#_datautveksling_ved_oppslag"></a>2.1. Datautveksling ved oppslag</h3>
-<div class="paragraph">
-<p>Tekst Datautveksling ved oppslag representasjon.</p>
-</div>
-<div class="sect3">
-<h4 id="_føderert_api_management"><a class="anchor" href="#_føderert_api_management"></a>2.1.1. Føderert API management</h4>
-<div class="paragraph">
-<p>Føderert API Management innebærer at et domene kan gi brukere i andre domener som man har et tillitsforhold til, ofte kalt fødereringspartnere, tilgang til sine egne data gjennom APIer. Dette er en tilnærming til API Management som har etablert seg de siste årene.  Det er flere grunner for dette, blant annet at store virksomheter i dag gjerne har virksomhetsdata lagret distribuert og gjerne fordelt mellom systemer som kjører på lokale servere (on-premise) og i skybaserte-løsninger.</p>
-</div>
-<div class="paragraph">
-<p>Det er et sterkt politisk fokus på deling av data mellom domener. Flere initiativer, som "orden i eget hus" og nasjonale og sektorvise digitaliseringsstrategier skal understøtte dette fokuset på deling av data. I en slik sammenheng ser vi behovet for et felles API Management-regime i kunnskapssektoren.</p>
-</div>
-<div class="paragraph">
-<p>Et slikt regime muliggjør deling av data for å oppnå sammenhengende brukerreiser, eksemplifisert ved de syv livshendelser og tjenestekjeder.  Det er en forutsetning at data kan deles mellom virksomheter som betjener slike brukerreiser.</p>
-</div>
-<div class="paragraph">
-<p>3.parts aktører kan bruke data fra sektoren for innovasjon. API management kan medvirke til deling av data til 3. part ved å gjøre data gjenfinnbart, tilgjengelig og dokumentert.</p>
-</div>
-<div class="paragraph">
-<p>Virksomhetene i Universiteter, Høyskoler og Forskning har mange fellestrekk og noen fellestjenester på tvers. Deres autonomi gjør likevel at de er ulike på enkelte områder, for eksempel når det gjelder teknisk infrastruktur.  Disse likhetene og forskjellene understreker behovet for en føderert API Management-løsning.  En slik løsning er mer fleksibel med tanke på tekniske løsninger og produktvalg lokalt.</p>
-</div>
-<div class="paragraph">
-<p>Designen avbildet er laget for å støtte følgende karakteristikk:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Intstitusjonene er sikret råderett over egne data gjennom tilgangstjeneste i ressursportalen og API gateway hos institusjonen som kan styre og holde oversikt over datatilgang</p>
-</li>
-<li>
-<p>Institusjonene har valgfrihet over API Gateway såfremt funksjoner og grensesnitt er ivaretatt</p>
-</li>
-<li>
-<p>Deling av data på tvers av institusjoner er støttet gjennom felles ressursportal</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/Føderert%20API%20management.png" alt="Føderert API management image">
-</div>
-<div class="title">Figure 2. Føderert API management</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><a href="Føderert%20API%20management.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_api_management_integrert_med_iam"><a class="anchor" href="#_api_management_integrert_med_iam"></a>2.1.2. API management integrert med IAM</h4>
-<div class="paragraph">
-<p>Infrastruktur for identitetshåndtering og tilgangsstyring (IAM) utfyller API management og må
-fungere sammen.</p>
-</div>
-<div class="paragraph">
-<p>Autentisering er det som sjekker at brukeren er kjent for virksomhenten og forsikrer
-at brukeren er den vedkommende gir seg ut for å være når brukeren ber om tilgang til ressurser.</p>
-</div>
-<div class="paragraph">
-<p>Autorisering identifiserer hvilke tilganger en bruker skal ha til virksomhetens ressurser.
-Autorisasjon kan tildeles roller. Brukere kan tildeles roller og gjennom dette få
-autorisasjon til virksomhetens ressurser som er knyttet til rollen.</p>
-</div>
-<div class="paragraph">
-<p>IAM utfører autentisering ved bruk av komponenter i den øvre delen av viewet.</p>
-</div>
-<div class="paragraph">
-<p>API management utføres av komponenter i den nedre delen av viewet.</p>
-</div>
-<div class="paragraph">
-<p>Ressursportalen og tjenesten for tildeling av rettigheter til klienter deltar i begge funksjoner.</p>
-</div>
-<div class="paragraph">
-<p>IAM autoriserer sluttbrukeres tilgang til tjenester. Dette er basert på både autentisering
-av deres identitet, det vil si hvem brukeren er, og de roller brukeren er tildelt hos en
-eller flere institusjoner.</p>
-</div>
-<div class="paragraph">
-<p>API management styrer tilgang til data gjennom API basert på policy eller godkjenning
-fra dataforvalter. Brukers tilgang til beskyttet tjeneste hos datakonsument kan være
-tilstrekkelig til at bruker ikke trenger å autoriseres eksplisitt hos datatilbyder. Avgjørelsen om å godkjenne tilgang til data kan godt være basert på
-en sluttbrukers rolle hos en institusjon.
-​</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/API%20management%20integrert%20med%20IAM.png" alt="API management integrert med IAM image">
-</div>
-<div class="title">Figure 3. API management integrert med IAM</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><a href="API%20management%20integrert%20med%20IAM.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_api_management_integrert_med_nasjonale_felleskomponenter"><a class="anchor" href="#_api_management_integrert_med_nasjonale_felleskomponenter"></a>2.1.3. API management integrert med nasjonale felleskomponenter</h4>
-<div class="paragraph">
-<p>​​Det er behov for datadeling og API Management på tvers av sektorer. Høyere utdanning og forskning ønsker utstrakt bruk av nasjonale felleskomponenter, som omtalt i Digitaliseringsrundskrivet. For å oppnå dette må både sektorens og den nasjonale infrastrukturen videreutvikles.​</p>
-</div>
-<div class="paragraph">
-<p>Føderert tilgangsstyring for datadeling på tvers av sektorer er ønskelig, og det krever blant annet standardisering av tilgangstokens for å oppnå gjennomgående tillitskjeder. ​Det er også ønskelig at brukere kan styre samtykke til sine data fra et sted nasjonalt, inklusivt til data i kilder i høyere utdanning og forskning. Det hadde vært ønskelig om en felles Norsk samtykketjeneste kunne være integrert med funksjonalitet som vi forvente skal realiseres i IAM løsningent til høyere utdanning og forskning.</p>
-</div>
-<div class="paragraph">
-<p>Figuren viser kun kobling til maskinporten direkte som er mulig i dag.  Det er planlagt automatisert høsting av API katalogen fra høyere utdanning og forskning til Felles API-katalog som visst i figuren. Samtykke til kilder i vår sektor fra Altinn autorisasjon er foreløpig ikke imlementert, så ingen kobling til Altinn autorisasjon er visst i figuren. ​</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/API%20management%20integrert%20med%20nasjonale%20felleskomponenter.png" alt="API management integrert med nasjonale felleskomponenter image">
-</div>
-<div class="title">Figure 4. API management integrert med nasjonale felleskomponenter</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><a href="API%20management%20integrert%20med%20nasjonale%20felleskomponenter.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_publiser_api"><a class="anchor" href="#_publiser_api"></a>2.1.4. Publiser API</h4>
-<div class="paragraph">
-<p>En prosessflyt som datatilbyder må gjennomføre for å gjøre et API synlig og tilgjengelig gjennom kataloger og søkeløsninger. Metadata om APIet blir registrert i API-katalogen. Metadata inkluderer begreper og datamodeller omfattet av datasettet som APIet tilgjengeliggjør, samt tilganger (scopes) knyttet til APIet som kan tildeles konsumenter.</p>
-</div>
-<div class="paragraph">
-<p>APIet registrert i UHF API katalog blir høstet inn i Felles API katalog. Vi ønsker at tilganger (scopes) skal i tillegg kunne registreres i Maskinporten slik at konsumenter utenfor UHF sektoren kan oppdage APIet og be om tilgang på et senere tidspunkt.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/Publiser%20API.png" alt="Publiser API image">
-</div>
-<div class="title">Figure 5. Publiser API</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><a href="Publiser%20API.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"></a>2.1.5. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</h4>
-<div class="paragraph">
-<p>En prosessflyt som datatilbyder må gjennomføre for å tildele rettigheter til en konsument som ber om tilgang til data. En datatilbyder mottar forespørsel om tilgang til et API på vegne av en organisasjon eller bruker. Dataeieren tar stilling til om konsumenten skal få tilgang til data gjennom APIet. Tilgang registreres knyttet til konsumentens klient (applikasjonen som benytter APIet) i klientregisteret.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/Tilgjengeliggjøre%20data%20etter%20forsepørsel%20løsningsmønster%20UHF.png" alt="Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF image">
-</div>
-<div class="title">Figure 6. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><a href="Tilgjengeliggjøre%20data%20etter%20forsepørsel%20løsningsmønster%20UHF.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_få_tilgang_til_data_løsningsmønster_uhf"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf"></a>2.1.6. Få tilgang til data - løsningsmønster UHF</h4>
-<div class="paragraph">
-<p>En prosessflyt en konsument av data må gjennomføre for å få tildelt rettigheter til data gjennom et API. Det omfatter å få kjennskap til aktuelt API gjennom API-katalogen, autentisere konsumenten, inngå avtale om bruk av data, samt å registrere tilganger hos den tekniske komponenten som skal utføre tjenestekallet. Dersom det dreier seg om tilgang til et åpent tilgjengelig API, kan enkelte delaktiviteter i prosessene hoppes over, men for å kunne logge informasjon om bruk av APIer bør alle konsumenter av et API registreres i klientregisteret.</p>
-</div>
-<div class="paragraph">
-<p>Viewet bør strengt tatt vise at konsumenten kan finne APIet enten i UH/F sektorens API katalog eller i Felles datakatalog. Vi velger å vise prosessflyten kun med UH/F sektorens komponenter både for å kunne presentere en oversiktlig prosessflyt og fordi forholdet til de nasjonale felleskomponenter er ennå ikke helt avklart.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/Få%20tilgang%20til%20data%20-%20løsningsmønster%20UHF.png" alt="Få tilgang til data - løsningsmønster UHF image">
-</div>
-<div class="title">Figure 7. Få tilgang til data - løsningsmønster UHF</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><a href="Få%20tilgang%20til%20data%20-%20løsningsmønster%20UHF.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_innhente_data_løsningsmønster_uhf"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf"></a>2.1.7. Innhente data - løsningsmønster UHF</h4>
-<div class="paragraph">
-<p>En prosessflyt en konsument utfører når det utføres et tjenestekall for å innhente data gjennom et API. API-adressen hentes i API-katalogen. Tilgang til APIet byttes inn mot et kjøretids-token i autoriseringstjenesten. Tjenestekall til APIet utføres gjennom API gateway der tokenet benyttes for å få tilgang. Dersom det er et åpent API er det kun relevante prossessteg som utføres.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/Innhente%20data%20-%20løsningsmønster%20UHF.png" alt="Innhente data - løsningsmønster UHF image">
-</div>
-<div class="title">Figure 8. Innhente data - løsningsmønster UHF</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><a href="Innhente%20data%20-%20løsningsmønster%20UHF.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_avgi_data_løsningsmønster_uhf"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf"></a>2.1.8. Avgi data - løsningsmønster UHF</h4>
-<div class="paragraph">
-<p>En prosessflyt en tilbyder av data utfører for å svare på en dataforespørsel. Tilbyder mottar forespørsel om oppslag med et aksesstoken. Klienten som forespør autentiseres og token valideres. Eventuelt mer fin-granulert tilgangskontroll utføres og data returneres. Tilgang kontrolleres kun dersom det er snakk om et sikret API.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/Avgi%20data%20-%20løsningsmønster%20UHF.png" alt="Avgi data - løsningsmønster UHF image">
-</div>
-<div class="title">Figure 9. Avgi data - løsningsmønster UHF</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><a href="Avgi%20data%20-%20løsningsmønster%20UHF.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_datautveksling_ved_publisering_konsumering_hendelsesbasert"><a class="anchor" href="#_datautveksling_ved_publisering_konsumering_hendelsesbasert"></a>2.2. Datautveksling ved publisering – konsumering (hendelsesbasert)</h3>
 
 </div>
 </div>
-</div>
 <div class="sect1">
-<h2 id="_integrasjonsmønster_for_datadeling"><a class="anchor" href="#_integrasjonsmønster_for_datadeling"></a>3. Integrasjonsmønster for datadeling</h2>
+<h2 id="_datadeling_på_tvers_av_sektorer"><a class="anchor" href="#_datadeling_på_tvers_av_sektorer"></a>5. Datadeling på tvers av sektorer</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Tekst integrasjonsmønster for datadeling</p>
-</div>
-<div class="paragraph">
-<p>*Provisjonering *(hoved IntArk mønster): Holde «server-side» kopi løpende oppdatert
-fra master ved å benytte eOppslag til å hente data fra master
-og eNotifikasjon for å gi beskjed til abonnenter om at noe er
-oppdatert på master.</p>
-</div>
-<div class="paragraph">
-<p><strong>Synkront oppslag: </strong>realisering av eOppslag – hva bør vi si om
-dette? Skal vi Skissere REST og GraphQL eller blir det for
-teknologispesifikk?</p>
-</div>
-<div class="paragraph">
-<p><strong>“Event stream” på logisk nivå: </strong>Dette er en form
-for ePublisering/eNotfikasjon. Ref. Gartner sin FS evaluering, men siden
-de ikke har åpen dokumentasjon<strong> </strong>se for eksempel
-denne:<strong> </strong><a href="https://mapr.com/blog/event-driven-microservices-patterns/" class="bare">https://mapr.com/blog/event-driven-microservices-patterns/</a><span class="[.underline"><a href="https://mapr.com/blog/event-driven-microservices-patterns/" class="bare">https://mapr.com/blog/event-driven-microservices-patterns/</a></span>].
-Overordnet, omtales arkitekturen som
-“https://en.wikipedia.org/wiki/Event-driven_architecture[<span class="underline">Event Driven
-Architecture</span>]”.<sup>2</sup>  Tilnærmingen forutsetter tilnærming til konsistens
-omtalt
-som «https://en.wikipedia.org/wiki/Eventual_consistency[<span class="underline">Eventual
-Consistency</span>]». «Conflict resolution» kan her gjennomføres på flere
-måter avhengig av domenebehov. Mange benytter «last writer wins», men
-det finnes flere, strengere alternativer, som for
-eksempel https://debezium.io/blog/2020/02/10/event-sourcing-vs-cdc/<span class="[.underline">Event
-sourcing og Change Data Capture</span>].</p>
-</div>
-<div class="paragraph">
-<p><strong>Backend for frontend</strong>: relevant når vi skal spesifisere samhandling med
-individer, som i innovativ læring og livslang læring. eHelse sier
-«Backend-for-Frontend (BFF) er et utbredt designkonsept som benyttes for
-mange klienter og API-er. Konseptet går ut på å la
-ulike brukergrensesnittyper (Nettleserbaserte, App-er på mobil osv) ha
-hver sin backend slik at spesialtilpasninger på API-er som kreves for de
-ulike brukergrensesnitttypene kan realiseres uten at det går
-utover vedlikeholdbarheten til API-ene.» Gartner bruker også den.</p>
-</div>
+
 </div>
 </div>
 </article>

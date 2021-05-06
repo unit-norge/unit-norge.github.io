@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Del og innhent data, verdistrøm for både tilbyder og konsument - UHF :: UNIT refansearkitekturer</title>
-    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-metode/Del%20og%20innhent%20data,%20verdistrøm%20for%20både%20tilbyder%20og%20konsument%20-%20UHF.var.1.html">
+    <title>Notifikasjonsinnhold - basiskonsept UHF :: UNIT refansearkitekturer</title>
+    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-målarkitekturen/Notifikasjonsinnhold%20-%20basiskonsept%20UHF.var.1.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -103,25 +103,22 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">UNIT referansearkitekturer</a></li>
-    <li><a href="Del%20og%20innhent%20data,%20verdistrøm%20for%20både%20tilbyder%20og%20konsument%20-%20UHF.var.1.html">Del og innhent data, verdistrøm for både tilbyder og konsument - UHF</a></li>
+    <li><a href="Notifikasjonsinnhold%20-%20basiskonsept%20UHF.var.1.html">Notifikasjonsinnhold - basiskonsept UHF</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/unit-ra-datadeling-metode/pages/Del%20og%20innhent%20data,%20verdistrøm%20for%20både%20tilbyder%20og%20konsument%20-%20UHF.var.1.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/unit-ra-datadeling-målarkitekturen/pages/Notifikasjonsinnhold%20-%20basiskonsept%20UHF.var.1.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Del og innhent data, verdistrøm for både tilbyder og konsument - UHF</h1>
-<div class="paragraph">
-<p>Tekst overordnede verdistrømm for datadeling for datatilbyder og datakonsument.</p>
-</div>
+<h1 class="page">Notifikasjonsinnhold - basiskonsept UHF</h1>
 <div class="imageblock">
 <div class="content">
-<img src="_images/Del%20og%20innhent%20data,%20verdistrøm%20for%20både%20tilbyder%20og%20konsument%20-%20UHF.png" alt="Del og innhent data" width="verdistrøm for både tilbyder og konsument - UHF image">
+<img src="_images/Notifikasjonsinnhold%20-%20basiskonsept%20UHF.png" alt="Notifikasjonsinnhold - basiskonsept UHF image">
 </div>
-<div class="title">Figure 1. Del og innhent data, verdistrøm for både tilbyder og konsument - UHF</div>
+<div class="title">Figure 1. Notifikasjonsinnhold - basiskonsept UHF</div>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -136,7 +133,7 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Elementer i view for Del og innhent data, verdistrøm for både tilbyder og konsument - UHF</caption>
+<caption class="title">Table 1. Elementer i view for Notifikasjonsinnhold - basiskonsept UHF</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -149,78 +146,56 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hendelsesrelaterte data</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Tilbyder av data til andre aktører.</p>
+<p>Hernik sier 3 pekere i notifikasjon
+subjekt med siste state
+subjekt før og etter
+selve hendelsen</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Del  data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible notification contents</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Gjøre data tilgjengelige og klargjøre for deling</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Del data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type hendelse</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>"Del data (operativt)" handler om utveksling av data gjennom etablerte kanaler og iht. avtaler. Dette forutsetter også håndtering av avvik og ikke-tilsiktede hendelser.</p>
+<p>Identifikasjon av type hendelse. Dette kan være et entydig element i et kontrollert vokabular, men det kan også være "fritekst".</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Gi tilgang til data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Øyeblikkbilde etter hendelse</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Vurdere tilgang til data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inkrementell endring i øyeblikksbilde av subjekt</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Holde orden i data og ansvar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tidsstempel</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forbedre (tilbyder)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifikator for foregående notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Subjekt for hendelse</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>"Kontinuerlig forbedring av opplegg for deling av data" handler om aktiv forvaltning av operative løsninger for deling av data gjennom kontakt med datakonsumenter og tilpasning til nye behov, krav og teknologi.</p>
-</div>
-<div class="paragraph">
-<p>Kan også omfatte tilbakemeldinger på kvalitet på data og forbedring av datagrunnlaget.</p>
+<p>Subjekt for hendelse er den entiteten som hendelsen gjelder; f.eks. en person. Kan være en samling av entiteter, f.eks en angitt befolkningsgruppe.</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Den som innhenter eller mottar data fra andre aktører.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Innhent data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum notifikasjonsinnhold</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Finne og vurdere data</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Be om tilgang til data</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Motta data</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Få tilgang til data</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Avklar behov for data</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Forbedre (konsument)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifikator for notifikasjon</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
 </tr>
 </tbody>
