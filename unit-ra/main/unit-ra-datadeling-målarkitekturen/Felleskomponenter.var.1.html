@@ -152,57 +152,9 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Autentiseringstjeneste</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identitetstilbyder</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Tjeneste som benyttes av tilbyder for å autentisere aktuell konsument.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway hos datatilbyder / OAuth resource server</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>API gateway beskytter ressurser og monitorerer tilgang.
-Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll.
-Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
-</div>
-<div class="paragraph">
-<p>Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Validere tilgangstoken</p>
-</li>
-<li>
-<p>Beskytte mot inntrenging og andre trusler</p>
-</li>
-<li>
-<p>Håndtere volumbegrensninger og andre abonnementsordninger</p>
-</li>
-<li>
-<p>Håndheve tilgangsstyring</p>
-</li>
-<li>
-<p>Samle inn data om bruken av API-er</p>
-</li>
-<li>
-<p>Orkestrering mellom interntjenester</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identity Goveranance Administration (IGA)</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Identitets- og tilgangsstyring (IAM) handler om å gi studenter, forskere og ansatte riktig tilgang til digitale systemer, tjenester og ressurser, samt avslutte tilgang for brukere som ikke lenger skal ha det.</p>
-</div>
-<div class="paragraph">
-<p>Avventer input fra IAM prosjektet</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjonsdistribusjon</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Tjensten mottar notifikasjoner fra tilbyder og distribuerer notifikasjoner til konsumenter som har interesse av gitte notifikasjoner.</p>
+<p>En identitetstilbyder er en virksomhet som er godkjent til å utstede elektroniske identiteter for entydig identifikasjon av en fysisk person på et gitt sikkerhetsnivå.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -212,16 +164,23 @@ Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logg
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Oauth2 autorisasjonstjener</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UHF autorisasjonstjener</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OAuth 2 grants og tokens.
 En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F Klientregister</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Konsumentregister</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Oversikt over alle programvaresystemer (klienter) som er blitt tildelt tilgang til ressurser.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Roller og tilgangsregler</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Definisjon av roller som blir brukt til å styre autorisasjon for å gi tilgang for en klient til et eller flere API.
+Definisjon av regler for tilgang til et eller flere API</p>
 </div></div></td>
 </tr>
 <tr>
@@ -261,60 +220,92 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
 </li>
 </ul>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UH/F API katalog</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UHF API-katalog</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjons-forvaltning</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjons-katalog</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IAM Autentiseringstjeneste</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Oversikt over alle API som er registrert i UH/F sektoren</p>
+<p>Tjeneste som benyttes av tilbyder for å autentisere aktuell konsument.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel rettigheter til konsument</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Tildel autoriserte rettigheter basert på roller, annen policy eller manuell behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UH/F sektoren blir tildelt rettighetene lagret i UH/F klientregisteret i Ressusportalen. Om klienten er fra utenfor UH/F sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Tilbyder av data til andre aktører.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>API gateway beskytter ressurser og monitorerer tilgang.
+Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll.
+Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
 </div>
 <div class="paragraph">
-<p>UH/F API katalog kan inneholde</p>
+<p>Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Navn på API</p>
+<p>Validere tilgangstoken</p>
 </li>
 <li>
-<p>Tekstlig beskrivelse av API</p>
+<p>Beskytte mot inntrenging og andre trusler</p>
 </li>
 <li>
-<p>Informasjonsmodell / Datamodell for API som tilbys</p>
+<p>Håndtere volumbegrensninger og andre abonnementsordninger</p>
 </li>
 <li>
-<p>Kildeinformasjon for data, begrepsinformasjon</p>
+<p>Håndheve tilgangsstyring</p>
 </li>
 <li>
-<p>Informasjon om tilgang, juridiske og tekniske begrensinger for bruk</p>
+<p>Samle inn data om bruken av API-er</p>
 </li>
 <li>
-<p>Eksempelkode, interaktiv API-konsoll og sandkasse for test</p>
-</li>
-<li>
-<p>Informasjon om hvordan få support og hjelp fra utsteder</p>
+<p>Orkestrering mellom interntjenester</p>
 </li>
 </ul>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon meldingsformidler</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Attributter / grunndata</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Opplysninger om personer som skal benyttes i tilgangsstyring.</p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Roller og tilgangsregler</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Definisjon av roller som blir brukt til å styre autorisasjon for å gi tilgang for en klient til et eller flere API.
-Definisjon av regler for tilgang til et eller flere API</p>
+<p>Den som innhenter eller mottar data fra andre aktører.</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beskyttet tjeneste / klient hos datakonsument</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Meldingsformidler (xMQ - system software)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Message broker, som ActiveMQ, RabbitMQ etc</p>
+<p>Tjeneste som IAM beskytter tilgang til. Tjenesten kan også være en konsument av data gjennom API, det vil si Universitet, Høyskole eller andre som gir tilgang til data fra datatilbyder.</p>
+</div>
+<div class="paragraph">
+<p>Komponenten tilbyr:
+  * autentisering  gjennom en Autentiseringstjeneste
+  * oppslag i felleskomponeneter for tilgang til datatilbyders dataprodukter
+  * tilgang til ressurser hos datatilbyder</p>
 </div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Administrere tilgjengelige ressurser</p></td>
 </tr>
 </tbody>
 </table>
