@@ -151,40 +151,88 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identitetstilbyder</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>En identitetstilbyder er en virksomhet som er godkjent til å utstede elektroniske identiteter for entydig identifikasjon av en fysisk person på et gitt sikkerhetsnivå.</p>
+<p>En part som kan autentisere en person eller
+virksomhet. Eksempler på dette er BankID, MinID for personer og utsteder
+av virksomhetssertifikat for virksomheter. Dette er en tjeneste som ikke
+omfattes av denne referansearkitekturen</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Ressursportalen holder oversikt over og tildeler tilganger til beskyttede ressurser i høyere utdanning og forskningssektoren i henhold til føringer fra eierne av disse ressursene. Tilganger er gitt i form av OAuth2 grants og tokens. Ressursportalen er en del av den felles infrastrukturen for føderert API management for høyere utdanning og forskning. Den registrerer og holder oversikt over API, holder oversikt over klienter som har blitt tildelt tilgang til API og hvilke tilganger det gjelder. Ressursportalen benytter Jason Web Token formattert OAuth2 sikkerhetstoken for å gi tilgang til ressurser gjennom API gateway nær de beskyttede ressursene.</p>
+<p>Ressursportalen holder oversikt over og tildeler
+tilganger til beskyttede ressurser i høyere utdanning og
+forskningssektoren i henhold til føringer fra eierne av disse
+ressursene. Tilganger er gitt i form av sikkerhetsbilletter.
+Ressursportalen er en del av den felles infrastrukturen for føderert API
+management for høyere utdanning og forskning. Den registrerer og holder
+oversikt over API og meldingsbaserte notifikasjoner, holder oversikt
+over klienter som har blitt tildelt tilgang til disse og hvilke
+tilganger det gjelder. Ressursportalen benytter JSON Web Token
+formattert OAuth2 sikkerhetsbilletter for å gi tilgang til ressurser
+gjennom API gateway og meldingstjenester nær de beskyttede ressursene.</p>
 </div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Autorisasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autorisasjonstjenester realiserer tilgangskontroll
+gjennom å utstede sikkerhetsbilletter. En autorisasjonstjener er også
+brukt til å realisere autorisasjonspolicy for tilgang og roller</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF autorisasjonstjener</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Autorisasjonstjenester realiserer tilgangskontroll gjennom å utstede OAuth 2 grants og tokens.
-En autorisasjonstjener er også brukt til å realisere tilgangs policy.</p>
+<p>Autorisasjonstjenester realiserer tilgangskontroll
+gjennom å utstede sikkerhetsbilletter. En autorisasjonstjener er også
+brukt til å realisere autorisasjonspolicy for tilgang og roller</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Konsumentregister</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Oversikt over alle programvaresystemer (klienter) som er blitt tildelt tilgang til ressurser.</p>
+<p>Oversikt over alle datakonsumenter som er blitt tildelt tilgang til
+ressurser.</p>
+</div>
+<div class="paragraph">
+<p>Oversikten over konsumenters bruk av API fra datatilbydere er
+autoritativt for</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>hvilke OAuth2 scopes knytet til hvilke API som konsumenten har fått
+tilgang til</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Oversikten over konsumenters bruk av notifikasjoner fra datatilbydere er
+autoritativt for</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>datakonsumentens abonnement for notifikasjoner</p>
+</li>
+</ul>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Roller og tilgangsregler</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Definisjon av roller som blir brukt til å styre autorisasjon for å gi tilgang for en klient til et eller flere API.
+<p>Definisjon av roller som blir brukt til å styre
+autorisasjon for å gi tilgang for en klient til et eller flere API.
 Definisjon av regler for tilgang til et eller flere API</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF API manager</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Administrativ komponent som kontrollerer policy og livssyklus for definisjon og forvaltning av API.
-Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstjener.</p>
+<p>API Management omfatter en administrativ komponent, API Manager, som
+kontrollerer policy og livssyklus for definisjon og forvaltning av API
+og en katalog over tilgjengelige API, API-Katalog (se under).<br>
+Tilganger gjennom et API defineres i API manager og tildeles av
+autorisasjonstjener.</p>
 </div>
 <div class="paragraph">
 <p>Ansvaret til API manager inkluderer:</p>
@@ -192,51 +240,184 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
 <div class="ulist">
 <ul>
 <li>
-<p>Sentralisert forvalter av som håndterer sikkerhetsretningslinjer, og sender kall til bakenforliggende API</p>
+<p>Sentralisert administrasjon av sikkerhetsretningslinjer for API</p>
 </li>
 <li>
-<p>Sentralisert publisering av API spesifikasjon (OpenAPI/RAML), dokumentasjon</p>
+<p>Sentralisert publisering av API spesifikasjon, for eksempel
+OpenAPI/RAML, dokumentasjon</p>
 </li>
 <li>
 <p>Sentralisert API administrasjon og forvaltning av API-katalogen</p>
 </li>
 <li>
-<p>Håndtering av registrerings- og introduksjonsprosesser for API utviklere</p>
+<p>Håndtering av registrerings- og introduksjonsprosesser for API
+utviklere</p>
 </li>
 <li>
-<p>Håndtere livssyklusen til et API, uvikling, test, utrulling, nye versjoner, nedlegging</p>
+<p>Håndtere livssyklusen til et API, utvikling, test, utrulling, nye
+versjoner og nedlegging</p>
 </li>
 <li>
-<p>Ivareta registrering, forvaltning og og utvikling av klientrettigheter</p>
+<p>Ivareta registrering, forvaltning og utvikling av konsumentrettigheter</p>
 </li>
 <li>
-<p>Rapportering og analyse for å monitorere bruk og last</p>
+<p>Rapportering og analyse for å overvåke bruk og last</p>
 </li>
 </ul>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF API-katalog</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Oversikt over alle API som er registrert i UHF sektoren</p>
+</div>
+<div class="paragraph">
+<p>API-katalog kan inneholde:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Navn på API</p>
+</li>
+<li>
+<p>Tekstlig beskrivelse av API</p>
+</li>
+<li>
+<p>Informasjonsmodell / Datamodell for API som tilbys</p>
+</li>
+<li>
+<p>Informasjon om tilgang, juridiske og tekniske begrensinger for bruk.
+Inkluderer hvilke rettighetter (OAuth2 scopes) en konsument kan få til
+et API.</p>
+</li>
+<li>
+<p>Kildeinformasjon for data, begrepsinformasjon</p>
+</li>
+<li>
+<p>Eksempelkode, interaktiv API-konsoll og sandkasse for test</p>
+</li>
+<li>
+<p>Informasjon om hvordan få support og hjelp fra utsteder</p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjons-forvaltning</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjonsforvalter</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Notifikasjonsforvalteren er en administrativ komponent som kontrollerer
+policy og livssyklus for definisjon og forvaltning av notifikasjoner, og
+omfatter en katalog over tilgjengelige notifikasjoner (se
+Notifikasjonskatalog under).<br>
+Tilganger til notifikasjoner defineres i Notifikasjonsforvalteren og
+tildeles av autorisasjonstjener.</p>
+</div>
+<div class="paragraph">
+<p>Ansvaret til Notifikasjonsforvalteren inkluderer:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sentralisert administrasjon av sikkerhetsretningslinjer for
+notifikasjoner</p>
+</li>
+<li>
+<p>Sentralisert publisering av notifikasjonsspesifikasjon og
+dokumentasjon</p>
+</li>
+<li>
+<p>Sentralisert notifikasjonsadministrasjon og forvaltning av
+notifikasjonskatalogen</p>
+</li>
+<li>
+<p>Håndtering av registrerings- og introduksjonsprosesser for utviklere
+av notifikasjoner</p>
+</li>
+<li>
+<p>Håndtere livssyklusen til en notifikasjon, utvikling, test, utrulling,
+nye versjoner og nedlegging</p>
+</li>
+<li>
+<p>Ivareta registrering, forvaltning og utvikling av konsumentrettigheter</p>
+</li>
+<li>
+<p>Rapportering og analyse for å overvåke bruk og last</p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjons-katalog</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Oversikt over alle notifikasjoner som er registrert i UHF sektoren</p>
+</div>
+<div class="paragraph">
+<p>Notifikasjonskatalogen bør tilby et selvbetjeningsgrensesnitt der</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>tjenesteeiere kan registrere og dokumentere systemer som sender
+<em>notifikasjoner</em></p>
+</li>
+<li>
+<p>tjenesteeiere kan registrere og dokumentere systemer som mottar
+notifikasjoner</p>
+</li>
+<li>
+<p>tjenesteeiere kan opprette abonnement på notifikasjoner</p>
+</li>
+<li>
+<p>drift- og utviklingspersonell kan hente tilkoblingsinformasjon</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Notifikasjonskatalogen kan inneholde</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Navn på notifikasjon</p>
+</li>
+<li>
+<p>Tekstlig beskrivelse av notifikasjon</p>
+</li>
+<li>
+<p>Informasjonsmodell / Datamodell for notifikasjonen som tilbys</p>
+</li>
+<li>
+<p>Kildeinformasjon for data, begrepsinformasjon</p>
+</li>
+<li>
+<p>Informasjon om tilgang, juridiske og tekniske begrensinger for bruk</p>
+</li>
+<li>
+<p>Eksempelkode, interaktiv notifikasjonskonsoll (for å se og enkel
+debugge notifikasjoner) og sandkasse for test (testmiljø)</p>
+</li>
+<li>
+<p>Informasjon om hvordan få support og hjelp fra utsteder</p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">IAM Autentiseringstjeneste</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Tjeneste som benyttes av tilbyder for å autentisere aktuell konsument.</p>
+<p>Identitets- og tilgangsstyring (IAM) handler om å gi studenter, forskere og ansatte
+riktig tilgang til digitale systemer, tjenester og ressurser, samt
+avslutte tilgang for brukere som ikke lenger skal ha det. Dette er en
+tjeneste som ikke omfattes av denne referansearkitekturen</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Tildel rettigheter til konsument</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Tildel autoriserte rettigheter basert på roller, annen policy eller manuell behandling av dataforvalter gjennom tjenesten "Forespør dataforvalter". Om klienten er fra UH/F sektoren blir tildelt rettighetene lagret i UH/F klientregisteret i Ressusportalen. Om klienten er fra utenfor UH/F sektoren må tildelte rettighetene lagres et sted der Maskinporten har oversikten.</p>
+<p>Datakonsument skal kunne finne
+tilgjengelige ressurser og be om tilgang til disse. Tilgang kan gis på
+grunnlag av eksisterende tillit til datakonsumenten eller per
+tilgangsforespørsel der ressurseieren beslutter tilgang.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -248,23 +429,25 @@ Tilganger gjennom et API defineres i API manager og tildeles av autorisasjonstje
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">API Gateway</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>API gateway beskytter ressurser og monitorerer tilgang.
-Den håndhever tilgangsstyring ved å validere aksesstokens og utfører eventuell fin-granulert tilgangskontroll.
-Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logging).</p>
+<p>API gateway er en tjeneste som tilgjengeliggjør, beskytter og overvåker
+tilgang til API-ressurser hos datatilbyder. Den håndhever
+tilgangsstyring ved å validere sikkerhetsbilletter og utfører eventuell
+fin-granulert tilgangskontroll. Den håndhever også volumbegrensninger og
+samler data om bruken av API-er (logging).</p>
 </div>
 <div class="paragraph">
-<p>Komponent som beskytter ressursene og monitorerer tilgang inklusivt:</p>
+<p>Komponent som beskytter ressursene og overvåker tilgang inklusivt:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Validere tilgangstoken</p>
+<p>Validere sikkerhetsbillett</p>
 </li>
 <li>
 <p>Beskytte mot inntrenging og andre trusler</p>
 </li>
 <li>
-<p>Håndtere volumbegrensninger og andre abonnementsordninger</p>
+<p>Håndtere volumbegrensninger</p>
 </li>
 <li>
 <p>Håndheve tilgangsstyring</p>
@@ -280,7 +463,35 @@ Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logg
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon meldingsformidler</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Meldingsformidler er en tjeneste som tilgjengeliggjør, beskytter og
+overvåker tilgang til notifikasjoner i form av meldinger hos
+datatilbyder. Den håndhever tilgangsstyring ved å validere
+sikkerhetsbilletter og utfører eventuell fin-granulert tilgangskontroll.
+Den håndhever også volumbegrensninger og samler data om bruken av
+notifikasjoner (logging).</p>
+</div>
+<div class="paragraph">
+<p>Meldingsformidleren som benyttes bør kunne tilby</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>leveransegaranti; når en hendelse er mottatt fra en produsent, så skal
+den leveres hos en konsument</p>
+</li>
+<li>
+<p>sikkerhet; autentisering og autorisasjon av produsenter og konsumenter</p>
+</li>
+<li>
+<p>fleksibel distribuering av hendelser; en «event mesh» må kunne endres
+raskt uten nedetid</p>
+</li>
+<li>
+<p>støtte for flere åpne <em>protokoller</em></p>
+</li>
+</ul>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Datakonsument</p></td>
@@ -312,7 +523,11 @@ Den håndhever også volumbegrenseninger og samler data om bruken av APIer (logg
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Administrere tilgjengelige ressurser</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Datatilbyder skal ha adgang til å
+definere og administrere sine egne ressurser som gjøres tilgjengelig
+gjennom den felles infrastrukturen i Ressursportalen.</p>
+</div></div></td>
 </tr>
 </tbody>
 </table>
