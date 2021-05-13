@@ -163,12 +163,13 @@
 <ul class="sectlevel2">
 <li><a href="#_datautveksling_ved_oppslag">4.1. Datautveksling ved oppslag</a>
 <ul class="sectlevel3">
-<li><a href="#_eoppslag_verdistrøm_med_kapabiliteter_for_tilbyder_og_konsument_uhf">4.1.1. eOppslag Verdistrøm med kapabiliteter for tilbyder og konsument - UHF</a></li>
-<li><a href="#_publiser_api">4.1.2. Publiser API</a></li>
-<li><a href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf">4.1.3. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</a></li>
-<li><a href="#_få_tilgang_til_data_løsningsmønster_uhf">4.1.4. Få tilgang til data - løsningsmønster UHF</a></li>
-<li><a href="#_innhente_data_løsningsmønster_uhf">4.1.5. Innhente data - løsningsmønster UHF</a></li>
-<li><a href="#_avgi_data_løsningsmønster_uhf">4.1.6. Avgi data - løsningsmønster UHF</a></li>
+<li><a href="#_datautvekslingsmønster">4.1.1. Datautvekslingsmønster</a></li>
+<li><a href="#_eoppslag_verdistrøm_med_kapabiliteter_for_tilbyder_og_konsument_uhf">4.1.2. eOppslag Verdistrøm med kapabiliteter for tilbyder og konsument - UHF</a></li>
+<li><a href="#_publiser_api">4.1.3. Publiser API</a></li>
+<li><a href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf">4.1.4. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</a></li>
+<li><a href="#_få_tilgang_til_data_løsningsmønster_uhf">4.1.5. Få tilgang til data - løsningsmønster UHF</a></li>
+<li><a href="#_innhente_data_løsningsmønster_uhf">4.1.6. Innhente data - løsningsmønster UHF</a></li>
+<li><a href="#_avgi_data_løsningsmønster_uhf">4.1.7. Avgi data - løsningsmønster UHF</a></li>
 </ul>
 </li>
 <li><a href="#_datautveksling_ved_publisering_konsumering_hendelsesbasert">4.2. Datautveksling ved publisering – konsumering (hendelsesbasert)</a>
@@ -218,7 +219,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Thu May 13 2021 13:17:31 GMT+0200 (CEST)</pre>
+<pre>Thu May 13 2021 13:33:57 GMT+0200 (CEST)</pre>
 </div>
 </div>
 </div>
@@ -691,16 +692,151 @@ Referansearkitekturen foreslår roller som har dette ansvaret i seksjonen
 <div class="sect1">
 <h2 id="_datadelingsplattformen_og_felles_komponentene_i_den"><a class="anchor" href="#_datadelingsplattformen_og_felles_komponentene_i_den"></a>3. Datadelingsplattformen og felles komponentene i den</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Datadeling i og mellom domener i økosystemet skjer ved bruk av
+datadelingsplattformen i høyere utdanning og forskning.
+Datadelingplattformen består av felleskomponentene og bruk av disse for
+å realisere datautvekslingsmønstrene beskrevet i referansearkitekturen.</p>
+</div>
+<div class="paragraph">
+<p>Saksbehandling og daglig drift hos institusjonene skjer ofte i kjernen
+av virksomheten, i det vi kaller de grunnleggende domener, mens arbeid i
+læringsgrupper og forskningsprosjekt skjer i brukersentriske domener.</p>
+</div>
+<div class="paragraph">
+<p>I praksis betyr dette samhandling i høyere utdanning og forskning.
+Samhandlingen kan skje mellom medlemmer i lærings og forskningsgrupper
+både innenfor egne institusjoner og på tvers av institusjoner. Andre
+områder for samhandling kan være innen saksbehandling og annen
+administrasjon innen en institusjon, eller mellom institusjonene og
+andre sektorer i inn- og utland.</p>
+</div>
+<div class="paragraph">
+<p>Plattformen skal støtte enkel publisering av data og effektive
+mekanismer for gjenfinning og tilgang til data for konsumenter som har
+rett til slik tilgang. Referansearkitekturen definerer prosessene og
+IT-støttet samhandlingsmønstrene brukt for å realisere deling av data.</p>
+</div>
+<div class="paragraph">
+<p>Referansearkitekturen spesifiserer hvordan <strong>datasett og API</strong> skal:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>defineres</p>
+</li>
+<li>
+<p>brukes</p>
+</li>
+<li>
+<p>gjenbrukes av nye konsumenter</p>
+</li>
+<li>
+<p>brukes til nye oppgaver.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Datasett til nye formål kan være satt sammen av data fra flere andre
+API.<br>
+Deler av delingsplattformen skal inngå i Kunnskapsdepartementets
+datafellesskap der det skal bygges et økosystem for bruk av data rundt
+plattformen.</p>
+</div>
+<div class="paragraph">
+<p>Virksomhetene i høyere utdanning og forskning må etablere tillit til
+hverandre for å kunne dele data. Datadelingsplattformen realiserer
+tilgangsstyring til sektorens data på en enhetlig måte gjennom bruk av
+felleskomponenter i plattformen. Hovedmetoden for tilgangsstyring i
+plattformen er API Management.</p>
+</div>
+<div class="paragraph">
+<p>Referansearkitekturen definerer hvordan det varsles om endringer i
+datasett gjennom notifikasjoner. Varslene brukes til å reagere på
+endringene i datasettet, uten at hele datasettet konsumeres. Muligheten
+til å reagere på varsler om endringer tilrettelegger for hurtig
+behandling av data i situasjoner der tidsbruk er et sentralt kriterium
+for bruksmønsteret.</p>
+</div>
 <div class="sect2">
 <h3 id="_føderert_api_management"><a class="anchor" href="#_føderert_api_management"></a>3.1. Føderert API management</h3>
 <div class="paragraph">
-<p>Text føderert API management</p>
+<p>Føderert API Management innebærer at et domene kan gi brukere i andre
+domener som man har et tillitsforhold til, ofte kalt
+fødereringspartnere, tilgang til sine egne data gjennom API. Det er
+flere grunner for å gjøre dette. Mange virksomheter har i dag sine
+virksomhetsdata lagret distribuert, fordelt mellom systemer som kjører
+på lokale servere («on-premise») og i skybaserte-løsninger.</p>
+</div>
+<div class="paragraph">
+<p>Det er et sterkt politisk ønske om deling av data mellom domener. Flere
+initiativer, slik som Digitaliseringsdirektoratets "Orden i eget hus" og
+andre nasjonale og sektorvise digitaliseringsstrategier skal understøtte
+deling av data. I en slik sammenheng ser vi behovet for et felles API
+Management-regime i kunnskapssektoren.</p>
+</div>
+<div class="paragraph">
+<p>Et slikt regime muliggjør deling av data for å oppnå sammenhengende
+brukerreiser, eksemplifisert ved de syv livshendelser og tjenestekjeder.
+Det er en forutsetning at data kan deles mellom virksomheter som
+betjener slike brukerreiser.</p>
+</div>
+<div class="paragraph">
+<p>3.parts aktører kan bruke data fra sektoren for innovasjon. API
+management kan medvirke til deling av data til 3. part ved å gjøre data
+gjenfinnbart, tilgjengelig og dokumentert.</p>
+</div>
+<div class="paragraph">
+<p>Virksomheter i høyere utdanning og Forskning har mange fellestrekk og
+noen fellestjenester på tvers. Deres autonomi gjør likevel at de er
+ulike på enkelte områder, for eksempel når det gjelder teknisk
+infrastruktur. Disse likhetene og forskjellene understreker behovet for
+en føderert API Management-løsning. En slik løsning er mer fleksibel med
+tanke på tekniske løsninger og produktvalg lokalt.</p>
+</div>
+<div class="paragraph">
+<p>Felleskomponentene relatert til API-management i referansearkitekturen
+(se under) er laget for å støtte følgende karakteristikk:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Institusjonene er sikret råderett over egne data gjennom
+tilgangstjeneste i ressursportalen og API gateway hos institusjonen som
+kan styre og holde oversikt over datatilgang</p>
+</li>
+<li>
+<p>Institusjonene har valgfrihet over API Gateway så lenge funksjoner og
+grensesnitt er ivaretatt</p>
+</li>
+<li>
+<p>Deling av data på tvers av institusjoner er støttet gjennom felles
+ressursportal</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_publisering_av_hendelser"><a class="anchor" href="#_publisering_av_hendelser"></a>3.2. Publisering av hendelser</h3>
 <div class="paragraph">
-<p>Text Publisering av hendelser</p>
+<p>For publisering av hendelser er det etablert et mønster der datatilbyder
+utsteder en lettvektsnotifikasjon som datakonsumenten kan abonnere på.
+Lettvektsnotifikasjonen inneholder en lenke til et API der
+datakonsumenten kan hente data relatert til notifikasjonen. Dette
+mønsteret er allerede i bruk i UHF-sektoren.</p>
+</div>
+<div class="paragraph">
+<p>Lettvektsnotifikasjonen i en eNotifikasjon blir overført mellom
+datatilbyder og konsument av en meldingsformidler (<em>event broker)</em>.
+Meldingsformidleren tar imot hendelser fra produsenter, og overfører
+hendelsen til de konsumenter som abonnere på i hendelsestypen, samtidig
+som den sørger for at eventuell leveransegaranti overholdes.</p>
+</div>
+<div class="paragraph">
+<p>I likhet med behovet for en <em>API katalog</em> som beskriver hvilke APIer som
+finnes, er det nødvendig med en Notifikasjonskatalog som gir et
+overblikk over hvilke datatilbydere som publiserer notifikasjoner om
+endring i datagrunnlag.</p>
 </div>
 </div>
 <div class="sect2">
@@ -724,11 +860,99 @@ Referansearkitekturen foreslår roller som har dette ansvaret i seksjonen
 </div>
 <div class="sect2">
 <h3 id="_datadeling_integrert_med_iam"><a class="anchor" href="#_datadeling_integrert_med_iam"></a>3.4. Datadeling integrert med IAM</h3>
-
+<div class="paragraph">
+<p>Infrastruktur for identitetshåndtering og tilgangsstyring (IAM) utfyller
+API management og notifikasjoner og må fungere sammen.</p>
+</div>
+<div class="paragraph">
+<p>Autentisering er det som sjekker at brukeren er kjent for virksomheten
+og forsikrer at brukeren er den vedkommende gir seg ut for å være når
+brukeren ber om tilgang til ressurser.</p>
+</div>
+<div class="paragraph">
+<p>Autorisering identifiserer hvilke tilganger en bruker skal ha til
+virksomhetens ressurser. Autorisasjon kan tildeles roller. Brukere kan
+tildeles roller og gjennom dette få autorisasjon til virksomhetens
+ressurser som er knyttet til rollen. Det kan skilles på disse to måtene
+å få tilgang på delte data:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Systemtilgang<br>
+Brukeren har implisitt tilgang gjennom tilgang til konsumenten sitt
+system i domenet. Konsumentens system har tilgang til API hos tilbyder.
+Det er konsumenten som må sikre at brukeren har rettighet til å få
+tilgang til tilbyders data</p>
+</li>
+<li>
+<p>Brukersentrisk datadeling<br>
+Brukeren må ha eksplisitt tilgang til tilbyder sine delte data i
+tilbyders system i domenet. Her er det tilbyder som har kontroll over
+brukerens tilgang på data og kan spore brukerens bruk av disse</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>IAM utfører autentisering ved bruk av en autentiseringstjeneste og en
+identitetstilbyder, som vist i figuren under.</p>
+</div>
+<div class="paragraph">
+<p>IAM autoriserer sluttbrukeres tilgang til tjenester. Dette er basert på
+både autentisering av deres identitet, det vil si hvem brukeren er, og
+de roller brukeren er tildelt hos en eller flere institusjoner.</p>
+</div>
+<div class="paragraph">
+<p>API management styrer tilgang til data gjennom API basert på policy
+eller godkjenning fra dataforvalter. Brukers tilgang til beskyttet
+tjeneste hos datakonsument kan være tilstrekkelig til at bruker ikke
+trenger å autoriseres eksplisitt hos datatilbyder. Avgjørelsen om å
+godkjenne tilgang til data kan være basert på en sluttbrukers rolle hos
+en institusjon. ​</p>
+</div>
+<div class="paragraph">
+<p>I UHF autorisasjon inngår autorisering og tildeling av en
+sikkerhetsbillett (token) ved bruk av en autorisasjonstjener og en
+token-tjeneste. Denne sikkerhetsbilletten brukes for å få tilgang til
+API eller notifikasjon hos datatilbyder.</p>
+</div>
+<div class="paragraph">
+<p>UHF Autorisasjon er en tjeneste som samordner tildeling av
+sikkerhetsbilletter til datakonsumenter. Sikkerhetsbilletten gir tilgang
+til en ressurs hos datatilbyderen for en autentisert datakonsument.
+Tjenesten samordner autorisasjon gjennom verifisering av konsument i
+konsumentregisteret og sjekk av konsumentens roller og tilganger til API
+eller notifikasjon.</p>
+</div>
+<div class="paragraph">
+<p>Ressursportalen og tjenesten for tildeling av rettigheter til
+datakonsumenter deltar i begge funksjoner.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_datadeling_på_tvers_av_sektorer"><a class="anchor" href="#_datadeling_på_tvers_av_sektorer"></a>3.5. Datadeling på tvers av sektorer</h3>
-
+<div class="paragraph">
+<p>Det er behov for datadeling og API Management på tvers av sektorer.
+Høyere utdanning og forskning ønsker utstrakt bruk av nasjonale
+felleskomponenter, som omtalt i Digitaliseringsrundskrivet og vist i
+figuren over. For å oppnå dette må både sektorens og den nasjonale
+infrastrukturen videreutvikles.​</p>
+</div>
+<div class="paragraph">
+<p>Føderert tilgangsstyring for datadeling på tvers av sektorer er
+ønskelig, og det krever blant annet standardisering av
+sikkerhetsbilletter (tokens) for å oppnå gjennomgående tillitskjeder.
+​Det er også ønskelig at brukere kan styre samtykke til sine data fra
+<em>et</em> sted nasjonalt, inklusivt til data i kilder i høyere utdanning og
+forskning. Det hadde vært ønskelig om en felles Norsk samtykketjeneste
+kunne være integrert med funksjonalitet som vi forvente skal realiseres
+i IAM løsningen til høyere utdanning og forskning. Samtykke til kilder i
+vår sektor fra Altinn autorisasjon er en mulig fremtidig løsning.</p>
+</div>
+<div class="paragraph">
+<p>Det er planlagt automatisert høsting av API katalogen fra høyere
+utdanning og forskning til Felles API-katalog som visst i figuren under.</p>
+</div>
 </div>
 </div>
 </div>
@@ -736,12 +960,7 @@ Referansearkitekturen foreslår roller som har dette ansvaret i seksjonen
 <h2 id="_datautveksling"><a class="anchor" href="#_datautveksling"></a>4. Datautveksling</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Tekst datautveksling</p>
-</div>
-<div class="paragraph">
-<p>Med utgangspunkt i
-<a href="https://nasjonal-arkitektur.github.io/architecture-repository/data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur
-for datautveksling</a> beskriv de mønstrene som vi bruker</p>
+<p>Datautveksling skjer ved bruk av datautvekslingsmønstrene under.</p>
 </div>
 <div class="sect2">
 <h3 id="_datautveksling_ved_oppslag"><a class="anchor" href="#_datautveksling_ved_oppslag"></a>4.1. Datautveksling ved oppslag</h3>
@@ -749,24 +968,83 @@ for datautveksling</a> beskriv de mønstrene som vi bruker</p>
 <p>Tekst Datautveksling ved oppslag representasjon.</p>
 </div>
 <div class="sect3">
-<h4 id="_eoppslag_verdistrøm_med_kapabiliteter_for_tilbyder_og_konsument_uhf"><a class="anchor" href="#_eoppslag_verdistrøm_med_kapabiliteter_for_tilbyder_og_konsument_uhf"></a>4.1.1. eOppslag Verdistrøm med kapabiliteter for tilbyder og konsument - UHF</h4>
+<h4 id="_datautvekslingsmønster"><a class="anchor" href="#_datautvekslingsmønster"></a>4.1.1. Datautvekslingsmønster</h4>
 <div class="paragraph">
-<p>Forklaring:
-Datatilbyder må evne å bestemme hvilken teknisk løsning som skal benyttes når dataene gjøres tilgjengelig som åpne data</p>
+<p><strong>Synkront oppslag</strong></p>
 </div>
 <div class="paragraph">
-<p>Datatilbyder må evne å velge hvor og hvordan dataene skal gjøres tilgjengelig, hvor skal datakonsument finne dataene og på hvilket format skal dataene deles</p>
+<p><em>Synkront oppslag</em> er realiseringen av eOppslag. I dette mønsteret
+hentes data fra datakilden ved behov. Et typisk eksempel på synkront
+oppslag kan være uthenting av aktuelle konteringsregler fra
+økonomisystemet ved prevalidering av regnskap før det føres i hovedbok.</p>
 </div>
 <div class="paragraph">
-<p>Datatilbyder må videre evne å bestemme detaljeringsgrad på dataene</p>
+<p><strong>Provisjonering via synkront oppslag</strong></p>
 </div>
 <div class="paragraph">
-<p>Krav til personvern må kunne ivaretas, samt eventuelle krav i forhold til andre skjermingsverdige opplysninger</p>
+<p>Synkront oppslag kan også benyttes til provisjonering. I et slikt
+tilfelle hentes all informasjon det er nødvendig at blir lagret i et
+system fra datakilden, før det lagres. Ved provisjonering med synkront
+oppsalg er det ofte store mengder data i bevegelse, og overføringen tar
+tid. Disse egenskapene medfører at provisjonering via synkront oppslag
+utføres sjelden. Denne metoden blir ofte kalt <em>batch-provisjonering</em>.</p>
 </div>
 <div class="paragraph">
-<p>Løsning:
-Prosesser for å dele data som åpne data</p>
+<p><strong>Provisjonering via lettvekts eNotifikasjoner</strong></p>
 </div>
+<div class="paragraph">
+<p>I de tilfellene provisjonering via synkrone oppslag ikke kan besørge en
+propageringshastighet som understøtter brukerenes behov, kan lette
+eNotifikasjoner benyttes i kombinasjon med eOppslag. De lette
+eNotifikasjonene bærer informasjon om <em>hvilke</em> data som har endret seg i
+datakilden, og leveres umiddelbart til de som måtte være interessert i
+dataendringene. Dette tillater systemet som er avhengig av
+provisjonering å hente kun den informasjonen som har blitt endret.</p>
+</div>
+<div class="paragraph">
+<p>Et typisk eksempel på bruk av dette mønsteret er visning av
+kontaktinformasjon i personprofiler. En professor kjøper seg ny telefon,
+og melder nummeret inn til sin arbeidsgiver. Telefonnummeret er
+reflektert i personprofilen snarlig etter registrering i HR-systemet.</p>
+</div>
+<div class="paragraph">
+<p><strong>Fremtidige utvidelser</strong></p>
+</div>
+<div class="paragraph">
+<p>Digitaliseringsdirektoratets referansearkitektur definerer to varianter
+av eNotifikasjon, den tidligere omtalte lettvektsvarianten, og en basert
+på hendelseslister.</p>
+</div>
+<div class="paragraph">
+<p>Hendelseslister består av notifikasjoner som konsumeres via eOppslag.
+Notifikasjonene kan inneholde varierende mengde informasjon, og
+propageres ikke like hurtig som lettvektsvarianten beskrevet ovenfor.
+Hendelseslistene er persistente av natur (til forskjell fra
+lettvektsvarianten, der notifikasjonene «forsvinner» når de er
+konsumert), og lar sådan datakilden beskrive en historikk. Et typisk
+eksempel på en slik historikk kan være de forskjellige stegene i en
+saksbehandlingsprosess, der de forskjellige stegene må være klart
+definert for å kunne foreta videre steg i saksbehandlingsprosessen,
+eller realisere etterlevelse av juridiske krav.</p>
+</div>
+<div class="paragraph">
+<p>I neste versjon av referansearkitekturen vil det vurderes å inkludere
+varianten basert på hendelseslister. Det vil også vurderes å utvide
+definisjonen av lettvektsnotifikasjoner slik at de kan bære konkrete
+data (også kalt <em>Event Carried State Transfer</em>), til forskjell fra
+eksisterende definisjon der de kun bærer en referanse til dataene som er
+endret.</p>
+</div>
+<div class="paragraph">
+<p><strong>Oppdatering hos datatilbyder</strong></p>
+</div>
+<div class="paragraph">
+<p>[Ny tekst om behov for at konsumenter kan be om oppdatering i
+kildesystemer]</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_eoppslag_verdistrøm_med_kapabiliteter_for_tilbyder_og_konsument_uhf"><a class="anchor" href="#_eoppslag_verdistrøm_med_kapabiliteter_for_tilbyder_og_konsument_uhf"></a>4.1.2. eOppslag Verdistrøm med kapabiliteter for tilbyder og konsument - UHF</h4>
 <div class="imageblock">
 <div class="content">
 <img src="../unit-ra-datadeling-målarkitekturen/_images/eOppslag%20Verdistrøm%20med%20kapabiliteter%20for%20tilbyder%20og%20konsument%20-%20UHF%20%20.png" alt="eOppslag Verdistrøm med kapabiliteter for tilbyder og konsument - UHF   image">
@@ -782,12 +1060,19 @@ Prosesser for å dele data som åpne data</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_publiser_api"><a class="anchor" href="#_publiser_api"></a>4.1.2. Publiser API</h4>
+<h4 id="_publiser_api"><a class="anchor" href="#_publiser_api"></a>4.1.3. Publiser API</h4>
 <div class="paragraph">
-<p>En prosessflyt som datatilbyder må gjennomføre for å gjøre et API synlig og tilgjengelig gjennom kataloger og søkeløsninger. Metadata om APIet blir registrert i API-katalogen. Metadata inkluderer begreper og datamodeller omfattet av datasettet som APIet tilgjengeliggjør, samt tilganger (scopes) knyttet til APIet som kan tildeles konsumenter.</p>
+<p>En prosessflyt som datatilbyder må gjennomføre for å gjøre et API synlig
+og tilgjengelig gjennom kataloger og søkeløsninger. Metadata om APIet
+blir registrert i API-katalogen. Metadata inkluderer begreper og
+datamodeller omfattet av datasettet som APIet tilgjengeliggjør, samt
+tilganger (scopes) knyttet til APIet som kan tildeles konsumenter.</p>
 </div>
 <div class="paragraph">
-<p>APIet registrert i UHF API katalog blir høstet inn i Felles API katalog. Vi ønsker at tilganger (scopes) skal i tillegg kunne registreres i Maskinporten slik at konsumenter utenfor UHF sektoren kan oppdage APIet og be om tilgang på et senere tidspunkt.</p>
+<p>APIet registrert i UHF API katalog blir høstet inn i Felles API katalog.
+Vi ønsker at tilganger (scopes) i tillegg skal registreres i
+Maskinporten slik at konsumenter utenfor UHF sektoren kan oppdage APIet
+og be om tilgang på et senere tidspunkt.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -804,7 +1089,7 @@ Prosesser for å dele data som åpne data</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"></a>4.1.3. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</h4>
+<h4 id="_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"></a>4.1.4. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</h4>
 <div class="paragraph">
 <p>En prosessflyt som datatilbyder må gjennomføre for å tildele rettigheter til en konsument som ber om tilgang til data. En datatilbyder mottar forespørsel om tilgang til et API på vegne av en organisasjon eller bruker. Dataeieren tar stilling til om konsumenten skal få tilgang til data gjennom APIet. Tilgang registreres knyttet til konsumentens klient (applikasjonen som benytter APIet) i klientregisteret.</p>
 </div>
@@ -823,7 +1108,7 @@ Prosesser for å dele data som åpne data</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_få_tilgang_til_data_løsningsmønster_uhf"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf"></a>4.1.4. Få tilgang til data - løsningsmønster UHF</h4>
+<h4 id="_få_tilgang_til_data_løsningsmønster_uhf"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf"></a>4.1.5. Få tilgang til data - løsningsmønster UHF</h4>
 <div class="paragraph">
 <p>En prosessflyt en konsument av data må gjennomføre for å få tildelt rettigheter til data gjennom et API. Det omfatter å få kjennskap til aktuelt API gjennom API-katalogen, autentisere konsumenten, inngå avtale om bruk av data, samt å registrere tilganger hos den tekniske komponenten som skal utføre tjenestekallet. Dersom det dreier seg om tilgang til et åpent tilgjengelig API, kan enkelte delaktiviteter i prosessene hoppes over, men for å kunne logge informasjon om bruk av APIer bør alle konsumenter av et API registreres i klientregisteret.</p>
 </div>
@@ -845,7 +1130,7 @@ Prosesser for å dele data som åpne data</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_innhente_data_løsningsmønster_uhf"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf"></a>4.1.5. Innhente data - løsningsmønster UHF</h4>
+<h4 id="_innhente_data_løsningsmønster_uhf"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf"></a>4.1.6. Innhente data - løsningsmønster UHF</h4>
 <div class="paragraph">
 <p>En prosessflyt en konsument utfører når det utføres et tjenestekall for å innhente data gjennom et API. API-adressen hentes i API-katalogen. Tilgang til APIet byttes inn mot et kjøretids-token i autoriseringstjenesten. Tjenestekall til APIet utføres gjennom API gateway der tokenet benyttes for å få tilgang. Dersom det er et åpent API er det kun relevante prossessteg som utføres.</p>
 </div>
@@ -864,7 +1149,7 @@ Prosesser for å dele data som åpne data</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_avgi_data_løsningsmønster_uhf"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf"></a>4.1.6. Avgi data - løsningsmønster UHF</h4>
+<h4 id="_avgi_data_løsningsmønster_uhf"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf"></a>4.1.7. Avgi data - løsningsmønster UHF</h4>
 <div class="paragraph">
 <p>En prosessflyt en tilbyder av data utfører for å svare på en dataforespørsel. Tilbyder mottar forespørsel om oppslag med et aksesstoken. Klienten som forespør autentiseres og token valideres. Eventuelt mer fin-granulert tilgangskontroll utføres og data returneres. Tilgang kontrolleres kun dersom det er snakk om et sikret API.</p>
 </div>

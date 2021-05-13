@@ -119,12 +119,13 @@
 <ul class="sectlevel1">
 <li><a href="#_datautveksling_ved_oppslag">1. Datautveksling ved oppslag</a>
 <ul class="sectlevel2">
-<li><a href="#_eoppslag_verdistrøm_med_kapabiliteter_for_tilbyder_og_konsument_uhf">1.1. eOppslag Verdistrøm med kapabiliteter for tilbyder og konsument - UHF</a></li>
-<li><a href="#_publiser_api">1.2. Publiser API</a></li>
-<li><a href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf">1.3. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</a></li>
-<li><a href="#_få_tilgang_til_data_løsningsmønster_uhf">1.4. Få tilgang til data - løsningsmønster UHF</a></li>
-<li><a href="#_innhente_data_løsningsmønster_uhf">1.5. Innhente data - løsningsmønster UHF</a></li>
-<li><a href="#_avgi_data_løsningsmønster_uhf">1.6. Avgi data - løsningsmønster UHF</a></li>
+<li><a href="#_datautvekslingsmønster">1.1. Datautvekslingsmønster</a></li>
+<li><a href="#_eoppslag_verdistrøm_med_kapabiliteter_for_tilbyder_og_konsument_uhf">1.2. eOppslag Verdistrøm med kapabiliteter for tilbyder og konsument - UHF</a></li>
+<li><a href="#_publiser_api">1.3. Publiser API</a></li>
+<li><a href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf">1.4. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</a></li>
+<li><a href="#_få_tilgang_til_data_løsningsmønster_uhf">1.5. Få tilgang til data - løsningsmønster UHF</a></li>
+<li><a href="#_innhente_data_løsningsmønster_uhf">1.6. Innhente data - løsningsmønster UHF</a></li>
+<li><a href="#_avgi_data_løsningsmønster_uhf">1.7. Avgi data - løsningsmønster UHF</a></li>
 </ul>
 </li>
 <li><a href="#_datautveksling_ved_publisering_konsumering_hendelsesbasert">2. Datautveksling ved publisering – konsumering (hendelsesbasert)</a>
@@ -148,12 +149,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Tekst datautveksling</p>
-</div>
-<div class="paragraph">
-<p>Med utgangspunkt i
-<a href="https://nasjonal-arkitektur.github.io/architecture-repository/data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur
-for datautveksling</a> beskriv de mønstrene som vi bruker</p>
+<p>Datautveksling skjer ved bruk av datautvekslingsmønstrene under.</p>
 </div>
 </div>
 </div>
@@ -164,24 +160,83 @@ for datautveksling</a> beskriv de mønstrene som vi bruker</p>
 <p>Tekst Datautveksling ved oppslag representasjon.</p>
 </div>
 <div class="sect2">
-<h3 id="_eoppslag_verdistrøm_med_kapabiliteter_for_tilbyder_og_konsument_uhf"><a class="anchor" href="#_eoppslag_verdistrøm_med_kapabiliteter_for_tilbyder_og_konsument_uhf"></a>1.1. eOppslag Verdistrøm med kapabiliteter for tilbyder og konsument - UHF</h3>
+<h3 id="_datautvekslingsmønster"><a class="anchor" href="#_datautvekslingsmønster"></a>1.1. Datautvekslingsmønster</h3>
 <div class="paragraph">
-<p>Forklaring:
-Datatilbyder må evne å bestemme hvilken teknisk løsning som skal benyttes når dataene gjøres tilgjengelig som åpne data</p>
+<p><strong>Synkront oppslag</strong></p>
 </div>
 <div class="paragraph">
-<p>Datatilbyder må evne å velge hvor og hvordan dataene skal gjøres tilgjengelig, hvor skal datakonsument finne dataene og på hvilket format skal dataene deles</p>
+<p><em>Synkront oppslag</em> er realiseringen av eOppslag. I dette mønsteret
+hentes data fra datakilden ved behov. Et typisk eksempel på synkront
+oppslag kan være uthenting av aktuelle konteringsregler fra
+økonomisystemet ved prevalidering av regnskap før det føres i hovedbok.</p>
 </div>
 <div class="paragraph">
-<p>Datatilbyder må videre evne å bestemme detaljeringsgrad på dataene</p>
+<p><strong>Provisjonering via synkront oppslag</strong></p>
 </div>
 <div class="paragraph">
-<p>Krav til personvern må kunne ivaretas, samt eventuelle krav i forhold til andre skjermingsverdige opplysninger</p>
+<p>Synkront oppslag kan også benyttes til provisjonering. I et slikt
+tilfelle hentes all informasjon det er nødvendig at blir lagret i et
+system fra datakilden, før det lagres. Ved provisjonering med synkront
+oppsalg er det ofte store mengder data i bevegelse, og overføringen tar
+tid. Disse egenskapene medfører at provisjonering via synkront oppslag
+utføres sjelden. Denne metoden blir ofte kalt <em>batch-provisjonering</em>.</p>
 </div>
 <div class="paragraph">
-<p>Løsning:
-Prosesser for å dele data som åpne data</p>
+<p><strong>Provisjonering via lettvekts eNotifikasjoner</strong></p>
 </div>
+<div class="paragraph">
+<p>I de tilfellene provisjonering via synkrone oppslag ikke kan besørge en
+propageringshastighet som understøtter brukerenes behov, kan lette
+eNotifikasjoner benyttes i kombinasjon med eOppslag. De lette
+eNotifikasjonene bærer informasjon om <em>hvilke</em> data som har endret seg i
+datakilden, og leveres umiddelbart til de som måtte være interessert i
+dataendringene. Dette tillater systemet som er avhengig av
+provisjonering å hente kun den informasjonen som har blitt endret.</p>
+</div>
+<div class="paragraph">
+<p>Et typisk eksempel på bruk av dette mønsteret er visning av
+kontaktinformasjon i personprofiler. En professor kjøper seg ny telefon,
+og melder nummeret inn til sin arbeidsgiver. Telefonnummeret er
+reflektert i personprofilen snarlig etter registrering i HR-systemet.</p>
+</div>
+<div class="paragraph">
+<p><strong>Fremtidige utvidelser</strong></p>
+</div>
+<div class="paragraph">
+<p>Digitaliseringsdirektoratets referansearkitektur definerer to varianter
+av eNotifikasjon, den tidligere omtalte lettvektsvarianten, og en basert
+på hendelseslister.</p>
+</div>
+<div class="paragraph">
+<p>Hendelseslister består av notifikasjoner som konsumeres via eOppslag.
+Notifikasjonene kan inneholde varierende mengde informasjon, og
+propageres ikke like hurtig som lettvektsvarianten beskrevet ovenfor.
+Hendelseslistene er persistente av natur (til forskjell fra
+lettvektsvarianten, der notifikasjonene «forsvinner» når de er
+konsumert), og lar sådan datakilden beskrive en historikk. Et typisk
+eksempel på en slik historikk kan være de forskjellige stegene i en
+saksbehandlingsprosess, der de forskjellige stegene må være klart
+definert for å kunne foreta videre steg i saksbehandlingsprosessen,
+eller realisere etterlevelse av juridiske krav.</p>
+</div>
+<div class="paragraph">
+<p>I neste versjon av referansearkitekturen vil det vurderes å inkludere
+varianten basert på hendelseslister. Det vil også vurderes å utvide
+definisjonen av lettvektsnotifikasjoner slik at de kan bære konkrete
+data (også kalt <em>Event Carried State Transfer</em>), til forskjell fra
+eksisterende definisjon der de kun bærer en referanse til dataene som er
+endret.</p>
+</div>
+<div class="paragraph">
+<p><strong>Oppdatering hos datatilbyder</strong></p>
+</div>
+<div class="paragraph">
+<p>[Ny tekst om behov for at konsumenter kan be om oppdatering i
+kildesystemer]</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_eoppslag_verdistrøm_med_kapabiliteter_for_tilbyder_og_konsument_uhf"><a class="anchor" href="#_eoppslag_verdistrøm_med_kapabiliteter_for_tilbyder_og_konsument_uhf"></a>1.2. eOppslag Verdistrøm med kapabiliteter for tilbyder og konsument - UHF</h3>
 <div class="imageblock">
 <div class="content">
 <img src="_images/eOppslag%20Verdistrøm%20med%20kapabiliteter%20for%20tilbyder%20og%20konsument%20-%20UHF%20%20.png" alt="eOppslag Verdistrøm med kapabiliteter for tilbyder og konsument - UHF   image">
@@ -197,12 +252,19 @@ Prosesser for å dele data som åpne data</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_publiser_api"><a class="anchor" href="#_publiser_api"></a>1.2. Publiser API</h3>
+<h3 id="_publiser_api"><a class="anchor" href="#_publiser_api"></a>1.3. Publiser API</h3>
 <div class="paragraph">
-<p>En prosessflyt som datatilbyder må gjennomføre for å gjøre et API synlig og tilgjengelig gjennom kataloger og søkeløsninger. Metadata om APIet blir registrert i API-katalogen. Metadata inkluderer begreper og datamodeller omfattet av datasettet som APIet tilgjengeliggjør, samt tilganger (scopes) knyttet til APIet som kan tildeles konsumenter.</p>
+<p>En prosessflyt som datatilbyder må gjennomføre for å gjøre et API synlig
+og tilgjengelig gjennom kataloger og søkeløsninger. Metadata om APIet
+blir registrert i API-katalogen. Metadata inkluderer begreper og
+datamodeller omfattet av datasettet som APIet tilgjengeliggjør, samt
+tilganger (scopes) knyttet til APIet som kan tildeles konsumenter.</p>
 </div>
 <div class="paragraph">
-<p>APIet registrert i UHF API katalog blir høstet inn i Felles API katalog. Vi ønsker at tilganger (scopes) skal i tillegg kunne registreres i Maskinporten slik at konsumenter utenfor UHF sektoren kan oppdage APIet og be om tilgang på et senere tidspunkt.</p>
+<p>APIet registrert i UHF API katalog blir høstet inn i Felles API katalog.
+Vi ønsker at tilganger (scopes) i tillegg skal registreres i
+Maskinporten slik at konsumenter utenfor UHF sektoren kan oppdage APIet
+og be om tilgang på et senere tidspunkt.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -219,7 +281,7 @@ Prosesser for å dele data som åpne data</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"></a>1.3. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</h3>
+<h3 id="_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"></a>1.4. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</h3>
 <div class="paragraph">
 <p>En prosessflyt som datatilbyder må gjennomføre for å tildele rettigheter til en konsument som ber om tilgang til data. En datatilbyder mottar forespørsel om tilgang til et API på vegne av en organisasjon eller bruker. Dataeieren tar stilling til om konsumenten skal få tilgang til data gjennom APIet. Tilgang registreres knyttet til konsumentens klient (applikasjonen som benytter APIet) i klientregisteret.</p>
 </div>
@@ -238,7 +300,7 @@ Prosesser for å dele data som åpne data</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_få_tilgang_til_data_løsningsmønster_uhf"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf"></a>1.4. Få tilgang til data - løsningsmønster UHF</h3>
+<h3 id="_få_tilgang_til_data_løsningsmønster_uhf"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf"></a>1.5. Få tilgang til data - løsningsmønster UHF</h3>
 <div class="paragraph">
 <p>En prosessflyt en konsument av data må gjennomføre for å få tildelt rettigheter til data gjennom et API. Det omfatter å få kjennskap til aktuelt API gjennom API-katalogen, autentisere konsumenten, inngå avtale om bruk av data, samt å registrere tilganger hos den tekniske komponenten som skal utføre tjenestekallet. Dersom det dreier seg om tilgang til et åpent tilgjengelig API, kan enkelte delaktiviteter i prosessene hoppes over, men for å kunne logge informasjon om bruk av APIer bør alle konsumenter av et API registreres i klientregisteret.</p>
 </div>
@@ -260,7 +322,7 @@ Prosesser for å dele data som åpne data</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_innhente_data_løsningsmønster_uhf"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf"></a>1.5. Innhente data - løsningsmønster UHF</h3>
+<h3 id="_innhente_data_løsningsmønster_uhf"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf"></a>1.6. Innhente data - løsningsmønster UHF</h3>
 <div class="paragraph">
 <p>En prosessflyt en konsument utfører når det utføres et tjenestekall for å innhente data gjennom et API. API-adressen hentes i API-katalogen. Tilgang til APIet byttes inn mot et kjøretids-token i autoriseringstjenesten. Tjenestekall til APIet utføres gjennom API gateway der tokenet benyttes for å få tilgang. Dersom det er et åpent API er det kun relevante prossessteg som utføres.</p>
 </div>
@@ -279,7 +341,7 @@ Prosesser for å dele data som åpne data</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_avgi_data_løsningsmønster_uhf"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf"></a>1.6. Avgi data - løsningsmønster UHF</h3>
+<h3 id="_avgi_data_løsningsmønster_uhf"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf"></a>1.7. Avgi data - løsningsmønster UHF</h3>
 <div class="paragraph">
 <p>En prosessflyt en tilbyder av data utfører for å svare på en dataforespørsel. Tilbyder mottar forespørsel om oppslag med et aksesstoken. Klienten som forespør autentiseres og token valideres. Eventuelt mer fin-granulert tilgangskontroll utføres og data returneres. Tilgang kontrolleres kun dersom det er snakk om et sikret API.</p>
 </div>
