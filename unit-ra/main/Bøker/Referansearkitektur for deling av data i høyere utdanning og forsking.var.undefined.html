@@ -138,7 +138,7 @@
 </ul>
 </li>
 <li><a href="#_økosystem">2.2. Økosystem</a>
-<ul class="sectlevel4">
+<ul class="sectlevel3">
 <li><a href="#_visjon_et_økosystem_for_datadeling">2.2.1. Visjon: Et økosystem for datadeling</a></li>
 </ul>
 </li>
@@ -218,7 +218,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Thu May 13 2021 12:46:58 GMT+0200 (CEST)</pre>
+<pre>Thu May 13 2021 12:56:49 GMT+0200 (CEST)</pre>
 </div>
 </div>
 </div>
@@ -402,8 +402,8 @@ som <em>tilbyder</em> og <em>konsument</em>.</p>
 </div>
 <div class="sect2">
 <h3 id="_økosystem"><a class="anchor" href="#_økosystem"></a>2.2. Økosystem</h3>
-<div class="sect4">
-<h5 id="_visjon_et_økosystem_for_datadeling"><a class="anchor" href="#_visjon_et_økosystem_for_datadeling"></a>2.2.1. Visjon: Et økosystem for datadeling</h5>
+<div class="sect3">
+<h4 id="_visjon_et_økosystem_for_datadeling"><a class="anchor" href="#_visjon_et_økosystem_for_datadeling"></a>2.2.1. Visjon: Et økosystem for datadeling</h4>
 <div class="paragraph">
 <p>I arbeidet med denne referansearkitekturen har vi tatt utgangspunkt i en
 idé om samhandling mellom ulike parter i et større hele. Dette er basert
@@ -418,7 +418,7 @@ etableres opp på en datadelingsplattform, og elementene i plattformen er
 spesifisert i referansearkitekturen.</p>
 </div>
 <div class="paragraph">
-<p>===</p>
+<p>LEGG INN EKSTERN BILDE</p>
 </div>
 <div class="paragraph">
 <p>1 Et økosystem for deling av data i UHF-sektoren</p>
@@ -437,19 +437,183 @@ felleskomponentene tilbyr tjenester som muliggjør datadelingen i
 <div class="sect2">
 <h3 id="_domener"><a class="anchor" href="#_domener"></a>2.3. Domener</h3>
 <div class="paragraph">
-<p>Tekst domener</p>
+<p>Informasjonen som skal forvaltes finnes i en faglig kontekst som vi
+kaller et «domene».</p>
+</div>
+<div class="paragraph">
+<p>Innen et domene definerer et fagområde sine begreper i det vokabularet
+som benyttes der. For eksempel vil et begrep som
+«Søker»<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> ha en beskrivelse,
+forståelse og sine egne data i et studieadministrativt domene.</p>
+</div>
+<div class="paragraph">
+<p>Som en del av den generelle utvikling innen IT systemer, er sektoren i
+ferd med å bygge en distribuert arkitektur som knytter sammen løst
+koblet, delte datakilder.<br>
+Referansearkitekturen er laget for å støtte denne utviklingen ved å
+benytte domener som utgangspunkt for informasjonsforvaltning, utvikling
+av datakilder, datasett, API og hendelser.</p>
+</div>
+<div class="paragraph">
+<p>Referansearkitekturen beskriver en datadelingsplattform som støtter
+deling av data mellom domener gjennom både API og publisering av
+hendelser. Vi grupperer domenene i grunnleggende domener og domener
+utviklet for spesielle brukstilfeller som avbildet under.</p>
+</div>
+<div class="paragraph">
+<p>2 Domener i UHF-sektoren</p>
+</div>
+<div class="paragraph">
+<p>De <strong><em>grunnleggende domenene</em></strong> inneholder data som støtter de sentrale
+prosessene for læring, forskning og administrasjon hos institusjonene.</p>
+</div>
+<div class="paragraph">
+<p>Disse domenene inneholder blant annet <strong><em>masterdatakilder</em></strong> med
+informasjon om, for eksempel, studenter, ansatte, forskningsprosjekt,
+forskningsresultater, læringsobjekter, med flere. Disse kildene er
+definert ut fra en dyp forståelse av sektorenes funksjon og vil typisk
+være forholdsvis stabile over tid.</p>
+</div>
+<div class="paragraph">
+<p>API og datasett definert i grunnleggende domener blir gjerne gjenbrukt
+av bruksnære domener.</p>
+</div>
+<div class="paragraph">
+<p>De <strong><em>bruksnære domenene</em></strong> er definert til å støtte en spesifikk
+brukernær kontekst. Domener for brukskontekst inkluderer for eksempel
+situasjoner der studenter evaluerer emner, der studenter får
+automatisert tilbakemeldinger for å forbedre læringsprosessen
+(læringsanalyse) og der deltagere i forskningsprosjekt utfører forsøk.</p>
+</div>
+<div class="paragraph">
+<p>Datasett og API definert her skal være <em>spesifikke</em> og skreddersydd til
+brukskonteksten.</p>
+</div>
+<div class="paragraph">
+<p>Vi har hentet denne tilnærmingen fra faglitteratur om Data
+Mesh<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>» av
+<a href="https://twitter.com/zhamakd">Zhamak Dehghani</a>]. Arkitekturen påvirker
+rutiner for utvikling av API, datasett og notifikasjoner beskrevet i
+seksjonen Rutiner for utvikling av API, notifikasjoner og datasett samt
+roller og ansvar beskrevet i seksjonen Roller og ansvar for datadeling
+og informasjonsforvaltning.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_hva_er_felles"><a class="anchor" href="#_hva_er_felles"></a>2.4. Hva er felles</h3>
 <div class="paragraph">
-<p>Tekst Hva er felles?</p>
+<p>Domenene beskrevet over, og rollene knyttet til disse får en definert
+avgrensning. Tilnærmingen til avgrensing følger fra strategiske valg i
+Handlingsplanen for digitalisering i høyere utdanning og
+forskning<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>.
+Disse valg er knyttet til hva som skal være standardisert, hva som skal
+være felles og hva som skal variere og fremme innovasjon.
+Administrasjons- og støtteprosesser skal benytte i størst mulig grad
+standardiserte arbeidsprosesser og felles begreper. Lærings- og
+forskningsprosesser skal fremme innovasjon gjennom ulike
+arbeidsprosesser og sterk grad av institusjonelt
+selvstyre.<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/media/image6.png" alt="image" width="567" height="227"></span></p>
+</div>
+<div class="paragraph">
+<p>3 Strategiske valg fra Handlingsplan for digitalisering i høyere
+utdanning og forskning</p>
+</div>
+<div class="paragraph">
+<p>Disse ulike tilnærmingene har ulike behov for deling av data, og vi har
+benyttet disse føringene i avgrensning av domenene og rollene i
+referansearkitekturen.</p>
+</div>
+<div class="paragraph">
+<p>Administrative prosesser og begreper skal være mest mulig standardisert.
+For å oppnå dette knyttes de til informasjonsdomener som representerer
+hele sektoren der definisjon av prosesser og begreper skal skje. Denne
+tilnærming er i tråd med eksisterende harmoniseringsprosesser i
+sektoren. Data som benyttes i de standardiserte, administrative
+prosessene derimot er knyttet til der hvor prosessen kjøres. I dag skjer
+dette som regel lokalt hos en institusjon.</p>
+</div>
+<div class="paragraph">
+<p>Lærings- og forskningsprosesser vil variere og være knyttet til en
+brukskontekst med et tilhørende informasjonsdomene. Aktører knyttet til
+brukernære lærings- og forskningsdomener vil typisk ønske en bred
+tilgang til lærings- og forskningsressurser produsert av andre hos
+institusjonen, nasjonalt og internasjonalt. Det kan også være ønskelig å
+publisere resultater fra bruksdomene bredt. Brukernære domener innen
+læring og forskning vil derfor ønske støtte til å dele ressurser på
+tvers av institusjonene. Eksempler på tjenester som muliggjør slik
+datadeling er Nasjonalt Vitenarkiv og eventuelle «Learning Object
+Repository».</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_samhandling_og_datadeling"><a class="anchor" href="#_samhandling_og_datadeling"></a>2.5. Samhandling og datadeling</h3>
 <div class="paragraph">
-<p>Tekst Samhandling og datadeling</p>
+<p>Når datatilbydere og datakonsumenter deler data, skjer det som en del av
+en digital samhandling. For at samhandlingen skal være vellykket, må
+tilbydere og konsumenter sikre at de handler i henhold til loven
+(juridisk samhandlingsevne), at aktørene har avklart forventninger til
+hverandre og klarer å samarbeide (organisatorisk samhandlingsevne), at
+datatilbydere og konsumenter har samme forståelse av dataenes betydning
+(semantisk samhandlingsevne) og at de tekniske løsningene som utfører
+datadeling fungerer sammen slik de skal (teknisk samhandlingsevne).
+Rammeverk for digital
+samhandling<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup>
+vist under utdyper disse samhandlingsevner.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/media/image7.png" alt="image" width="464" height="274"></span></p>
+</div>
+<div class="paragraph">
+<p>3 Samhandling</p>
+</div>
+<div class="paragraph">
+<p>Modellene som er utgangspunkt for referansearkitekturen for deling av
+data i høyere utdanning og forskning er laget for å ivareta juridisk-,
+organisatorisk-, semantisk- og teknisk samhandlingsevne og hjelper
+dermed de som benytter modellene til å lykkes med digital samhandling.</p>
+</div>
+<div class="paragraph">
+<p>Verktøykassen for deling av data<sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup>
+fra Digitaliseringsdirektoratet gir veiledning for de som skal bruke
+data fra andre (datakonsumenter) og de som skal dele data med andre
+(datatilbydere). Den overordnede prosessen brukt av datakonsumenter og
+datatilbydere for å dele data er beskrevet i verktøykassen og avbildet
+under.</p>
+</div>
+<div class="paragraph">
+<p>Modellen beskriver verdistrømmer for både de som skal bruke data fra
+andre (datakonsumenter) og for de som skal dele data med andre
+(datatilbydere), samt forholdet mellom disse to verdistrømmene.</p>
+</div>
+<div class="paragraph">
+<p>Verdistrømmene viser hvilke steg en datakonsument må gjennom for å motta
+data, og hvilke steg en datatilbyder må gjennom for å avgi data. Enkelte
+steg i verdistrømmene er tilpasset sektoren for høyere utdanning og
+forskning i referansearkitekturen. Dette er beskrevet senere i
+dokumentet</p>
+</div>
+<div class="paragraph">
+<p>Før datatilbyderen kan utføre det første steget i verdistrømmen for
+datadeling må organisasjonen ha oversikt over egne data som skal deles.
+For å kunne utføre det andre steget i verdistrømmen må datatilbyderen ha
+evnen til å publisere datasettene slik at andre kan benytte disse. Disse
+stegene er sentral i
+<a href="https://data.norge.no/guide/veileder-orden-i-eget-hus/">«orden i eget
+hus»</a>. For at datadeling skal fungere etter hensikt, må dataene også ha
+god kvalitet. Dette krever kapabiliteter innen informasjonsforvaltning.
+ Vi har modellert disse evner som «muliggjørende kapabiliteter» i
+referansearkitekturen for høyere utdanning og forskning med utgangspunkt
+i
+<a href="https://app.powerbi.com/view?r=eyJrIjoiMThhNjkzNmItOGQ4NC00MDkzLWI3MDQtNzY0ZjA1MjQ5MzViIiwidCI6ImFlMWE3NzI0LTQwNDEtNDQ2Mi1hNmRjLTUzOGNiMTk5NzA3ZSIsImMiOjh9">EUNIS
+sin kapabilitetsmodell for europeiske universiteter</a> som vist under.
+EUNIS modellen var produsert som et samarbeid mellom europeiske
+universiteter.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/media/image8.png" alt="image" width="567" height="241"></span></p>
 </div>
 </div>
 <div class="sect2">
@@ -930,7 +1094,7 @@ informasjonsformål de brukes til [kilde: data.norge.no, SKATTEETATEN]</p>
 <p>Master data is the consistent and uniform set of
 identifiers and extended attributes that describes the core entities of
 the enterprise including customers, prospects, citizens, suppliers,
-sites, hierarchies, and chart of accounts.  <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+sites, hierarchies, and chart of accounts.  <sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup></p>
 </div>
 </li>
 </ul>
@@ -1076,7 +1240,25 @@ arkitekturprinsippene</p>
 <div id="footnotes">
 <hr>
 <div class="footnote" id="_footnotedef_1">
-<a href="#_footnoteref_1">1</a>. Gartner definisjon hentet fra <a href="https://www.gartner.com/en/information-technology/glossary/master-data-management-mdm" class="bare">https://www.gartner.com/en/information-technology/glossary/master-data-management-mdm</a> 2021.01.07
+<a href="#_footnoteref_1">1</a>. <em>Person som</em> har søkt opptak til et studieprogram eller enkeltemner ved et universitet eller en høyskole.
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. Fra «https://martinfowler.com/articles/data-monolith-to-mesh.html#DomainDataAsAProduct[How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh
+</div>
+<div class="footnote" id="_footnotedef_3">
+<a href="#_footnoteref_3">3</a>. <a href="https://www.unit.no/handlingsplan-digitalisering-i-hoyere-utdanning-og-forskning" class="bare">https://www.unit.no/handlingsplan-digitalisering-i-hoyere-utdanning-og-forskning</a>
+</div>
+<div class="footnote" id="_footnotedef_4">
+<a href="#_footnoteref_4">4</a>. Disse strategiske valg er basert på arbeid med valg av operasjonelle modeller beskrevet i «Enterprise Architecture as Strategy» av Ross, Weill og Robertsen.
+</div>
+<div class="footnote" id="_footnotedef_5">
+<a href="#_footnoteref_5">5</a>. <a href="https://www.digdir.no/nasjonal-arkitektur/rammeverk-digital-samhandling/2148" class="bare">https://www.digdir.no/nasjonal-arkitektur/rammeverk-digital-samhandling/2148</a>
+</div>
+<div class="footnote" id="_footnotedef_6">
+<a href="#_footnoteref_6">6</a>. Verktøykasse for deling av data <a href="https://www.digdir.no/apne-data/nasjonal-verktoykasse-deling-av-data/2243" class="bare">https://www.digdir.no/apne-data/nasjonal-verktoykasse-deling-av-data/2243</a>
+</div>
+<div class="footnote" id="_footnotedef_7">
+<a href="#_footnoteref_7">7</a>. Gartner definisjon hentet fra <a href="https://www.gartner.com/en/information-technology/glossary/master-data-management-mdm" class="bare">https://www.gartner.com/en/information-technology/glossary/master-data-management-mdm</a> 2021.01.07
 </div>
 </div>
 </article>
