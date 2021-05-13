@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Issues mot nasjonale felleskompontenter (Maskinporten, ID Porten og Altinn autorisasjon) (copy) :: UNIT refansearkitekturer</title>
+    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-issues/Issues%20mot%20nasjonale%20felleskompontenter%20(Maskinporten,%20ID%20Porten%20og%20Altinn%20autorisasjon)%20(copy).html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://unit-norge.github.io">UNIT refansearkitekturer</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="unit-ra" data-version="main">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">UNIT referansearkitekturer</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Om UNIT referansearkitekturer</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../Bøker/Referansearkitektur%20for%20deling%20av%20data%20i%20høyere%20utdanning%20og%20forsking.html">Referansearkitektur for deling av data i høyere utdanning og forsking</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">UNIT referansearkitekturer</span>
+    <span class="version">main</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">UNIT referansearkitekturer</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">main</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">UNIT referansearkitekturer</a></li>
+    <li><a href="Issues%20mot%20nasjonale%20felleskompontenter%20(Maskinporten,%20ID%20Porten%20og%20Altinn%20autorisasjon)%20(copy).html">Issues mot nasjonale felleskompontenter (Maskinporten, ID Porten og Altinn autorisasjon) (copy)</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/unit-ra-datadeling-issues/pages/Issues%20mot%20nasjonale%20felleskompontenter%20(Maskinporten,%20ID%20Porten%20og%20Altinn%20autorisasjon)%20(copy).adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Issues mot nasjonale felleskompontenter (Maskinporten, ID Porten og Altinn autorisasjon) (copy)</h1>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Harmonisering av autorisasjon</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Det er ønskelig at UHF autorisasjonstjener og Maskinporten godkjenner
+hverandres tokens. Dette forutsetter at informasjonsmodellen benyttet i
+tokens er felles. Løsningsvarianter:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Klienter forholder seg til flere autentiseringstjenere og
+standardisere token struktur</p>
+</li>
+<li>
+<p>Innbytte av tokens (token exchange) fra andre “trusted”
+autorisasjonstjenere. En konsekvens av dette er at man mister (?)
+koblingen til bruker og dermed kjennskap til autentiseringsstyrken som
+ligger bak.</p>
+</li>
+<li>
+<p>Software Statement Assertion
+(<a href="https://tools.ietf.org/html/draft-ietf-oauth-assertions-18" class="bare">https://tools.ietf.org/html/draft-ietf-oauth-assertions-18</a>) – løsning
+benyttet av Open Banking UK</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Harmonisering av samtykke</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Altinn autorisasjon benytter «Self-contained OAuth2 token» for
+samtykke. Men da vi ikke kan godkjenne tokens på tvers, har vi
+utfordringer med å benytte Altinn autorisasjon direkte. I hvert fall
+dekker det ikke skopes vi har anvar for i UHF autorisasjonstjeneren</p>
+</li>
+<li>
+<p>Hjelper User Managed Access (UMA) her?</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Delegering av rettigheter (fullmakt??): Altinn har per i dag ingen god
+mekanisme for å delegere rettigheter under organisasjonsgranulariteten i
+Enhetsregisteret. Vi tror ikke dette er et problem siden vi <strong>forventer
+at IGA innenfor UHF sektoren vil dekke våre behov.</strong></p>
+</li>
+</ol>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
