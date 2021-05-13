@@ -120,7 +120,7 @@
 <li><a href="#_introduksjon">1. Introduksjon</a>
 <ul class="sectlevel2">
 <li><a href="#_bakgrunn">1.1. Bakgrunn</a>
-<ul class="sectlevel3">
+<ul class="sectlevel5">
 <li><a href="#_behov_og_bruksområder">1.1.1. Behov og bruksområder</a></li>
 <li><a href="#_føringer_pågående_og_videre_arbeid">1.1.2. Føringer, pågående og videre arbeid</a></li>
 </ul>
@@ -131,14 +131,23 @@
 </li>
 <li><a href="#_metode">2. Metode</a>
 <ul class="sectlevel2">
-<li><a href="#_hva_er_datadeling">2.1. Hva er datadeling</a></li>
-<li><a href="#_økosystem">2.2. Økosystem</a></li>
-<li><a href="#_domener">2.3. Domener</a></li>
-<li><a href="#_hva_er_felles">2.4. Hva er felles</a></li>
-<li><a href="#_samhandling_og_datadeling">2.5. Samhandling og datadeling</a></li>
-<li><a href="#_del_og_innhent_data_verdistrøm_for_både_tilbyder_og_konsument_uhf">2.6. Del og innhent data, verdistrøm for både tilbyder og konsument - UHF</a></li>
-<li><a href="#_muliggjørende_kapabiliteter">2.7. Muliggjørende kapabiliteter</a></li>
-<li><a href="#_informasjonsforvaltningsdomener">2.8. Informasjonsforvaltningsdomener</a></li>
+<li><a href="#_tilnærming_til_utvikling_av_referansearkitekturen">2.1. Tilnærming til utvikling av referansearkitekturen</a></li>
+<li><a href="#_hva_er_datadeling">2.2. Hva er datadeling</a>
+<ul class="sectlevel4">
+<li><a href="#_hva_er_datadeling_2">2.2.1. Hva er datadeling?</a></li>
+</ul>
+</li>
+<li><a href="#_økosystem">2.3. Økosystem</a>
+<ul class="sectlevel4">
+<li><a href="#_visjon_et_økosystem_for_datadeling">2.3.1. Visjon: Et økosystem for datadeling</a></li>
+</ul>
+</li>
+<li><a href="#_domener">2.4. Domener</a></li>
+<li><a href="#_hva_er_felles">2.5. Hva er felles</a></li>
+<li><a href="#_samhandling_og_datadeling">2.6. Samhandling og datadeling</a></li>
+<li><a href="#_del_og_innhent_data_verdistrøm_for_både_tilbyder_og_konsument_uhf">2.7. Del og innhent data, verdistrøm for både tilbyder og konsument - UHF</a></li>
+<li><a href="#_muliggjørende_kapabiliteter">2.8. Muliggjørende kapabiliteter</a></li>
+<li><a href="#_informasjonsforvaltningsdomener">2.9. Informasjonsforvaltningsdomener</a></li>
 </ul>
 </li>
 <li><a href="#_datadelingsplattformen_og_felles_komponentene_i_den">3. Datadelingsplattformen og felles komponentene i den</a>
@@ -209,7 +218,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Mon May 10 2021 19:55:23 GMT+0200 (CEST)</pre>
+<pre>Thu May 13 2021 10:29:27 GMT+0200 (CEST)</pre>
 </div>
 </div>
 </div>
@@ -233,8 +242,8 @@ initiativene i ‘Handlingsplan for digitalisering i høyere utdanning og
 forskning’ innenfor de funksjonelle områdene utdanning, forskning og
 administrasjon.</p>
 </div>
-<div class="sect3">
-<h4 id="_behov_og_bruksområder"><a class="anchor" href="#_behov_og_bruksområder"></a>1.1.1. Behov og bruksområder</h4>
+<div class="sect5">
+<h6 id="_behov_og_bruksområder"><a class="anchor" href="#_behov_og_bruksområder"></a>1.1.1. Behov og bruksområder</h6>
 <div class="paragraph">
 <p>Referansearkitekturen skal skape samhandling gjennom datadeling, bidra
 til å støtte bruksområder og dekke tilhørende behov i kunnskapssektoren.</p>
@@ -324,8 +333,8 @@ datadelingsplattform vil gi økt tilgang til data av høy kvalitet, som
 igjen muliggjør datadrevet beslutninger.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_føringer_pågående_og_videre_arbeid"><a class="anchor" href="#_føringer_pågående_og_videre_arbeid"></a>1.1.2. Føringer, pågående og videre arbeid</h4>
+<div class="sect5">
+<h6 id="_føringer_pågående_og_videre_arbeid"><a class="anchor" href="#_føringer_pågående_og_videre_arbeid"></a>1.1.2. Føringer, pågående og videre arbeid</h6>
 <div class="paragraph">
 <p>Referansearkitekturen og dette dokumentet tar utgangspunkt i pågående
 arbeid og førende strategier og prinsipper nasjonalt, innen sektoren og
@@ -340,8 +349,10 @@ internasjonalt.</p>
 <h3 id="_forankring"><a class="anchor" href="#_forankring"></a>1.2. Forankring</h3>
 <div class="paragraph">
 <p>Referansearkitekturen er utarbeidet i et samarbeidsprosjekt Datadeling
-med prosjektdeltagelse fra Unit, NTNU, UiO og Uninett. Styringsgruppen
-består av medlemmer fra Unit, UiB, OsloMet, USIT, NMBU og Uninett.</p>
+med prosjektdeltagelse fra Unit, NTNU, Universitetet i Oslo og Uninett.
+Styringsgruppen består av medlemmer fra Unit, Universitetet i Bergen,
+OsloMet, Universitetet i Oslo, Norges Miljø- og Biovitenskaplige
+universitet og Uninett.</p>
 </div>
 </div>
 <div class="sect2">
@@ -355,58 +366,99 @@ består av medlemmer fra Unit, UiB, OsloMet, USIT, NMBU og Uninett.</p>
 <div class="sect1">
 <h2 id="_metode"><a class="anchor" href="#_metode"></a>2. Metode</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_tilnærming_til_utvikling_av_referansearkitekturen"><a class="anchor" href="#_tilnærming_til_utvikling_av_referansearkitekturen"></a>2.1. Tilnærming til utvikling av referansearkitekturen</h3>
 <div class="paragraph">
-<p>Denne referansearkitekturen skal gi veiledning til utforming av digitale samhandlingsløsninger for deling av data i høyere utdanning og forskning. Denne seksjonen veileder gjennom en presentasjon av hva som skal oppnås ved å definere hva datadeling er, en visjon om hva vi skal bruke det til, og modellene som skal skape fundament for utforming av løsningene i visjonen.</p>
+<p>Denne referansearkitekturen skal gi veiledning til utforming av digitale
+samhandlingsløsninger for deling av data i høyere utdanning og
+forskning. Denne seksjonen veileder gjennom en presentasjon av hva som
+skal oppnås ved å definere hva datadeling er, en visjon om hva vi skal
+bruke det til, og modellene som skal skape fundament for utforming av
+løsningene i visjonen.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_hva_er_datadeling"><a class="anchor" href="#_hva_er_datadeling"></a>2.1. Hva er datadeling</h3>
+<h3 id="_hva_er_datadeling"><a class="anchor" href="#_hva_er_datadeling"></a>2.2. Hva er datadeling</h3>
+<div class="sect4">
+<h5 id="_hva_er_datadeling_2"><a class="anchor" href="#_hva_er_datadeling_2"></a>2.2.1. Hva er datadeling?</h5>
 <div class="paragraph">
 <p>Følgende definisjon for datadeling er hentet fra
 Digitaliseringsdirektoratets
-<a href="https://doc.difi.no/nasjonal-arkitektur/nab_arkitekturlandskap_segmentarkitektur_datadeling/">segmentarkitektur for datadeling</a>.</p>
+<a href="https://nasjonal-arkitektur.github.io/architecture-repository/data-sharing/data-sharing.html#_hva_er_datadeling">temaområde
+for datadeling</a>.</p>
 </div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title"><em>Datadeling</em></div>
+<div class="quoteblock">
+<blockquote>
 <div class="paragraph">
-<p>Datadeling handler om å forsyne forretningsprosesser og dataanalyse med nødvendig datagrunnlag.</p>
+<p>Formålet med datadeling er å forsyne forretningsprosesser og dataanalyse
+med nødvendig datagrunnlag for aktuell oppgaveløsning.</p>
 </div>
 <div class="paragraph">
 <p>De fleste aktører sitter på begge sider i dette bildet, og må kunne
-både <em>dele</em> og <em>innhente</em> data og hendelser. Det skilles på rollene som <em>tilbyder</em> og <em>konsument</em>.</p>
+både <em>dele</em> og <em>innhente</em> data. Det skilles på rollene
+som <em>tilbyder</em> og <em>konsument</em>.</p>
 </div>
 <div class="paragraph">
-<p>I noen sammenhenger skilles det også mellom <em>data</em> og <em>hendelser</em>.</p>
+<p>I noen sammenhenger skilles det også mellom <em>data</em> og <em>hendelser</em>.</p>
 </div>
+</blockquote>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_økosystem"><a class="anchor" href="#_økosystem"></a>2.2. Økosystem</h3>
+<h3 id="_økosystem"><a class="anchor" href="#_økosystem"></a>2.3. Økosystem</h3>
+<div class="sect4">
+<h5 id="_visjon_et_økosystem_for_datadeling"><a class="anchor" href="#_visjon_et_økosystem_for_datadeling"></a>2.3.1. Visjon: Et økosystem for datadeling</h5>
 <div class="paragraph">
-<p>Tekst økosystem.</p>
+<p>I arbeidet med denne referansearkitekturen har vi tatt utgangspunkt i en
+idé om samhandling mellom ulike parter i et større hele. Dette er basert
+på visjonen om et økosystem, der aktører utfyller hverandre og
+samhandlingen skaper større verdi enn de enkelte aktører kan klare hver
+for seg. Studenter, undervisere, forskere og tjenestetilbydere med flere
+skal både skape, tilby, bearbeide og konsumere data på nye måter som gir
+alle insentiv og gevinst. I økosystemet for deling av data i høyere
+utdanning og forskning ser vi for oss de forskjellige aktørene i
+forskjellig kontekst kalt domener (se seksjonen under). Økosystemet skal
+etableres opp på en datadelingsplattform, og elementene i plattformen er
+spesifisert i referansearkitekturen.</p>
+</div>
+<div class="paragraph">
+<p>===</p>
+</div>
+<div class="paragraph">
+<p>1 Et økosystem for deling av data i UHF-sektoren</p>
+</div>
+<div class="paragraph">
+<p>Figuren viser datadeling i og mellom domener. Virksomhetskritiske og
+brukernære funksjoner som er domenespesifikke, kalles her
+tjenesteprodukter. Dataprodukter tilgjengeliggjøres og deles mellom
+domenene i økosystemet. Domenene kan opptre som datatilbydere (tilbyr
+dataprodukt) og datakonsumenter (datakonsum). Datadelingsplattformen og
+felleskomponentene tilbyr tjenester som muliggjør datadelingen i
+økosystemet.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_domener"><a class="anchor" href="#_domener"></a>2.3. Domener</h3>
+<h3 id="_domener"><a class="anchor" href="#_domener"></a>2.4. Domener</h3>
 <div class="paragraph">
 <p>Tekst domener</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_hva_er_felles"><a class="anchor" href="#_hva_er_felles"></a>2.4. Hva er felles</h3>
+<h3 id="_hva_er_felles"><a class="anchor" href="#_hva_er_felles"></a>2.5. Hva er felles</h3>
 <div class="paragraph">
 <p>Tekst Hva er felles?</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_samhandling_og_datadeling"><a class="anchor" href="#_samhandling_og_datadeling"></a>2.5. Samhandling og datadeling</h3>
+<h3 id="_samhandling_og_datadeling"><a class="anchor" href="#_samhandling_og_datadeling"></a>2.6. Samhandling og datadeling</h3>
 <div class="paragraph">
 <p>Tekst Samhandling og datadeling</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_del_og_innhent_data_verdistrøm_for_både_tilbyder_og_konsument_uhf"><a class="anchor" href="#_del_og_innhent_data_verdistrøm_for_både_tilbyder_og_konsument_uhf"></a>2.6. Del og innhent data, verdistrøm for både tilbyder og konsument - UHF</h3>
+<h3 id="_del_og_innhent_data_verdistrøm_for_både_tilbyder_og_konsument_uhf"><a class="anchor" href="#_del_og_innhent_data_verdistrøm_for_både_tilbyder_og_konsument_uhf"></a>2.7. Del og innhent data, verdistrøm for både tilbyder og konsument - UHF</h3>
 <div class="paragraph">
 <p>Tekst overordnede verdistrømm for datadeling for datatilbyder og datakonsument.</p>
 </div>
@@ -425,7 +477,7 @@ både <em>dele</em> og <em>innhente</em> data og hendelser. Det skilles på 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_muliggjørende_kapabiliteter"><a class="anchor" href="#_muliggjørende_kapabiliteter"></a>2.7. Muliggjørende kapabiliteter</h3>
+<h3 id="_muliggjørende_kapabiliteter"><a class="anchor" href="#_muliggjørende_kapabiliteter"></a>2.8. Muliggjørende kapabiliteter</h3>
 <div class="paragraph">
 <p>Tekst muliggjørende kapabiliteter</p>
 </div>
@@ -444,7 +496,7 @@ både <em>dele</em> og <em>innhente</em> data og hendelser. Det skilles på 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_informasjonsforvaltningsdomener"><a class="anchor" href="#_informasjonsforvaltningsdomener"></a>2.8. Informasjonsforvaltningsdomener</h3>
+<h3 id="_informasjonsforvaltningsdomener"><a class="anchor" href="#_informasjonsforvaltningsdomener"></a>2.9. Informasjonsforvaltningsdomener</h3>
 <div class="paragraph">
 <p>Tekst informasjonsforvaltningsdomener</p>
 </div>
