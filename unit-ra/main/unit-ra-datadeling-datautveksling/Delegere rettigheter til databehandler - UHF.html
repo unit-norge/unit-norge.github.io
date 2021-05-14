@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Ytre API :: UNIT refansearkitekturer</title>
-    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-rutiner/Ytre%20API.html">
+    <title>Delegere rettigheter til databehandler - UHF :: UNIT refansearkitekturer</title>
+    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-datautveksling/Delegere%20rettigheter%20til%20databehandler%20-%20UHF.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -103,119 +103,35 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">UNIT referansearkitekturer</a></li>
-    <li><a href="Ytre%20API.html">Ytre API</a></li>
+    <li><a href="Delegere%20rettigheter%20til%20databehandler%20-%20UHF.html">Delegere rettigheter til databehandler - UHF</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/unit-ra-datadeling-rutiner/pages/Ytre%20API.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/unit-ra-datadeling-datautveksling/pages/Delegere%20rettigheter%20til%20databehandler%20-%20UHF.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Ytre API</h1>
+<h1 class="page">Delegere rettigheter til databehandler - UHF</h1>
 <div class="paragraph">
-<p>Ytre API benyttes i en forretningsprosesskontekst og datasett eksponert
-gjennom en ytre API er laget for å møte behovene til prosessen. Ytre API
-kan benyttes i både grunnleggende og bruksnære domener. En tilnærming
-til definisjon av APIer og datasett for prosesstøtte er beskrevet under.</p>
+<p>Delegering av rettigheter til databehandler er det en konsument må gjøre
+for at en leverandør kan identifisere seg med sitt eget
+virksomhetssertifikat og opptre på vegne av konsumenten som er den som
+innehar behandlingsgrunnlaget for å innhente data.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Melde behov, gjerne av datakonsumentene</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Tjenesteansvarlig kjører periodisk prosess for å samle innspill og
-prioritere</p>
-</li>
-<li>
-<p>Vurder å kjøre tjenestedesign workshop for å beskrive bruksscenariene</p>
-</li>
-</ol>
+<div class="imageblock">
+<div class="content">
+<img src="_images/Delegere%20rettigheter%20til%20databehandler%20-%20UHF.png" alt="Delegere rettigheter til databehandler - UHF image">
 </div>
-</li>
-<li>
-<p>Analysere behov og finne ut hvilke domener, kilder og datasett som er
-involvert</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Tjenesteansvarlig identifiserer berørte interessenter, potensielt
-andre tjenesteansvarlige, dataforvalter, domeneansvarlig og
-begrepsansvarlig</p>
-</li>
-<li>
-<p>Tjenesteansvarlig må vurdere og eventuelt sette i gang juridiske
-avklaringer omkring deling av data</p>
-</li>
-</ol>
+<div class="title">Figure 1. Delegere rettigheter til databehandler - UHF</div>
 </div>
-</li>
-<li>
-<p>Kjør begrepsharmonisering etter behov med relevante interessenter</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Følg
-<a href="https://data.norge.no/specification/forvaltningsstandard-begrepskoordinering/">standarden
-om Begrepsharmonisering og begrepsdifferensiering</a>
-(<a href="https://laeringsplattformen.difi.no/kurs/971527404/begrip-begrepene-et-innforingskurs-i-terminologi-og-begrepsarbeid">kurs
-om begrepsarbeid</a> er en utfyllende ressurs)</p>
-</li>
-</ol>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="Delegere%20rettigheter%20til%20databehandler%20-%20UHF.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
 </div>
-</li>
-<li>
-<p>Publiser nye eller oppdaterte begreper i
-<a href="https://data.norge.no/concepts">felles begrepskatalog</a></p>
-</li>
-<li>
-<p>Identifiser hva må skapes, harmoniseres eller videreutvikles. Pass på
-at funksjonaliteten spesifisert i grensesnittet dekker kun det som
-trengs for å støtte brukstilfellet under utvikling.</p>
-</li>
-<li>
-<p>Sikre at data i alle steg i verdikjeden passer til den tenkte
-anvendelsen.</p>
-</li>
-<li>
-<p>Definere API/datasett i team med representasjon fra både bruksmiljø og
-produsent. Det kan ta noen iterasjoner med utprøving av API før man er
-fornøyd. Senere oppdateringer kan kjøres som iterasjoner da man allerede
-har resultatene fra tidligere steg.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Designe nødvendig API for brukskonteksten.</p>
-</li>
-<li>
-<p>Mappe nødvendig funksjonalitet til API fra grunnleggende domener.</p>
-</li>
-<li>
-<p>Designe «API mediation», det vil si hvordan datasettet spesifisert i
-det ytre APIet tilgjengeliggjøres. Oppgaven inkluderer mapping til indre
-API som benyttes med nødvendig oversetting av protokoller, formater og
-datastrukturer, samt etterlevelse av policy for sikkerhet og
-volumbegrensninger.</p>
-</li>
-<li>
-<p>Implementere tjenestene</p>
-</li>
-<li>
-<p>Koordinere mellom APIene for å sikre sammenhengende brukeropplevelse
-mellom APIene</p>
-</li>
-<li>
-<p>Publisere APIene og datasett i UHF API katalog (eventuelt felles
-datakatalog) i henhold til
-<a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO</a></p>
-</li>
-</ol>
 </div>
-</li>
-</ol>
 </div>
 </article>
   </div>

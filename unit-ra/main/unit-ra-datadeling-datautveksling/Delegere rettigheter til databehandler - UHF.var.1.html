@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Notifikasjonsinnhold - basiskonsept UHF :: UNIT refansearkitekturer</title>
-    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-målarkitekturen/Notifikasjonsinnhold%20-%20basiskonsept%20UHF.var.1.html">
+    <title>Delegere rettigheter til databehandler - UHF :: UNIT refansearkitekturer</title>
+    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-datautveksling/Delegere%20rettigheter%20til%20databehandler%20-%20UHF.var.1.html">
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -103,25 +103,28 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">UNIT referansearkitekturer</a></li>
-    <li><a href="Notifikasjonsinnhold%20-%20basiskonsept%20UHF.var.1.html">Notifikasjonsinnhold - basiskonsept UHF</a></li>
+    <li><a href="Delegere%20rettigheter%20til%20databehandler%20-%20UHF.var.1.html">Delegere rettigheter til databehandler - UHF</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/unit-ra-datadeling-målarkitekturen/pages/Notifikasjonsinnhold%20-%20basiskonsept%20UHF.var.1.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="file:///C:/antora/unit-norge/components/unit-ra/docs/modules/unit-ra-datadeling-datautveksling/pages/Delegere%20rettigheter%20til%20databehandler%20-%20UHF.var.1.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Notifikasjonsinnhold - basiskonsept UHF</h1>
+<h1 class="page">Delegere rettigheter til databehandler - UHF</h1>
 <div class="paragraph">
-<p>Som et minimum må en notifikasjon inneholde en identifikator. Anbefalt innhold er basert på standarden CloudEvents (se Utvikling av ytre API i dette dokumentet)</p>
+<p>Delegering av rettigheter til databehandler er det en konsument må gjøre
+for at en leverandør kan identifisere seg med sitt eget
+virksomhetssertifikat og opptre på vegne av konsumenten som er den som
+innehar behandlingsgrunnlaget for å innhente data.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/Notifikasjonsinnhold%20-%20basiskonsept%20UHF.png" alt="Notifikasjonsinnhold - basiskonsept UHF image">
+<img src="_images/Delegere%20rettigheter%20til%20databehandler%20-%20UHF.png" alt="Delegere rettigheter til databehandler - UHF image">
 </div>
-<div class="title">Figure 1. Notifikasjonsinnhold - basiskonsept UHF</div>
+<div class="title">Figure 1. Delegere rettigheter til databehandler - UHF</div>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -136,7 +139,7 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </table>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Elementer i view for Notifikasjonsinnhold - basiskonsept UHF</caption>
+<caption class="title">Table 1. Elementer i view for Delegere rettigheter til databehandler - UHF</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -149,57 +152,46 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hendelsesrelaterte data</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registering av representasjonsforhold</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Hernik sier 3 pekere i notifikasjon
-subjekt med siste state
-subjekt før og etter
-selve hendelsen</p>
+<p>Tjeneste for å registrere et representasjonsforhold som gir leverandør mulighet til å opptre på vegne av konsument</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Possible notification contents</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Type hendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delegerbar ressurs</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Identifikasjon av type hendelse. Dette kan være et entydig element i et kontrollert vokabular, men det kan også være "fritekst".</p>
+<p>Dataobjekt som beskriver en ressurs, f.eks. et API, som det kan gis rettigheter til gjennom et representasjonsforhold.</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Øyeblikkbilde etter hendelse</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Inkrementell endring i øyeblikksbilde av subjekt</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tidsstempel</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifikator for foregående notifikasjon</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Subjekt for hendelse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delegering av rettigheter til databehandler (leverandør)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Subjekt for hendelse er den entiteten som hendelsen gjelder; f.eks. en person. Kan være en samling av entiteter, f.eks en angitt befolkningsgruppe.</p>
+<p>Prosessen med å delegere rettigheter til databehandler/leverandør.</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum notifikasjonsinnhold</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere delegert tilgang</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prosessen med å delegere tilganger. I tilknytning til eOppslag vil formålet være å gi leverandør tilgang til å representere konsument overfor et API, men registreringen vil potensielt også kunne gjelde for andre områder.</p>
+</div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifikator for notifikasjon</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtale med leverandør</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prosessen med å inngå en avtale med leverandør. En slik avtale vil normalt være inngått tidligere og uavhengig av om man skal ta i bruk et nytt API. En tjenesteavtale med leverandør er en forutsetning for å kunne delegere en tilgang.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delegere rettigheter til databehandler</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Evnen til å delegere rettigheter til databehandler som utfører oppgaver på vegne av behandlingsansvarlig.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Samhandlingsaktør</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Samlebetegnelse på roller som inngår i en samhandlingsprosess og samhandler med en annen samhandlingsaktør. Kan være en tilbyder, konsument, avsender, mottaker, leverandør etc.</p>
+</div></div></td>
 </tr>
 </tbody>
 </table>

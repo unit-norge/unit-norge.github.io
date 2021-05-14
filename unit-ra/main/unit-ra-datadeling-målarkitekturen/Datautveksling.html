@@ -295,7 +295,7 @@ og be om tilgang på et senere tidspunkt.</p>
 <p>En prosessflyt en konsument av data må gjennomføre for å få tildelt rettigheter til data gjennom et API. Det omfatter å få kjennskap til aktuelt API gjennom API-katalogen, autentisere konsumenten, inngå avtale om bruk av data, samt å registrere tilganger hos den tekniske komponenten som skal utføre tjenestekallet. Dersom det dreier seg om tilgang til et åpent tilgjengelig API, kan enkelte delaktiviteter i prosessene hoppes over, men for å kunne logge informasjon om bruk av APIer bør alle konsumenter av et API registreres i klientregisteret.</p>
 </div>
 <div class="paragraph">
-<p>Viewet bør strengt tatt vise at konsumenten kan finne APIet enten i UH/F sektorens API katalog eller i Felles datakatalog. Vi velger å vise prosessflyten kun med UH/F sektorens komponenter både for å kunne presentere en oversiktlig prosessflyt og fordi forholdet til de nasjonale felleskomponenter er ennå ikke helt avklart.</p>
+<p>Viewet bør strengt tatt vise at konsumenten kan finne APIet enten i UHF sektorens API katalog eller i Felles datakatalog. Vi velger å vise prosessflyten kun med UHF sektorens komponenter både for å kunne presentere en oversiktlig prosessflyt og fordi forholdet til de nasjonale felleskomponenter er ennå ikke helt avklart.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -354,6 +354,13 @@ og be om tilgang på et senere tidspunkt.</p>
 <div class="sect1">
 <h2 id="_datautveksling_ved_publisering_konsumering_hendelsesbasert"><a class="anchor" href="#_datautveksling_ved_publisering_konsumering_hendelsesbasert"></a>2. Datautveksling ved publisering – konsumering (hendelsesbasert)</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Datautveksling ved publisering og konsumering av hendelser er basert på
+<a href="https://nasjonal-arkitektur.github.io/architecture-repository/publish-subscribe/book-publish-subscribe.html">publisering-konsumering</a>
+i
+<a href="https://nasjonal-arkitektur.github.io/architecture-repository/data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur
+for datautveksling fra Digitaliseringsdirektoratet</a>.</p>
+</div>
 <div class="sect2">
 <h3 id="_publisering_av_hendelser_basiskonsept_uhf"><a class="anchor" href="#_publisering_av_hendelser_basiskonsept_uhf"></a>2.1. Publisering av hendelser - basiskonsept UHF</h3>
 <div class="paragraph">
@@ -375,6 +382,16 @@ og be om tilgang på et senere tidspunkt.</p>
 </div>
 <div class="sect2">
 <h3 id="_enotifikasjon_oversikt_over_verdistrømmer_uhf"><a class="anchor" href="#_enotifikasjon_oversikt_over_verdistrømmer_uhf"></a>2.2. eNotifikasjon - oversikt over verdistrømmer UHF</h3>
+<div class="paragraph">
+<p>Den overordnede verdistrømmen vist under skisserer handlingene hos
+datatilbyder og datakonsument som inngår i dette utvekslingsmønsteret.
+Datatilbyderen oppretter en hendelsesstrøm som datakonsumenten oppdager
+og abonnerer på. Datatilbyderen publiserer notifikasjoner om hendelser i
+hendelsesstrømmen, og datakonsumenten innhenter disse. Når konsumenten
+har mottatt en notifikasjon, vurderer konsumenten om det er behov for å
+innhente mer informasjon om hendelsen. I så fall benytter konsumenten
+synkront oppslag som beskrevet tidligere for innhentingen.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/eNotifikasjon%20-%20oversikt%20over%20verdistrømmer%20UHF.png" alt="eNotifikasjon - oversikt over verdistrømmer UHF image">
@@ -410,6 +427,9 @@ og be om tilgang på et senere tidspunkt.</p>
 </div>
 <div class="sect2">
 <h3 id="_notifikasjonsinnhold_basiskonsept_uhf"><a class="anchor" href="#_notifikasjonsinnhold_basiskonsept_uhf"></a>2.4. Notifikasjonsinnhold - basiskonsept UHF</h3>
+<div class="paragraph">
+<p>Som et minimum må en notifikasjon inneholde en identifikator. Anbefalt innhold er basert på standarden CloudEvents (se Utvikling av ytre API i dette dokumentet)</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/Notifikasjonsinnhold%20-%20basiskonsept%20UHF.png" alt="Notifikasjonsinnhold - basiskonsept UHF image">
@@ -471,6 +491,16 @@ Datakonsumenten vurderer relevans og foretar videre behandling av notifikasjon</
 <div class="sect1">
 <h2 id="_oppdatering"><a class="anchor" href="#_oppdatering"></a>3. Oppdatering</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Datatilbyder kan gjøre oppdatering av data tilgjengelig for
+datakonsument gjennom et API. Prosessen for en datakonsument å be om
+tilgang til oppdatering (se <em>Få tilgang til data</em>) og for en
+datatilbyder å gi tilgang til oppdatering (se <em>Tilgjengeliggjøre data
+etter forespørsel</em>) er tilsvarende som for tilgang til å lese data. Det
+vil ofte være forskjellige kriterier som må oppfylles for å få lov til å
+oppdatere data enn for å lese data. Dette kan inkludere både
+kvalitetssikring og juridiske hensyn.</p>
+</div>
 <div class="sect2">
 <h3 id="_be_om_oppdatering_løsningsmønster_i_uhf_sektoren"><a class="anchor" href="#_be_om_oppdatering_løsningsmønster_i_uhf_sektoren"></a>3.1. Be om oppdatering  - løsningsmønster i UHF sektoren</h3>
 <div class="paragraph">

@@ -125,6 +125,17 @@
 <li><a href="#_konsumer_notifikasjoner_publiser_og_abonner_uhf">6. Konsumer notifikasjoner - Publiser og Abonner UHF</a></li>
 </ul>
 </div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Datautveksling ved publisering og konsumering av hendelser er basert på
+<a href="https://nasjonal-arkitektur.github.io/architecture-repository/publish-subscribe/book-publish-subscribe.html">publisering-konsumering</a>
+i
+<a href="https://nasjonal-arkitektur.github.io/architecture-repository/data-exchange-ra/book-data-exchange-ra.html">Referansearkitektur
+for datautveksling fra Digitaliseringsdirektoratet</a>.</p>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_publisering_av_hendelser_basiskonsept_uhf"><a class="anchor" href="#_publisering_av_hendelser_basiskonsept_uhf"></a>1. Publisering av hendelser - basiskonsept UHF</h2>
 <div class="sectionbody">
@@ -149,6 +160,16 @@
 <div class="sect1">
 <h2 id="_enotifikasjon_oversikt_over_verdistrømmer_uhf"><a class="anchor" href="#_enotifikasjon_oversikt_over_verdistrømmer_uhf"></a>2. eNotifikasjon - oversikt over verdistrømmer UHF</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Den overordnede verdistrømmen vist under skisserer handlingene hos
+datatilbyder og datakonsument som inngår i dette utvekslingsmønsteret.
+Datatilbyderen oppretter en hendelsesstrøm som datakonsumenten oppdager
+og abonnerer på. Datatilbyderen publiserer notifikasjoner om hendelser i
+hendelsesstrømmen, og datakonsumenten innhenter disse. Når konsumenten
+har mottatt en notifikasjon, vurderer konsumenten om det er behov for å
+innhente mer informasjon om hendelsen. I så fall benytter konsumenten
+synkront oppslag som beskrevet tidligere for innhentingen.</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/eNotifikasjon%20-%20oversikt%20over%20verdistrømmer%20UHF.png" alt="eNotifikasjon - oversikt over verdistrømmer UHF image">
@@ -188,6 +209,9 @@
 <div class="sect1">
 <h2 id="_notifikasjonsinnhold_basiskonsept_uhf"><a class="anchor" href="#_notifikasjonsinnhold_basiskonsept_uhf"></a>4. Notifikasjonsinnhold - basiskonsept UHF</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Som et minimum må en notifikasjon inneholde en identifikator. Anbefalt innhold er basert på standarden CloudEvents (se Utvikling av ytre API i dette dokumentet)</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/Notifikasjonsinnhold%20-%20basiskonsept%20UHF.png" alt="Notifikasjonsinnhold - basiskonsept UHF image">
