@@ -116,31 +116,192 @@
 <h1 class="page">Vedlegg - Føringer, pågående og videre arbeid</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#_om_arkitekturprinsippenes_føringer_for_datadeling">1. Om arkitekturprinsippenes føringer for datadeling</a></li>
+<ul class="sectlevel2">
+<li><a href="#_uhintark_prosjektet">1. UH:IntArk-<strong>prosjektet</strong></a></li>
+<li><a href="#_dette_notatet_og_videre">2. Dette notatet og videre</a></li>
+<li><a href="#_om_arkitekturprinsippenes_føringer_for_datadeling">3. Om arkitekturprinsippenes føringer for datadeling</a></li>
 </ul>
 </div>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Tekst føringer</p>
+<p>Dette dokumentet beskriver de føringene til organisasjoner og
+IT-løsninger som vi ønsker å bruke videre i sektoren til å skape en
+effektiv plattform for datadeling. Referansearkitekturen tar
+utgangspunkt i følgende pågående arbeid i sektoren i dag:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>Integrasjonsarkitektur UH:IntArk</p>
+</li>
+<li>
+<p>Arbeid med Sak og Arkiv i sektoren</p>
+</li>
+<li>
+<p>Arbeid med nytt API for Felles Studentsystem, FS</p>
+</li>
+<li>
+<p>Arbeid med masterdatakilder for forskning</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Referansearkitekturen innarbeider også føringer fra:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Digitaliseringsstrategiene til offentlig sektor og høyere utdanning og
+forskning</p>
+</li>
+<li>
+<p><a href="https://www.digdir.no/digitalisering-og-samordning/overordnede-arkitekturprinsipper/1065">Overordnede
+arkitekturprinsipper</a> for digitalisering av offentlig sektor</p>
+</li>
+<li>
+<p><a href="https://www.digdir.no/nasjonal-arkitektur/rammeverk-digital-samhandling/2148">Rammeverk
+for digital samhandling</a></p>
+</li>
+<li>
+<p><a href="https://nasjonal-arkitektur.github.io/architecture-repository/about-topic-areas/about-topic-areas.html">Nasjonal
+referansearkitekturene for datadeling og datautveksling</a></p>
+</li>
+<li>
+<p><a href="https://app.powerbi.com/view?r=eyJrIjoiMThhNjkzNmItOGQ4NC00MDkzLWI3MDQtNzY0ZjA1MjQ5MzViIiwidCI6ImFlMWE3NzI0LTQwNDEtNDQ2Mi1hNmRjLTUzOGNiMTk5NzA3ZSIsImMiOjh9">Capability
+model from EUNIS</a> (European University Information System Organization)</p>
+</li>
+<li>
+<p>Behovene avdekket i tjenestedesign analyse av behovene til Studenter,
+Lærere, Forskere og tjenesteleverandører av Muliggjørende økosystem. Se
+<em>Vedlegg 3 Muliggjørende økosystem for deling av data</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>En viktig forutsetning for videre arbeid med samhandling og datadeling
+er Digitaliseringsdirektoratets
+<a href="https://data.norge.no/guide/veileder-orden-i-eget-hus/">«Orden i eget
+hus»</a>:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><em>«Med orden i eget hus mener vi at “den enkelte virksomhet skal ha
+oversikt over hvilke data den håndterer, hva dataene betyr, hva de
+brukes til, hvilke prosesser de inngår i, og hvem som kan bruke dem
+(informasjonsforvaltning)֦ . Dette innebærer også å ta stilling til
+hvilke data som kan gjøres tilgjengelig for gjenbruk i offentlig sektor,
+og viderebruk av privat sektor. Offentlige virksomheter må prioritere
+utveksling av informasjon som andre virksomheter har krav
+på https://www.regjeringen.no/no/dokumenter/digitaliseringsrundskrivet/id2826781/[(Digitaliseringsrundskrivet)].”</em></p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Referansearkitekturen forutsetter at virksomheter i UHF-sektoren har
+gjennomført eller er i gang med å gjennomføre prosesser for å skape
+«orden i eget hus».</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uhintark_prosjektet"><a class="anchor" href="#_uhintark_prosjektet"></a>1. UH:IntArk-<strong>prosjektet</strong></h3>
+<div class="paragraph">
+<p>UH:IntArk-prosjektet som tidligere er gjennomført i regi av UH-IT har
+utarbeidet et forslag til referansearkitektur for integrasjon. Denne er
+testet ut med en proof-of-concept. Dette proof-of-concept er
+videreutviklet i Datadelingsprosjektet for leveranse til hele UH
+sektoren som UH: IntArk fase 1.</p>
+</div>
+<div class="paragraph">
+<p>Referansearkitekturen beskrevet i dette dokumentet er et målbilde for
+neste fase, som vi her kaller UH:IntArk fase 2. Mange element i
+målbildet kan med fordel rulles ut så tidlig som mulig, for eksempel
+tiltak rettet mot orden i eget hus.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dette_notatet_og_videre"><a class="anchor" href="#_dette_notatet_og_videre"></a>2. Dette notatet og videre</h3>
+<div class="paragraph">
+<p>Arbeidsgrupper i datadelingsprosjektet har samarbeidet i utformingen av
+referansearkitekturen for deling av data i høyere utdanning og forskning
+(UHF). Denne referansearkitekturen vil danne grunnlag for
+videreutvikling av UH:IntArk i fase 2. Arbeidsgruppen har i sitt arbeid
+tatt utgangspunkt i den nasjonale referansearkitekturen og tilpasset
+denne til UHF.</p>
+</div>
+<div class="paragraph">
+<p>Den anbefalte referansearkitekturen er beskrevet i dette notatet.</p>
+</div>
+<div class="paragraph">
+<p>Deler av referansearkitekturen beskrevet her vil inngå i
+referansearkitekturen for Kunnskapssektorens datafellesskap (en
+infrastruktur for deling av data til sekundær- og viderebruk fra hele
+KDs sektor), og arbeidet er koordinert med dette tiltaket som er i
+skrivende stund i en forprosjektfase.</p>
+</div>
+<div class="paragraph">
+<p>Referansearkitekturer gir mønstre og veiledning til utforming av
+løsninger. Denne referansearkitekturen beskriver både eksisterende
+samhandling formulert som beste praksis og nødvendig neste steg i
+generelle datadelingsmønster som kan gjenbrukes i sektoren. Disse
+mønstrene er dokumentert gjennom videreutvikling av
+referansearkitekturene fra digitaliseringsdirektoratet. Hensikten med
+arbeidet er å fremme en koordinert utvikling av informasjonsforvaltning
+og datadeling som resulterer i «orden i eget hus», økt gjenbruk av data
+«kun en gang» og nye, innovative anvendelser av data i sektoren.</p>
+</div>
+<div class="paragraph">
+<p>Vi forventer at referansearkitekturen vil videreutvikles over tid. Vi
+mener at innholdet som finnes nå har tilstrekkelig veiledning til å føre
+til gevinst, samtidig er vi klar over mangler som vi ønsker skal være
+dekket så snart som praktisk mulig:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Rutinen for utvikling av indre API burde være detaljert</p>
+</li>
+<li>
+<p>Retningslinjer for spesifikasjon av API burde vært definert. Vi tenker
+å benytte Open API spesifikasjon som en del av retningslinjene for REST
+APIene. GraphQL vurderes i tillegg.</p>
+</li>
+<li>
+<p>Prosesser for rettighetsklarering av dataprodukter bør defineres</p>
+</li>
+<li>
+<p>Føringer til beskrivelser av dataprodukter bør defineres. Det er et
+mål at dataprodukter skal være mest mulig selvbeskrivende.</p>
+</li>
+<li>
+<p>Begrepsdefinisjoner bør suppleres og publiseres i begrepskatalogen</p>
+</li>
+<li>
+<p>Notifikasjoner som er realisert ved bruk av hendelseslister vurderes
+ut fra behov</p>
+</li>
+<li>
+<p>Samle føringer for datatilbydere og -konsumenter, for eksempel
+tolkning av arkitekturprinsipper der man blant annet kun skal dele
+videre fra en tjeneste data en er autoritativ for</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_om_arkitekturprinsippenes_føringer_for_datadeling"><a class="anchor" href="#_om_arkitekturprinsippenes_føringer_for_datadeling"></a>1. Om arkitekturprinsippenes føringer for datadeling</h2>
+<h2 id="_om_arkitekturprinsippenes_føringer_for_datadeling"><a class="anchor" href="#_om_arkitekturprinsippenes_føringer_for_datadeling"></a>3. Om arkitekturprinsippenes føringer for datadeling</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pek til
-<a href="https://www.digdir.no/digitalisering-og-samordning/overordnede-arkitekturprinsipper/1065">overordnede arkitekturprinsippene</a> fra digitaliseringsdirektoratet og hva de betyr
-her.</p>
-</div>
-<div class="paragraph">
-<p><mark>Trenger vi noen justeringer av prinsippene?</mark></p>
-</div>
-<div class="paragraph">
-<p>Si noe om UH-IntArk prinsippene og forhold til de overordnede
-arkitekturprinsippene</p>
+<p>De
+<a href="https://www.digdir.no/digitalisering-og-samordning/overordnede-arkitekturprinsipper/1065">Overordnede
+arkitekturprinsippene</a> fra digitaliseringsdirektoratet er gjeldende for
+referansearkitekturen. For å forenkle bruk av prinsippene, har vi valgt
+ut noen av føringene fra de overordnede prinsipper som er spesielt
+relevant for integrasjoner og inkludert disse i referansearkitekturen
+når vi ruller ut UH:IntArk fase 1, som
+<a href="https://www.usit.uio.no/prosjekter/datadeling/arbeidsomrader/integrasjonsarkitektur/dokumentasjon/prinsippene/">integrasjonsprinsipper</a>.</p>
 </div>
 </div>
 </div>
