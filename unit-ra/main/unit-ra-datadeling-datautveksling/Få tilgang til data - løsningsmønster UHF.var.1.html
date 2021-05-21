@@ -246,9 +246,6 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF API katalog</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Oversikt over alle API som er registrert i UH/F sektoren</p>
 </div>
@@ -270,42 +267,48 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 <p>Kildeinformasjon for data, begrepsinformasjon</p>
 </li>
 <li>
-<p>Informasjon om tilgang, juridiske og tekniske begrensinger for bruk</p>
-</li>
-<li>
 <p>Eksempelkode, interaktiv API-konsoll og sandkasse for test</p>
 </li>
 <li>
 <p>Informasjon om hvordan få support og hjelp fra utsteder</p>
 </li>
+<li>
+<p>Informasjon om tilgang, juridiske og tekniske begrensinger for bruk. Inkluderer hvilke rettighetter (OAuth2 scopes) en konsument kan få til et API.</p>
+</li>
+<li>
+<p>Grensesnitt for å presentere APIer</p>
+</li>
+<li>
+<p>Grensesnitt for å søke etter APIer</p>
+</li>
 </ul>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel rettigheter til konsument</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel rettigheter til konsument</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Datakonsument skal kunne finne
 tilgjengelige ressurser og be om tilgang til disse. Tilgang kan gis på
 grunnlag av eksisterende tillit til datakonsumenten eller per
 tilgangsforespørsel der ressurseieren beslutter tilgang.</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">API tilgangs-forespørsel</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API tilgangs-forespørsel</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>API eieren får forespørsel om den vil gi konsumenten tilgang til APIet.</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF autorisasjonstjener</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UHF autorisasjonstjener</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Autorisasjonstjenester realiserer tilgangskontroll
 gjennom å utstede sikkerhetsbilletter. En autorisasjonstjener er også
 brukt til å realisere autorisasjonspolicy for tilgang og roller</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Konsumentregister</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UHF Konsumentregister</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Oversikt over alle datakonsumenter som er blitt tildelt tilgang til
 ressurser.</p>
@@ -333,7 +336,12 @@ autoritativt for</p>
 </li>
 </ul>
 </div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">OAUTH scopes</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dataobjekt som som kan beskrives som en ressurs-definisjon, og et token er som regel knyttet til ett eller flere scopes. Scopes benyttes til å styre tilganger til API-er og operasjoner, samt eventuelt hva slags responser man får fra API-er.</p>
+</div></div></td>
 </tr>
 </tbody>
 </table>
