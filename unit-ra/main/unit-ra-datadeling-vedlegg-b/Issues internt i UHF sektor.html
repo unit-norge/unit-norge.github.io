@@ -148,25 +148,18 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Klientregister inneholder den samme klientoversikten i IAM og i
-datadeling. Hvordan den totale oversikten skal vedlikeholdes må
-defineres. Skal det være repliserte, konsistente registre? Skal det være
-disjunkte subsett?</p>
-</li>
-<li>
-<p>Tilgang til API-er kan ha basis i roller (da er man vel virkelig i
-overlapp med IGA)</p>
+<p>Det er ønskelig at samme forretningslogikk ligger til grunn for tilgang til data uansett om det skjer via bruk av applikasjoner eller oppslag gjennom API. Koordinering mellom IAM prosjektet, UH Sak prosjektet og Datadelingsprosjektet er en forutsetning for denne harmonisering av funksjonalitet.</p>
 </li>
 <li>
 <p>Dersom forskjellige autorisasjonstjenere ikke kan dele tokens, har vi
-vel også det samme problemet vi har mot de nasjonale fellestjenestene at
+det samme problemet vi har mot de nasjonale fellestjenestene at
 den ene domenen ikke kan forholde seg til tokens fra den andre domenen.</p>
 </li>
 <li>
 <p>Sektoren har tre uavhengige SSO løsninger: IDporten, Feide og Azure
 AD. Dette gir både redusert brukervennlighet, og en sikkerhetsutfordring
 dersom man ikke kan garantere for at det er samme person i de ulike SSO
-dokenene.</p>
+identitetene.</p>
 </li>
 </ol>
 </div>

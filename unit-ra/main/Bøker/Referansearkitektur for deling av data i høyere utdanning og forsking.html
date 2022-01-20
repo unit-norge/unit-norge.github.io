@@ -152,7 +152,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Thu Jan 20 2022 12:57:46 GMT+0100 (CET)</pre>
+<pre>Thu Jan 20 2022 14:24:49 GMT+0100 (CET)</pre>
 </div>
 </div>
 </div>
@@ -2137,6 +2137,9 @@ Tjenesteansvarlig</p></td>
 <h2 id="_vedlegg_a_definisjoner"><a class="anchor" href="#_vedlegg_a_definisjoner"></a>7. Vedlegg A; Definisjoner</h2>
 <div class="sectionbody">
 <div class="paragraph">
+<p>Referansearkitekturen forutsetter at begreper vil bli definert i sine respektive domener og publisert i en begrepskatalog når referansearkitekturen realiseres. I mellomtiden kopierer vi utvalgte begreper fra data.norge.no med kildeangivelse for å bidra til en entydig forståelse av referansearkitekturen.</p>
+</div>
+<div class="paragraph">
 <p><strong>Datakvalitet</strong> innebærer at data skal være korrekte, komplette,
 oppdaterte og konsistente og har evnen til å støtte de
 informasjonsformål de brukes til [kilde: data.norge.no, SKATTEETATEN]</p>
@@ -2164,13 +2167,13 @@ data.norge.no, NAV]</p>
 <ol class="loweralpha" type="a">
 <li>
 <p>Det er ønskelig at UHF autorisasjonstjener og Maskinporten godkjenner
-hverandres tokens. Dette forutsetter at informasjonsmodellen benyttet i
+hverandres tilgangstokens. Dette forutsetter at informasjonsmodellen benyttet i
 tokens er felles. Løsningsvarianter:</p>
 <div class="olist lowerroman">
 <ol class="lowerroman" type="i">
 <li>
 <p>Klienter forholder seg til flere autentiseringstjenere og
-standardisere token struktur</p>
+tjenestetilbyderne standardiserer token strukturen</p>
 </li>
 <li>
 <p>Innbytte av tokens (token exchange) fra andre “trusted”
@@ -2196,19 +2199,18 @@ løsning benyttet av Open Banking UK</p>
 <p>Altinn autorisasjon benytter «Self-contained OAuth2 token» for
 samtykke. Men da vi ikke kan godkjenne tokens på tvers, har vi
 utfordringer med å benytte Altinn autorisasjon direkte. I hvert fall
-dekker det ikke skopes vi har anvar for i UHF autorisasjonstjeneren</p>
+dekker ikke tjenesten «scopes» vi har anvar for i UHF autorisasjonstjeneren.</p>
 </li>
 <li>
-<p>Hjelper User Managed Access (UMA) her?</p>
+<p>Kan «User Managed Access (UMA)» være et alternativ her?</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>Delegering av rettigheter (fullmakt??): Altinn har per i dag ingen god
+<p>Delegering av authorisasjons-rettigheter: Altinn har per i dag ingen god
 mekanisme for å delegere rettigheter under organisasjonsgranulariteten i
-Enhetsregisteret. Vi tror ikke dette er et problem siden vi <strong>forventer
-at IGA innenfor UHF sektoren vil dekke våre behov.</strong></p>
+Enhetsregisteret. UHF sektorene arbeider med mekanismer for authorisasjon og tilgangsstyring i sektorene våre. Det er ønskelig med en helhetlig nasjonal modell for authorisasjon og tilgangsstyring som fungerer på tvers av sektorer.</p>
 </li>
 </ol>
 </div>
@@ -2218,25 +2220,18 @@ at IGA innenfor UHF sektoren vil dekke våre behov.</strong></p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Klientregister inneholder den samme klientoversikten i IAM og i
-datadeling. Hvordan den totale oversikten skal vedlikeholdes må
-defineres. Skal det være repliserte, konsistente registre? Skal det være
-disjunkte subsett?</p>
-</li>
-<li>
-<p>Tilgang til API-er kan ha basis i roller (da er man vel virkelig i
-overlapp med IGA)</p>
+<p>Det er ønskelig at samme forretningslogikk ligger til grunn for tilgang til data uansett om det skjer via bruk av applikasjoner eller oppslag gjennom API. Koordinering mellom IAM prosjektet, UH Sak prosjektet og Datadelingsprosjektet er en forutsetning for denne harmonisering av funksjonalitet.</p>
 </li>
 <li>
 <p>Dersom forskjellige autorisasjonstjenere ikke kan dele tokens, har vi
-vel også det samme problemet vi har mot de nasjonale fellestjenestene at
+det samme problemet vi har mot de nasjonale fellestjenestene at
 den ene domenen ikke kan forholde seg til tokens fra den andre domenen.</p>
 </li>
 <li>
 <p>Sektoren har tre uavhengige SSO løsninger: IDporten, Feide og Azure
 AD. Dette gir både redusert brukervennlighet, og en sikkerhetsutfordring
 dersom man ikke kan garantere for at det er samme person i de ulike SSO
-dokenene.</p>
+identitetene.</p>
 </li>
 </ol>
 </div>

@@ -153,13 +153,13 @@
 <ol class="loweralpha" type="a">
 <li>
 <p>Det er ønskelig at UHF autorisasjonstjener og Maskinporten godkjenner
-hverandres tokens. Dette forutsetter at informasjonsmodellen benyttet i
+hverandres tilgangstokens. Dette forutsetter at informasjonsmodellen benyttet i
 tokens er felles. Løsningsvarianter:</p>
 <div class="olist lowerroman">
 <ol class="lowerroman" type="i">
 <li>
 <p>Klienter forholder seg til flere autentiseringstjenere og
-standardisere token struktur</p>
+tjenestetilbyderne standardiserer token strukturen</p>
 </li>
 <li>
 <p>Innbytte av tokens (token exchange) fra andre “trusted”
@@ -185,19 +185,18 @@ løsning benyttet av Open Banking UK</p>
 <p>Altinn autorisasjon benytter «Self-contained OAuth2 token» for
 samtykke. Men da vi ikke kan godkjenne tokens på tvers, har vi
 utfordringer med å benytte Altinn autorisasjon direkte. I hvert fall
-dekker det ikke skopes vi har anvar for i UHF autorisasjonstjeneren</p>
+dekker ikke tjenesten «scopes» vi har anvar for i UHF autorisasjonstjeneren.</p>
 </li>
 <li>
-<p>Hjelper User Managed Access (UMA) her?</p>
+<p>Kan «User Managed Access (UMA)» være et alternativ her?</p>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>Delegering av rettigheter (fullmakt??): Altinn har per i dag ingen god
+<p>Delegering av authorisasjons-rettigheter: Altinn har per i dag ingen god
 mekanisme for å delegere rettigheter under organisasjonsgranulariteten i
-Enhetsregisteret. Vi tror ikke dette er et problem siden vi <strong>forventer
-at IGA innenfor UHF sektoren vil dekke våre behov.</strong></p>
+Enhetsregisteret. UHF sektorene arbeider med mekanismer for authorisasjon og tilgangsstyring i sektorene våre. Det er ønskelig med en helhetlig nasjonal modell for authorisasjon og tilgangsstyring som fungerer på tvers av sektorer.</p>
 </li>
 </ol>
 </div>
