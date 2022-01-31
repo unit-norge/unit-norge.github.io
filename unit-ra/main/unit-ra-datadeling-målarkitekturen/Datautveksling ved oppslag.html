@@ -273,32 +273,17 @@ og be om tilgang på et senere tidspunkt.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"><a class="anchor" href="#_tilgjengeliggjøre_data_etter_forsepørsel_løsningsmønster_uhf"></a>4. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>En prosessflyt som datatilbyder må gjennomføre for å tildele rettigheter til en konsument som ber om tilgang til data. En datatilbyder mottar forespørsel om tilgang til et API på vegne av en organisasjon eller bruker. Dataeieren tar stilling til om konsumenten skal få tilgang til data gjennom APIet. Tilgang registreres knyttet til konsumentens klient (applikasjonen som benytter APIet) i klientregisteret.</p>
+<p>Unresolved include directive in modules/unit-ra-datadeling-målarkitekturen/pages/Datautveksling ved oppslag.adoc - include::main@unit-ra:unit-ra-datadeling-målarkitekturen:page$Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF.adoc[]
+= Få tilgang til data - løsningsmønster UHF
+:wysiwig_editing: 1
+:imagepath: main@unit-ra:unit-ra-datadeling-målarkitekturen:
+:toc: left
+:experimental:
+:toclevels: 4
+:sectnums:
+:sectnumlevels: 9</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/Tilgjengeliggjøre%20data%20etter%20forsepørsel%20løsningsmønster%20UHF.png" alt="Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF image">
-</div>
-<div class="title">Figure 3. Tilgjengeliggjøre data etter forsepørsel løsningsmønster UHF</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><a href="Tilgjengeliggjøre%20data%20etter%20forsepørsel%20løsningsmønster%20UHF.var.1.html" class="page">Vis detaljer om elementene i diagrammet</a> (Tips: <kbd>Shift</kbd>-klikk for å åpne i nytt vindu)</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_få_tilgang_til_data_løsningsmønster_uhf"><a class="anchor" href="#_få_tilgang_til_data_løsningsmønster_uhf"></a>5. Få tilgang til data - løsningsmønster UHF</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>En prosessflyt en konsument av data må gjennomføre for å få tildelt rettigheter til data gjennom et API. Det omfatter å få kjennskap til aktuelt API gjennom API-katalogen, autentisere konsumenten, inngå avtale om bruk av data, samt å registrere tilganger hos den tekniske komponenten som skal utføre tjenestekallet. Dersom det dreier seg om tilgang til et åpent tilgjengelig API, kan enkelte delaktiviteter i prosessene hoppes over, men for å kunne logge informasjon om bruk av APIer bør alle konsumenter av et API registreres i klientregisteret.</p>
 </div>
@@ -309,7 +294,7 @@ og be om tilgang på et senere tidspunkt.</p>
 <div class="content">
 <img src="_images/Få%20tilgang%20til%20data%20-%20løsningsmønster%20UHF.png" alt="Få tilgang til data - løsningsmønster UHF image">
 </div>
-<div class="title">Figure 4. Få tilgang til data - løsningsmønster UHF</div>
+<div class="title">Figure 3. Få tilgang til data - løsningsmønster UHF</div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -321,7 +306,7 @@ og be om tilgang på et senere tidspunkt.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_innhente_data_løsningsmønster_uhf"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf"></a>6. Innhente data - løsningsmønster UHF</h2>
+<h2 id="_innhente_data_løsningsmønster_uhf"><a class="anchor" href="#_innhente_data_løsningsmønster_uhf"></a>4. Innhente data - løsningsmønster UHF</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>En prosessflyt en konsument utfører når det utføres et tjenestekall for å innhente data gjennom et API. API-adressen hentes i API-katalogen. Tilgang til APIet byttes inn mot et kjøretids-token i autoriseringstjenesten. Tjenestekall til APIet utføres gjennom API gateway der tokenet benyttes for å få tilgang. Dersom det er et åpent API er det kun relevante prossessteg som utføres.</p>
@@ -330,7 +315,7 @@ og be om tilgang på et senere tidspunkt.</p>
 <div class="content">
 <img src="_images/Innhente%20data%20-%20løsningsmønster%20UHF.png" alt="Innhente data - løsningsmønster UHF image">
 </div>
-<div class="title">Figure 5. Innhente data - løsningsmønster UHF</div>
+<div class="title">Figure 4. Innhente data - løsningsmønster UHF</div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -342,7 +327,7 @@ og be om tilgang på et senere tidspunkt.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_avgi_data_løsningsmønster_uhf"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf"></a>7. Avgi data - løsningsmønster UHF</h2>
+<h2 id="_avgi_data_løsningsmønster_uhf"><a class="anchor" href="#_avgi_data_løsningsmønster_uhf"></a>5. Avgi data - løsningsmønster UHF</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>En prosessflyt en tilbyder av data utfører for å svare på en dataforespørsel. Tilbyder mottar forespørsel om oppslag med et aksesstoken. Klienten som forespør autentiseres og token valideres. Eventuelt mer fin-granulert tilgangskontroll utføres og data returneres. Tilgang kontrolleres kun dersom det er snakk om et sikret API.</p>
@@ -351,7 +336,7 @@ og be om tilgang på et senere tidspunkt.</p>
 <div class="content">
 <img src="_images/Avgi%20data%20-%20løsningsmønster%20UHF.png" alt="Avgi data - løsningsmønster UHF image">
 </div>
-<div class="title">Figure 6. Avgi data - løsningsmønster UHF</div>
+<div class="title">Figure 5. Avgi data - løsningsmønster UHF</div>
 </div>
 <div class="sidebarblock">
 <div class="content">
