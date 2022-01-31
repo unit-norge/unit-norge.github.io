@@ -500,7 +500,16 @@ Hendelsesstrømmen kan være i form av en hendelsesliste eller abonnement på et
 <div class="sect2">
 <h3 id="_generere_og_publisere_notifikasjoner_publiser_og_abonner_uhf"><a class="anchor" href="#_generere_og_publisere_notifikasjoner_publiser_og_abonner_uhf"></a>3.7. Generere og publisere notifikasjoner - Publiser og Abonner UHF</h3>
 <div class="paragraph">
-<p>Datatilbyder publiserer en notifikasjon til en Notifikasjonsdistubusjon i form av en publisering/abonneringsløsning</p>
+<p>Datatilbyder publiserer en notifikasjon til en Notifikasjonsdistribusjon i form av en publisering/abonneringsløsning. Notifikasjonsdistribusjonen er realisert som en publisert kø per abonnent med et emne.</p>
+</div>
+<div class="paragraph">
+<p>Datatilbyder publiserer notifikasjoner til disse køene når hendelser
+oppstår hos datatilbyder.</p>
+</div>
+<div class="paragraph">
+<p>Hver enkelt abonnent har en innboks som abonnenten konsumerer. Den
+publiserte meldingen er transient og forsvinner fra innboksen etter at
+den er konsumert.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -519,11 +528,18 @@ Hendelsesstrømmen kan være i form av en hendelsesliste eller abonnement på et
 <div class="sect2">
 <h3 id="_konsumer_notifikasjoner_publiser_og_abonner_uhf"><a class="anchor" href="#_konsumer_notifikasjoner_publiser_og_abonner_uhf"></a>3.8. Konsumer notifikasjoner - Publiser og Abonner UHF</h3>
 <div class="paragraph">
-<p>Datakonsumentlytter på emner som konsumenten abonnerer på hos  Datatilbyder. Når en ny melding kommer i meldingskøen trigges konsumsjonen av notifikasjonen.
-Datakonsumenten vurderer relevans og foretar videre behandling av notifikasjon</p>
+<p>Datakonsument lytter på emner som konsumenten abonnerer på hos
+Datatilbyder. Når en ny melding kommer i meldingskøen trigges
+konsumpsjonen av notifikasjonen.</p>
 </div>
 <div class="paragraph">
-<p>Videre behandling består av å gjøre et eOppslag (via API) som beskrevet i "Løsningsmønster forespørsel UHF"</p>
+<p>Datakonsumenten vurderer relevans med basis i regler definert for
+abonnenten og foretar videre behandling av notifikasjon.</p>
+</div>
+<div class="paragraph">
+<p>Videre behandling består av å gjøre et eOppslag (via API) som beskrevet
+i «Løsningsmønster forespørsel UHF» dersom konsumenten har behov for
+ytterligere informasjon om hendelsen beskrevet i notifikasjonen.</p>
 </div>
 <div class="imageblock">
 <div class="content">
