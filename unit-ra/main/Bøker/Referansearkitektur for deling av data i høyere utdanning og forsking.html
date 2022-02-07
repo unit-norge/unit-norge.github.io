@@ -155,7 +155,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Mon Feb 07 2022 09:05:49 GMT+0100 (CET)</pre>
+<pre>Mon Feb 07 2022 09:14:20 GMT+0100 (CET)</pre>
 </div>
 </div>
 </div>
@@ -1330,14 +1330,7 @@ kvalitetssikring og juridiske hensyn.</p>
 <div class="sect3">
 <h4 id="_be_om_oppdatering_løsningsmønster_i_uhf_sektoren"><a class="anchor" href="#_be_om_oppdatering_løsningsmønster_i_uhf_sektoren"></a>4.4.1. Be om oppdatering  - løsningsmønster i UHF sektoren</h4>
 <div class="paragraph">
-<p>Datatilbyder kan gjøre oppdatering av data tilgjengelig for
-datakonsument gjennom et API. Prosessen for en datakonsument å be om
-tilgang til oppdatering (se <em>Få tilgang til data</em>) og for en
-datatilbyder å gi tilgang til oppdatering (se <em>Tilgjengeliggjøre data
-etter forespørsel</em>) er tilsvarende som for tilgang til å lese data. Det
-vil ofte være forskjellige kriterier som må oppfylles for å få lov til å
-oppdatere data enn for å lese data. Dette kan inkludere både
-kvalitetssikring og juridiske hensyn.</p>
+<p>En prosessflyt en konsument utfører når det utføres et tjenestekall for å be om en oppdatering av data gjennom et API. API-adressen hentes i API-katalogen. Tilgang til APIet byttes inn mot et kjøretids-token i autoriseringstjenesten. Tjenestekall til APIet utføres gjennom API gateway der tokenet benyttes for å få tilgang.</p>
 </div>
 <div class="imageblock">
 <div class="content">
