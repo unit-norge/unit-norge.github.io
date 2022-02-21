@@ -262,20 +262,20 @@ med informasjonsforvaltning, behandlet i neste seksjon.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>For at datadeling skal gi best mulig verdi må data ha den kvaliteten som konsumenten behøver og forventer. Referansearkitekturen anbefaler at man organiserer og
-forvalter informasjonen i høyere utdannking og forskning med basis i sektorenes behov.</p>
+forvalter informasjonen i høyere utdannking og forskning med basis i sektorenes behov. Forvaltningen må spesifisere hvem som er ansvarlig for hvilke data, hvilke sentrale bruksmønster finnes, og hvordan disse er støttet.</p>
 </div>
 <div class="paragraph">
-<p>Vi kan dele sektorens prosesser i to kategorier, som vist i Figur 4.
+<p>Vi kan dele sektorenes prosesser i to kategorier, som vist i Figur 4.
 Administrasjons- og støtteprosesser er forholdsvis stabile, og sektorene
 har et mål om å standardisere disse på tvers av sektorene. Lærings- og
 forskningsprosesser er mer dynamiske og ulike. Disse to typer prosesser
 trenger forskjellige typer data. De sentrale administrative prosesser
-benytter gjerne opplysninger om personer, studieemner eller
+benytter gjerne opplysninger ocm personer, studieemner eller
 forskningsprosjekt. Disse opplysningene må være tilgjengelig der den
 administrative prosessen kjøres, som kan gjerne være lokalt hos en
 institusjon. Lærings- og forskningsprosesser har ofte behov for delte
 dataressurser på tvers av institusjoner som for eksempel læringsobjekter
-eller forskningsresultater. <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+eller forskningsresultater i sin egen lærings- eller forskningskontekst. <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/image4.png" alt="image" width="624" height="245"></span></p>
@@ -285,40 +285,36 @@ eller forskningsresultater. <sup class="footnote">[<a id="_footnoteref_1" class=
 utdanning og forskning</p>
 </div>
 <div class="paragraph">
-<p>Referansearkitekturen foreslår at begge typer prosesser kan støttes av
+<p>Referansearkitekturen foreslår at sektorene innfører felles praksis for informasjonsforvaltning, betegnet som den grønne baktrunn i figur 5.
+Begge typer prosesser bekrevet over kan støttes av
 data i faglige kontekster vi kaller «domener», men på litt forskjellige
-måter. Et administrativt domene kan omfatte konteksten til en
-administrativ funksjon, som for eksempel studieadministrasjon. Domenen
-vil dekke denne funksjonen i alle institusjonene som bruker samme
-standard. Lærings- eller forskningsdomener vil omfatte den faglige
-konteksten knyttet til et spesifikt bruksområde. Eksempler kan være
-emnerelatert informasjon delt mellom studenter i samme emne eller
-forskningskontekst i et forskningsprosjekt.</p>
+måter.
+Domenene organiseres som
+vist i Figur 5.</p>
 </div>
 <div class="paragraph">
-<p>Referansearkitekturen foreslår videre at domenene kan organiseres som
-vist i Figur 5. De administrative domenene har ansvar for basiskontekst
-relatert til utførelse av læring og forskning, og vi kaller derfor disse
-domenene «grunnleggende domener». Domener i lærings- og
-forskningskontekst kaller vi «brukernære domener». Informasjon i
-brukernære domener kommer fra den spesifikke brukskonteksten, men noe
-gjenbrukes også fra grunnleggende domener. <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup></p>
+<p>De administrative domenene har ansvar for basiskontekst
+relatert til, for eksempel, hvordan personer lærer i studieemner eller
+forskningsprosjekt utfører forskning.
+Vi kaller derfor disse domenene «grunnleggende domener». Her kan vi standardisere administrasjonsprosesser, begreper og informasjonsmodeller samtidig som institusjonene kan bevare selvråderett over administrasjonsdata der det er hensiktsmessig.</p>
+</div>
+<div class="paragraph">
+<p>Domener i lærings- og forskning kaller vi «brukernære domener», fordi de er definert for å støtte spesifikke arbeidsoppgaver i en brukskontekst.
+For eksempel vil et domene som skal støtte læring i et emne
+for en gruppe studenter typisk ønske å forvalte informasjon om
+oppgaver som hører til emnet, hvilke læringsobjekter som kan være
+relevant og resultater knyttet til oppgavene.
+Informasjonen her vil inkludere noe informasjon gjenbrukt fra grunnleggende domener, representert ved den grønne pilen.
+Disse domener støtter innovasjon ved å avgrense konteksten til der man er enig om en arbeidsmåte som passer til oppgavene.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/image5.png" alt="image" width="565" height="459"></span></p>
 </div>
 <div class="paragraph">
-<p>Figur 5 Domener i UHF sektoren</p>
+<p>Figur 5 Domener i høyere utdanning og forskning <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup></p>
 </div>
 <div class="paragraph">
-<p>Domenene vil ha behov for å forvalte prosesser, begreper og dersom det
-er hensiktsmessig, også data. Et domene som skal støtte læring i et emne
-for en gruppe studenter vil typisk ønske å forvalte informasjon om
-oppgaver som hører til emnet, hvilke læringsobjekter som kan være
-relevant og resultater knyttet til oppgavene. Administrative domener der
-flere institusjoner deltar kan velge å forvalte prosessdefinisjoner og
-begreper i domenet, mens tilhørende data kan forvaltes lokalt hos
-institusjonen. Referansearkitekturen foreslår bruk av følgende roller
+<p>Referansearkitekturen foreslår bruk av følgende roller
 knyttet til domenene med forvaltningsansvar:</p>
 </div>
 <div class="ulist">
@@ -357,9 +353,8 @@ som innspill til denne prosessen.</p>
 <h2 id="_økosystem_for_deling_av_data"><a class="anchor" href="#_økosystem_for_deling_av_data"></a>5. Økosystem for deling av data</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Vi benytter både datadelingsplattformen og forvaltning av informasjon
-som skal deles på plattformen i en visjon om et økosystem for deling av
-data. Økosystemet består av aktører i domener som samhandler ved å tilby
+<p>Vår visjon er et økosystem for deling av data hvor både datadelingsplattformen og informasjonen som forvaltes der inngår.
+Økosystemet består av aktører i domener som samhandler ved å tilby
 og konsumere data. Disse aktørene utfyller hverandre i funksjon, og
 samhandlingen skaper større verdi enn de enkelte aktører kan klare hver
 for seg. Studenter, undervisere, forskere, tjenestetilbydere med flere
