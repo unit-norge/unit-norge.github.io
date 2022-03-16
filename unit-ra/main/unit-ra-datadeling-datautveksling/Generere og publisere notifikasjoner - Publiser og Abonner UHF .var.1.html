@@ -156,9 +156,7 @@
 oppstår hos datatilbyder.</p>
 </div>
 <div class="paragraph">
-<p>Hver enkelt abonnent har en innboks som abonnenten konsumerer. Den
-publisert notifikasjon er transient og forsvinner fra innboksen etter at
-den er konsumert.</p>
+<p>Hver enkelt abonnent har en innboks som abonnenten konsumerer. Notifikasjoner er transient og forsvinner fra innboksen etter at de er konsumert.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -212,12 +210,14 @@ Gå tilbake til standardvisning ved å klikke 'tilbake' (eller lukk dette vindue
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Generer notifikasjon ut fra hendelse</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Prosessen med å generere en notifikasjon på bakgrunn av en hendelse.</p>
+<p>Prosessen med å generere en notifikasjon på bakgrunn av en hendelse(endring i datagrunnlaget).</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publiser notifikasjon - Publiser/Abonner</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prosess der notifikasjonen fra "Generer notifikasjon ut fra hendelse” overleveres Notifikasjonsdistribusjon for eventuell levering til konsumenter.</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Notifikasjon</p></td>
@@ -252,7 +252,9 @@ Når meldingen er lest forsvinner den fra innboksen til abonnenten</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Hendelse</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>En hendelse som resulterer i endring av et datagrunnlag.</p>
+</div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UHF Konsumentregister</p></td>
@@ -291,7 +293,7 @@ autoritativt for</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publisert tynn notifikasjon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tynn notifikasjon</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Notifikasjon med beskjed om hva som har skjedd og hvor man finner resultatet, dvs peker mot datagrunnlaget.</p>
 </div></div></td>
