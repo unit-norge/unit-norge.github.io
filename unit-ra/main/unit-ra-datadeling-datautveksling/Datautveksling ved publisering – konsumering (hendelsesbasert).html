@@ -172,8 +172,8 @@ konsumerer hendelser fra hendelsesstrømmen og om nødvendig gjør
 oppdateringer av sine data.</p>
 </div>
 <div class="paragraph">
-<p>Hendelsestrømmer implementeres som en lettvekts notifikasjon i en
-publisert meldingskø (publiser/abonner).</p>
+<p>Hendelsestrømmer implementeres som lettvekts notifikasjoner i en
+notifikasjonskø (publiser/abonner).</p>
 </div>
 <div class="paragraph">
 <p>Alternative måter er blant annet hendelseslister, som beskrevet i
@@ -221,7 +221,7 @@ synkront oppslag som beskrevet tidligere for innhentingen.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Notifikasjoner blir publisert i form av publisering/abonnering til en
-publisert meldingskø. Hendelseslister er en alternativ måte å beskrive
+notifikasjonskø. Hendelseslister er en alternativ måte å beskrive
 en slik strøm av hendelser.</p>
 </div>
 <div class="imageblock">
@@ -265,7 +265,7 @@ en slik strøm av hendelser.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Datatibyder mottar forespørsel om å inngå avtale om tilgang og innhenting av hendelsesstrømmer
-Hendelsesstrømmen kan være i form av en hendelsesliste eller abonnement på et emne (publisert meldingskø).</p>
+Hendelsesstrømmen kan være i form av en hendelsesliste eller abonnement på et emne (notifikasjonskø).</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -287,7 +287,7 @@ Hendelsesstrømmen kan være i form av en hendelsesliste eller abonnement på et
 <div class="sectionbody">
 <div class="paragraph">
 <p>Datakonsument inngår avtale om tilgang og innhenting av hendelsesstrømmer
-Hendelsesstrømmen kan være i form av en hendelsesliste eller abonnement på et emne (publisert meldingskø).</p>
+Hendelsesstrømmen kan være i form av en hendelsesliste eller abonnement på et emne (notifikasjonskø).</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -337,7 +337,7 @@ oppstår hos datatilbyder.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Datakonsument lytter på emner som konsumenten abonnerer på hos
-Datatilbyder. Når en ny melding kommer i meldingskøen trigges
+Datatilbyder. Når en ny notifikasjon kommer i notifikasjonskøen trigges
 konsumering av notifikasjonen.</p>
 </div>
 <div class="paragraph">

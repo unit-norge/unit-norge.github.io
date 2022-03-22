@@ -155,7 +155,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Tue Mar 22 2022 13:26:13 GMT+0100 (CET)</pre>
+<pre>Tue Mar 22 2022 14:24:04 GMT+0100 (CET)</pre>
 </div>
 </div>
 </div>
@@ -1436,7 +1436,7 @@ utdanning og forskning til Felles API-katalog som visst i figuren under.</p>
 <p>Fellestjenestene i datadelingsplattformen brukes i felles prosesser for å dele data. Gjennom å utføre en fellesprosess, vil en datakonsument eller en datatilbyder oppnå en evne (kapabilitet). Dette kapittelet beskriver de fellesprosessene som er definert for deling av data, og de evnene som oppnås ved å benytte dem. Prosessbeskrivelsen viser hvilke tjenester støtter prosessen, og hvilke komponenter realiserer tjenestene. Prosessbeskrivelsen viser også de sentrale forretningsobjekter og dataobjekter som benyttes og produseres underveis. Både tjenester og komponenter kan aksessere dataobjekter.</p>
 </div>
 <div class="paragraph">
-<p>Prosessbeskrivelsene er presentert i <a href="https://www.opengroup.org/archimate-forum/archimate-overview">ArchiMate modelleringsspråk</a>. Vår bruk av Archimate er beskrevet i Vedlegg F.</p>
+<p>Prosessbeskrivelsene er presentert i <a href="https://www.opengroup.org/archimate-forum/archimate-overview">ArchiMate modelleringsspråk</a>. Vår bruk av Archimate er beskrevet i Vedlegg F. Prosesstegningene er definert for høyere utdanning og forskning, omtalt som "UHF".</p>
 </div>
 <div class="sect2">
 <h3 id="_delegere_rettigheter_til_databehandler_uhf"><a class="anchor" href="#_delegere_rettigheter_til_databehandler_uhf"></a>5.1. Delegere rettigheter til databehandler - UHF</h3>
@@ -1674,8 +1674,8 @@ konsumerer hendelser fra hendelsesstrømmen og om nødvendig gjør
 oppdateringer av sine data.</p>
 </div>
 <div class="paragraph">
-<p>Hendelsestrømmer implementeres som en lettvekts notifikasjon i en
-publisert meldingskø (publiser/abonner).</p>
+<p>Hendelsestrømmer implementeres som lettvekts notifikasjoner i en
+notifikasjonskø (publiser/abonner).</p>
 </div>
 <div class="paragraph">
 <p>Alternative måter er blant annet hendelseslister, som beskrevet i
@@ -1719,7 +1719,7 @@ synkront oppslag som beskrevet tidligere for innhentingen.</p>
 <h4 id="_grunnleggende_begreper_for_publisering_av_hendelser_hendelsesliste_publiser_og_abonner_uhf"><a class="anchor" href="#_grunnleggende_begreper_for_publisering_av_hendelser_hendelsesliste_publiser_og_abonner_uhf"></a>5.3.3. Grunnleggende begreper for publisering av hendelser - Hendelsesliste, Publiser og Abonner UHF</h4>
 <div class="paragraph">
 <p>Notifikasjoner blir publisert i form av publisering/abonnering til en
-publisert meldingskø. Hendelseslister er en alternativ måte å beskrive
+notifikasjonskø. Hendelseslister er en alternativ måte å beskrive
 en slik strøm av hendelser.</p>
 </div>
 <div class="imageblock">
@@ -1759,7 +1759,7 @@ en slik strøm av hendelser.</p>
 <h4 id="_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer_publiser_og_abonner_uhf"><a class="anchor" href="#_inngå_avtaler_om_tilgang_og_levering_av_hendelsesstrømmer_publiser_og_abonner_uhf"></a>5.3.5. Inngå avtaler om tilgang og levering av hendelsesstrømmer - Publiser og Abonner UHF</h4>
 <div class="paragraph">
 <p>Datatibyder mottar forespørsel om å inngå avtale om tilgang og innhenting av hendelsesstrømmer
-Hendelsesstrømmen kan være i form av en hendelsesliste eller abonnement på et emne (publisert meldingskø).</p>
+Hendelsesstrømmen kan være i form av en hendelsesliste eller abonnement på et emne (notifikasjonskø).</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1779,7 +1779,7 @@ Hendelsesstrømmen kan være i form av en hendelsesliste eller abonnement på et
 <h4 id="_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer_hendelsesliste_og_publiser_og_abonner_uhf"><a class="anchor" href="#_inngå_avtaler_om_tilgang_og_innhenting_av_hendelsesstrømmer_hendelsesliste_og_publiser_og_abonner_uhf"></a>5.3.6. Inngå avtaler om tilgang og innhenting av hendelsesstrømmer - Hendelsesliste og Publiser og Abonner UHF</h4>
 <div class="paragraph">
 <p>Datakonsument inngår avtale om tilgang og innhenting av hendelsesstrømmer
-Hendelsesstrømmen kan være i form av en hendelsesliste eller abonnement på et emne (publisert meldingskø).</p>
+Hendelsesstrømmen kan være i form av en hendelsesliste eller abonnement på et emne (notifikasjonskø).</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1825,7 +1825,7 @@ oppstår hos datatilbyder.</p>
 <h4 id="_konsumer_notifikasjoner_publiser_og_abonner_uhf"><a class="anchor" href="#_konsumer_notifikasjoner_publiser_og_abonner_uhf"></a>5.3.8. Konsumer notifikasjoner - Publiser og Abonner UHF</h4>
 <div class="paragraph">
 <p>Datakonsument lytter på emner som konsumenten abonnerer på hos
-Datatilbyder. Når en ny melding kommer i meldingskøen trigges
+Datatilbyder. Når en ny notifikasjon kommer i notifikasjonskøen trigges
 konsumering av notifikasjonen.</p>
 </div>
 <div class="paragraph">
