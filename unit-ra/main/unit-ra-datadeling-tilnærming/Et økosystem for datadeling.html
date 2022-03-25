@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Domener :: Referansearkitekturer i høyere utdanning og forskning</title>
-    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-tilnærming/Domener.html">
+    <title>Et økosystem for datadeling :: Referansearkitekturer i høyere utdanning og forskning</title>
+    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-tilnærming/Et%20økosystem%20for%20datadeling.html">
     <meta name="generator" content="Antora 2.2.0">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -137,91 +137,42 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Referansearkitekturer i høyere utdanning og forskning</a></li>
-    <li><a href="Domener.html">Domener</a></li>
+    <li><a href="Et%20økosystem%20for%20datadeling.html">Et økosystem for datadeling</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/unit-norge/unit-ra/edit/main/docs/modules/unit-ra-datadeling-tilnærming/pages/Domener.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/unit-norge/unit-ra/edit/main/docs/modules/unit-ra-datadeling-tilnærming/pages/Et%20økosystem%20for%20datadeling.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Domener</h1>
+<h1 class="page">Et økosystem for datadeling</h1>
 <div class="paragraph">
-<p>Informasjonen som skal forvaltes finnes i en faglig kontekst som vi
-kaller et «domene».</p>
-</div>
-<div class="paragraph">
-<p>Innen et domene definerer et fagområde sine begreper i det vokabularet
-som benyttes der. For eksempel vil et begrep som
-«Søker»<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> ha en beskrivelse,
-forståelse og sine egne data i et studieadministrativt domene.</p>
-</div>
-<div class="paragraph">
-<p>Som en del av den generelle utvikling innen IT systemer, er høyere utdannings- og forskningssektorene i
-ferd med å bygge en distribuert arkitektur som knytter sammen løst
-koblede, delte datakilder.
-Referansearkitekturen er laget for å støtte denne utviklingen ved å
-benytte domener som utgangspunkt for informasjonsforvaltning, utvikling
-av datakilder, datasett, API og hendelser.</p>
-</div>
-<div class="paragraph">
-<p>Referansearkitekturen beskriver en datadelingsplattform som støtter
-deling av data mellom domener gjennom både API og publisering av
-hendelser. Vi grupperer domenene i grunnleggende domener og domener
-utviklet for spesielle brukstilfeller som avbildet under.</p>
+<p>I arbeidet med denne referansearkitekturen har vi tatt utgangspunkt i en
+idé om samhandling mellom ulike parter i et større hele. Dette er basert
+på visjonen om et økosystem, der aktører utfyller hverandre og
+samhandlingen skaper større verdi enn de enkelte aktører kan klare hver
+for seg. Studenter, undervisere, forskere og tjenestetilbydere med flere
+skal både skape, tilby, bearbeide og konsumere data på nye måter som gir
+alle insentiv og gevinst. I økosystemet for deling av data i høyere
+utdanning og forskning ser vi for oss de forskjellige aktørene i
+forskjellig kontekst kalt domener (se seksjonen under). Økosystemet skal
+etableres opp på en datadelingsplattform, og elementene i plattformen er
+spesifisert i referansearkitekturen.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="_images/DomenerUHF.png" alt="DomenerUHF">
+<img src="_images/økosystem.png" alt="økosystem">
 </div>
-<div class="title">Figure 1. Domener i høyere utdannings- og forkninssektorene</div>
-</div>
-<div class="paragraph">
-<p>De <strong><em>grunnleggende domenene</em></strong> inneholder kontekst som støtter de sentrale
-prosessene for læring, forskning og administrasjon hos institusjonene.  Denne kontekten vil omfatte begreper, informasjonsmodeller, proesesser og dersom det er hensiktsmessig, også data.</p>
+<div class="title">Figure 1. Et økosystem for deling av data i høyere utdannings- og forskningssektorene</div>
 </div>
 <div class="paragraph">
-<p>Disse domenene inneholder blant annet <strong><em>masterdatakilder</em></strong> med
-informasjon om, for eksempel, studenter, ansatte, forskningsprosjekt,
-forskningsresultater, læringsobjekter, med flere. Den semantiske betydningen av objektene og deres attributter i masterdatakildene skal reflektere en omforent forståelse av disse begrepene.
-Disse kildene er
-definert ut fra en dyp forståelse av sektorenes funksjon og vil typisk
-være forholdsvis stabile over tid.</p>
-</div>
-<div class="paragraph">
-<p>API og datasett definert i grunnleggende domener blir gjerne gjenbrukt
-av bruksnære domener.</p>
-</div>
-<div class="paragraph">
-<p>De <strong><em>bruksnære domenene</em></strong> er definert til å støtte en spesifikk
-brrukskontekst. Domener for brukskontekst inkluderer for eksempel
-situasjoner der studenter evaluerer emner, der studenter får
-automatisert tilbakemeldinger for å forbedre læringsprosessen
-(læringsanalyse) og der deltagere i forskningsprosjekt utfører forsøk.</p>
-</div>
-<div class="paragraph">
-<p>Datasett og API definert her skal være <em>spesifikke</em> og skreddersydd til
-brukskonteksten.</p>
-</div>
-<div class="paragraph">
-<p>Vi har hentet denne tilnærmingen fra faglitteratur om Data
-Mesh<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> av
-<a href="https://twitter.com/zhamakd">Zhamak Dehghani</a>. Arkitekturen påvirker
-rutiner for utvikling av API, datasett og notifikasjoner beskrevet i
-seksjonen <a href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-rutiner/Rutiner.html">Rutiner</a> samt
-roller og ansvar beskrevet i seksjonen <a href="https://unit-norge.github.io/unit-ra/main/unit-ra-datadeling-roller/Roller%20og%20ansvar%20for%20informasjonsforvaltning.html">Roller og ansvar for datadeling
-og informasjonsforvaltning</a>.</p>
-</div>
-<div id="footnotes">
-<hr>
-<div class="footnote" id="_footnotedef_1">
-<a href="#_footnoteref_1">1</a>. <em>Person som</em> har søkt opptak til et studieprogram eller enkeltemner ved et universitet eller en høyskole.
-</div>
-<div class="footnote" id="_footnotedef_2">
-<a href="#_footnoteref_2">2</a>. Fra <a href="https://martinfowler.com/articles/data-monolith-to-mesh.html#DomainDataAsAProduct">How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh, Domain Data as a Product</a>
-</div>
+<p>Figuren viser datadeling i og mellom domener. Dataprodukter tilgjengeliggjøres og deles mellom
+domenene i økosystemet. Domenene kan opptre som datatilbydere (tilbyr
+dataprodukt) og datakonsumenter (datakonsum). Datadelingsplattformen og
+fellestjenestene i den muliggjør datadelingen i
+økosystemet.</p>
 </div>
 </article>
   </div>
