@@ -155,7 +155,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>Mon Mar 28 2022 11:35:01 GMT+0200 (CEST)</pre>
+<pre>Mon Mar 28 2022 12:30:04 GMT+0200 (CEST)</pre>
 </div>
 </div>
 </div>
@@ -1281,7 +1281,7 @@ ressursportal</p>
 <h3 id="_publisering_av_hendelser"><a class="anchor" href="#_publisering_av_hendelser"></a>4.2. Publisering av hendelser</h3>
 <div class="paragraph">
 <p>For publisering av hendelser er det etablert et mønster der datatilbyder
-utsteder en lettvektsnotifikasjon som datakonsumenten kan abonnere på.
+utsteder et emne som tilbyr lettvektsnotifikasjoner om hendelser som medfører endringer i datagrunnslaget som datakonsumenten kan abonnere på.
 Lettvektsnotifikasjonen inneholder en lenke til et API der
 datakonsumenten kan hente data relatert til notifikasjonen. Dette
 mønsteret er allerede i bruk i høyere utdannings- og forskningssektorene.</p>
@@ -1289,8 +1289,8 @@ mønsteret er allerede i bruk i høyere utdannings- og forskningssektorene.</p>
 <div class="paragraph">
 <p>Lettvektsnotifikasjonen i en eNotifikasjon blir overført mellom
 datatilbyder og konsument av en meldingsformidler (<em>event broker)</em>.
-Meldingsformidleren tar imot hendelser fra produsenter, og overfører
-hendelsen til de konsumenter som abonnerer på hendelsestypen, samtidig
+Meldingsformidleren tar imot notifikasjonen om hendelser fra produsenter, og overfører
+notifikasjon til de konsumenter som abonnerer på hendelsestypen, samtidig
 som den sørger for at eventuell leveransegaranti overholdes.</p>
 </div>
 <div class="paragraph">

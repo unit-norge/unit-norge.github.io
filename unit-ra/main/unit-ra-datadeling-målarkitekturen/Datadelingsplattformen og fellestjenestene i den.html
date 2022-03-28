@@ -277,7 +277,7 @@ ressursportal</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>For publisering av hendelser er det etablert et mønster der datatilbyder
-utsteder en lettvektsnotifikasjon som datakonsumenten kan abonnere på.
+utsteder et emne som tilbyr lettvektsnotifikasjoner om hendelser som medfører endringer i datagrunnslaget som datakonsumenten kan abonnere på.
 Lettvektsnotifikasjonen inneholder en lenke til et API der
 datakonsumenten kan hente data relatert til notifikasjonen. Dette
 mønsteret er allerede i bruk i høyere utdannings- og forskningssektorene.</p>
@@ -285,8 +285,8 @@ mønsteret er allerede i bruk i høyere utdannings- og forskningssektorene.</p>
 <div class="paragraph">
 <p>Lettvektsnotifikasjonen i en eNotifikasjon blir overført mellom
 datatilbyder og konsument av en meldingsformidler (<em>event broker)</em>.
-Meldingsformidleren tar imot hendelser fra produsenter, og overfører
-hendelsen til de konsumenter som abonnerer på hendelsestypen, samtidig
+Meldingsformidleren tar imot notifikasjonen om hendelser fra produsenter, og overfører
+notifikasjon til de konsumenter som abonnerer på hendelsestypen, samtidig
 som den sørger for at eventuell leveransegaranti overholdes.</p>
 </div>
 <div class="paragraph">
