@@ -276,15 +276,13 @@ ressursportal</p>
 <h2 id="_publisering_av_hendelser"><a class="anchor" href="#_publisering_av_hendelser"></a>2. Publisering av hendelser</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For publisering av hendelser er det etablert et mønster der datatilbyder
-utsteder et emne som tilbyr lettvektsnotifikasjoner om hendelser som medfører endringer i datagrunnslaget som datakonsumenten kan abonnere på.
-Lettvektsnotifikasjonen inneholder en lenke til et API der
-datakonsumenten kan hente data relatert til notifikasjonen. Dette
+<p>For publisering av hendelser er det etablert et mønster der datatilbyder tilbyr lettvektsnotifikasjoner om hendelser som medfører endringer i datagrunnslaget som datakonsumenten kan abonnere på.
+Lettvektsnotifikasjonen inneholder en identifikator som peker til hvilke data som er relatert til notifikasjonen. Dette
 mønsteret er allerede i bruk i høyere utdannings- og forskningssektorene.</p>
 </div>
 <div class="paragraph">
 <p>Lettvektsnotifikasjonen i en eNotifikasjon blir overført mellom
-datatilbyder og konsument av en meldingsformidler (<em>event broker)</em>.
+datatilbyder og konsument av en meldingsformidler (<em>message broker)</em>.
 Meldingsformidleren tar imot notifikasjoner om hendelser fra produsenter, og overfører
 notifikasjonene til de konsumenter som abonnerer på hendelsestypen, samtidig
 som den sørger for at eventuell leveransegaranti overholdes.</p>
