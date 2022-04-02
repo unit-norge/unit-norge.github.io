@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tilgjengeliggjøre data etter forespørsel - løsningsmønster UHF :: Referansearkitekturer i høyere utdanning og forskning</title>
+    <link rel="canonical" href="https://unit-norge.github.io/unit-ra/siste/unit-ra-datadeling-datautveksling/Tilgjengeliggjøre%20data%20etter%20forespørsel%20-%20løsningsmønster%20UHF.var.2.html">
+    <meta name="generator" content="Antora 2.2.0">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://unit-norge.github.io">Referansearkitekturer i høyere utdanning og forskning</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="unit-ra" data-version="siste">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Referansearkitekturer i høyere utdanning og forskning</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../om-hkdir-referansearkitekturer.html">Om våre referansearkitekturer</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#main@unit-ra:unit-ra-datadeling-sammendrag:page$Sammendrag.adoc">Sammendrag</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#main@unit-ra:Bøker:page$Referansearkitektur for deling av data i høyere utdanning og forsking.adoc">Referansearkitektur for deling av data i høyere utdanning og forsking</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#main@unit-ra:unit-ra-datadeling-introduksjon:page$Introduksjon.adoc">Introduksjon</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#main@unit-ra:unit-ra-datadeling-tilnærming:page$Tilnærming til utvikling av referansearkitekturen.adoc">Tilnærming til utvikling av referansearkitekturen</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#main@unit-ra:unit-ra-datadeling-roller:page$Roller og ansvar for informasjonsforvaltning.adoc">Roller og ansvar for informasjonsforvaltning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#main@unit-ra:unit-ra-datadeling-målarkitekturen:page$Datadelingsplattformen og fellestjenestene i den.adoc">Datadelingsplattformen og fellestjenestene i den</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#main@unit-ra:unit-ra-datadeling-datautveksling:page$Datautveksling.adoc">Datautveksling</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#main@unit-ra:unit-ra-datadeling-rutiner:page$Rutiner.adoc">Rutiner</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#main@unit-ra:unit-ra-datadeling-vedlegg-a:page$Vedlegg A; Definisjoner.adoc">Vedlegg A: Definisjoner</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#main@unit-ra:unit-ra-datadeling-vedlegg-b:page$Vedlegg B; Behov for avklaringer og utfordringer i sektorenes kontekst.adoc">Vedlegg B: Behov for avklaringer og utfordringer i sektorenes kontekst</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#main@unit-ra:unit-ra-datadeling-vedlegg-c:page$Vedlegg C; Integrasjonsprinsipper.adoc">Vedlegg C: Integrasjonsprinsipper</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#main@unit-ra:unit-ra-datadeling-vedlegg-d:page$Vedlegg D; Behov og bruksområder.adoc">Vedlegg D: Behov og bruksområder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#main@unit-ra:unit-ra-datadeling-vedlegg-e:page$Vedlegg E; Føringer.adoc">Vedlegg E: Føringer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#main@unit-ra:unit-ra-datadeling-vedlegg-f:page$Vedlegg F; Bruk av Archimate.adoc">Vedlegg F: Bruk av Archimate</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Referansearkitekturer i høyere utdanning og forskning</span>
+    <span class="version">siste</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Referansearkitekturer i høyere utdanning og forskning</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">siste</a>
+        </li>
+        <li class="version">
+          <a href="../../1.0/index.html">1.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Referansearkitekturer i høyere utdanning og forskning</a></li>
+    <li><a href="Tilgjengeliggjøre%20data%20etter%20forespørsel%20-%20løsningsmønster%20UHF.var.2.html">Tilgjengeliggjøre data etter forespørsel - løsningsmønster UHF</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">siste</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Tilgjengeliggjøre%20data%20etter%20forespørsel%20-%20løsningsmønster%20UHF.var.2.html">siste</a>
+    <a class="version" href="../../1.0/unit-ra-datadeling-datautveksling/Tilgjengeliggjøre%20data%20etter%20forespørsel%20-%20løsningsmønster%20UHF.var.2.html">1.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/unit-norge/unit-ra/edit/main/docs/modules/unit-ra-datadeling-datautveksling/pages/Tilgjengeliggjøre%20data%20etter%20forespørsel%20-%20løsningsmønster%20UHF.var.2.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Tilgjengeliggjøre data etter forespørsel - løsningsmønster UHF</h1>
+<div class="paragraph">
+<p>En prosessflyt som datatilbyder må gjennomføre for å tildele rettigheter til en konsument som ber om tilgang til data. En datatilbyder mottar forespørsel om tilgang til et API på vegne av en organisasjon eller bruker. Dataeieren tar stilling til om konsumenten skal få tilgang til data gjennom APIet. Tilgang registreres knyttet til konsumentens klient (applikasjonen som benytter APIet) i klientregisteret.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="main@unit-ra:unit-ra-datadeling-datautveksling:Tilgjengeliggjøre data etter forespørsel - løsningsmønster UHF.png" alt="Tilgjengeliggjøre data etter forespørsel - løsningsmønster UHF image">
+</div>
+<div class="title">Figure 1. Tilgjengeliggjøre data etter forespørsel - løsningsmønster UHF</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Elementer i view for Tilgjengeliggjøre data etter forespørsel - løsningsmønster UHF</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Beskrivelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilganger konsument</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Oversikt over hvilke API og OAUTH-scopes en virksomhet (representert ved organisasjonsnummer) skal ha tilgang til (utstedt token for).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datatilbyder</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Tilbyder av data til andre aktører.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgjengeliggjør API</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prosessen med å tilby data gjennom et API til aktører utenfor egen virksomhet.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildele tilganger til API</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prosess for å registrere hvilke databrukere som skal få tilgang
+Sette policy, og grov tilgangsstyring gjennom Maskinporten.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inngå avtale om tilgang til data</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prosess for å inngå avtale om tilgang og bruk av data.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere brukere av samtykke</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Prosess for å registrere konsumenter som skal ha mulighet for å innhente samtykker som gir tilgang til en tjeneste.</p>
+</div>
+<div class="paragraph">
+<p>Dette utføres kun om det er behov for samtykke for tilgang til dataene.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maskinporten</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Maskinporten sørger for sikker autentisering og tilgangskontroll for datautveksling mellom
+virksomheter, maskin til maskin. Dette gir teknisk og organisatorisk samhandlingsevne.</p>
+</div>
+<div class="paragraph">
+<p>Mer om Maskinporten:
+<a href="https://www.digdir.no/digitale-felleslosninger/maskinporten/869" class="bare">https://www.digdir.no/digitale-felleslosninger/maskinporten/869</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Altinn autorisasjon</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Autorisasjonskomponenten i Altinn som gir muligheter til å delegere rettigheter til andre organisasjoner eller personer. Rettigheter til bruk av autorisasjonskomponenten baserer seg på registrerte roller i Enhetsregisteret.
+Altinn autorisasjon leverer også tjenester for å registrere og kontrollere samtykke gitt av person eller virksomhet.</p>
+</div>
+<div class="paragraph">
+<p>Altinn autorisasjon gir teknisk samhandlingsevne ved at bruker logger inn med elektronisk ID,
+autorisasjonskomponenten sjekker at bruker har de tilgangene som kreves for å ta i bruk aktuell tjeneste.</p>
+</div>
+<div class="paragraph">
+<p>Dersom en privatperson skal ta i bruk en tjeneste på vegne av en virksomhet, gjøres det et oppslag mot Enhetsregisteret for å bekrefte at personen har en rolle på vegne av virksomheten. Dette gir organisatorisk samhandlingsevne.</p>
+</div>
+<div class="paragraph">
+<p>Mer om Altinn autorisasjon:
+<a href="https://www.altinndigital.no/produkter/styring-av-tilgang/" class="bare">https://www.altinndigital.no/produkter/styring-av-tilgang/</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Registrere samtykkebasert tilgang</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Tjeneste for å registrere konsumenter som ma innhente samtykke som gir grunnlag for utlevering fra datatilbyder.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aktører som kan innhente samtykke for bruk av API</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Oversikt over aktører som skal ha mulighet til å innhente samtykke som grunnlag for å få tilgang til data gjennom et API.
+URL til konsumenten det kan innhentes samtykke for må inngå i beskrivelsen.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tilgjengeliggjøre data etter forespørsel</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Evnen til å gjøre data tilgjengelig for aktører utenfor egen virksomhet på forespørsel.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">API tilgangs-forespørsel</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>API eieren får forespørsel om den vil gi konsumenten tilgang til APIet.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Godkjenn tilgang</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Tjeneste for å vurdere og eventuelt gi tilgang for en konsument som ber om tilgang. En tjeneste i UHF Ressursportalen som lar dataforvalteren beslutte tilgang, enten gjennom en automatisert policy eller gjennom en manuell behandling.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tildel rettigheter til konsument</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Datakonsument skal kunne finne
+tilgjengelige ressurser og be om tilgang til disse. Tilgang kan gis på
+grunnlag av eksisterende tillit til datakonsumenten eller per
+tilgangsforespørsel der ressurseieren beslutter tilgang.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ressursportal</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Ressursportalen tildeler og holder oversikt over tilganger til beskyttede ressurser i høyere utdanning og forskningssektoren i henhold til føringer fra eierne av disse
+ressursene. Tilganger er gitt i form av sikkerhetsbilletter.
+Ressursportalen er en del av den felles infrastrukturen for føderert API
+management for høyere utdanning og forskning. Den registrerer og holder
+oversikt over API og meldingsbaserte notifikasjoner, holder oversikt
+over klienter som har blitt tildelt tilgang til disse og hvilke
+tilganger det gjelder. Ressursportalen benytter JSON Web Token
+formattert OAuth2 sikkerhetsbilletter for å gi tilgang til ressurser
+gjennom API gateway og meldingstjenester nær de beskyttede ressursene.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forespør dataforvalter</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>En tjeneste som lar dataforvalteren beslutte datatilgang, enten gjennom en automatisert policy eller gjennom en manuell behandling.</p>
+</div>
+<div class="paragraph">
+<p>Datatilgang kan være lesetilgang, skrivetilgang eller begge deler.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
